@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063301"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템 문제 해결
@@ -114,11 +114,11 @@ sudo update-locale LANG=en_US.UTF8
 일부 경우에 대 한 액세스 허용 방화벽을 해제 합니다.  일부 경우에 대 한 액세스 차단 보일 방화벽이 설치 되어 있는 하기만 하면 됩니다.
 
 ### <a name="permission-denied-error-when-using-ping"></a>Ping을 사용 하는 경우 사용 권한 거부 오류
-#### [<a name="anniversary-update"></a>1주년 업데이트](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[1 주년 업데이트](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 WSL에서 ping을 실행 하려면 Windows에서 관리자 권한이 필요 합니다.  Ping을 실행 하려면 관리자 권한으로 Windows에서 Ubuntu의 Bash를 실행 하거나 bash.exe 관리자 권한으로 CMD/PowerShell 프롬프트에서 실행 합니다.
 
-#### [<a name="build-14926"></a>빌드 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[빌드 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   관리자 권한이 더 이상 필요 합니다.
 
 ### <a name="bash-is-hung"></a>Bash가 중지 되었습니다.

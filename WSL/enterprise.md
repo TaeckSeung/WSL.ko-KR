@@ -1,5 +1,5 @@
 ---
-title: 엔터프라이즈에 대 한 Linux 용 Windows 하위 시스템
+title: 엔터프라이즈에 대한 Linux용 Windows 하위 시스템
 description: 리소스 및 최상의 방법에 대 한 지침 엔터프라이즈 환경에서 Linux 용 Windows 하위 시스템을 사용합니다.
 keywords: BashOnWindows, bash, wsl, windows, linux, windowssubsystem, ubuntu, debian, suse, windows 10, enterprise, 배포, 오프 라인 패키지, 저장소, 배포, 설치, 용 windows 하위 시스템에 설치
 author: mscraigloewen
@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 9d867654d1b66fc14b58bc5e111986a7d38ef79c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063281"
 ---
-# <a name="windows-subsystem-for-linux-for-enterprise"></a>엔터프라이즈에 대 한 Linux 용 Windows 하위 시스템
+# <a name="windows-subsystem-for-linux-for-enterprise"></a>엔터프라이즈에 대한 Linux용 Windows 하위 시스템
 
 비즈니스용 Microsoft Store WSL 회사에 배포 하려는 기업에 다양 한 솔루션을 제공 합니다. 합니다 [온라인 문서의](https://docs.microsoft.com/en-us/microsoft-store/) 비즈니스용 Microsoft Store 대 한 저장소 환경에 대 한 일반 정보를 확인할 수 있는 훌륭한 리소스 됩니다.
 

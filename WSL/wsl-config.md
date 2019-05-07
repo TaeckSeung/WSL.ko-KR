@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.openlocfilehash: c806552750f413fcb75f989d868a57cc939af64a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063501"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>관리 및 Linux 용 Windows 하위 시스템 구성
@@ -24,8 +24,8 @@ ms.locfileid: "59063501"
 Linux 용 Windows 하위 시스템을 사용 하 여 Linux를 실행 하는 방법은 여러 가지가 있습니다.
 
 1. `[distro]` ie `ubuntu`
-1. `wsl.exe` 로 구분하거나 여러 `bash.exe`
-1. `wsl [command]` 로 구분하거나 여러 `bash -c [command]`
+1. `wsl.exe` 또는 `bash.exe`
+1. `wsl [command]` 또는 `bash -c [command]`
 
 어떤 방법을 사용 해야 하는 일에 따라 달라 집니다.
 

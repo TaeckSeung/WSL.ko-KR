@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.openlocfilehash: be1c1331183317d4f970696464110b9968208d21
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063571"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판의 패키지에 대 한 Windows 하위 시스템을 수동으로 다운로드

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
 ms.openlocfilehash: b98101c19d7d450548531521c3f8ee15ce62f9f1
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063261"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>WSL에 대 한 사용자 지정 Linux 배포판으로 만들기

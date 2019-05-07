@@ -8,12 +8,13 @@ ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: a9c8d32f2b87319b45b1b757b4d71c0a4c41292c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.localizationpriority: High
+ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063511"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59529067"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux 설명서 용 Windows 하위 시스템
 
@@ -25,7 +26,7 @@ Linux 용 Windows 하위 시스템, 가상 컴퓨터의 오버 헤드 없이 수
 1. 와 같은 일반적인 명령줄 사용 가능한 소프트웨어를 실행할 `grep`, `sed`, `awk`, 또는 다른 ELF-64 이진 파일. 
 1. Bash 셸 스크립트 및 GNU/Linux 명령줄 응용 프로그램을 실행 합니다.  
     * 도구: vim, emacs, tmux
-    * 언어들: C/c + +, Python, Ruby, Javascript/node.js C# & F#, Rust, Go 등입니다.
+    * 언어들: Javascript/node.js, Ruby, Python, C /C++, C# & F#, Rust, Go 등입니다.
     * 서비스: sshd, MySQL, Apache, lighttpd
 1. 자체 GNU/Linux 배포 패키지 관리자를 사용 하 여 추가 소프트웨어를 설치 합니다.
 1. Unix 유사 명령줄 셸을 사용 하 여 Windows 응용 프로그램을 호출 합니다.

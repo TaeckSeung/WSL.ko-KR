@@ -7,14 +7,27 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 3eee7ff6d1f8302e98cde84fccabf5d9113c83f2
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
+ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063631"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64988258"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에 대 한 릴리스 정보
+
+## <a name="build-18890"></a>18890 빌드
+일반 Windows에 대 한 18890 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)합니다.
+
+### <a name="wsl"></a>WSL
+* 비블로킹 소켓 누수 [GH 2913]
+* EOF 입력 터미널에 후속 읽기 [GH 3421]를 차단할 수 있습니다.
+* [GH 3928 설명] wsl.conf를 가리키도록 업데이트 하기 위해 resolv.conf 헤더
+* Epoll의 교착 상태 [GH 3922] 코드를 삭제 합니다.
+* -가져오고 내보내고-[GH 3932]에 대 한 인수에서 공백 처리
+* Mmap 확장 파일은 제대로 작동 하지 않습니다 [GH 3939]
+* ARM64를 사용 하 여 문제를 해결 \\wsl$ 액세스 제대로 작동 하지 않습니다
+* 추가 wsl.exe에 대 한 더 나은 기본 아이콘
 
 ## <a name="build-18342"></a>18342 빌드
 일반 Windows에 대 한 18342 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)합니다.
@@ -276,7 +289,7 @@ wslconfig.exe /terminate <DistributionName>
     * 참조 [블로그](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) 자세한 내용은 합니다.
 * 배포 실행을 중지 하려면 종료/wslconfig를 추가 합니다.
 
-## <a name="build-17692"></a>17692 빌드
+## <a name="build-17692"></a>빌드 17692
 일반 Windows에 대 한 17692 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)합니다.
 
 ### <a name="wsl"></a>WSL
@@ -285,7 +298,7 @@ wslconfig.exe /terminate <DistributionName>
 * ARM64: 캐시 유지 관리 작업을 에뮬레이트하십시오. 확인할 [dotnet 문제](https://github.com/dotnet/core/issues/1561)합니다.
 * DrvFs: 개인 범위에 해당 하는 문자는 이스케이프 된 문자는 이스케이프을 해제 합니다.
 
-## <a name="build-17686"></a>17686 빌드
+## <a name="build-17686"></a>빌드 17686
 일반 Windows에 대 한 17686 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)합니다.
 
 ### <a name="wsl"></a>WSL
@@ -349,8 +362,7 @@ wslconfig.exe /terminate <DistributionName>
 * Futex pi 인식 작업에 대 한 지원을 추가 합니다. [GH 1006]
     * 우선 순위는 현재 지원 되는 WSL 기능 제한 사항이 있지만 표준 사용을 차단 해야 하므로 note 합니다.
 * WSL 프로세스에 대 한 Windows 방화벽 지원 합니다. [GH 1852]
-    * 예를 들어는 WSL 수 있도록 모든 포트에서 수신 대기를 관리자 권한 Windows cmd를 사용 하 여 python 처리:
-```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * 예를 들어는 WSL 수 있도록 모든 포트에서 수신 대기를 관리자 권한 Windows cmd를 사용 하 여 python 처리: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
     * 방화벽 규칙을 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [링크](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * Wsl.exe를 사용 하는 경우 사용자의 기본 셸을 따릅니다. [GH 2372]
 * 모든 네트워크 인터페이스가 이더넷으로 보고 합니다. [GH 2996]
@@ -375,7 +387,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="ltp-results"></a>LTP 결과:
 진행 중인 테스트 합니다.
 
-## <a name="build-17110"></a>17110 빌드
+## <a name="build-17110"></a>빌드 17110
 일반 Windows에 대 한 17110 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)합니다.
 
 ### <a name="wsl"></a>WSL
@@ -467,7 +479,7 @@ WSL 및 Windows 응용 프로그램 이제 Unix 소켓을 통해 서로 통신�
 ### <a name="ltp-results"></a>LTP 결과:
 진행 중인 테스트 합니다.
 
-## <a name="build-17083"></a>17083 빌드
+## <a name="build-17083"></a>빌드 17083
 일반 Windows에 대 한 17083 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)합니다.
 
 ### <a name="wsl"></a>WSL
@@ -526,7 +538,7 @@ WSL 및 Windows 응용 프로그램 이제 Unix 소켓을 통해 서로 통신�
 
 * 새 환경 변수를 도입 `WSLENV`를 환경 변수 WSL 및 Win32 간에 전달 되는 방식을 구성 합니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
@@ -761,7 +773,7 @@ WSL 및 Windows 응용 프로그램 이제 Unix 소켓을 통해 서로 통신�
 총 오류 횟수: 229<br/>
 [LTP 테스트 실행 로그](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
 
-## <a name="build-16257"></a>16257 빌드
+## <a name="build-16257"></a>빌드 16257
 
 일반 Windows에 대 한 16257 빌드에 대 한 정보를 방문 합니다 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)합니다.<br/>
 
@@ -793,7 +805,7 @@ WSL 및 Windows 응용 프로그램 이제 Unix 소켓을 통해 서로 통신�
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>알려진 문제
-#### [<a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>GitHub Issue 2392: Windows 폴더 WSL에서 인식할 수 없습니다...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub Issue 2392: Windows 폴더 WSL에서 인식할 수 없습니다...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 빌드 16257 WSL에 문제를 통해 Windows 파일/폴더를 열거 하는 동안 `/mnt/c/...`합니다.
 이 문제는 해결 되었습니다 및에서 해제 되어야 참가자는 2017 년 8 월 14를 시작 하는 주 동안 빌드.
 

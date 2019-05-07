@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.openlocfilehash: c0b8af08a06428ebd292b8c6b9b275726988bdbe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063621"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 설치 가이드
@@ -61,6 +61,6 @@ Windows에서 Linux 배포판을 실행할 수 있습니다, 전에 "Windows 하
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
     [System.Environment]::SetEnvironmentVariable("PATH", $userenv + "C:\Users\Administrator\Ubuntu", "User")
     ```
-    입력 하 여 이제 모든 경로에서 배포를 시작할 수 있습니다 `<distro>.exe`합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. `ubuntu.exe`
+    입력 하 여 이제 모든 경로에서 배포를 시작할 수 있습니다 `<distro>.exe`합니다. 예: `ubuntu.exe`
 
 이제 Linux 배포를 설치 해야 [새 배포판 인스턴스를 초기화](initialize-distro.md) 배포를 사용 하기 전에 합니다.

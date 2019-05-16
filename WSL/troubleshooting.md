@@ -86,7 +86,7 @@ VPN 연결을 끊 었는 후 변경 내용이 되돌리려면 `/etc/resolv.conf`
 1. 확인을 클릭합니다.
 
 ### <a name="error-0x80040154-after-windows-update"></a>"Error: 0x80040154 "Windows 업데이트 후
-Linux 기능에 대 한 Windows 하위 시스템을 비활성화할 수 있습니다 Windows 업데이트 중입니다. 이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다. Linux에서 찾을 수 있습니다 Windows 하위 시스템을 사용 하도록 설정 하는 것에 대 한 지침을 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.
+Linux 기능에 대 한 Windows 하위 시스템을 비활성화할 수 있습니다 Windows 업데이트 중입니다. 이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다. Linux에서 찾을 수 있습니다 Windows 하위 시스템을 사용 하도록 설정 하는 것에 대 한 지침을 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.
 
 ### <a name="changing-the-display-language"></a>표시 언어 변경
 WSL 설치는 Windows 설치의 로캘이 일치 하는 Ubuntu 로캘을 자동으로 변경 하려고 합니다.  이 문제를 원하지 않는 경우 설치가 완료 되 면 Ubuntu 로캘을 변경 하려면이 명령을 실행할 수 있습니다.  이 변경 내용을 적용 하려면 bash.exe를 다시 시작 해야 합니다.

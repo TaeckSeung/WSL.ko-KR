@@ -7,12 +7,12 @@ ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
-ms.openlocfilehash: 80675d8452b626ebe1d235774167c5ff27e4b44d
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 07461f7db4a351f5b79ab0c5179d3d917ef1bdf7
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063271"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035064"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에 대 한 질문 질문과
 
@@ -82,7 +82,7 @@ WSL의 이점 중 하나는 Windows 및 Linux 응용 프로그램 또는 도구�
 
 WSL에서 컴퓨터의 고정된 드라이브를 탑재 합니다 `/mnt/<drive>` 에 Linux 배포판에 대 한 폴더입니다. 예를 들어 프로그램 `C:` 드라이브 아래에 탑재 됩니다 `/mnt/c/` 
 
-탑재 된 드라이브를 사용 하 여 편집할 수 있습니다, 코드 예를 들어 `C:\dev\myproj\` 를 사용 하 여 [Visual Studio](https://visualstudio.microsoft.com/vs/) / 또는 [VS Code](https://code.visualstudio.com/), 및 Linux에서 해당 코드를 통해 동일한 파일에 액세스 하 여 빌드/테스트 `\mnt\c\dev\myproj`합니다.
+탑재 된 드라이브를 사용 하 여 편집할 수 있습니다, 코드 예를 들어 `C:\dev\myproj\` 를 사용 하 여 [Visual Studio](https://visualstudio.microsoft.com/vs/) / 또는 [VS Code](https://code.visualstudio.com/), 및 Linux에서 해당 코드를 통해 동일한 파일에 액세스 하 여 빌드/테스트 `/mnt/c/dev/myproj`합니다.
 
 > **중요 참고**: WSL를 사용 하는 주요 제한 사항 중 하나입니다는 직접 액세스/변경은 Windows 응용 프로그램 또는 도구를 사용 하 여 Linux 배포판의 파일 시스템에 파일이 지원 되지 않습니다. 참조 [Windows 앱 및 도구를 사용 하 여 Linux 파일을 변경 하지 마세요](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 
@@ -146,7 +146,7 @@ WSL 레거시 콘솔을 실행 하는 것을 지원 하지 않습니다. 레거�
 1. 확인을 클릭합니다.
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>왜 "오류: 0x80040154 "Windows를 업그레이드 한 후 bash.exe를 실행 하나요?
-"Windows 하위 시스템에 대 한 Linux" 기능을 비활성화할 수 있습니다 Windows 업데이트 중입니다. 이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다. "Windows 하위 시스템에 대 한 Linux" 기능을 사용 하는 것에 대 한 지침을 찾을 수 있습니다 합니다 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.
+"Windows 하위 시스템에 대 한 Linux" 기능을 비활성화할 수 있습니다 Windows 업데이트 중입니다. 이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다. "Windows 하위 시스템에 대 한 Linux" 기능을 사용 하는 것에 대 한 지침을 찾을 수 있습니다 합니다 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL의 표시 언어를 변경 하려면 어떻게 해야 합니까?
 WSL 설치는 Windows 설치의 로캘이 일치 하는 Ubuntu 로캘을 자동으로 변경 하려고 합니다. 이 문제를 원하지 않는 경우 설치가 완료 되 면 Ubuntu 로캘을 변경 하려면이 명령을 실행할 수 있습니다. 이 변경 내용을 적용 하려면 bash.exe를 다시 시작 해야 합니다.

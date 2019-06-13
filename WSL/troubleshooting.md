@@ -8,12 +8,12 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063301"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040848"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템 문제 해결
 
@@ -28,7 +28,7 @@ Windows에서 VPN에 연결한 후 bash 네트워크 연결이 끊어지는 경�
 5. 열기 `/etc/resolv.conf` 및 <br/>
    a. 파일에서 첫 번째 줄을 삭제 "\# WSL에서이 파일 자동으로 생성 되었습니다. 이 파일의 자동 생성을 중지 하려면이 줄을 제거 합니다. "입니다. <br/>
    b. DNS 서버 목록에서 첫 번째 항목으로 위에서 (1)에서 DNS 항목을 추가 합니다. <br/>
-   다. 파일을 닫습니다. <br/>
+   c. 파일을 닫습니다. <br/>
 
 VPN 연결을 끊 었는 후 변경 내용이 되돌리려면 `/etc/resolv.conf`합니다. 이렇게 하려면 다음을 수행 합니다.
 1. `cd /etc`
@@ -86,7 +86,7 @@ VPN 연결을 끊 었는 후 변경 내용이 되돌리려면 `/etc/resolv.conf`
 1. 확인을 클릭합니다.
 
 ### <a name="error-0x80040154-after-windows-update"></a>"Error: 0x80040154 "Windows 업데이트 후
-Linux 기능에 대 한 Windows 하위 시스템을 비활성화할 수 있습니다 Windows 업데이트 중입니다. 이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다. Linux에서 찾을 수 있습니다 Windows 하위 시스템을 사용 하도록 설정 하는 것에 대 한 지침을 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.
+Linux 기능에 대 한 Windows 하위 시스템을 비활성화할 수 있습니다 Windows 업데이트 중입니다. 이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다. Linux에서 찾을 수 있습니다 Windows 하위 시스템을 사용 하도록 설정 하는 것에 대 한 지침을 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.
 
 ### <a name="changing-the-display-language"></a>표시 언어 변경
 WSL 설치는 Windows 설치의 로캘이 일치 하는 Ubuntu 로캘을 자동으로 변경 하려고 합니다.  이 문제를 원하지 않는 경우 설치가 완료 되 면 Ubuntu 로캘을 변경 하려면이 명령을 실행할 수 있습니다.  이 변경 내용을 적용 하려면 bash.exe를 다시 시작 해야 합니다.
@@ -149,7 +149,6 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ### <a name="confirm-wsl-is-enabled"></a>WSL 사용 하도록 설정할지 확인 합니다.
 PowerShell에서 다음을 실행 하 여 Linux 용 Windows 하위 시스템 활성화 되어 있는지 확인할 수 있습니다.  
 ``` PowerShell
-PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
@@ -165,7 +164,22 @@ Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linu
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. 시작 로그 HostKeys 제공 되며 같은 로그 메시지가 표시 되지 않았는지 확인 합니다: debug1: sshd 버전 OpenSSH_7.2, OpenSSL 1.0.2g 2016 년 3 월 월 1 일 debug1: key_load_private: 잘못 된 암호는 개인 키 debug1를 해독 하기 위해 제공한: key_load_public : 해당 파일 또는 디렉터리 없음 호스트 키를 로드 하지 못했습니다: /etc/ssh/ssh_host_rsa_key debug1: key_load_private: 이러한 파일 또는 디렉터리 debug1 없음: key_load_public: 해당 파일 또는 디렉터리 없음 호스트 키를 로드 하지 못했습니다: /etc/ssh/ssh_host_dsa_key debug1: key_load_private: 이러한 파일 또는 디렉터리 debug1 없음: key_load_public: 해당 파일 또는 디렉터리 없음 호스트 키를 로드 하지 못했습니다: /etc/ssh/ssh_host_ecdsa_key debug1: key_load_private: 이러한 파일 또는 디렉터리 debug1 없음: key_load_public: 해당 파일 또는 디렉터리 없음 호스트 키를 로드 하지 못했습니다: /etc/ssh/ssh_host_ed25519_key
+3. 시작 로그를 확인 하 고 HostKeys 제공 되며 같은 로그 메시지가 표시 되지 않는 확인 합니다.
+   ```
+   debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
+   debug1: key_load_private: incorrect passphrase supplied to decrypt private key
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_rsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_dsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ed25519_key
+   ```
 
 이러한 메시지를 보이지 키 아래에서 누락 된 경우 `/etc/ssh/`, 키를 다시 생성 하거나만 제거 및 openssh 서버를 설치 해야 합니다.
 ```BASH

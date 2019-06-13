@@ -8,12 +8,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: b31bb3a542b8481c723df42292e20e364680722d
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: fbb5bdc401a013b0853774cff6ad2dc84a36e412
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063591"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040841"
 ---
 # <a name="guide-to-install-or-uninstall-windows-subsystem-for-linux-on-windows-10-anniversary-update-and-creators-update"></a>설치 또는 Windows 10 1 주년 업데이트 및 크리에이터 업데이트의 Linux 용 Windows 하위 시스템을 제거 하는 가이드 
 
@@ -38,7 +38,7 @@ Fall Creators Update 이상을 업그레이드할 수 없는 경우, 설정 및 
 
 1. 명령 프롬프트를 엽니다.  형식 `bash` 하 고 enter 키를 누릅니다
 
-    처음에 Windows, Ubuntu에서 Bash를 실행 Canonical의 라이선스에 동의 하 라는 메시지가 표시 됩니다. Accpted, WSL 다운로드 되 고 컴퓨터에 Ubuntu 인스턴스를 설치 하 고 "Bash에서 Ubuntu의 Windows" 바로 가기를 시작 메뉴에 추가 됩니다.
+    처음에 Windows, Ubuntu에서 Bash를 실행 Canonical의 라이선스에 동의 하 라는 메시지가 표시 됩니다. WSL 다운로드 되 고 컴퓨터에 Ubuntu 인스턴스 설치에 동의 하 고 "Bash에서 Ubuntu의 Windows" 바로 가기를 시작 메뉴에 추가 됩니다.
 
     ![Ubuntu를 설치 하 라는 메시지가](media/bashShellInstall.png)
 

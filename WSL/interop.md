@@ -7,12 +7,12 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: 5dcfe0987ecb6615fbe1ab67d178679ac6ad9317
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063251"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040822"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows와 Linux 상호 운용성에 대 한 Windows 하위 시스템
 
@@ -81,7 +81,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>WSL에서 Windows 도구를 실행 합니다.
 
-WSL 사용 하 여 WSL 명령줄에서 직접 Windows 이진 파일을 호출할 수 있습니다 `[binary name].exe`합니다.  `notepad.exe`) 을 입력합니다.  Linux에서 Windows 실행 파일을 더 쉽게 실행 하려면 Windows 경로가 포함 되어 `$PATH` Fall Creators Update에 있습니다.
+WSL 사용 하 여 WSL 명령줄에서 직접 Windows 이진 파일을 호출할 수 있습니다 `[binary name].exe`합니다.  `notepad.exe` )을 입력합니다.  Linux에서 Windows 실행 파일을 더 쉽게 실행 하려면 Windows 경로가 포함 되어 `$PATH` Fall Creators Update에 있습니다.
 
 이러한 방식으로 실행 하는 응용 프로그램에 다음 속성이 있습니다.
 
@@ -198,7 +198,7 @@ Interop을 사용 하지 않도록 설정 WSL 세션 간에 유지 되지 않습
 
 ## <a name="creators-update-and-anniversary-update"></a>크리에이터 업데이트 및 1 주년 업데이트
 
-Interop 환경 사전 Fall Creators Update는 최신 interop 환경을 비슷하지만 주요 차이점 중 handfull 가지 있습니다.
+Interop 환경 사전 Fall Creators Update는 최신 interop 환경을 비슷하지만 주요 차이점 중 몇 가지 있습니다.
 
 요약:
 

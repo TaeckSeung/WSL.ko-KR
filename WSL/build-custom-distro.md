@@ -8,12 +8,12 @@ ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: b98101c19d7d450548531521c3f8ee15ce62f9f1
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063261"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040779"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>WSL에 대 한 사용자 지정 Linux 배포판으로 만들기
 
@@ -24,7 +24,7 @@ Microsoft Store 대 한 WSL 배포판의 패키지를 빌드 및/또는 테스�
 * 개발자는 자신의 개발 컴퓨터에 테스트용으로 로드 될 수 있습니다. 있는 사용자 지정 Linux 배포를 만들 수
 
 ## <a name="background"></a>배경
-Microsoft Store 통해 UWP 응용 프로그램으로 WSL에 대 한 Linux 배포판을 배포 했습니다. WSL-Windows 커널에 있는 하위 시스템에 실행 한 다음 해당 응용 프로그램을 설치할 수 있습니다. 이 배달 메커니즘을 이전 하는 블로그 게시물에서 설명한 것 처럼 많은 이점이 있습니다.
+Microsoft Store 통해 UWP 응용 프로그램으로 WSL에 대 한 Linux 배포판을 배포 했습니다. WSL-Windows 커널에 있는 하위 시스템에 실행 한 다음 해당 응용 프로그램을 설치할 수 있습니다. 이 배달 메커니즘에서 설명한 것 처럼 많은 이점이 있습니다는 [이전 블로그 게시물](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/)합니다.
 
 ## <a name="sideloading-a-custom-linux-distro-package"></a>사용자 지정 Linux 배포판의 패키지를 테스트용으로 로드
 개인 컴퓨터에 테스트용으로 로드 하려면 응용 프로그램으로 사용자 지정 Linux 배포판 패키지를 만들 수 있습니다. 사용자 지정 패키지는 배포 되지 Microsoft Store 통해 배포 유지 관리자는으로 제출 하지 않는 한 note 하십시오.
@@ -42,6 +42,6 @@ Microsoft Store 통해 UWP 응용 프로그램으로 WSL에 대 한 Linux 배포
 * [명령줄 블로그](https://blogs.msdn.microsoft.com/commandline/)
 
 ## <a name="provide-feedback"></a>사용자 의견 제공
-* [배포판 Launcher Gitub 리포지토리](https://github.com/Microsoft/WSL-DistroLauncher)
+* [배포판 Launcher GitHub 리포지토리](https://github.com/Microsoft/WSL-DistroLauncher)
 * [WSL에 대 한 GitHub 문제 추적기](https://github.com/Microsoft/BashOnWindows/issues)
 * [명령줄 UserVoice 포털](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

@@ -19,3 +19,6 @@ Doc 문제가 발견 되 면 / 오류 또는 제안, 하세요 문제를 제출 
 자세한 내용은 참조는 [준수 사항 FAQ](https://opensource.microsoft.com/codeofconduct/faq/) 에 문의 하거나 [ opencode@microsoft.com ](mailto:opencode@microsoft.com) 추가 질문이 나 의견을 사용 하 여 합니다.
 
 콘솔 설명서 및 Microsoft의 명령줄 셸에 대 한 markdown 소스 시작 합니다.
+
+## <a name="license"></a>라이선스
+Creative Commons Attribution 4.0 International (4.0에서 CC) 있는 Public License에 따라 배포 합니다.

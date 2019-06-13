@@ -8,12 +8,12 @@ ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: c0b8af08a06428ebd292b8c6b9b275726988bdbe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 25723395212575f8fe2dcbfbd30b59de9431816a
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063621"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035070"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 설치 가이드
 
@@ -51,7 +51,7 @@ Windows에서 Linux 배포판을 실행할 수 있습니다, 전에 "Windows 하
     ![Windows Server에서 확장 된 Ubuntu 배포판](media/server-appx-expand.png)
 
     > **문제 해결**
-    > * **0x8007007e 오류로 설치 하지 못했습니다.**: 이 오류는 시스템 WSL를 지원 하지 않습니다 하는 경우에 발생 합니다. 다음 사항을 확인하세요.
+    > * **0x8007007e 오류로 설치 하지 못했습니다.** : 이 오류는 시스템 WSL를 지원 하지 않습니다 하는 경우에 발생 합니다. 다음 사항을 확인하세요.
     >   * 16215 이상 Windows 빌드를 실행 하는 합니다. [빌드를 확인할](troubleshooting.md#check-your-build-number)합니다.
     >   * Linux 선택적 구성 요소에 대 한 Windows 하위 시스템을 사용 하도록 설정 하 고 컴퓨터 다시 시작 합니다.  [WSL를 사용할 수 있는지](troubleshooting.md#confirm-wsl-is-enabled)합니다.
     
@@ -59,7 +59,7 @@ Windows에서 Linux 배포판을 실행할 수 있습니다, 전에 "Windows 하
         
     ```powershell
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
-    [System.Environment]::SetEnvironmentVariable("PATH", $userenv + "C:\Users\Administrator\Ubuntu", "User")
+    [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
     ```
     입력 하 여 이제 모든 경로에서 배포를 시작할 수 있습니다 `<distro>.exe`합니다. 예: `ubuntu.exe`
 

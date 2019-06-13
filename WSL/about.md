@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: High
-ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: f2df3c06d6c56aa8bc5a41ea9f075635b70c8685
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59529067"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040812"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux 설명서 용 Windows 하위 시스템
 
@@ -32,9 +32,9 @@ Linux 용 Windows 하위 시스템, 가상 컴퓨터의 오버 헤드 없이 수
 1. Unix 유사 명령줄 셸을 사용 하 여 Windows 응용 프로그램을 호출 합니다.
 1. Windows에서 GNU/Linux 응용 프로그램을 호출 합니다.
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
-* [Windows에서 Linux 설치](install_guide.md)
+* [Windows 10에서 Linux 설치](install-win10.md)
 * [명령 참조를 참조 하세요.](reference.md)
 * [읽기에 대 한 질문과 대답](faq.md)
 

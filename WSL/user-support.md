@@ -8,12 +8,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
-ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063601"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040827"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>사용자 계정 및 Linux 용 Windows 하위 시스템에 대 한 권한
 
@@ -116,7 +116,7 @@ Ubuntu를 사용 하는 단계별 지침 단계:
     C:\> ubuntu config --default-user username
     ```
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 WSL에서 사용 권한을 제공 하는 경우 염두에 두 가지 중요 한 개념이 있습니다.
 
@@ -128,11 +128,11 @@ WSL에서 Linux를 실행 하는 경우 Linux는 프로세스와 동일한 Windo
 * 일반 (권한이 상승 되지 않은): Linux에서 로그인 한 사용자의 권한으로 실행
 * 관리자 권한/관리자: 관리자 권한/관리자 Windows 권한으로 실행 되는 Linux
 
-> 상승 된 때문에 프로세스 수 변경/시스템 차원의 설정 및 데이터 손상과 보호 파일 및 폴더 액세스/수정 **하지 말고** Windows 있는지 여부에 반드시 필요한 경우가 아니면 관리자 권한 프로세스를 시작 하거나 Linux 응용 프로그램/도구/셸!
+> 수 있기 때문에 관리자 권한으로 액세스/수정 (따라서 손상) 시스템 차원의 설정 및 시스템-wide/보호 된 데이터 **하지 말고** 는 Windows 또는 Linux에 반드시 필요한 경우가 아니면 관리자 권한 프로세스를 실행 합니다. 응용 프로그램/도구/셸!
 
 위의 Windows 권한은 Linux 인스턴스 내에서 사용 권한을 무관 다음과 같습니다. "루트 권한" Linux Linux 환경 및 파일 시스템 내에서 사용자의 권한에 영향을 줍니다. 영향을 미치지 않습니다 Windows 권한 부여에 있습니다. 따라서 루트로 Linux 프로세스를 실행 (예: 통해 `sudo`) Linux 환경 내에서 권한 관리를 처리 하는 유일한 부여 합니다.
 
-**예:**    
+**예:**     
 Windows 관리자 권한으로 Bash 세션에 액세스할 수 있습니다 `cd /mnt/c/Users/Administrator` 관리자 권한이 사용 권한 거부 "오류를 볼 수 없는 Bash 세션 동안.
 
 Linux에서 입력 `sudo cd /mnt/c/Users/Administrator` Windows 내에서 사용 권한을 Windows에서 관리 되므로 관리자의 디렉터리에 대 한 액세스 권한을 부여 하지 됩니다.

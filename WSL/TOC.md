@@ -8,5 +8,11 @@
 # [상호 운용성](./interop.md)
 # [사용자 지정 Distro 빌드](./build-custom-distro.md)
 # [질문과 대답](./faq.md)
+# [WSL 2](./wsl2-index.md)
+## [WSL 2 정보](./wsl2-about.md)
+## [WSL 2 설치](./wsl2-install.md)
+## [WSL 1에서 WSL 2로 사용자 환경 변경](./wsl2-ux-changes.md)
+## [질문과 대답](./wsl2-faq.md)
+
 # [문제 해결](./troubleshooting.md)
 # [릴리스 정보](./release-notes.md)

@@ -1,0 +1,3 @@
+# <a name="af-unix-sample"></a><span data-ttu-id="5d284-101">AF-Unix-샘플</span><span class="sxs-lookup"><span data-stu-id="5d284-101">AF-Unix-Sample</span></span>
+
+<span data-ttu-id="5d284-102">WSL 및 Windows 프로세스 간의 AF_UNIX 상호 운용성을 보여 주는 데모입니다.</span><span class="sxs-lookup"><span data-stu-id="5d284-102">Demo demonstrating AF_UNIX interop between a WSL and Windows process.</span></span> <span data-ttu-id="5d284-103">기능에 대 한 자세한 내용은 WSL Commandline 블로그를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="5d284-103">COnsult the WSL Commandline blog for more information on the feature.</span></span>

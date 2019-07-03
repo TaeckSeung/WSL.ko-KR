@@ -7,7 +7,7 @@
       "locale": "ko-kr",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -24,7 +24,7 @@
   ],
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
-	"git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/WSL.ko-kr",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/WSL.ko-kr",
   "git_repository_branch_open_to_public_contributors": "live",
   "contribution_branch_mappings": {
 	      "live-sxs": "live"

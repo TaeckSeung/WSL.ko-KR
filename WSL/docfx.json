@@ -36,11 +36,7 @@
       "extendBreadcrumb": true,
       "ms.prod" : "windows-subsystem-for-linux"
     },
-    "fileMetadata": {
-        "open_to_public_contributors": {
-	     "/*.md":  true
-        }
-    },
+    "fileMetadata": {},
     "template": [],
     "dest": "wsl",
     "markdownEngineName": "markdig"

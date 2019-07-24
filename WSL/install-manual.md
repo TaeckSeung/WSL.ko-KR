@@ -1,31 +1,31 @@
 ---
-title: 수동으로 Windows 하위 시스템 (WSL) Linux 배포판에 대 한 다운로드
+title: Linux 용 Windows 하위 시스템 (WSL) Distros를 수동으로 다운로드 합니다.
 description: Linux 배포판에 대 한 Windows 하위 시스템을 수동으로 다운로드 하는 방법에 대 한 지침입니다.
-keywords: BashOnWindows, bash, wsl, windows, linux, WSL, 용 windows 하위 시스템 배포판, windows 하위 시스템, ubuntu, openSUSE, SLES, debian, kali
+keywords: BashOnWindows, bash, wsl, windows, linux 용 windows 하위 시스템, WSL, windows 하위 시스템, 배포판, ubuntu, openSUSE, SLES, debian, kali
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 669c017c97aba70c107484b32acd99296265d84a
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: 55cea2c4b7087f3dd8a29986aaddc8c313763448
+ms.sourcegitcommit: b07769a3140db9ac63e42c7d7d1290c0bad8c40d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67035029"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67467557"
 ---
-# <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판의 패키지에 대 한 Windows 하위 시스템을 수동으로 다운로드
+# <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판 패키지에 대 한 Windows 하위 시스템 수동으로 다운로드
 
-일부의 시나리오는 사용자 수 없습니다 수 (또는 원하는)을 설치 하려면 Microsoft Store 통해 WSL Linux 배포판입니다. 특히 있습니다 Windows Server 또는 장기 서비스 (LTSB/LTSC) 데스크톱 Microsoft Store 또는 사용자 회사 네트워크 정책 및/또는 관리자 환경에서 Microsoft Store 사용을 허용 하지 않으려면 지원 하지 않는 OS SKU를 실행할 수 있습니다.
+Microsoft Store를 통해 WSL Linux 배포판을 설치 하거나 원하지 않는 몇 가지 시나리오가 있습니다. 특히 Microsoft Store을 지원 하지 않는 LTSB/LTSC (장기 서비스) 데스크톱 OS SKU 또는 사용자 환경에서 Microsoft Store 사용을 허용 하지 않는 회사 네트워크 정책 및/또는 관리자를 실행 하 고 있을 수 있습니다.
 
-이러한 경우에 WSL 자체를 사용할 수 있는, 어떻게 있습니다 다운로드 하 고 저장소에 액세스할 수 없으면 Linux 배포판 WSL 설치?
+이러한 경우 WSL 자체를 사용할 수 있는 동안 스토어에 액세스할 수 없는 경우 WSL에서 Linux 배포판을 다운로드 하 여 설치 하는 방법
 
-> 참고: **명령줄 셸 환경 Cmd, PowerShell 및/WSL Linux 배포판을 비롯 하 여 Windows 10 S 모드에서 실행 되도록 허용 되지 않습니다**합니다. 이 제한은 S 모드를 제공 하는 무결성 및 보안 목표를 보장 하기 위해 존재 합니다. 읽기 [이 게시물](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) 자세한 내용은 합니다.
+> 참고: **Cmd, PowerShell 및 Linux/WSL 배포판을 포함 하는 명령줄 셸 환경은 Windows 10 S 모드에서 실행할 수 없습니다**. 이러한 제한은 S 모드에서 제공 하는 무결성 및 보안 목표를 보장 하기 위해 존재 합니다. 자세한 내용은 [이 게시물](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) 을 참조 하세요.
 
-## <a name="downloading-distros"></a>배포판을 다운로드합니다.
+## <a name="downloading-distros"></a>배포판 다운로드 중
 
-Microsoft Store 앱을 사용할 수 없는 경우 다운로드 하 고 이러한 링크를 클릭 하 여 Linux 배포판을 수동으로 설치할 수 있습니다.
+Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭 하 여 Linux 배포판을 다운로드 하 고 수동으로 설치할 수 있습니다.
 * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
 * [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
@@ -33,33 +33,40 @@ Microsoft Store 앱을 사용할 수 없는 경우 다운로드 하 고 이러�
 * [Kali Linux](https://aka.ms/wsl-kali-linux)
 * [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
-* [WSL에 대 한 fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
+* [WSL 용 Fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-이렇게 하면는 `<distro>.appx` 선택한 폴더에 다운로드 하려면 패키지 있습니다. 수행 합니다 [설치 지침](#installing-your-distro) 에 다운로드 한 distro(s) 설치.
+이렇게 하면 `<distro>.appx` 패키지가 선택한 폴더로 다운로드 됩니다. [설치 지침](#Installing-your-distro) 에 따라 다운로드 한 배포판를 설치 합니다.
 
-## <a name="downloading-distros-via-the-command-line"></a>명령줄을 통해 다운로드 배포판
-원한다 면 명령줄을 통해 기본 distro(s)에도 다운로드할 수 있습니다.
+## <a name="downloading-distros-via-the-command-line"></a>명령줄을 통해 배포판 다운로드
+원하는 경우 명령줄을 통해 기본 설정 배포판를 다운로드할 수도 있습니다.
 
  ### <a name="download-using-powershell"></a>PowerShell을 사용 하 여 다운로드
- PowerShell을 사용 하는 배포판을 다운로드 하려면 사용 합니다 [Invoke-webrequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet. 다음은 Ubuntu 16.04를 다운로드 하는 샘플 명령입니다.
+ PowerShell을 사용 하 여 배포판를 다운로드 하려면 [호출 WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet을 사용 합니다. Ubuntu 16.04을 다운로드 하는 샘플 지침은 다음과 같습니다.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
 ```
 
 > [!TIP]
-> 다운로드 시간이 오래 걸리면, 설정 하 여 진행률 표시줄 해제 `$ProgressPreference = 'SilentlyContinue'`
+> 다운로드 시간이 오래 걸리는 경우을 설정 하 여 진행률 표시줄을 해제 합니다.`$ProgressPreference = 'SilentlyContinue'`
 
-### <a name="download-using-curl"></a>Curl을 사용 하 여 다운로드
-Windows 10 Spring 2018 업데이트 (또는 이상)는 인기 있는 포함 [명령줄 유틸리티 curl](https://curl.haxx.se/) 는 사용 하 여 명령줄에서 웹 요청 (예: HTTP GET, POST, PUT, 명령 등)를 호출할 수 있습니다. 사용할 수 있습니다 `curl.exe` 위의 배포판을 다운로드 하려면:
+### <a name="download-using-curl"></a>말아를 사용 하 여 다운로드
+Windows 10 스프링 2018 업데이트 (이상)에는 명령줄에서 웹 요청 (예: HTTP GET, POST, PUT 등)을 호출할 수 있는 인기 있는 [말아 명령줄 유틸리티가](https://curl.haxx.se/) 포함 되어 있습니다. 를 사용 `curl.exe` 하 여 위의 배포판을 다운로드할 수 있습니다.
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-위의 예에서 `curl.exe` 실행 됩니다 (뿐만 아니라 `curl`), PowerShell에서 실제 curl 실행 파일 인지 확인 호출 별칭 PowerShell curl 없습니다 [Invoke-webrequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)
+위의 예에서를 실행 하 `curl.exe` 는 것이 아니라, `curl`powershell에서 실제 말아 실행 파일을 호출 하 여 [호출-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 에 대 한 powershell 말아 앨리어스가 아닌를 실행 하도록 합니다.
 
-> 참고: 사용 하 여 `curl` Cmd 셸을 사용 하 여 다운로드 단계 호출/스크립트에 있는 경우에 좋을 수 있습니다 및/또는 `.bat`  /  `.cmd` 스크립트입니다.
+> 참고: Cmd `curl` shell 및/또는 `.bat`  /  스크립트를 사용 하 여 다운로드 단계를 호출/스크립팅 해야 하는 경우를 사용 하는 것이 좋습니다. `.cmd`
 
-## <a name="installing-your-distro"></a>배포를 설치합니다.
-다운로드 한 distro(s) 프로그램을 설치 하는 방법에 지침을 참조 하십시오 합니다 [Windows 데스크톱](install-win10.md) 또는 [Windows Server](install-on-server.md) 설치 지침.
+## <a name="installing-your-distro"></a>배포판 설치
+Windows 10을 사용 하는 경우 PowerShell을 사용 하 여 배포판를 설치할 수 있습니다. 위에서 다운로드 한 배포판이 포함 된 폴더로 이동 하 고 해당 디렉터리에서 다음 명령을 실행 합니다. 여기서 `app_name` 는 배포판 파일의 이름입니다.  
+```Powershell
+Add-AppxPackage .\app_name.appx
+```
+
+Windows server를 사용 하는 경우 [Windows server](install-on-server.md) 설명서 페이지에서 설치 지침을 찾을 수 있습니다.
+
+배포판가 설치 되 면 [Intilization 단계](initialize-distro.md) 페이지를 참조 하 여 새 배포판를 초기화 합니다.

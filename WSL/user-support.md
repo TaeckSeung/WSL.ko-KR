@@ -1,7 +1,7 @@
 ---
 title: Linux 사용자 계정 및 사용 권한
-description: Linux 용 Windows 하위 시스템을 사용 하 여 사용자 계정 및 사용 권한 관리에 대 한 참조입니다.
-keywords: BashOnWindows, bash, wsl, windows, linux, windowssubsystem, ubuntu, 사용자 계정에 대 한 windows 하위 시스템
+description: Linux 용 Windows 하위 시스템을 사용 하 여 사용자 계정 및 사용 권한 관리를 참조 하세요.
+keywords: BashOnWindows, bash, wsl, windows, linux 용 windows 하위 시스템, windowssubsystem, ubuntu, 사용자 계정
 author: scooley
 ms.author: scooley
 ms.date: 09/11/2017
@@ -9,61 +9,61 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/14/2019
 ms.locfileid: "67040827"
 ---
-# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>사용자 계정 및 Linux 용 Windows 하위 시스템에 대 한 권한
+# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에 대 한 사용자 계정 및 사용 권한
 
-WSL에서 새 Linux 배포를 설정 하는 첫 번째 단계는 Linux 사용자를 만들기.  사용자가 만든 첫 번째 사용자 계정에 몇 가지 특수 한 특성을 사용 하 여 자동으로 구성 됩니다.
+WSL에서 새 Linux 배포를 설정 하는 첫 번째 단계는 Linux 사용자를 만드는 것입니다.  만든 첫 번째 사용자 계정은 다음과 같은 몇 가지 특수 특성으로 자동으로 구성 됩니다.
 
-1. 기본 사용자 것-해당 로그인 자동으로 시작 합니다.
-1. 기본적으로 Linux 관리자 (sudo 그룹의 구성원)는 것입니다.
+1. 기본 사용자입니다. 시작 시 자동으로 로그인 됩니다.
+1. 기본적으로 Linux 관리자 (sudo 그룹의 구성원)입니다.
 
-Linux 용 Windows 하위 시스템에서 실행 중인 각 Linux 배포에는 자체 Linux 사용자 계정 및 암호.  언제 든 지 추가 배포를 다시 설치 또는 다시 설정 Linux 사용자 계정을 구성 해야 합니다.  와 별개의 Windows 사용자 계정에도, Linux 사용자 계정 에서만 배포당 독립 받지 않습니다.
+Linux 용 Windows 하위 시스템에서 실행 되는 각 Linux 배포에는 고유한 Linux 사용자 계정 및 암호가 있습니다.  배포를 추가, 다시 설치 또는 다시 설정 하는 경우 언제 든 지 Linux 사용자 계정을 구성 해야 합니다.  Linux 사용자 계정은 배포 마다 독립적이 지 않으며 Windows 사용자 계정과 독립적입니다.
 
-## <a name="resetting-your-linux-password"></a>Linux 암호를 다시 설정
+## <a name="resetting-your-linux-password"></a>Linux 암호 재설정
 
-변경할 현재 암호를 알고 있고 Linux 사용자 계정에 액세스할 경우 Linux를 사용 하 여 암호 재설정 해당 배포-가장 가능성이 높은 도구 `passwd`합니다.
+Linux 사용자 계정에 대 한 액세스 권한이 있고 현재 암호를 알고 있는 경우 해당 배포 `passwd`의 linux 암호 재설정 도구를 사용 하 여 변경 합니다.
 
-배포에 따라 옵션 하지 않은 경우에 기본 사용자를 다시 설정 하 여 암호를 재설정할 수 있습니다.
+배포에 따라 옵션이 아닌 경우 기본 사용자를 다시 설정 하 여 암호를 다시 설정할 수 있습니다.
 
-WSL은 사용자 계정을 자동으로 식별 하는 기본 사용자 태그는 WSL 시작할 때 로그인을 제공 합니다.  대부분의 배포 루트 및 루트 사용자로 설정 된 암호가 없거나를 사용 하 여 기본 사용자를 설정 하는 명령을 포함 하므로 기본 사용자 루트 변경은 등 암호 재설정에 대 한 유용한 도구입니다.
+WSL은 WSL을 시작할 때 자동으로 로그인 하는 사용자 계정을 식별 하는 기본 사용자 태그를 제공 합니다.  대부분의 배포에는 기본 사용자를 루트로 설정 하는 명령과 암호를 설정 하지 않은 루트 사용자를 설정 하는 명령이 포함 되어 있으므로, 기본 사용자를 root로 변경 하면 암호 재설정과 같은 작업을 수행 하는 데 유용한 도구입니다.
 
-### <a name="for-creators-update-and-earlier"></a>크리에이터 스 업데이트 이상
-실행 중인 경우 Windows 10 크리에이터 스 업데이트 하거나 이전에 다음 명령을 실행 하 여 기본 Bash 사용자를 변경할 수 있습니다.
+### <a name="for-creators-update-and-earlier"></a>작성자 업데이트 및 이전 버전
+Windows 10 크리에이터 업데이트 또는 이전 버전을 실행 하는 경우 다음 명령을 실행 하 여 기본 Bash 사용자를 변경할 수 있습니다.
 
-1. 기본 사용자 변경 `root`:
+1. 기본 사용자를 `root`다음과 같이 변경 합니다.
 
     ```console
     C:\> lxrun /setdefaultuser root
     ```
 
-1. 실행할 `bash.exe` 지금 로그인으로 `root`:
+1. 지금 `bash.exe` 다음으로 `root`로그인 하려면 실행:
 
     ```console
     C:\> bash.exe
     ```
 
-1. 분포의 암호 명령을 사용 하 여 암호를 재설정 하 고 Linux 콘솔을 닫습니다.
+1. 배포의 암호 명령을 사용 하 여 암호를 재설정 하 고 Linux 콘솔을 닫습니다.
 
     ```BASH
     $ passwd username
     $ exit
     ```
 
-1. Windows CMD에서 일반적인 Linux 사용자 계정으로 다시 기본 사용자를 다시 설정 합니다.
+1. Windows CMD에서 기본 사용자를 일반 Linux 사용자 계정으로 다시 설정 합니다.
 
     ```console
     C:\> lxrun.exe /setdefaultuser username
     ```
 
-### <a name="for-fall-creators-update-and-later"></a>Fall Creators Update에 대 한 이상
-특정 배포에 사용할 수 있는 명령을 확인 하려면 `[distro.exe] /?`합니다.
+### <a name="for-fall-creators-update-and-later"></a>적합 하지 않은 작성자 업데이트 이상
+특정 배포에 사용할 수 있는 명령을 확인 하려면를 실행 `[distro.exe] /?`합니다.
     
-예를 들어, Ubuntu를 사용 하 여 설치 합니다.
+예: Ubuntu가 설치 된 경우:
 
 ```console
 C:\> ubuntu.exe /?
@@ -93,51 +93,51 @@ Usage:
       - Print this usage message.
 ```
 
-Ubuntu를 사용 하는 단계별 지침 단계:
+Ubuntu를 사용 하는 단계별 지침:
 
-1. 열기 CMD
-1. 기본 Linux 사용자로 `root`:
+1. CMD 열기
+1. 기본 Linux 사용자를 다음으로 `root`설정 합니다.
 
     ```console
     C:\> ubuntu config --default-user root
     ```    
 
-1. Linux 배포를 시작 (`ubuntu`).  자동으로로 로그인 `root`:
+1. Linux 배포 (`ubuntu`)를 시작 합니다.  자동으로 로그인 `root`합니다.
 
-1. 사용 하 여 암호 재설정을 `passwd` 명령:
+1. 다음 `passwd` 명령을 사용 하 여 암호를 다시 설정 합니다.
 
     ```BASH
     $ passwd username
     ```
 
-1. Windows CMD에서 일반적인 Linux 사용자 계정으로 다시 기본 사용자를 다시 설정 합니다.
+1. Windows CMD에서 기본 사용자를 일반 Linux 사용자 계정으로 다시 설정 합니다.
 
     ```console
     C:\> ubuntu config --default-user username
     ```
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
-WSL에서 사용 권한을 제공 하는 경우 염두에 두 가지 중요 한 개념이 있습니다.
+WSL의 사용 권한과 관련 하 여 다음 두 가지 중요 한 개념을 염두에 두어야 합니다.
 
-1. Windows 권한 모델을 Windows 리소스에 대 한 프로세스의 권한을 제어합니다
-2. Linux 권한 모델에는 Linux 리소스에 대 한 프로세스의 권한을 제어합니다
+1. Windows 사용 권한 모델은 Windows 리소스에 대 한 프로세스의 권한을 제어 합니다.
+2. Linux 권한 모델은 Linux 리소스에 대 한 프로세스의 권한을 제어 합니다.
 
-WSL에서 Linux를 실행 하는 경우 Linux는 프로세스와 동일한 Windows 권한을 갖습니다. 두 사용 권한 수준 중 하나로 Linux는 시작할 수 있습니다.
+WSL에서 Linux를 실행 하는 경우 Linux는이를 시작 하는 프로세스와 동일한 Windows 사용 권한을 갖습니다. Linux는 다음 두 가지 권한 수준 중 하나로 시작할 수 있습니다.
 
-* 일반 (권한이 상승 되지 않은): Linux에서 로그인 한 사용자의 권한으로 실행
-* 관리자 권한/관리자: 관리자 권한/관리자 Windows 권한으로 실행 되는 Linux
+* 보통 (권한 없음): Linux는 로그인 한 사용자의 권한으로 실행 됩니다.
+* 관리자 권한/관리자: 관리자 권한으로 실행 되는 Linux 및 Windows 권한
 
-> 수 있기 때문에 관리자 권한으로 액세스/수정 (따라서 손상) 시스템 차원의 설정 및 시스템-wide/보호 된 데이터 **하지 말고** 는 Windows 또는 Linux에 반드시 필요한 경우가 아니면 관리자 권한 프로세스를 실행 합니다. 응용 프로그램/도구/셸!
+> 상승 된 프로세스는 시스템 수준 설정과 시스템 차원의/보호 된 데이터에 액세스/수정 (따라서 손상) 할 수 있기 때문에 Windows 또는 Linux 응용 프로그램/도구 인지 여부에 관계 없이 상승 된 프로세스를 시작 **하지 않습니다** . 셸에!
 
-위의 Windows 권한은 Linux 인스턴스 내에서 사용 권한을 무관 다음과 같습니다. "루트 권한" Linux Linux 환경 및 파일 시스템 내에서 사용자의 권한에 영향을 줍니다. 영향을 미치지 않습니다 Windows 권한 부여에 있습니다. 따라서 루트로 Linux 프로세스를 실행 (예: 통해 `sudo`) Linux 환경 내에서 권한 관리를 처리 하는 유일한 부여 합니다.
+위의 Windows 권한은 Linux 인스턴스 내의 권한과는 독립적입니다. Linux "루트 권한"은 Linux 환경 & filesystem에서 사용자의 권한에만 영향을 줍니다. 부여 된 Windows 권한에는 영향을 주지 않습니다. 따라서 linux 프로세스를 루트 (예: via `sudo`)로 실행 하면 linux 환경 내에서 해당 프로세스 관리자 권한만 부여 됩니다.
 
-**예:**     
-Windows 관리자 권한으로 Bash 세션에 액세스할 수 있습니다 `cd /mnt/c/Users/Administrator` 관리자 권한이 사용 권한 거부 "오류를 볼 수 없는 Bash 세션 동안.
+**예제:**     
+관리자 권한이 없는 bash 세션이 "권한 거부" `cd /mnt/c/Users/Administrator` 오류를 표시 하는 동안 Windows 관리자 권한이 있는 bash 세션에서 액세스할 수 있습니다.
 
-Linux에서 입력 `sudo cd /mnt/c/Users/Administrator` Windows 내에서 사용 권한을 Windows에서 관리 되므로 관리자의 디렉터리에 대 한 액세스 권한을 부여 하지 됩니다.
+Linux에서는 windows 내의 `sudo cd /mnt/c/Users/Administrator` 권한이 windows에서 관리 되기 때문에를 입력 하면 관리자 디렉터리에 대 한 액세스 권한이 부여 되지 않습니다.
 
-Linux 권한 모델이 사용자에 게 현재 Linux 사용자를 기반으로 하는 권한이 있는 Linux 환경 내에 있을 때 중요 합니다.
+Linux 권한 모델은 사용자에 게 현재 Linux 사용자에 따라 사용 권한이 있는 Linux 환경 내에서 중요 합니다.
 
-**예:**  
-Sudo 그룹에 사용자가 실행할 수 있습니다 `sudo apt update`합니다.
+**예제:**  
+Sudo 그룹의 사용자가 실행 `sudo apt update`될 수 있습니다.

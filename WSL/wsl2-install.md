@@ -10,7 +10,7 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 3ad180ecc9deaa1566e9870700b26f82f631c7f1
 ms.sourcegitcommit: 9ad7a54668f39677e9660186e4f5172ea2597e2b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68246871"

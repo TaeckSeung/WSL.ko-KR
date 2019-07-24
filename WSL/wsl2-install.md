@@ -1,54 +1,66 @@
 ---
-title: WSL 2를 설치 합니다.
-description: WSL 2에 대 한 설치 지침
-keywords: BashOnWindows, bash, wsl, wsl2, windows, linux, windowssubsystem, ubuntu, debian, suse, windows 10 용 windows 하위 시스템에 설치
+title: WSL 2 설치
+description: WSL 2의 설치 지침
+keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 2af43a046333fc8c7b4142cdc5077cdfbf29fea7
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
-ms.translationtype: MT
+ms.openlocfilehash: 3ad180ecc9deaa1566e9870700b26f82f631c7f1
+ms.sourcegitcommit: 9ad7a54668f39677e9660186e4f5172ea2597e2b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038083"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246871"
 ---
-# <a name="installation-instructions-for-wsl-2"></a>WSL 2에 대 한 설치 지침
+# <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
-설치 하 고 사용 하 여 시작 WSL 2는 다음 단계를 완료 합니다.
+WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니다.
 
-- ' 가상 컴퓨터 플랫폼 ' 선택적 구성 요소를 사용 하도록 설정
-- WSL 2 명령줄을 사용 하 여 지원 되는 배포판 설정
-- 사용할 WSL에 배포판의 버전 확인
+- '가상 머신 플랫폼' 옵션 구성 요소 사용
+- 명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
+- Distro가 사용 중인 WSL 버전 확인
 
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>' 가상 컴퓨터 플랫폼 ' 선택적 구성 요소를 사용 하도록 설정
+WSL 2를 사용하려면 Windows 10 빌드 18917 이상을 실행해야 하며 WSL이 이미 설치되어 있어야 합니다([여기](./install-win10.md)에서 지침을 찾을 수 있음). 
 
-관리자 권한으로 PowerShell을 열고 실행 합니다.
+## <a name="enable-the-virtual-machine-platform-optional-component"></a>'가상 머신 플랫폼' 옵션 구성 요소 사용
+
+관리자 권한으로 PowerShell을 열어 실행합니다.
 
 `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
 
-이러한 변경 내용을 사용 하도록 설정 된 후 컴퓨터를 다시 시작 해야 합니다.
+이러한 변경 내용을 사용한 후에는 컴퓨터를 다시 시작해야 합니다.
 
-## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>WSL 2 명령줄을 사용 하 여 지원 되는 배포판 설정
+## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 
-Powershell을 실행 합니다.
+PowerShell에서 실행하고
 
 `wsl --set-version <Distro> 2`
 
-바꿔야 및 `<Distro>` 배포의 실제 이름입니다. (이러한 명령을 사용 하 여 찾을 수 있습니다: `wsl -l`). 위와 동일한 명령을 실행 하지만 ' 2'와 ' 1'을 대체 하 여 언제 든 지에서 WSL 1로 다시 변경할 수 있습니다.
+`<Distro>`를 Distro의 실제 이름으로 대체해야 합니다. (`wsl -l` 명령을 사용하여 이를 찾을 수 있습니다.) 위와 동일한 명령을 실행하되 '2'를 '1'로 바꾸면 언제든지 WSL 1로 다시 변경할 수 있습니다.
 
-또한 WSL 2 기본 아키텍처를 확인 하려면이 명령을 사용 하 여 수행할 수 있습니다.
+또한 WSL 2를 기본 아키텍처로 설정하려는 경우 이 명령을 사용하여 수행할 수 있습니다.
 
 `wsl --set-default-version 2`
 
-모든 이렇게 하면 설치 하는 새 배포판 WSL 2 배포판으로 초기화 되어야 합니다.
+이렇게 하면 설치한 새로운 Distro가 WSL 2 Distro로 초기화됩니다.
 
-## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>사용할 WSL 배포의 버전 확인 완료
+## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>Distro가 사용 중인 WSL의 버전을 확인하는 작업으로 마무리합니다.
 
-확인 하려면 다음 명령을 사용 하는 각 배포판을 사용 하는 WSL의 어떤 버전:
+Distro가 사용 중인 WSL의 버전을 확인하려면 다음 명령을 사용합니다.
 
 `wsl --list --verbose` 또는 `wsl -l -v`
 
-위에서 선택한 배포판 'version' 열 아래에 있는 '2'를 이제 표시 됩니다. 이 과정을 완료 했으므로 자유롭게 WSL 2 배포를 사용 하 여 시작 하십시오! 
+위에서 선택한 Distro는 이제 'version' 열 아래에 '2'를 표시해야 합니다. 이제 WSL 2 Distro를 자유롭게 사용할 수 있습니다. 
+
+## <a name="troubleshooting"></a>문제 해결: 
+
+다음은 WSL 2를 설치할 때 발생하는 관련 오류 및 권장되는 수정 사항입니다. 기타 일반적인 WSL 오류 및 해결 방법은 [WSL 문제 해결 페이지](troubleshooting.md)를 참조하세요.
+
+* **0x80070003 오류 또는 0x80370102 오류로 인해 설치하지 못했습니다.**
+    * 컴퓨터 BIOS 내에서 가상화를 사용하도록 설정했는지 확인합니다. 이 방법에 대한 지침은 컴퓨터마다 다르며, CPU 관련 옵션에 있을 가능성이 높습니다.
+   
+* **업그레이드 시도 중 오류: `Invalid command line option: wsl --set-version Ubuntu 2`**
+    * Linux용 Windows 하위 시스템을 사용하도록 설정하고 Windows Build 버전 18917 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 Powershell 프롬프트에서 이 명령을 실행합니다. 전체 WSL 설치 지침은 [여기](./install-win10.md)에서 찾을 수 있습니다.

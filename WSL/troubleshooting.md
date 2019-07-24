@@ -1,6 +1,6 @@
 ---
-title: Linux 용 Windows Susbystem 문제 해결
-description: 실행 하는 사용자 문제 및 일반적인 오류에 대 한 자세한 정보를 제공 Linux 용 Windows Susbystem에서 Linux를 실행 하는 동안.
+title: Linux 용 Windows 하위 시스템 문제 해결
+description: Linux 용 Windows 하위 시스템에서 Linux를 실행 하는 동안 사용자가 실행 하는 일반적인 오류 및 문제에 대 한 자세한 정보를 제공 합니다.
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 author: scooley
 ms.author: scooley
@@ -8,163 +8,163 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.openlocfilehash: 0c84fb710eca1b0ffabe437f98d5c17edbd6ea39
+ms.sourcegitcommit: ead64b13501d6cb7170adafbb5624f4984a0af16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040848"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307643"
 ---
-# <a name="troubleshooting-windows-subsystem-for-linux"></a><span data-ttu-id="56486-104">Linux 용 Windows 하위 시스템 문제 해결</span><span class="sxs-lookup"><span data-stu-id="56486-104">Troubleshooting Windows Subsystem for Linux</span></span>
+# <a name="troubleshooting-windows-subsystem-for-linux"></a><span data-ttu-id="8e657-104">Linux 용 Windows 하위 시스템 문제 해결</span><span class="sxs-lookup"><span data-stu-id="8e657-104">Troubleshooting Windows Subsystem for Linux</span></span>
 
-### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a><span data-ttu-id="56486-105">Bash의 VPN에 연결 되 면 네트워크 연결이 끊어지는</span><span class="sxs-lookup"><span data-stu-id="56486-105">Bash loses network connectivity once connected to a VPN</span></span>
+### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a><span data-ttu-id="8e657-105">Bash는 VPN에 연결 된 후 네트워크 연결을 손실 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-105">Bash loses network connectivity once connected to a VPN</span></span>
 
-<span data-ttu-id="56486-106">Windows에서 VPN에 연결한 후 bash 네트워크 연결이 끊어지는 경우 bash 내에서이 해결 방법을 시도 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-106">If after connecting to a VPN on Windows, bash loses network connectivity, try this workaround from within bash.</span></span> <span data-ttu-id="56486-107">이 해결 방법은 직접을 통해 DNS 확인을 재정의할 수 있습니다 `/etc/resolv.conf`합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-107">This workaround will allow you to manually override the DNS resolution through `/etc/resolv.conf`.</span></span>
+<span data-ttu-id="8e657-106">Windows에서 VPN에 연결한 후 bash에서 네트워크 연결이 끊어지면 bash 내에서이 해결 방법을 시도해 보세요.</span><span class="sxs-lookup"><span data-stu-id="8e657-106">If after connecting to a VPN on Windows, bash loses network connectivity, try this workaround from within bash.</span></span> <span data-ttu-id="8e657-107">이 해결 방법에서는를 통해 `/etc/resolv.conf`DNS 확인을 수동으로 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-107">This workaround will allow you to manually override the DNS resolution through `/etc/resolv.conf`.</span></span>
 
-1. <span data-ttu-id="56486-108">작업과에서 vpn DNS 서버의 기록 `ipconfig.exe /all`</span><span class="sxs-lookup"><span data-stu-id="56486-108">Take a note of the DNS server of the VPN from doing `ipconfig.exe /all`</span></span>
-2. <span data-ttu-id="56486-109">기존 resolv.conf의 복사본 `sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span><span class="sxs-lookup"><span data-stu-id="56486-109">Make a copy of the existing resolv.conf `sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span></span>
-3. <span data-ttu-id="56486-110">현재 resolv.con 연결 해제 `sudo unlink /etc/resolv.conf`</span><span class="sxs-lookup"><span data-stu-id="56486-110">Unlink the current resolv.con `sudo unlink /etc/resolv.conf`</span></span>
+1. <span data-ttu-id="8e657-108">이 작업을 수행 하는 데 VPN의 DNS 서버를 적어 둡니다.`ipconfig.exe /all`</span><span class="sxs-lookup"><span data-stu-id="8e657-108">Take a note of the DNS server of the VPN from doing `ipconfig.exe /all`</span></span>
+2. <span data-ttu-id="8e657-109">기존 resolv.conf의 복사본 만들기`sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span><span class="sxs-lookup"><span data-stu-id="8e657-109">Make a copy of the existing resolv.conf `sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span></span>
+3. <span data-ttu-id="8e657-110">현재 resolv.conf의 연결을 해제 합니다.`sudo unlink /etc/resolv.conf`</span><span class="sxs-lookup"><span data-stu-id="8e657-110">Unlink the current resolv.con `sudo unlink /etc/resolv.conf`</span></span>
 4. `sudo mv /etc/resolv.conf.new /etc/resolv.conf`
-5. <span data-ttu-id="56486-111">열기 `/etc/resolv.conf` 및</span><span class="sxs-lookup"><span data-stu-id="56486-111">Open `/etc/resolv.conf` and</span></span> <br/>
-   <span data-ttu-id="56486-112">a.</span><span class="sxs-lookup"><span data-stu-id="56486-112">a.</span></span> <span data-ttu-id="56486-113">파일에서 첫 번째 줄을 삭제 "\# WSL에서이 파일 자동으로 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-113">Delete the first line from the file, which says "\# This file was automatically generated by WSL.</span></span> <span data-ttu-id="56486-114">이 파일의 자동 생성을 중지 하려면이 줄을 제거 합니다. "입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-114">To stop automatic generation of this file, remove this line.".</span></span> <br/>
-   <span data-ttu-id="56486-115">b.</span><span class="sxs-lookup"><span data-stu-id="56486-115">b.</span></span> <span data-ttu-id="56486-116">DNS 서버 목록에서 첫 번째 항목으로 위에서 (1)에서 DNS 항목을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-116">Add the DNS entry from (1) above as the very first entry in the list of DNS servers.</span></span> <br/>
-   <span data-ttu-id="56486-117">c.</span><span class="sxs-lookup"><span data-stu-id="56486-117">c.</span></span> <span data-ttu-id="56486-118">파일을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-118">Close the file.</span></span> <br/>
+5. <span data-ttu-id="8e657-111">및 `/etc/resolv.conf` 열기</span><span class="sxs-lookup"><span data-stu-id="8e657-111">Open `/etc/resolv.conf` and</span></span> <br/>
+   <span data-ttu-id="8e657-112">a.</span><span class="sxs-lookup"><span data-stu-id="8e657-112">a.</span></span> <span data-ttu-id="8e657-113">파일에서 첫 번째 줄을 삭제 합니다. 즉,\# "이 파일은 wsl에 의해 자동으로 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-113">Delete the first line from the file, which says "\# This file was automatically generated by WSL.</span></span> <span data-ttu-id="8e657-114">이 파일의 자동 생성을 중지 하려면이 줄을 제거 하십시오. "</span><span class="sxs-lookup"><span data-stu-id="8e657-114">To stop automatic generation of this file, remove this line.".</span></span> <br/>
+   <span data-ttu-id="8e657-115">b.</span><span class="sxs-lookup"><span data-stu-id="8e657-115">b.</span></span> <span data-ttu-id="8e657-116">(1)의 DNS 항목을 DNS 서버 목록의 첫 번째 항목으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-116">Add the DNS entry from (1) above as the very first entry in the list of DNS servers.</span></span> <br/>
+   <span data-ttu-id="8e657-117">c.</span><span class="sxs-lookup"><span data-stu-id="8e657-117">c.</span></span> <span data-ttu-id="8e657-118">파일을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-118">Close the file.</span></span> <br/>
 
-<span data-ttu-id="56486-119">VPN 연결을 끊 었는 후 변경 내용이 되돌리려면 `/etc/resolv.conf`합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-119">Once you have disconnected the VPN, you will have to revert the changes to `/etc/resolv.conf`.</span></span> <span data-ttu-id="56486-120">이렇게 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-120">To do this, do:</span></span>
+<span data-ttu-id="8e657-119">VPN의 연결을 끊은 후에는 변경 내용을로 `/etc/resolv.conf`되돌려야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-119">Once you have disconnected the VPN, you will have to revert the changes to `/etc/resolv.conf`.</span></span> <span data-ttu-id="8e657-120">이렇게 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-120">To do this, do:</span></span>
 1. `cd /etc`
 2. `sudo mv resolv.conf resolv.conf.new`
 3. `sudo ln -s ../run/resolvconf/resolv.conf resolv.conf`
 
-### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a><span data-ttu-id="56486-121">WSL를 시작 하거나 배포를 설치 하는 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-121">Starting WSL or installing a distribution returns an error code</span></span>
+### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a><span data-ttu-id="8e657-121">WSL을 시작 하거나 배포를 설치 하면 오류 코드가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-121">Starting WSL or installing a distribution returns an error code</span></span>
 
-<span data-ttu-id="56486-122">따릅니다 [이러한 지침](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs) 자세한 로그를 수집 하 여 GitHub에서 문제를 제출 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-122">Follow [these instructions](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs) to collect detailed logs and file an issue on our GitHub.</span></span>
+<span data-ttu-id="8e657-122">자세한 로그를 수집 하 고 GitHub에서 문제를 파일 하려면 [다음 지침](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs) 을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="8e657-122">Follow [these instructions](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs) to collect detailed logs and file an issue on our GitHub.</span></span>
 
-### <a name="updating-bash-on-ubuntu-on-windows"></a><span data-ttu-id="56486-123">Windows에서 ubuntu의 Bash를 업데이트 하는 중</span><span class="sxs-lookup"><span data-stu-id="56486-123">Updating Bash on Ubuntu on Windows</span></span>
+### <a name="updating-bash-on-ubuntu-on-windows"></a><span data-ttu-id="8e657-123">Windows에서 Ubuntu의 Bash 업데이트</span><span class="sxs-lookup"><span data-stu-id="8e657-123">Updating Bash on Ubuntu on Windows</span></span>
 
-<span data-ttu-id="56486-124">업데이트 필요할 수 있는 Windows에서 ubuntu의 Bash의 두 구성 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-124">There are two components of Bash on Ubuntu on Windows that can require updating.</span></span> 
+<span data-ttu-id="8e657-124">업데이트 해야 할 수 있는 Windows의 Ubuntu에는 Bash의 두 구성 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-124">There are two components of Bash on Ubuntu on Windows that can require updating.</span></span> 
 
-1. <span data-ttu-id="56486-125">Linux 용 Windows 하위 시스템</span><span class="sxs-lookup"><span data-stu-id="56486-125">The Windows Subsystem for Linux</span></span>
+1. <span data-ttu-id="8e657-125">Linux 용 Windows 하위 시스템</span><span class="sxs-lookup"><span data-stu-id="8e657-125">The Windows Subsystem for Linux</span></span>
   
-   <span data-ttu-id="56486-126">에 모든 새 수정 설명 하면 Windows에서 ubuntu의 Bash의이 부분을 업그레이드 합니다 [릴리스](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-126">Upgrading this portion of Bash on Ubuntu on Windows will enable any new fixes outlines in the [release notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes).</span></span> <span data-ttu-id="56486-127">Windows 참가자 프로그램에 구독 하 고 최신 빌드 인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-127">Ensure that you are subscribed to the Windows Insider Program and that your build is up to date.</span></span> <span data-ttu-id="56486-128">재설정에 Ubuntu를 포함 하 여 세밀 하 게 세분화 제어 체크 아웃 인스턴스를 [명령 참조 페이지](https://msdn.microsoft.com/en-us/commandline/wsl/reference)합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-128">For finer grain control including resetting your Ubuntu instance check out the [command reference page](https://msdn.microsoft.com/en-us/commandline/wsl/reference).</span></span>
+   <span data-ttu-id="8e657-126">Windows의 Ubuntu에 있는 Bash의이 부분을 업그레이드 하면 [릴리스 정보](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)에서 새로운 수정 개요가 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-126">Upgrading this portion of Bash on Ubuntu on Windows will enable any new fixes outlines in the [release notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes).</span></span> <span data-ttu-id="8e657-127">Windows 참가자 프로그램을 구독 하 고 빌드가 최신 상태 인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-127">Ensure that you are subscribed to the Windows Insider Program and that your build is up to date.</span></span> <span data-ttu-id="8e657-128">Ubuntu 인스턴스를 다시 설정 하는 등의 미세 제어를 위해 [명령 참조 페이지](https://msdn.microsoft.com/en-us/commandline/wsl/reference)를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-128">For finer grain control including resetting your Ubuntu instance check out the [command reference page](https://msdn.microsoft.com/en-us/commandline/wsl/reference).</span></span>
 
-2. <span data-ttu-id="56486-129">Ubuntu 사용자 이진 파일</span><span class="sxs-lookup"><span data-stu-id="56486-129">The Ubuntu user binaries</span></span> 
+2. <span data-ttu-id="8e657-129">Ubuntu 사용자 이진 파일</span><span class="sxs-lookup"><span data-stu-id="8e657-129">The Ubuntu user binaries</span></span> 
 
-   <span data-ttu-id="56486-130">Windows에서 ubuntu의 Bash의이 부분을 업그레이드 apt get을 통해 설치 된 응용 프로그램을 포함 하 여 Ubuntu 사용자 바이너리에 포함 된 업데이트 설치 됩니다.</span><span class="sxs-lookup"><span data-stu-id="56486-130">Upgrading this portion of Bash on Ubuntu on Windows will install any updates to the Ubuntu user binaries including applications that you have installed via apt-get.</span></span> <span data-ttu-id="56486-131">Bash에서 다음 명령을 실행을 업데이트 하려면:</span><span class="sxs-lookup"><span data-stu-id="56486-131">To update run the following commands in Bash:</span></span>
+   <span data-ttu-id="8e657-130">Windows의 Ubuntu에 있는 Bash의이 부분을 업그레이드 하면 apt-get을 통해 설치한 응용 프로그램을 포함 하 여 Ubuntu 사용자 이진 파일에 대 한 업데이트를 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-130">Upgrading this portion of Bash on Ubuntu on Windows will install any updates to the Ubuntu user binaries including applications that you have installed via apt-get.</span></span> <span data-ttu-id="8e657-131">업데이트 하려면 Bash에서 다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-131">To update run the following commands in Bash:</span></span>
   
    1. `apt-get update`
    2. `apt-get upgrade`
   
-### <a name="apt-get-upgrade-errors"></a><span data-ttu-id="56486-132">Apt get 업그레이드 오류</span><span class="sxs-lookup"><span data-stu-id="56486-132">Apt-get upgrade errors</span></span>
-<span data-ttu-id="56486-133">일부 패키지는 아직 구현 되지 않은 기능을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-133">Some packages use features that we haven't implemented yet.</span></span> <span data-ttu-id="56486-134">`udev`예를 들어, 아직 지원 되지 않으며 여러 `apt-get upgrade` 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-134">`udev`, for example, isn't supported yet and causes several `apt-get upgrade` errors.</span></span>
+### <a name="apt-get-upgrade-errors"></a><span data-ttu-id="8e657-132">Apt-업그레이드 오류 가져오기</span><span class="sxs-lookup"><span data-stu-id="8e657-132">Apt-get upgrade errors</span></span>
+<span data-ttu-id="8e657-133">일부 패키지는 아직 구현 하지 않은 기능을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-133">Some packages use features that we haven't implemented yet.</span></span> <span data-ttu-id="8e657-134">`udev`예를 들어,는 아직 지원 되지 않으며 여러 `apt-get upgrade` 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-134">`udev`, for example, isn't supported yet and causes several `apt-get upgrade` errors.</span></span>
 
-<span data-ttu-id="56486-135">관련 된 문제를 해결 하려면 `udev`, 다음 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-135">To fix issues related to `udev`, follow the following steps:</span></span>
+<span data-ttu-id="8e657-135">와 관련 된 `udev`문제를 해결 하려면 다음 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-135">To fix issues related to `udev`, follow the following steps:</span></span>
 
-1. <span data-ttu-id="56486-136">다음을 작성 `/usr/sbin/policy-rc.d` 변경 내용을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-136">Write the following to `/usr/sbin/policy-rc.d` and save your changes.</span></span>
+1. <span data-ttu-id="8e657-136">에 다음을 `/usr/sbin/policy-rc.d` 작성 하 고 변경 내용을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-136">Write the following to `/usr/sbin/policy-rc.d` and save your changes.</span></span>
   
    ``` BASH
    #!/bin/sh
    exit 101
    ```
   
-2. <span data-ttu-id="56486-137">추가 권한을 실행 `/usr/sbin/policy-rc.d`</span><span class="sxs-lookup"><span data-stu-id="56486-137">Add execute permissions to `/usr/sbin/policy-rc.d`</span></span>
+2. <span data-ttu-id="8e657-137">실행 권한 추가`/usr/sbin/policy-rc.d`</span><span class="sxs-lookup"><span data-stu-id="8e657-137">Add execute permissions to `/usr/sbin/policy-rc.d`</span></span>
    ``` BASH
    chmod +x /usr/sbin/policy-rc.d
    ```
   
-3. <span data-ttu-id="56486-138">다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-138">Run the following commands</span></span>
+3. <span data-ttu-id="8e657-138">다음 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-138">Run the following commands</span></span>
    ``` BASH
    dpkg-divert --local --rename --add /sbin/initctl
    ln -s /bin/true /sbin/initctl
    ```
   
-### <a name="error-0x80040306-on-installation"></a><span data-ttu-id="56486-139">"Error: 0x80040306 "설치</span><span class="sxs-lookup"><span data-stu-id="56486-139">"Error: 0x80040306" on installation</span></span>
-<span data-ttu-id="56486-140">이 레거시 콘솔을 지원 하지 않습니다는 팩트와 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-140">This has to do with the fact that we do not support legacy console.</span></span>
-<span data-ttu-id="56486-141">레거시 콘솔 사용 하지 않으려면:</span><span class="sxs-lookup"><span data-stu-id="56486-141">To turn off legacy console:</span></span>
+### <a name="error-0x80040306-on-installation"></a><span data-ttu-id="8e657-139">"Error: 0x80040306 "설치 시</span><span class="sxs-lookup"><span data-stu-id="8e657-139">"Error: 0x80040306" on installation</span></span>
+<span data-ttu-id="8e657-140">레거시 콘솔을 지원 하지 않기 때문에이 작업을 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-140">This has to do with the fact that we do not support legacy console.</span></span>
+<span data-ttu-id="8e657-141">레거시 콘솔을 해제 하려면:</span><span class="sxs-lookup"><span data-stu-id="8e657-141">To turn off legacy console:</span></span>
 
-1. <span data-ttu-id="56486-142">Cmd.exe를 열으십시오</span><span class="sxs-lookup"><span data-stu-id="56486-142">Open cmd.exe</span></span>
-1. <span data-ttu-id="56486-143">제목을 마우스 오른쪽 단추로 클릭 모음-> 속성에는 레거시 콘솔 사용의 선택을 취소-></span><span class="sxs-lookup"><span data-stu-id="56486-143">Right click title bar -> Properties -> Uncheck Use legacy console</span></span>
-1. <span data-ttu-id="56486-144">확인을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-144">Click OK</span></span>
+1. <span data-ttu-id="8e657-142">Cmd.exe를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-142">Open cmd.exe</span></span>
+1. <span data-ttu-id="8e657-143">제목 표시줄-> 속성을 마우스 오른쪽 단추로 클릭 > 기존 콘솔 사용 선택 취소</span><span class="sxs-lookup"><span data-stu-id="8e657-143">Right click title bar -> Properties -> Uncheck Use legacy console</span></span>
+1. <span data-ttu-id="8e657-144">확인을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-144">Click OK</span></span>
 
-### <a name="error-0x80040154-after-windows-update"></a><span data-ttu-id="56486-145">"Error: 0x80040154 "Windows 업데이트 후</span><span class="sxs-lookup"><span data-stu-id="56486-145">"Error: 0x80040154" after Windows update</span></span>
-<span data-ttu-id="56486-146">Linux 기능에 대 한 Windows 하위 시스템을 비활성화할 수 있습니다 Windows 업데이트 중입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-146">The Windows Subsystem for Linux feature may be disabled during a Windows update.</span></span> <span data-ttu-id="56486-147">이 경우 Windows 기능을 다시 사용 하도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-147">If this happens the Windows feature must be re-enabled.</span></span> <span data-ttu-id="56486-148">Linux에서 찾을 수 있습니다 Windows 하위 시스템을 사용 하도록 설정 하는 것에 대 한 지침을 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-148">Instructions for enabling the Windows Subsystem for Linux can be found in the [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).</span></span>
+### <a name="error-0x80040154-after-windows-update"></a><span data-ttu-id="8e657-145">"Error: 0x80040154 "Windows 업데이트 후</span><span class="sxs-lookup"><span data-stu-id="8e657-145">"Error: 0x80040154" after Windows update</span></span>
+<span data-ttu-id="8e657-146">Windows 업데이트를 실행 하는 동안 Linux 용 Windows 하위 시스템 기능을 사용 하지 못할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-146">The Windows Subsystem for Linux feature may be disabled during a Windows update.</span></span> <span data-ttu-id="8e657-147">이 문제가 발생 하면 Windows 기능을 다시 사용 하도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-147">If this happens the Windows feature must be re-enabled.</span></span> <span data-ttu-id="8e657-148">Linux 용 Windows 하위 시스템을 사용 하도록 설정 하는 방법에 대 한 지침은 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-148">Instructions for enabling the Windows Subsystem for Linux can be found in the [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).</span></span>
 
-### <a name="changing-the-display-language"></a><span data-ttu-id="56486-149">표시 언어 변경</span><span class="sxs-lookup"><span data-stu-id="56486-149">Changing the display language</span></span>
-<span data-ttu-id="56486-150">WSL 설치는 Windows 설치의 로캘이 일치 하는 Ubuntu 로캘을 자동으로 변경 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-150">WSL install will try to automatically change the Ubuntu locale to match the locale of your Windows install.</span></span>  <span data-ttu-id="56486-151">이 문제를 원하지 않는 경우 설치가 완료 되 면 Ubuntu 로캘을 변경 하려면이 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-151">If you do not want this behavior you can run this command to change the Ubuntu locale after install completes.</span></span>  <span data-ttu-id="56486-152">이 변경 내용을 적용 하려면 bash.exe를 다시 시작 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-152">You will have to relaunch bash.exe for this change to take effect.</span></span>
+### <a name="changing-the-display-language"></a><span data-ttu-id="8e657-149">표시 언어 변경</span><span class="sxs-lookup"><span data-stu-id="8e657-149">Changing the display language</span></span>
+<span data-ttu-id="8e657-150">WSL install은 Windows 설치의 로캘과 일치 하도록 Ubuntu 로캘을 자동으로 변경 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-150">WSL install will try to automatically change the Ubuntu locale to match the locale of your Windows install.</span></span>  <span data-ttu-id="8e657-151">이 동작을 원하지 않는 경우 설치가 완료 된 후이 명령을 실행 하 여 Ubuntu 로캘을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-151">If you do not want this behavior you can run this command to change the Ubuntu locale after install completes.</span></span>  <span data-ttu-id="8e657-152">이 변경 내용이 적용 되려면 bash를 다시 실행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-152">You will have to relaunch bash.exe for this change to take effect.</span></span>
 
-<span data-ttu-id="56486-153">아래 예제에서는 EN-US 로캘 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-153">The below example changes to locale to en-US:</span></span>
+<span data-ttu-id="8e657-153">아래 예제에서는 로캘을 en-us로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-153">The below example changes to locale to en-US:</span></span>
 ``` BASH
 sudo update-locale LANG=en_US.UTF8
 ```
 
-### <a name="installation-issues-after-windows-system-restore"></a><span data-ttu-id="56486-154">Windows 시스템 복원 후 설치 문제</span><span class="sxs-lookup"><span data-stu-id="56486-154">Installation issues after Windows system restore</span></span>
-1.  <span data-ttu-id="56486-155">삭제 된 `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-155">Delete the `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` folder.</span></span> <br/>
-  <span data-ttu-id="56486-156">**참고: 이렇게 하지 않으면 선택적 기능에 완전히 설치 된 경우 및 작업.**</span><span class="sxs-lookup"><span data-stu-id="56486-156">**Note: Do not do this if your optional feature is fully installed and working.**</span></span>
-2.  <span data-ttu-id="56486-157">WSL 선택적 기능 사용 (경우 아직)</span><span class="sxs-lookup"><span data-stu-id="56486-157">Enable the WSL optional feature (if not already)</span></span>
-3.  <span data-ttu-id="56486-158">다시 부팅</span><span class="sxs-lookup"><span data-stu-id="56486-158">Reboot</span></span>
-4.  <span data-ttu-id="56486-159">lxrun 제거/전체</span><span class="sxs-lookup"><span data-stu-id="56486-159">lxrun /uninstall /full</span></span>
-5.  <span data-ttu-id="56486-160">Bash를 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-160">Install bash</span></span>
+### <a name="installation-issues-after-windows-system-restore"></a><span data-ttu-id="8e657-154">Windows 시스템 복원 후의 설치 문제</span><span class="sxs-lookup"><span data-stu-id="8e657-154">Installation issues after Windows system restore</span></span>
+1.  <span data-ttu-id="8e657-155">폴더를 `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-155">Delete the `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` folder.</span></span> <br/>
+  <span data-ttu-id="8e657-156">**참고: 선택적 기능이 완전히 설치 되 고 작동 하는 경우에는이 작업을 수행 하지 마십시오.**</span><span class="sxs-lookup"><span data-stu-id="8e657-156">**Note: Do not do this if your optional feature is fully installed and working.**</span></span>
+2.  <span data-ttu-id="8e657-157">WSL 선택적 기능 사용 (아직 없는 경우)</span><span class="sxs-lookup"><span data-stu-id="8e657-157">Enable the WSL optional feature (if not already)</span></span>
+3.  <span data-ttu-id="8e657-158">다시 부팅</span><span class="sxs-lookup"><span data-stu-id="8e657-158">Reboot</span></span>
+4.  <span data-ttu-id="8e657-159">lxrun/uninstall/full</span><span class="sxs-lookup"><span data-stu-id="8e657-159">lxrun /uninstall /full</span></span>
+5.  <span data-ttu-id="8e657-160">Bash 설치</span><span class="sxs-lookup"><span data-stu-id="8e657-160">Install bash</span></span>
 
-### <a name="no-internet-access-in-wsl"></a><span data-ttu-id="56486-161">WSL에서 인터넷 액세스가 불가능</span><span class="sxs-lookup"><span data-stu-id="56486-161">No internet access in WSL</span></span>
-<span data-ttu-id="56486-162">일부 사용자에 게 WSL에서 인터넷 액세스를 차단 하는 특정 방화벽 응용 프로그램을 사용 하 여 문제를 보고 했습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-162">Some users have reported issues with specific firewall applications blocking internet access in WSL.</span></span>  <span data-ttu-id="56486-163">보고 하는 방화벽은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-163">The firewalls reported are:</span></span>
+### <a name="no-internet-access-in-wsl"></a><span data-ttu-id="8e657-161">WSL에서 인터넷에 액세스할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-161">No internet access in WSL</span></span>
+<span data-ttu-id="8e657-162">일부 사용자가 WSL에서 인터넷 액세스를 차단 하는 특정 방화벽 응용 프로그램의 문제를 보고 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-162">Some users have reported issues with specific firewall applications blocking internet access in WSL.</span></span>  <span data-ttu-id="8e657-163">보고 된 방화벽은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-163">The firewalls reported are:</span></span>
 
-1. <span data-ttu-id="56486-164">Kaspersky</span><span class="sxs-lookup"><span data-stu-id="56486-164">Kaspersky</span></span>
-1. <span data-ttu-id="56486-165">AVG</span><span class="sxs-lookup"><span data-stu-id="56486-165">AVG</span></span>
-1. <span data-ttu-id="56486-166">Avast</span><span class="sxs-lookup"><span data-stu-id="56486-166">Avast</span></span>
+1. <span data-ttu-id="8e657-164">Kaspersky</span><span class="sxs-lookup"><span data-stu-id="8e657-164">Kaspersky</span></span>
+1. <span data-ttu-id="8e657-165">매출</span><span class="sxs-lookup"><span data-stu-id="8e657-165">AVG</span></span>
+1. <span data-ttu-id="8e657-166">Avast</span><span class="sxs-lookup"><span data-stu-id="8e657-166">Avast</span></span>
 
-<span data-ttu-id="56486-167">일부 경우에 대 한 액세스 허용 방화벽을 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-167">In some cases turning off the firewall allows for access.</span></span>  <span data-ttu-id="56486-168">일부 경우에 대 한 액세스 차단 보일 방화벽이 설치 되어 있는 하기만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="56486-168">In some cases simply having the firewall installed looks to block access.</span></span>
+<span data-ttu-id="8e657-167">방화벽을 해제 하면 액세스가 허용 되는 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-167">In some cases turning off the firewall allows for access.</span></span>  <span data-ttu-id="8e657-168">경우에 따라 방화벽을 설치 하면 액세스를 차단 하는 것으로 보입니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-168">In some cases simply having the firewall installed looks to block access.</span></span>
 
-### <a name="permission-denied-error-when-using-ping"></a><span data-ttu-id="56486-169">Ping을 사용 하는 경우 사용 권한 거부 오류</span><span class="sxs-lookup"><span data-stu-id="56486-169">Permission Denied error when using ping</span></span>
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[<span data-ttu-id="56486-170">1 주년 업데이트</span><span class="sxs-lookup"><span data-stu-id="56486-170">Anniversary Update</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+### <a name="permission-denied-error-when-using-ping"></a><span data-ttu-id="8e657-169">Ping을 사용 하는 경우 사용 권한 거부 오류</span><span class="sxs-lookup"><span data-stu-id="8e657-169">Permission Denied error when using ping</span></span>
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[<span data-ttu-id="8e657-170">기념일 업데이트</span><span class="sxs-lookup"><span data-stu-id="8e657-170">Anniversary Update</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
-<span data-ttu-id="56486-171">WSL에서 ping을 실행 하려면 Windows에서 관리자 권한이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-171">Administrator privileges in Windows are required to run ping in WSL.</span></span>  <span data-ttu-id="56486-172">Ping을 실행 하려면 관리자 권한으로 Windows에서 Ubuntu의 Bash를 실행 하거나 bash.exe 관리자 권한으로 CMD/PowerShell 프롬프트에서 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-172">To run ping, run Bash on Ubuntu on Windows as an administrator, or run bash.exe from a CMD/PowerShell prompt with administrator privileges.</span></span>
+<span data-ttu-id="8e657-171">WSL에서 ping을 실행 하려면 Windows의 관리자 권한이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-171">Administrator privileges in Windows are required to run ping in WSL.</span></span>  <span data-ttu-id="8e657-172">Ping을 실행 하려면 관리자 권한으로 Windows의 Ubuntu에서 Bash를 실행 하거나 관리자 권한으로 CMD/PowerShell 프롬프트에서 bash를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-172">To run ping, run Bash on Ubuntu on Windows as an administrator, or run bash.exe from a CMD/PowerShell prompt with administrator privileges.</span></span>
 
-#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[<span data-ttu-id="56486-173">빌드 14926 +</span><span class="sxs-lookup"><span data-stu-id="56486-173">Build 14926+</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
-  <span data-ttu-id="56486-174">관리자 권한이 더 이상 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-174">Administrator privileges no longer required.</span></span>
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[<span data-ttu-id="8e657-173">14926 + 빌드</span><span class="sxs-lookup"><span data-stu-id="8e657-173">Build 14926+</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+  <span data-ttu-id="8e657-174">더 이상 관리자 권한이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-174">Administrator privileges no longer required.</span></span>
 
-### <a name="bash-is-hung"></a><span data-ttu-id="56486-175">Bash가 중지 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-175">Bash is hung</span></span>
-<span data-ttu-id="56486-176">찾을 bash를 사용 하는 동안 해당 bash 중지 (또는 교착 상태)을 수집 및 메모리 덤프를 보고 하 여 문제를 진단 하는 데 도움이 입력에 응답 하지.</span><span class="sxs-lookup"><span data-stu-id="56486-176">If while working with bash, you find that bash is hung (or deadlocked) and not responding to inputs, help us diagnose the issue by collecting and reporting a memory dump.</span></span> <span data-ttu-id="56486-177">참고이 단계 시스템 작동이 중단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="56486-177">Note that these steps will crash your system.</span></span> <span data-ttu-id="56486-178">이 작업을 수행 하기 전에 작업을 저장 하거나 된 익숙하지 않은 경우에 이렇게 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="56486-178">Do not do this if you are not comfortable with that or save your work prior to doing this.</span></span>  <br/>
-<span data-ttu-id="56486-179">메모리 덤프를 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-179">To collect a memory dump:</span></span>
-1. <span data-ttu-id="56486-180">"전체 메모리 덤프" 메모리 덤프 유형을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-180">Change the memory dump type to "complete memory dump".</span></span> <span data-ttu-id="56486-181">덤프 형식을 변경 하는 동안 현재 컴퓨터 종류를 적어둡니다.</span><span class="sxs-lookup"><span data-stu-id="56486-181">While changing the dump type, take a note of your current type.</span></span>
-2. <span data-ttu-id="56486-182">사용 된 [단계](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) 크래시를 구성 하려면 키보드 컨트롤을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-182">Use the [steps](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) to configure crash using keyboard control.</span></span>
-3. <span data-ttu-id="56486-183">교착 상태를 중단을 재현 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-183">Repro the hang or deadlock.</span></span>
-4. <span data-ttu-id="56486-184">키 시퀀스 (2)를에서 사용 하 여 시스템을 충돌 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-184">Crash the system using the key sequence from (2).</span></span>
-5. <span data-ttu-id="56486-185">시스템 크래시를 메모리 덤프를 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-185">The system will crash and collect the memory dump.</span></span>
-6. <span data-ttu-id="56486-186">시스템이 다시 부팅 되 면 보고서를 memory.dmp secure@microsoft.com합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-186">Once the system reboots, report the memory.dmp to secure@microsoft.com.</span></span> <span data-ttu-id="56486-187">시스템 드라이브 c: 경우 덤프 파일의 기본 위치는 %SystemRoot%\memory.dmp 또는 C:\Windows\memory.dmp 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-187">The default location of the dump file is %SystemRoot%\memory.dmp or C:\Windows\memory.dmp if C: is the system drive.</span></span> <span data-ttu-id="56486-188">WSL 또는 Bash에 대 한 덤프 인지 확인 메일의 Windows 팀입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-188">In the email, note that the dump is for the WSL or Bash on Windows team.</span></span>
-7. <span data-ttu-id="56486-189">메모리 덤프 형식을 원래 설정으로 복원 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-189">Restore the memory dump type to the original setting.</span></span>
+### <a name="bash-is-hung"></a><span data-ttu-id="8e657-175">Bash가 중지 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-175">Bash is hung</span></span>
+<span data-ttu-id="8e657-176">Bash로 작업 하는 동안 bash가 중지 (또는 교착 상태) 상태 이며 입력에 응답 하지 않는 것을 발견 하면 메모리 덤프를 수집 하 고 보고 하 여 문제를 진단 하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-176">If while working with bash, you find that bash is hung (or deadlocked) and not responding to inputs, help us diagnose the issue by collecting and reporting a memory dump.</span></span> <span data-ttu-id="8e657-177">이러한 단계를 수행 하면 시스템이 중단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-177">Note that these steps will crash your system.</span></span> <span data-ttu-id="8e657-178">이 작업을 수행 하기 전에이 작업을 수행 하기 전에 작업을 저장 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-178">Do not do this if you are not comfortable with that or save your work prior to doing this.</span></span>  <br/>
+<span data-ttu-id="8e657-179">메모리 덤프를 수집 하려면:</span><span class="sxs-lookup"><span data-stu-id="8e657-179">To collect a memory dump:</span></span>
+1. <span data-ttu-id="8e657-180">메모리 덤프 유형을 "전체 메모리 덤프"로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-180">Change the memory dump type to "complete memory dump".</span></span> <span data-ttu-id="8e657-181">덤프 유형을 변경 하는 동안 현재 유형을 기록해 둡니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-181">While changing the dump type, take a note of your current type.</span></span>
+2. <span data-ttu-id="8e657-182">키보드 컨트롤을 사용 하 여 충돌을 구성 하는 [단계](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) 를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-182">Use the [steps](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) to configure crash using keyboard control.</span></span>
+3. <span data-ttu-id="8e657-183">중지 또는 교착 상태를 재현 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-183">Repro the hang or deadlock.</span></span>
+4. <span data-ttu-id="8e657-184">(2)의 키 시퀀스를 사용 하 여 시스템의 작동이 중단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-184">Crash the system using the key sequence from (2).</span></span>
+5. <span data-ttu-id="8e657-185">시스템 작동이 중단 되 고 메모리 덤프가 수집 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-185">The system will crash and collect the memory dump.</span></span>
+6. <span data-ttu-id="8e657-186">시스템이 다시 부팅 되 면 memory.dmp를에 secure@microsoft.com보고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-186">Once the system reboots, report the memory.dmp to secure@microsoft.com.</span></span> <span data-ttu-id="8e657-187">덤프 파일의 기본 위치는%SystemRoot%\memory.dmp 또는 C:가 시스템 드라이브인 경우에 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-187">The default location of the dump file is %SystemRoot%\memory.dmp or C:\Windows\memory.dmp if C: is the system drive.</span></span> <span data-ttu-id="8e657-188">전자 메일에서 덤프는 Windows 팀의 WSL 또는 Bash에 대 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-188">In the email, note that the dump is for the WSL or Bash on Windows team.</span></span>
+7. <span data-ttu-id="8e657-189">메모리 덤프 유형을 원래 설정으로 복원 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-189">Restore the memory dump type to the original setting.</span></span>
 
-### <a name="check-your-build-number"></a><span data-ttu-id="56486-190">빌드 번호 확인</span><span class="sxs-lookup"><span data-stu-id="56486-190">Check your build number</span></span>
+### <a name="check-your-build-number"></a><span data-ttu-id="8e657-190">빌드 번호 확인</span><span class="sxs-lookup"><span data-stu-id="8e657-190">Check your build number</span></span>
 
-<span data-ttu-id="56486-191">PC의 아키텍처 및 Windows에 대 한 빌드 번호를 찾으려면 열기</span><span class="sxs-lookup"><span data-stu-id="56486-191">To find your PC's architecture and Windows build number, open</span></span>  
-<span data-ttu-id="56486-192">**설정을** > **System** > **에 대 한**</span><span class="sxs-lookup"><span data-stu-id="56486-192">**Settings** > **System** > **About**</span></span>
+<span data-ttu-id="8e657-191">PC의 아키텍처 및 Windows 빌드 번호를 찾으려면를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-191">To find your PC's architecture and Windows build number, open</span></span>  
+<span data-ttu-id="8e657-192">**설정** > **시스템** 정보 > </span><span class="sxs-lookup"><span data-stu-id="8e657-192">**Settings** > **System** > **About**</span></span>
 
-<span data-ttu-id="56486-193">검색할 합니다 **OS 빌드** 하 고 **시스템 형식** 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-193">Look for the **OS Build** and **System Type** fields.</span></span>  
-    <span data-ttu-id="56486-194">![빌드 스크린샷 및 시스템 형식 필드](media/system.png)</span><span class="sxs-lookup"><span data-stu-id="56486-194">![Screenshot of Build and System Type fields](media/system.png)</span></span> 
+<span data-ttu-id="8e657-193">**OS 빌드** 및 **시스템 유형** 필드를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-193">Look for the **OS Build** and **System Type** fields.</span></span>  
+    <span data-ttu-id="8e657-194">![빌드 및 시스템 유형 필드의 스크린샷](media/system.png)</span><span class="sxs-lookup"><span data-stu-id="8e657-194">![Screenshot of Build and System Type fields](media/system.png)</span></span> 
 
 
-<span data-ttu-id="56486-195">사용자의 Windows Server 빌드 번호를 찾으려면 다음 PowerShell에서 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-195">To find your Windows Server build number, run the following in PowerShell:</span></span>  
+<span data-ttu-id="8e657-195">Windows Server 빌드 번호를 찾으려면 PowerShell에서 다음을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-195">To find your Windows Server build number, run the following in PowerShell:</span></span>  
 ``` PowerShell
 systeminfo | Select-String "^OS Name","^OS Version"
 ```
 
-### <a name="confirm-wsl-is-enabled"></a><span data-ttu-id="56486-196">WSL 사용 하도록 설정할지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-196">Confirm WSL is enabled</span></span>
-<span data-ttu-id="56486-197">PowerShell에서 다음을 실행 하 여 Linux 용 Windows 하위 시스템 활성화 되어 있는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="56486-197">You can confirm that the Windows Subsystem for Linux is enabled by running the following in PowerShell:</span></span>  
+### <a name="confirm-wsl-is-enabled"></a><span data-ttu-id="8e657-196">WSL이 사용 하도록 설정 되었는지 확인</span><span class="sxs-lookup"><span data-stu-id="8e657-196">Confirm WSL is enabled</span></span>
+<span data-ttu-id="8e657-197">PowerShell에서 다음을 실행 하 여 Linux 용 Windows 하위 시스템을 사용할 수 있는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-197">You can confirm that the Windows Subsystem for Linux is enabled by running the following in PowerShell:</span></span>  
 ``` PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-### <a name="openssh-server-connection-issues"></a><span data-ttu-id="56486-198">OpenSSH 서버 연결 문제</span><span class="sxs-lookup"><span data-stu-id="56486-198">OpenSSH-Server connection issues</span></span>
-<span data-ttu-id="56486-199">다음 오류로 인해 실패 했습니다는 SSH 서버를 연결 하려고 합니다. "127.0.0.1에 의해 연결이 닫혔습니다 22 포트"입니다.</span><span class="sxs-lookup"><span data-stu-id="56486-199">Trying to connect your SSH server is failed with the following error: "Connection closed by 127.0.0.1 port 22".</span></span>
-1. <span data-ttu-id="56486-200">OpenSSH 서버에서 실행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-200">Make sure your OpenSSH Server is running:</span></span>
+### <a name="openssh-server-connection-issues"></a><span data-ttu-id="8e657-198">OpenSSH-서버 연결 문제</span><span class="sxs-lookup"><span data-stu-id="8e657-198">OpenSSH-Server connection issues</span></span>
+<span data-ttu-id="8e657-199">다음 오류로 인해 SSH 서버를 연결 하지 못했습니다. "연결을 127.0.0.1 포트 22"로 닫았습니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-199">Trying to connect your SSH server is failed with the following error: "Connection closed by 127.0.0.1 port 22".</span></span>
+1. <span data-ttu-id="8e657-200">OpenSSH 서버가 실행 중인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-200">Make sure your OpenSSH Server is running:</span></span>
    ``` BASH
    sudo service ssh status
    ```
-   <span data-ttu-id="56486-201">이 자습서를 수행 했다면을 https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span><span class="sxs-lookup"><span data-stu-id="56486-201">and you've followed this tutorial: https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span></span>
-2. <span data-ttu-id="56486-202">Sshd 서비스를 중지 하 고 디버그 모드에서 sshd를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-202">Stop the sshd service and start sshd in debug mode:</span></span>
+   <span data-ttu-id="8e657-201">그리고 다음 자습서를 수행 했습니다. https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span><span class="sxs-lookup"><span data-stu-id="8e657-201">and you've followed this tutorial: https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span></span>
+2. <span data-ttu-id="8e657-202">Sshd 서비스를 중지 하 고 디버그 모드에서 sshd를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-202">Stop the sshd service and start sshd in debug mode:</span></span>
    ``` BASH
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. <span data-ttu-id="56486-203">시작 로그를 확인 하 고 HostKeys 제공 되며 같은 로그 메시지가 표시 되지 않는 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-203">Check the startup logs and make sure HostKeys are available and you don't see log messages such as:</span></span>
+3. <span data-ttu-id="8e657-203">시작 로그를 확인 하 고 호스트 키를 사용할 수 있는지 확인 하 고 다음과 같은 로그 메시지가 표시 되지 않는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-203">Check the startup logs and make sure HostKeys are available and you don't see log messages such as:</span></span>
    ```
    debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
    debug1: key_load_private: incorrect passphrase supplied to decrypt private key
@@ -181,7 +181,7 @@ Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linu
    Could not load host key: /etc/ssh/ssh_host_ed25519_key
    ```
 
-<span data-ttu-id="56486-204">이러한 메시지를 보이지 키 아래에서 누락 된 경우 `/etc/ssh/`, 키를 다시 생성 하거나만 제거 및 openssh 서버를 설치 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="56486-204">If you do see such messages and the keys are missing under `/etc/ssh/`, you will have to regenerate the keys or just purge&install openssh-server:</span></span>
+<span data-ttu-id="8e657-204">이러한 메시지가 표시 되 고 아래 `/etc/ssh/`에 키가 없는 경우 키를 다시 생성 하거나 openssh를 제거 & 설치 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e657-204">If you do see such messages and the keys are missing under `/etc/ssh/`, you will have to regenerate the keys or just purge&install openssh-server:</span></span>
 ```BASH
 sudo apt-get purge openssh-server
 sudo apt-get install openssh-server

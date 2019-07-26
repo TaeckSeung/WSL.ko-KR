@@ -7,15 +7,49 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: e2d9d5fc70c173e9b516ab7af01599b623b40b39
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
+ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67042429"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501578"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템의 릴리스 정보
 
+
+## <a name="build-18947"></a>빌드 18947
+빌드 18947에 대 한 일반적인 Windows 정보는 [windows 블로그](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/)를 참조 하십시오.
+
+### <a name="wsl"></a>WSL
+* [WSL2] Localhost: port를 사용 하 여 호스트에서 WSL2의 수신 대기 tcp 소켓에 액세스할 수 있습니다.
+* [WSL2] 향후 문제를 추적 하기 위한 설치/변환 오류 및 추가 진단 수정 [GH 4105] 
+* [WSL2] 진단 가능 WSL2 네트워크 문제 개선
+* [WSL2] 4.19.55에 커널 버전 업데이트
+* [WSL2] Docker에 필요한 구성 옵션을 사용 하 여 커널 업데이트 [GH 4165]
+* [WSL2] 경량 유틸리티 VM에 할당 된 Cpu 수를 호스트와 동일 하 게 늘립니다 (이전에는 커널 구성의 CONFIG_NR_CPUS에서 8 번 이상). [GH 4137]
+* [WSL2] WSL2 경량 VM에 대 한 스왑 파일 만들기
+* [WSL2] Wsl $ \\ \\배포판를통해사용자탑재를표시할수있습니다(예:sshfs)[GH4172]\\
+* [WSL2] 9p 파일 시스템 성능 향상
+* [WSL2] Vhd ACL이 무제한으로 확장 되지 않았는지 확인 [GH 4126]
+* [WSL2] Squashfs 및 xt_conntrack를 지원 하도록 커널 구성 업데이트 [GH 4107, 4123]
+* [WSL2] Interop에 대 한 수정. enabled/etc/wsl.conf 옵션 [GH 4140]
+* [WSL2] 파일 시스템에서 EAs를 지원 하지 않는 경우 ENOTSUP 반환
+* [WSL2] Wsl $를 \\사용 하 여 \\CopyFile 중단 수정
+* 기본 umask를 0022로 전환 하 고 umask 설정을/etc/wsl.conf에 추가 합니다.
+* Symlink를 적절 하 게 확인 하기 위해 wslpath를 수정 합니다 .이는 19h1에서 회귀 되었습니다 [GH 4078].
+* 트윅 WSL2 설정에\.대 한% UserProfile% wslconfig 파일 소개
+```
+[wsl2]
+kernel=<path>              # An absolute Windows path to a custom Linux kernel.
+memory=<size>              # How much memory to assign to the WSL2 VM.
+processors=<number>        # How many processors to assign to the WSL2 VM.
+swap=<size>                # How much swap space to add to the WSL2 VM. 0 for no swap file.
+swapFile=<path>            # An absolute Windows path to the swap vhd.
+localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or localhost in the WSL2 VM should be connectable from the host via localhost:port (default true).
+
+# <path> entries must be absolute Windows paths with escaped backslashes, for example C:\\Users\\Ben\\kernel
+# <size> entries must be size followed by unit, for example 8GB or 512MB
+```
 
 ## <a name="build-18917"></a>빌드 18917
 빌드 18917에 대 한 일반적인 Windows 정보는 [windows 블로그](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/)를 참조 하십시오.

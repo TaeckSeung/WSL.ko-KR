@@ -8,16 +8,16 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 55cea2c4b7087f3dd8a29986aaddc8c313763448
-ms.sourcegitcommit: b07769a3140db9ac63e42c7d7d1290c0bad8c40d
+ms.openlocfilehash: bf2f2e24fb8a2db49270fb77558d4fda1828dedf
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67467557"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523774"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판 패키지에 대 한 Windows 하위 시스템 수동으로 다운로드
 
-Microsoft Store를 통해 WSL Linux 배포판을 설치 하거나 원하지 않는 몇 가지 시나리오가 있습니다. 특히 Microsoft Store을 지원 하지 않는 LTSB/LTSC (장기 서비스) 데스크톱 OS SKU 또는 사용자 환경에서 Microsoft Store 사용을 허용 하지 않는 회사 네트워크 정책 및/또는 관리자를 실행 하 고 있을 수 있습니다.
+Microsoft Store를 통해 WSL Linux 배포판을 설치 하거나 원하지 않는 몇 가지 시나리오가 있습니다. 특히 사용자 환경에서 Microsoft Store 사용을 허용 하지 않는 Microsoft Store 또는 회사 네트워크 정책 및/또는 관리자를 지원 하지 않는 Windows Server 또는 LTSC (장기 서비스) 데스크톱 OS SKU를 실행 하 고 있을 수 있습니다.
 
 이러한 경우 WSL 자체를 사용할 수 있는 동안 스토어에 액세스할 수 없는 경우 WSL에서 Linux 배포판을 다운로드 하 여 설치 하는 방법
 

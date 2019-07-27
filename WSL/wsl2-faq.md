@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: e16097a3d863bbda8c4655054f154415cdd7f2f5
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67587137"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 FAQ
@@ -33,7 +33,7 @@ WSL 2는 Windows 10 Home을 포함 하 여 WSL을 현재 사용할 수 있는 �
 
 Hyper-v를 사용 하는 경우 일부 타사 응용 프로그램은 작동할 수 없습니다. 즉, WSL 2를 사용 하도록 설정한 경우에는 실행할 수 없습니다. 아쉽게도 VirtualBox 6 (2018 년 12 월에 출시 된 VirtualBox 6.0.0는 [이제 Windows 호스트에서 대체 실행 코어로 hyper-v를 지원함][1]) 이전에 VMware 및 버전의 virtualbox를 포함 합니다.
 
-이 문제를 해결 하는 데 도움이 되는 방법을 조사 하 고 있습니다. 예를 들어, [하이퍼바이저 플랫폼][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s. This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3]이라는 api 집합을 노출 하 고, 현재 hyper-v와 호환 되는 virtualbox 6 이상을 표시 합니다.
+이 문제를 해결 하는 데 도움이 되는 방법을 조사 하 고 있습니다. 예를 들어 타사 가상화 공급자가 Hyper-v와 호환 되는 소프트웨어를 만드는 데 사용할 수 있는 [하이퍼바이저 플랫폼][2] 이라는 api 집합을 노출 합니다. 이를 통해 응용 프로그램은 [Google Android Emulator][3]와 같은 에뮬레이션에 hyper-v 아키텍처를 사용 하 고 현재 hyper-v와 호환 되는 virtualbox 6 이상을 사용할 수 있습니다.
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2의 GPU에 액세스할 수 있나요? 하드웨어 지원을 높일 계획이 있나요?
 

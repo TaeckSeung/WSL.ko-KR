@@ -7,18 +7,18 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
-ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
+ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68501578"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523790"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템의 릴리스 정보
 
 
-## <a name="build-18947"></a>빌드 18947
-빌드 18947에 대 한 일반적인 Windows 정보는 [windows 블로그](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/)를 참조 하십시오.
+## <a name="build-18945"></a>빌드 18945
+빌드 18945에 대 한 일반적인 Windows 정보는 [windows 블로그](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)를 참조 하십시오.
 
 ### <a name="wsl"></a>WSL
 * [WSL2] Localhost: port를 사용 하 여 호스트에서 WSL2의 수신 대기 tcp 소켓에 액세스할 수 있습니다.

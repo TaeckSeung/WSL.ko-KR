@@ -7,12 +7,12 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
+ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523790"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68832119"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템의 릴리스 정보
 
@@ -37,7 +37,7 @@ ms.locfileid: "68523790"
 * [WSL2] Wsl $를 \\사용 하 여 \\CopyFile 중단 수정
 * 기본 umask를 0022로 전환 하 고 umask 설정을/etc/wsl.conf에 추가 합니다.
 * Symlink를 적절 하 게 확인 하기 위해 wslpath를 수정 합니다 .이는 19h1에서 회귀 되었습니다 [GH 4078].
-* 트윅 WSL2 설정에\.대 한% UserProfile% wslconfig 파일 소개
+* 트윅 WSL2 설정을 위한\\% UserProfile%. wslconfig 파일을 소개 합니다.
 ```
 [wsl2]
 kernel=<path>              # An absolute Windows path to a custom Linux kernel.
@@ -506,7 +506,7 @@ wslconfig.exe /terminate <DistributionName>
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL은 wsl.
 사용자가 하위 시스템을 시작할 때마다 적용 되는 WSL의 특정 기능을 자동으로 구성 하는 메서드를 추가 했습니다. 여기에는 자동 탑재 옵션 및 네트워크 구성이 포함 됩니다. 이에 대 한 자세한 내용은 다음 블로그 게시물을 살펴보세요. https://aka.ms/wslconf
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX를 사용 하면 WSL 및 Windows 네이티브 프로세스의 Linux 프로세스 간 소켓 연결을 허용 합니다.
+#### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX를 사용 하면 WSL 및 Windows 네이티브 프로세스의 Linux 프로세스 간 소켓 연결을 허용 합니다.
 WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통신할 수 있습니다. Windows에서 서비스를 실행 하 고 Windows 및 WSL 앱 모두에서 서비스를 사용할 수 있게 하려는 경우를 가정해 보겠습니다. 이제는 Unix 소켓에서 가능 합니다. 블로그 게시물에서 자세한 내용을 알아보세요. https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL

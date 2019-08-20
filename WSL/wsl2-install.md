@@ -8,22 +8,21 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 3ad180ecc9deaa1566e9870700b26f82f631c7f1
-ms.sourcegitcommit: 9ad7a54668f39677e9660186e4f5172ea2597e2b
+ms.openlocfilehash: 0220d642854f9fc7fe2a85357ad2e70e0b888ed8
+ms.sourcegitcommit: f878e88921d36e01e32624a9c60ee9de3d706a2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246871"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620094"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
 WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니다.
 
+- WSL이 설치 되어 있는지 확인 하 고 ( [여기](./install-win10.md)에서 작업을 수행 하기 위한 지침을 찾을 수 있음) Windows 10 빌드 18917 이상을 실행 하 고 있는지 확인 합니다.
 - '가상 머신 플랫폼' 옵션 구성 요소 사용
 - 명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 - Distro가 사용 중인 WSL 버전 확인
-
-WSL 2를 사용하려면 Windows 10 빌드 18917 이상을 실행해야 하며 WSL이 이미 설치되어 있어야 합니다([여기](./install-win10.md)에서 지침을 찾을 수 있음). 
 
 ## <a name="enable-the-virtual-machine-platform-optional-component"></a>'가상 머신 플랫폼' 옵션 구성 요소 사용
 

@@ -7,12 +7,13 @@ ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
-ms.openlocfilehash: 2bbcec661146fcb570209fd895e6543657e98996
-ms.sourcegitcommit: 939fe561d178454219adbee96c0ad3f768db2208
+ms.localizationpriority: high
+ms.openlocfilehash: e3376f8dff83262577bc52fb3ac368b70b21d922
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67237390"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122759"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에 대 한 질문과 대답
 

@@ -8,12 +8,13 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
-ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.localizationpriority: high
+ms.openlocfilehash: de18c128854ef9a39a26551db2ea0aee97b8ab4f
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040827"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122681"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에 대 한 사용자 계정 및 사용 권한
 

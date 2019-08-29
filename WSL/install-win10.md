@@ -8,12 +8,13 @@ ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 82b5c0ccba7a444f13f186a2e33f210ac2cf48da
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: 218e3e652d0849f944e8aaceef3fb954294222be
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499290"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122772"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 용 windows 하위 시스템 설치 가이드
 
@@ -76,4 +77,4 @@ WSL 용 Linux 배포판을 설치 하기 전에 "Linux 용 Windows 하위 시스
     
  * **오류 0x8007019e를 사용 하 여 WslRegisterDistribution 실패**   
   * Linux 선택적 구성 요소에 대 한 Windows 하위 시스템을 사용할 수 없습니다. 
-   * **제어판** -> **프로그램 및 기능** 을 엽니다.-> * * windows 기능 사용/사용 안 함 * *-> **Linux 용 windows 하위 시스템** 을 확인 하거나이 문서의 시작 부분에 설명 된 PowerShell cmdlet을 사용 합니다.
+   * **제어판** -> **프로그램 및**기능 -> 을 엽니다.**windows 기능 사용/사용 안 함** 을 선택 하거나이 문서의 시작 부분에 설명 된 PowerShell cmdlet을 사용 하 여 **Linux 용 windows 하위 시스템** 을 선택 하거나 > 합니다.

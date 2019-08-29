@@ -7,12 +7,13 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
-ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
+ms.localizationpriority: high
+ms.openlocfilehash: 56a596c39b0d07e75d0beb381b80af5a14612e00
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68832119"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122749"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템의 릴리스 정보
 
@@ -574,7 +575,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
   * fmask: 모든 일반 파일에 대해 제외할 8 진수 마스크입니다.
   * 6mask: 모든 디렉터리에 대해 제외할 8 진수 마스크입니다.
 
-  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+  예를 들어 다음과 같은 가치를 제공해야 합니다.
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -583,7 +584,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 
 * 는 새 환경 변수 `WSLENV`를 도입 하 여 환경 변수가 wsl과 Win32 사이에서 흐르는 방식을 구성 합니다.
 
-  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+  예를 들어 다음과 같은 가치를 제공해야 합니다.
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
@@ -631,7 +632,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 
 빌드 17046에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc)를 참조 하십시오.
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 활성 터미널 없이 프로세스를 실행할 수 있습니다. [GH 709, 1007, 1511, 2252, 2391, et al.]
 - CLONE_VFORK 및 CLONE_VM에 대 한 지원이 향상 되었습니다. [GH 1878, 2615]
@@ -664,7 +665,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 17040에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 17035 이후의 수정 사항은 없습니다.
 
@@ -679,7 +680,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 17035에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - DrvFs의 파일에 액세스 하는 경우 EINVAL와 함께 실패할 수 있습니다. [GH 2448]
 
@@ -694,7 +695,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 17025에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 새 포그라운드 프로세스 그룹 [GH 1653, 2510]에서 초기 프로세스를 시작 합니다.
 - SIDELIVERY UP 배달 수정 [GH 2496].
@@ -714,7 +715,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 17017에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 빈 ELF program headers [GH 330]을 무시 합니다.
 - LxssManager가 비 대화형 사용자 (ssh 및 예약 된 작업 지원) [GH 777, 1602]에 대해 WSL 인스턴스를 만들도록 허용 합니다.
@@ -742,7 +743,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16288에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 소켓 파일 설명자에 대해 uid, gid 및 모드를 올바르게 초기화 및 보고 [GH 2490]
 - 추가 개선 사항 및 버그 수정
@@ -758,7 +759,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 162738에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - LX MM 상태를 해제할 때 파일 지원 섹션의 매핑된 뷰를 명시적으로 매핑 해제 [GH 2415]
 - 추가 개선 사항 및 버그 수정
@@ -774,7 +775,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 162735에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 이 릴리스에서는 WSL 관련 변경 내용이 없습니다.
 
@@ -789,7 +790,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16273에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - DrvFs에서 디렉터리에 대해 잘못 된 파일 형식을 보고 하는 문제 해결 [GH 2392]
 - Uevent를 사용 하는 프로그램의 차단을 해제 하는 NETLINK_KOBJECT_UEVENT 소켓 만들기 허용 [GH 1121, 2293, 2242, 2295, 2235, 648, 637]
@@ -823,7 +824,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16257에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - Prlimit64 시스템 호출 구현
 - Ulimit에 대 한 지원 추가 (setrlimit RLIMIT_NOFILE) [GH 1688]
@@ -861,7 +862,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16251에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - WSL 선택적 구성 요소에서 베타 태그 제거에 대 한 자세한 내용은 [블로그 게시물](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/) 을 참조 하세요.
 - Exec [GH 962, 1415, 2072]에서 집합-사용자 ID 및 집합 그룹 ID 바이너리에 대해 저장 된 설정 uid 및 gid를 올바르게 초기화 합니다.
@@ -886,7 +887,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16241에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 #### <a name="wsl"></a>WSL
 - 이 릴리스에서는 WSL 관련 변경 내용이 없습니다.
 
@@ -911,7 +912,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16237에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - Lxfs (root, root, 0000)에서 EAs가 없는 파일에 대 한 기본 특성 사용
 - 확장 된 특성을 사용 하는 배포에 대 한 지원 추가
 - Getdents 및 getdents64에서 반환 된 항목의 패딩 수정
@@ -931,7 +932,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16232에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 이 릴리스에서는 WSL 관련 변경 내용이 없습니다.
 
 </br>
@@ -941,7 +942,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16226에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - xattr 관련 syscall 지원 (getxattr, setxattr, listxattr, removexattr).
 - capablity xattr 지원.
 - 비-MS SMB 서버를 비롯 한 특정 파일 시스템 및 필터와의 호환성이 향상 되었습니다. [GH #1952]
@@ -955,7 +956,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16215에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - WSL에서 더 이상 개발자 모드를 요구 하지 않습니다.
 - Drvfs에서 디렉터리 연결점을 지원 합니다.
 - WSL 배포 appx 패키지의 제거를 처리 합니다.
@@ -972,7 +973,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16199에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 이러한 릴리스에서는 WSL 관련 변경 내용이 없습니다.
 
 </br>
@@ -982,7 +983,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16193에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - SIGCONT 및 threadgroup을 종료 하는 경합 상태 [GH 1973]
 - FILE_DEVICE_CONSOLE 대신 tty 및 인 pty 장치를 report FILE_DEVICE_NAMED_PIPE로 변경 [GH 1840]
 - IP_OPTIONS에 대 한 SSH 픽스
@@ -996,7 +997,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16184에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - Apt 패키지 유지 관리 작업 제거 (lxrun/update)
 - Node.js의 Windows 프로세스에서 표시 되지 않는 고정 출력 [GH 1840]
 - Lxcore의 완화 맞춤 요구 사항 [GH 1794]
@@ -1011,7 +1012,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16179에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 이번 주에는 WSL이 변경 되지 않습니다.
 
 </br>
@@ -1021,7 +1022,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 빌드 16176에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - [직렬 지원 사용](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
 - 추가 된 IP 소켓 옵션 IP_OPTIONS [GH 1116]
@@ -1049,7 +1050,7 @@ WSL 및 Windows 응용 프로그램은 이제 Unix 소켓을 통해 서로 통�
 
 WSL 테스트를 위한 새로운 [블로그 게시물](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/) 을 발표 했습니다.
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 지원 소켓 옵션 IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]
 - PTRACE_OLDSETOPTIONS에 대 한 지원을 추가 합니다. [GH 1692]
@@ -1069,7 +1070,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 15042에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - "..."로 끝나는 경로를 제거할 때 교착 상태를 수정 합니다.
 - 성공 시 FIONBIO에서 0을 반환 하지 않는 문제 해결 [GH 1683]
@@ -1089,7 +1090,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 15031에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 시간 (2)이 산발적으로 동작 하는 버그를 수정 했습니다.
 - \* SIGPROCMASK syscall에서 신호 마스크를 손상 시킬 수 있는 문제를 해결 하 고 문제를 해결 합니다.
@@ -1112,7 +1113,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 15025에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - Grep 2.27을 중단 한 버그 수정 [GH 1578]
 - Eventfd2 syscall에 대해 구현 된 EFD_SEMAPHORE 플래그 [GH 452]
@@ -1142,7 +1143,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 15019에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - Htop (GH 823, 945, 971)와 같은 도구에 대해 procfs에서 CPU 사용량을 잘못 보고 하는 버그가 수정 되었습니다.
 - 기존 파일에 대해 O_TRUNC를 사용 하 여 open ()을 호출 하면 inotify 앞에 IN_MODIFY가 생성 됩니다.
@@ -1164,7 +1165,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 15014에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 이제 Ctrl + C는 의도 한 대로 작동 합니다.
 - 이제 htop 및 ps auxw에 올바른 리소스 사용률 (GH #516)이 표시 됩니다.
@@ -1201,7 +1202,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 
   - 해결 방법: 대체 키를 Ctrl + C에 매핑합니다. 예를 들어 Ctrl + K를 Ctrl + C로 매핑하려면: `stty intr \^k`를 추가 합니다.  이 매핑은 터미널 당 이며 bash를 시작할 *때마다* 수행 해야 합니다. 사용자는이를 포함 하는 옵션을 탐색할 수 있습니다.`.bashrc`
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - WSL을 실행 하면 CPU 코어의 100%를 사용 하는 문제를 해결 했습니다.
 - 소켓 옵션 IP_PKTINFO, IPV6_RECVPKTINFO 이제 지원 됩니다. (GH #851, 987)
@@ -1229,7 +1230,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 
 - WSL은 시스템 스레드를 실행 하는 동안 CPU 코어의 100%를 사용 합니다.  근본 원인을 내부적으로 해결 하 고 해결 했습니다.
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 이제 모든 bash 세션을 동일한 권한 수준에서 만들어야 합니다.  다른 수준에서 세션을 시작 하려고 하면 차단 됩니다.  즉, 관리자 및 비관리자 콘솔을 동시에 실행할 수 없습니다. (GH #626)
 <br/>
@@ -1287,7 +1288,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14986에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - Netlink 및 인 pty IOCTLs를 사용 하 여 버그 검사 수정
 - 이제 커널 버전은 4.4.0를 보고 합니다. Xenial를 사용 하 여 일관성을 유지 합니다.
@@ -1322,7 +1323,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14971에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
  - 이러한 상황 때문에 Linux 용 Windows 하위 시스템에 대 한이 빌드에 업데이트가 없습니다.  정기적으로 예약 된 업데이트는 다음 릴리스에서 다시 시작 됩니다.
 
@@ -1339,7 +1340,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14965에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - Netlink sockets NETLINK_ROUTE 프로토콜의 RTM_GETLINK 및 RTM_GETADDR에 대 한 지원 (GH #468)
   - 네트워크 열거에 대해 ifconfig 및 ip 명령을 사용 하도록 설정 합니다.
@@ -1377,7 +1378,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14959에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - Windows에 대 한 Pico 프로세스 알림이 개선 되었습니다.  [Wsl 블로그에서](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)추가 정보를 찾을 수 있습니다.
 - Windows 상호 운용성으로 향상 된 안정성
@@ -1396,7 +1397,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14955에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
  - 이러한 상황 때문에 Linux 용 Windows 하위 시스템에 대 한이 빌드에 업데이트가 없습니다.  정기적으로 예약 된 업데이트는 다음 릴리스에서 다시 시작 됩니다.
 
@@ -1428,7 +1429,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 - [Interop 용 WSL 팀 블로그](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
 - [MSDN Interop 설명서](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 이제 모든 새 WSL 인스턴스에 Ubuntu 16.04 (Xenial)이 설치 됩니다.  T (기존 14.04) 인스턴스가 있는 사용자는 자동으로 업그레이드 되지 않습니다.
 - 설치 중에 설정 된 로캘이 이제 표시 됩니다.
@@ -1449,7 +1450,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14946에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 공백이 나 따옴표를 포함 하는 NT 사용자 이름을 가진 사용자에 대해 WSL 사용자 계정을 만들지 못하게 하는 문제를 해결 했습니다. 
 - 상태에서 디렉터리의 링크 수에 대해 0을 반환 하도록 VolFs 및 DrvFs를 변경 합니다.
@@ -1474,7 +1475,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 빌드 14942에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/onefourninefourtwoooooo)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - SSH를 차단 하는 "NOEXECUTE 메모리의 실행을 시도 했습니다." 라는 네트워킹 충돌을 포함 하 여 해결 된 많은 버그 검사
 - DrvFs의 Windows 응용 프로그램에서 생성 된 알림에 대 한 inotifiy 지원은 현재
@@ -1505,7 +1506,7 @@ Windows 10에 대 한 작성자 업데이트에 포함 하기 위해 계획 된 
 ### <a name="known-issue"></a>알려진 문제
 WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인은 "NOEXECUTE 메모리의 실행을 시도 했습니다." 라는 오류와 함께 중단 됩니다.  이 문제의 가장 일반적인 노력 ssh를 사용할 때 발생 하는 충돌입니다.  근본 원인은 내부 빌드에서 고정 되 고, 가장 빠른 기회에서 참가자에 게 푸시됩니다.
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - Chroot 시스템 호출을 구현 합니다.
 - ~~DrvFs의 Windows 응용 프로그램에서 생성 된 알림에 대 한 지원을 포함 하는~~ inotify의 향상 된 기능
@@ -1536,7 +1537,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 빌드 14931에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
  - 이러한 상황 때문에 Linux 용 Windows 하위 시스템에 대 한이 빌드에 업데이트가 없습니다.  정기적으로 예약 된 업데이트는 다음 릴리스에서 다시 시작 됩니다.
 
@@ -1547,7 +1548,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 빌드 14926에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 
 - 이제 Ping은 관리자 권한이 없는 콘솔에서 작동 합니다.
 - 이제 Ping6이 지원 됩니다 (관리자 권한 없음).
@@ -1572,7 +1573,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 빌드 14915에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 -  GH #262 (unix 데이터 그램 소켓) 용 socketpair
 - SO_REUSEADDR에 대 한 Unix 소켓 지원
 - SO_BROADCAST에 대 한 UNIX 소켓 지원 (GH #568)
@@ -1596,7 +1597,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 빌드 14905에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 이제 다시 시작 가능한 시스템 호출이 지원 됩니다 (GH #349, GH #520).
 - Symlink (GH #650)로 끝나는 디렉터리
 - /Sv/svvvvvhu에 대해 구현 된 RNDGETENTCNT ioctl
@@ -1611,7 +1612,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 빌드 14901에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 후행 슬래시 문제를 수정 했습니다.
     - 이제와 `$ mv a/c/ a/b/` 같은 명령이 작동 합니다.
 - 이제 Ubuntu 로캘을 Windows 로캘로 설정 해야 하는지 여부를 묻는 메시지가 표시 됩니다.
@@ -1644,7 +1645,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 ## <a name="build-14388-to-windows-10-anniversary-update"></a>Windows 10 기념일 업데이트에 14388 빌드
 빌드 14388에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/14388wip)를 참조 하십시오. <br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 8/2에 대 한 Windows 10 기념일 업데이트 준비에 대 한 수정
   - 기념일 업데이트의 WSL에 대 한 자세한 내용은 [블로그](https://blogs.msdn.microsoft.com/wsl/) 를 참조 하세요.
 
@@ -1653,7 +1654,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 ## <a name="build-14376"></a>빌드 14376
 빌드 14376에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/)를 참조 하십시오. <br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - Apt-get이 중단 되는 일부 인스턴스 제거 (GH #493)
 - 빈 탑재를 올바르게 처리 하지 않는 문제를 해결 함
 - 지 각 디스크가 올바르게 탑재 되지 않은 문제를 수정 했습니다.
@@ -1668,7 +1669,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 ## <a name="build-14371"></a>빌드 14371
 빌드 14371에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/)를 참조 하십시오. <br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - Ptrace를 사용 하는 경우 SIGCHLD 및 wait ()로 타이밍 경합을 수정 했습니다.
 - 경로에 후행/(GH #432)가 있는 경우 몇 가지 동작을 수정 했습니다.
 - 자식에 대 한 열린 핸들로 인해 이름 바꾸기/연결 해제 실패 문제가 해결 됨
@@ -1679,7 +1680,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 ## <a name="build-14366"></a>빌드 14366
 빌드 14366에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/)를 참조 하십시오. <br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - Symlink를 통한 파일 생성 수정
 -   Python에 대 한 listxattr 추가 (GH 385)
 -   추가 버그 수정 및 개선 사항
@@ -1693,7 +1694,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 ## <a name="build-14361"></a>빌드 14361
 빌드 14361에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/wip14361)를 참조 하십시오. <br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - DrvFs는 Windows의 Ubuntu에서 Bash로 실행 될 때 대/소문자를 구분 합니다.
   - 사용자는 .txt와 CASE를 입력할 수 있습니다. /Mnt/c 드라이브의 TXT
   - 대/소문자 구분은 Windows의 Ubuntu에 있는 Bash 내 에서만 지원 됩니다. Bash를 벗어난 NTFS에서 파일을 올바르게 보고 하지만 Windows의 파일과 상호 작용 하는 경우 예기치 않은 동작이 발생할 수 있습니다.
@@ -1739,7 +1740,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 빌드 14352에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/wip14352)를 참조 하십시오.<br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - 대량 파일이 다운로드/생성 되지 않은 문제를 해결 했습니다.  Npm 및 기타 시나리오를 차단 해제 해야 합니다 (GH #3, GH #313).
 - 소켓이 중단 된 일부 인스턴스 제거
 - 일부 ptrace 오류 수정 됨
@@ -1767,7 +1768,7 @@ WSL에서 일부 소켓 구현에 문제가 발생 했습니다.  버그 확인�
 
 VolFs 및 드라이브 Fs에 대 한 정보는 [Wsl 블로그](https://blogs.msdn.microsoft.com/wsl)에서 찾을 수 있습니다. <br/>
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - Windows 사용자 이름에 유니코드 문자가 있는 경우의 설치 문제 해결
 - 이제 FAQ의 apt 업데이트 udev 해결 방법이 기본적으로 처음 실행 될 때 제공 됩니다.
 - Symlink fs (/mnt/<drive>) 디렉터리에서 사용 하도록 설정 됨
@@ -1813,7 +1814,7 @@ VolFs 및 드라이브 Fs에 대 한 정보는 [Wsl 블로그](https://blogs.msd
 빌드 14332에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/wip14332)를 참조 하십시오. <br/>
 
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 - DNS 항목 우선 순위를 포함 하는 resolv.conf 향상
 - /Mnt 및 비/mnt 드라이브 간에 파일 및 디렉터리를 이동 하는 문제
 - 이제 symlink를 사용 하 여 Tar 파일을 만들 수 있습니다.
@@ -1834,12 +1835,12 @@ VolFs 및 드라이브 Fs에 대 한 정보는 [Wsl 블로그](https://blogs.msd
 빌드 14332에 대 한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/wip14328)를 참조 하십시오. <br/>
 
 
-### <a name="new-features"></a>새로운 기능
+### <a name="new-features"></a>새 기능
 * 이제 Linux 사용자를 지원 합니다.  Windows에서 Ubuntu에 Bash를 설치 하면 Linux 사용자를 만들라는 메시지가 표시 됩니다.  자세한 내용은 다음을 참조 하세요. https://aka.ms/wslusers
 * 이제 호스트 이름이 Windows 컴퓨터 이름으로 설정 되어 있습니다.@localhost
 * 빌드 14328에 대 한 자세한 내용은 다음을 참조 하세요. https://aka.ms/wip14328
 
-### <a name="fixed"></a>고정
+### <a name="fixed"></a>수정됨
 * 비/mnt/<drive> 파일에 대 한 Symlink 향상
     * npm 설치 이제 작동
     * 이제 jdk/jre에서 [여기](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html)에 있는 지침을 사용 하 여 설치할 수 있습니다.

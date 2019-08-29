@@ -8,12 +8,13 @@ ms.date: 02/7/2018
 ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
-ms.openlocfilehash: 0c9f9315b17d5156aa111e7619ee25534653b27e
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: ca65cf6fde3e0ba4750ffc44f5aec542be6cfabf
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499272"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122702"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템 관리 및 구성
 
@@ -272,7 +273,7 @@ Wsl은 및 라는 두 `automount` 개의 `network`섹션을 지원 합니다.
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled    | boolean                        | true         | `true`고정 드라이브 (즉, `C:/`또는 `D:/`)를 사용 하 여 자동으로 `/mnt`DrvFs에 탑재할 수 있습니다.  `false`는 드라이브가 자동으로 탑재 되지 않음을 의미 하지만 수동으로 또는를 통해 `fstab`탑재할 수 있습니다.                                                                                                             |
 | mountFsTab | boolean                        | true         | `true`wsl start에서 처리할를 설정 `/etc/fstab` 합니다. /etc/fstab는 SMB 공유와 같은 다른 파일 시스템을 선언할 수 있는 파일입니다. 따라서 시작 시 WSL에서 자동으로 이러한 파일 시스템를 탑재할 수 있습니다.                                                                                                                |
-| 루트       | 문자열                         | `/mnt/`      | 고정 드라이브가 자동으로 탑재 되는 디렉터리를 설정 합니다. 예를 들어 wsl `/windir/` 에 디렉터리가 있고이를 루트로 지정 하는 경우 고정 드라이브가에 탑재 된 것을 볼 수 있습니다.`/windir/c`                                                                                              |
+| 루트       | String                         | `/mnt/`      | 고정 드라이브가 자동으로 탑재 되는 디렉터리를 설정 합니다. 예를 들어 wsl `/windir/` 에 디렉터리가 있고이를 루트로 지정 하는 경우 고정 드라이브가에 탑재 된 것을 볼 수 있습니다.`/windir/c`                                                                                              |
 | 옵션    | 쉼표로 구분 된 값 목록 | 빈 문자열 | 이 값은 기본 DrvFs 탑재 옵션 문자열에 추가 됩니다. **DrvFs 옵션만 지정할 수 있습니다.** 탑재 이진이 일반적으로 플래그로 구문 분석 하는 옵션은 지원 되지 않습니다. 이러한 옵션을 명시적으로 지정 하려면/etc/fstab에서 수행 하려는 모든 드라이브를 포함 해야 합니다. |
 
 기본적으로 WSL은 uid 및 gid를 기본 사용자의 값으로 설정 합니다 (Ubuntu 배포판에서 기본 사용자는 uid = 1000, gid = 1000으로 만들어짐). 사용자가이 키를 통해 gid 또는 uid 옵션을 명시적으로 지정 하면 연결 된 값이 덮어쓰여집니다. 그렇지 않으면 기본값이 항상 추가 됩니다.

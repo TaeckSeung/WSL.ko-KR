@@ -8,19 +8,19 @@ ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.localizationpriority: High
-ms.openlocfilehash: edff78b1447aa382253417d27df52fe497c58b08
-ms.sourcegitcommit: e17038c166b69f73e593ae3ac351c9d66e2ba64b
+ms.localizationpriority: high
+ms.openlocfilehash: 7c8e3b3f7ec13109485d7efa29739dadc8bfacf7
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694623"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122675"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux 용 Windows 하위 시스템 설명서
 
 Linux 용 Windows 하위 시스템을 통해 개발자는 가상 컴퓨터의 오버 헤드 없이 대부분의 명령줄 도구, 유틸리티 및 응용 프로그램을 포함 하 여 Windows에서 직접 수정 되지 않은 GNU/Linux 환경을 실행할 수 있습니다.  
 
-다음 작업을 수행할 수 있습니다.
+다음을 할 수 있습니다.
 
 1. [Microsoft Store에서](https://aka.ms/wslstore)선호 하는 GNU/Linux 배포판을 선택 합니다.
 1. ,, 또는 다른 ELF-64 이진 파일과 같은 `sed` 일반적인명령줄무료소프트웨어를실행합니다.`awk` `grep` 

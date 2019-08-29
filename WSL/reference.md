@@ -8,12 +8,13 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
 ms.custom: seodec18
-ms.openlocfilehash: 018b02b43e859476f7ee38f54df8efa0ca0e652b
-ms.sourcegitcommit: 62c49d435a91f2e390c3c495f3e09e62b5ada13c
+ms.localizationpriority: high
+ms.openlocfilehash: edd4b8216a25f519e36b8b99b626b0a4315f6039
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69578844"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122747"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에 대 한 명령 참조
 

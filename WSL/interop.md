@@ -7,19 +7,20 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.localizationpriority: high
+ms.openlocfilehash: 3f3df3337ece75d7af77313f5fc55eb4e18e31cb
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040822"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122729"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows와 Linux의 상호 운용성을 위한 windows 하위 시스템
 
 > **업데이트를 업데이트 합니다.**  
 작성자 업데이트 또는 기념일 업데이트를 실행 하는 경우 [작성자/기념일 업데이트 섹션](interop.md#creators-update-and-anniversary-update)으로 이동 합니다.
 
-WSL (Linux 용 Windows 하위 시스템)은 지속적으로 Windows와 Linux 간의 통합을 개선 하 고 있습니다.  다음 작업을 수행할 수 있습니다.
+WSL (Linux 용 Windows 하위 시스템)은 지속적으로 Windows와 Linux 간의 통합을 개선 하 고 있습니다.  다음을 할 수 있습니다.
 
 1. Linux 콘솔에서 Windows 이진 파일을 호출 합니다.
 1. Windows 콘솔에서 Linux 이진 파일을 호출 합니다.
@@ -37,7 +38,7 @@ Windows와 WSL 간에 원활한 환경을 제공 합니다.  기술 세부 정�
 1. WSL 기본 사용자로 실행 합니다.
 1. 호출 프로세스 및 터미널과 동일한 Windows 관리 권한이 있어야 합니다.
 
-이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```console
 C:\temp> wsl ls -la

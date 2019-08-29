@@ -8,12 +8,13 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 30cb1de0a01fd46bc434061cd36794f4ece77e4b
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: e544dc461913c6e044c70f39103cced62167c4b8
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499291"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122711"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>새로 설치 된 배포판 초기화
 배포판를 다운로드 하 여 설치한 후에는 새 배포판의 초기화를 완료 해야 합니다.
@@ -21,7 +22,7 @@ ms.locfileid: "67499291"
 ## <a name="launch-a-distro"></a>배포판 시작
 새로 설치한 배포판의 초기화를 완료 하려면 새 인스턴스를 시작 합니다. Microsoft Store 앱에서 "시작" 단추를 클릭 하거나 시작 메뉴에서 배포판를 시작 하 여이 작업을 수행할 수 있습니다.
 
-> 팁:  가장 자주 사용 되는 배포판을 시작 메뉴에 고정 하거나 작업 표시줄에 고정 하는 것이 좋습니다.
+> 팁: 가장 자주 사용 되는 배포판을 시작 메뉴에 고정 하거나 작업 표시줄에 고정 하는 것이 좋습니다.
 
 ![시작 메뉴에서 배포판 시작](media/start-menu.png)
 

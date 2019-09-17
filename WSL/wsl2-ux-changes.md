@@ -2,18 +2,18 @@
 title: WSL 1과 WSL 2 간의 UX 변경 내용
 description: WSL 1과 WSL 2 사이의 사용자 환경 변경
 keywords: BashOnWindows, bash, wsl, wsl2, windows, linux, windowssubsystem, ubuntu, debian, suse, windows 10 용 windows 하위 시스템
-author: mscraigloewen
-ms.author: mscraigloewen
+author: craigloewen-msft
+ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a6c8f4fbbf21b4295e69fe3de2ecf0922ab20bbe
-ms.sourcegitcommit: 6086126c35a5518a7110935fa13592b5ed9dd6b7
+ms.openlocfilehash: 3addfd27d777731bf92efab42c6bcd4be415779b
+ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67891781"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71020968"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 사이의 사용자 환경 변경
 

@@ -2,18 +2,18 @@
 title: WSL 2 질문과 대답
 description: Linux 2 용 Windows 하위 시스템에 대 한 질문과 대답
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
-author: mscraigloewen
-ms.author: mscraigloewen
+author: craigloewen-msft
+ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 760ca61f77f12509224458f1b44a1329d7225600
-ms.sourcegitcommit: 00e4d12bfcd0dcd53c7445ddb2f8f0d0739d20af
+ms.openlocfilehash: ea6a1e4fc813ec80393a0c4e2beb89e9a40fb68e
+ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915555"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71020919"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 FAQ
 

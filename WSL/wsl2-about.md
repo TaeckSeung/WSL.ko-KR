@@ -2,18 +2,18 @@
 title: WSL 2 정보
 description: Linux 용 Windows 하위 시스템에 대 한 새 아키텍처 정보 WSL 2 정보
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
-author: mscraigloewen
-ms.author: mscraigloewen
+author: craigloewen-msft
+ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: e9c1f043207193a5c00ecf6176f54f240aa48680
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.openlocfilehash: 983699c26a21af7b81ba31067316ba3bbf1601af
+ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499256"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71020930"
 ---
 # <a name="about-wsl-2"></a>WSL 2 정보
 

@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 4ae5b8452ae2aec679c2f0450dc48644b77fc1c9
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: bced0fd0bf948842b8c465f645aa5c368c2f4335
+ms.sourcegitcommit: ebc6ae7e7546a6d33644e68788fa0215028859b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070306"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
@@ -26,13 +26,16 @@ WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니
 - 명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 - Distro가 사용 중인 WSL 버전 확인
 
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>'가상 머신 플랫폼' 옵션 구성 요소 사용
+## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>' 가상 컴퓨터 플랫폼 ' 옵션 구성 요소를 사용 하도록 설정 하 고 WSL이 사용 하도록 설정 되어 있는지 확인 합니다.
 
 관리자 권한으로 PowerShell을 열어 실행합니다.
 
-`Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
 
-이러한 변경 내용을 사용한 후에는 컴퓨터를 다시 시작해야 합니다.
+그러면 Linux 선택적 구성 요소에 대 한 가상 컴퓨터 플랫폼과 Windows 하위 시스템이 모두 설치 됩니다. 이러한 명령을 실행 한 후 컴퓨터를 다시 시작 해야 합니다. 
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 

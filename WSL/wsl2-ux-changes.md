@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 3addfd27d777731bf92efab42c6bcd4be415779b
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: 347c965dbbc2a328590d3a8149a8316979d6793d
+ms.sourcegitcommit: ebc6ae7e7546a6d33644e68788fa0215028859b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020968"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070313"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 사이의 사용자 환경 변경
 
@@ -32,18 +32,7 @@ ms.locfileid: "71020968"
 파일 성능 혜택을 누릴 수 있도록 Linux 루트 파일 시스템 내부의 Linux 응용 프로그램에 자주 액세스 하는 파일을 배치 해야 합니다. 이러한 파일은 더 빠른 파일 시스템 액세스를 위해 Linux 루트 파일 시스템 내에 있어야 합니다. Windows 앱이 Linux 루트 파일 시스템에 액세스할 수도 있습니다 (예: 파일 탐색기). 실행 시도: `explorer.exe .` Linux 배포판의 홈 디렉터리에서 수행 하는 작업을 확인 하 고이를 훨씬 쉽게 전환할 수 있습니다. 
 
 ## <a name="accessing-network-applications"></a>네트워크 응용 프로그램 액세스
-WSL 2 preview의 초기 빌드에서 Linux 배포판의 IP 주소와 호스트 컴퓨터의 IP 주소를 사용 하는 Linux의 모든 Windows server를 사용 하 여 Windows에서 Linux 서버에 액세스 해야 합니다. 이는 일시적 이며 수정할 우선 순위 목록에 매우 높습니다.
-
-### <a name="accessing-linux-applications-from-windows"></a>Windows에서 Linux 응용 프로그램 액세스
-WSL 배포판 서버를 사용 하는 경우 배포판를 켜는 가상 머신의 IP 주소를 찾아 해당 IP 주소를 사용 하 여 연결 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.
-
-- Wsl 배포판 내에서 명령을 `ip addr` 실행 하 고 `eth0` 인터페이스의 `inet` 값에서 찾아 배포판의 IP 주소를 가져옵니다.
-   - 다음과 `ip addr | grep eth0`같이 grep를 사용 하 여 명령의 출력을 필터링 하 여이를 보다 쉽게 찾을 수 있습니다.
-- 위에서 찾은 IP를 사용 하 여 Linux 서버에 연결 합니다.
-
-아래 그림에서는 Edge 브라우저를 사용 하 여 node.js 서버에 연결 하는 방법의 예를 보여 줍니다.
-
-![Windows에서 Linux 네트워크 응용 프로그램에 액세스](media/wsl2-network-w2l.jpg)
+WSL 2 preview의 초기 빌드에서는 호스트 컴퓨터의 IP 주소를 사용 하 여 Linux에서 Windows server에 액세스 해야 합니다.
 
 ### <a name="accessing-windows-applications-from-linux"></a>Linux에서 Windows 응용 프로그램 액세스
 Windows 네트워크 응용 프로그램에 액세스 하려면 호스트 컴퓨터의 IP 주소를 사용 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.
@@ -54,6 +43,19 @@ Windows 네트워크 응용 프로그램에 액세스 하려면 호스트 컴퓨
 아래 그림은 Windows에서 실행 되는 Windows에서 실행 되는 node.js 서버에 연결 하 여이에 대 한 예를 보여 줍니다. 
 
 ![Windows에서 Linux 네트워크 응용 프로그램에 액세스](media/wsl2-network-l2w.png)
+
+### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>Windows에서 Linux 응용 프로그램 액세스 (18945 보다 낮은 빌드 에서만)
+WSL 배포판 서버를 사용 하는 경우 배포판를 켜는 가상 머신의 IP 주소를 찾아 해당 IP 주소를 사용 하 여 연결 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.
+
+- Wsl 배포판 내에서 명령을 `ip addr` 실행 하 고 `eth0` 인터페이스의 `inet` 값에서 찾아 배포판의 IP 주소를 가져옵니다.
+   - 다음과 `ip addr | grep eth0`같이 grep를 사용 하 여 명령의 출력을 필터링 하 여이를 보다 쉽게 찾을 수 있습니다.
+- 위에서 찾은 IP를 사용 하 여 Linux 서버에 연결 합니다.
+
+아래 그림에서는 Edge 브라우저를 사용 하 여 node.js 서버에 연결 하는 방법의 예를 보여 줍니다.
+
+![Windows에서 Linux 네트워크 응용 프로그램에 액세스](media/wsl2-network-w2l.jpg)
+
+빌드가 18945 이상인 경우 일반 localhost를 사용할 수 있습니다. 
 
 ### <a name="other-networking-considerations"></a>기타 네트워킹 고려 사항
 

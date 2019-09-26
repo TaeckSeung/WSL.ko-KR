@@ -2,18 +2,16 @@
 title: WSL 2
 description: Linux 용 Windows 하위 시스템 2
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
-author: craigloewen-msft
-ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 921ce7cbc4c64998d64638a049df4e1b21fb5182
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: 8d3de7d1b54c8e434233c4821be9a460cc4ac27e
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020941"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269847"
 ---
 # <a name="wsl-2"></a>WSL 2
 

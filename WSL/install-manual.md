@@ -2,18 +2,16 @@
 title: Linux 용 Windows 하위 시스템 (WSL) Distros를 수동으로 다운로드 합니다.
 description: Linux 배포판에 대 한 Windows 하위 시스템을 수동으로 다운로드 하는 방법에 대 한 지침입니다.
 keywords: BashOnWindows, bash, wsl, windows, linux 용 windows 하위 시스템, WSL, windows 하위 시스템, 배포판, ubuntu, openSUSE, SLES, debian, kali
-author: taraj
-ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: ded81ec9672d75203e0d289c551c86cd90bde606
-ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
+ms.openlocfilehash: df47e656cf83e0b13aa8eb3f210e010d6a85bfd8
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68832101"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269788"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판 패키지에 대 한 Windows 하위 시스템 수동으로 다운로드
 
@@ -35,7 +33,7 @@ Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭 하 �
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
 * [WSL 용 Fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-이렇게 하면 `<distro>.appx` 패키지가 선택한 폴더로 다운로드 됩니다. [설치 지침](#Installing-your-distro) 에 따라 다운로드 한 배포판를 설치 합니다.
+이렇게 하면 `<distro>.appx` 패키지가 선택한 폴더로 다운로드 됩니다. [설치 지침](#installing-your-distro) 에 따라 다운로드 한 배포판를 설치 합니다.
 
 ## <a name="downloading-distros-via-the-command-line"></a>명령줄을 통해 배포판 다운로드
 원하는 경우 명령줄을 통해 기본 설정 배포판를 다운로드할 수도 있습니다.

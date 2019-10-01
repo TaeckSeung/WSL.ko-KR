@@ -2,19 +2,17 @@
 title: Linux용 Windows 하위 시스템 문제 해결
 description: Linux용 Windows 하위 시스템에서 Linux를 실행하는 동안 사용자에게 발생할 수 있는 일반적인 오류 및 문제에 대한 자세한 정보를 제공합니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
-author: scooley
-ms.author: scooley
 ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: a73de13853c124de38cae1b9c6c51d0ee9978d44
-ms.sourcegitcommit: f1780bf174c67c531864497ae78cf3f26ef68503
+ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
+ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71205978"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71279256"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -101,7 +99,7 @@ sudo update-locale LANG=en_US.UTF8
 1.  `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` 폴더를 삭제합니다. <br/>
   **참고: 선택적 기능이 완전히 설치되어 작동하는 경우에는 이 작업을 수행하지 마세요.**
 2.  선택적 WSL 기능을 사용하도록 설정합니다(아직 사용하지 않는 경우).
-3.  다시 부팅합니다.
+3.  다시 부팅
 4.  lxrun /uninstall /full을 실행합니다
 5.  Bash를 설치합니다.
 
@@ -188,3 +186,10 @@ sudo apt-get purge openssh-server
 sudo apt-get install openssh-server
 ```
 
+### <a name="the-referenced-assembly-could-not-be-found-when-enabling-the-wsl-optional-feature"></a>WSL 선택적 기능을 사용하도록 설정할 때 "참조된 어셈블리를 찾을 수 없습니다." 오류가 발생함
+
+이 오류는 잘못된 설치 상태와 관련이 있습니다. 이 문제를 시도해 보고 해결하려면 다음 단계를 수행하세요.
+
+* PowerShell에서 WSL 기능 사용 명령을 실행하는 경우 [시작] 메뉴를 열고, 'Windows 기능 사용/사용 안 함'을 검색하여 GUI를 대신 사용해 본 다음, 목록에서 선택적 구성 요소를 설치할 'Linux용 Windows 하위 시스템'을 선택합니다.
+* [설정], [업데이트]로 차례로 이동하고, '업데이트 확인'을 클릭하여 Windows 버전을 업데이트합니다.
+* 두 단계가 모두 실패하고 WSL에 액세스해야 하는 경우 설치 미디어를 사용하여 Windows 10을 다시 설치하고 '모두 유지'를 선택하여 앱과 파일이 유지되도록 하는 방식으로 업그레이드하는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 지침은 [Windows 10 다시 설치](https://support.microsoft.com/en-us/help/4000735/windows-10-reinstall) 페이지에서 확인할 수 있습니다.

@@ -2,19 +2,17 @@
 title: Windows 10에 WSL(Linux용 Windows 하위 시스템) 설치
 description: Linux용 Windows 하위 시스템을 Windows 10에 설치하는 방법에 대한 지침입니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, Debian, Suse, Windows 10, 설치
-author: taraj
-ms.author: taraj
 ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 218e3e652d0849f944e8aaceef3fb954294222be
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: c53c4507fb56f8e4a3456963b1d6f50ceac8ef37
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122772"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269809"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -77,4 +75,4 @@ WSL용 Linux 배포판을 설치하려면 먼저 선택적인 "Linux용 Windows 
     
  * **0x8007019e 오류로 인한 WslRegisterDistribution 실패**   
   * 선택적인 Linux용 Windows 하위 시스템 구성 요소가 실행되지 않습니다. 
-   * 제어판 프로그램 및 기능 Windows 기능 사용/사용 안 함 을 차례로 열어 Linux용 Windows 하위 시스템 을 선택하거나 이 문서의 시작 부분에서 설명한 PowerShell cmdlet을 사용합니다.
+   * **제어판** -> **프로그램 및 기능** -> **Windows 기능 사용/사용 안 함**을 차례로 열어 **Linux용 Windows 하위 시스템**을 선택하거나 이 문서의 시작 부분에서 설명한 PowerShell cmdlet을 사용합니다.

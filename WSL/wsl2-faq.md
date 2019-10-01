@@ -2,18 +2,16 @@
 title: WSL 2 질문과 대답
 description: Linux 2 용 Windows 하위 시스템에 대 한 질문과 대답
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
-author: mscraigloewen
-ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: c4a8c02db6563d7ad572917578c1a49d419f1756
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67587137"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269567"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 FAQ
 
@@ -45,7 +43,7 @@ WSL 2의 초기 릴리스에서 하드웨어 액세스 지원은 제한 됩니�
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>가상 머신에서 WSL 2를 실행할 수 있나요?
 
-예! 가상 머신에서 중첩 된 가상화를 사용 하도록 설정 했는지 확인 해야 합니다. 관리자 권한으로 PowerShell 창에서 다음 명령을 실행 하 여 Hyper-v에서이 기능을 사용 하도록 설정할 수 있습니다.
+예! 가상 머신에서 중첩 된 가상화를 사용 하도록 설정 했는지 확인 해야 합니다. 관리자 권한으로 PowerShell 창에서 다음 명령을 실행 하 여 부모 Hyper-v 호스트에서이 기능을 사용 하도록 설정할 수 있습니다.
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 

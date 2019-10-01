@@ -16,3 +16,4 @@
 
 # [문제 해결](./troubleshooting.md)
 # [릴리스 정보](./release-notes.md)
+# [명령줄 참조](./reference.md)

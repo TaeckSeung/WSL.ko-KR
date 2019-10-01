@@ -2,36 +2,38 @@
 title: WSL 2 설치
 description: WSL 2의 설치 지침
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
-author: mscraigloewen
-ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 3ad180ecc9deaa1566e9870700b26f82f631c7f1
-ms.sourcegitcommit: 9ad7a54668f39677e9660186e4f5172ea2597e2b
+ms.openlocfilehash: af70bf567cd548d0ca84bbe535003052ec49256b
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246871"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269579"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
 WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니다.
 
+- WSL이 설치 되어 있는지 확인 하 고 ( [여기](./install-win10.md)에서 작업을 수행 하기 위한 지침을 찾을 수 있음) Windows 10 빌드 18917 이상을 실행 하 고 있는지 확인 합니다.
+   - 빌드 18917 이상을 사용 하 고 있는지 확인 하려면 [Windows 참가자 프로그램에](https://insider.windows.com/en-us/) 참여 하 고 ' Fast ' 링을 선택 하세요. 
+   - 명령 프롬프트를 열고 `ver` 명령을 실행 하 여 Windows 버전을 확인할 수 있습니다.
 - '가상 머신 플랫폼' 옵션 구성 요소 사용
 - 명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 - Distro가 사용 중인 WSL 버전 확인
 
-WSL 2를 사용하려면 Windows 10 빌드 18917 이상을 실행해야 하며 WSL이 이미 설치되어 있어야 합니다([여기](./install-win10.md)에서 지침을 찾을 수 있음). 
-
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>'가상 머신 플랫폼' 옵션 구성 요소 사용
+## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>' 가상 컴퓨터 플랫폼 ' 옵션 구성 요소를 사용 하도록 설정 하 고 WSL이 사용 하도록 설정 되어 있는지 확인 합니다.
 
 관리자 권한으로 PowerShell을 열어 실행합니다.
 
-`Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
 
-이러한 변경 내용을 사용한 후에는 컴퓨터를 다시 시작해야 합니다.
+그러면 Linux 선택적 구성 요소에 대 한 가상 컴퓨터 플랫폼과 Windows 하위 시스템이 모두 설치 됩니다. 이러한 명령을 실행 한 후 컴퓨터를 다시 시작 해야 합니다. 
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 

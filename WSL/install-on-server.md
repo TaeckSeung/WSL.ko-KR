@@ -2,18 +2,16 @@
 title: Windows Server에 Linux 하위 시스템 설치
 description: Windows Server의 Linux 하위 시스템에 대 한 설치 지침
 keywords: BashOnWindows, bash, wsl, windows, linux, windowssubsystem, ubuntu, windows server 용 windows 하위 시스템
-author: scooley
-ms.author: scooley
 ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: d295cf3db99fb45b943369f532f7e807a603061c
-ms.sourcegitcommit: 8b5a8d49b63441478dd540887f534dcc6dd0ba41
+ms.openlocfilehash: 51a2e3f3443ed9b1ba3d8ab79977f22839ee0283
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67308796"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269777"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 설치 가이드
 
@@ -51,7 +49,7 @@ Windows에서 Linux 배포판을 실행 하려면 먼저 "Linux 용 Windows 하�
     ![Windows Server의 확장 된 Ubuntu 배포판](media/server-appx-expand.png)
 
     > **문제 해결**
-    > * **0x8007007e 등 오류로 인해 설치 하지 못했습니다**. 이 오류는 시스템에서 WSL을 지원 하지 않을 때 발생 합니다. 다음 사항을 확인합니다
+    > * **0x8007007e 등 오류로 인해 설치 하지 못했습니다**. 이 오류는 시스템에서 WSL을 지원 하지 않을 때 발생 합니다. 다음 사항을 확인하세요.
     >   * Windows 빌드 16215 이상을 실행 하 고 있습니다. [빌드를 확인](troubleshooting.md#check-your-build-number)합니다.
     >   * Linux 용 Windows 하위 시스템 옵션 구성 요소가 사용 하도록 설정 되어 있고 컴퓨터가 다시 시작 되었습니다.  [WSL이 사용 하도록 설정 되어 있는지 확인](troubleshooting.md#confirm-wsl-is-enabled)합니다.
     

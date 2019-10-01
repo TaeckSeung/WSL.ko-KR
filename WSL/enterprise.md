@@ -2,18 +2,16 @@
 title: 엔터프라이즈에 대한 Linux용 Windows 하위 시스템
 description: 엔터프라이즈 환경에서 Linux 용 Windows 하위 시스템을 가장 효과적으로 사용 하는 방법에 대 한 리소스 및 지침입니다.
 keywords: BashOnWindows, bash, wsl, windows, linux 용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, enterprise, 배포, 오프 라인, 패키징, 스토어, 배포, 설치, 설치
-author: mscraigloewen
-ms.author: mscraigloewen
 ms.date: 09/04/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 9d867654d1b66fc14b58bc5e111986a7d38ef79c
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: c32d62267c77d87fb200cfe43b8e6f43b4e3a56d
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "59063281"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269857"
 ---
 # <a name="windows-subsystem-for-linux-for-enterprise"></a>엔터프라이즈에 대한 Linux용 Windows 하위 시스템
 

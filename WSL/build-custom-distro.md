@@ -2,18 +2,16 @@
 title: WSL 용 사용자 지정 Linux 배포판 빌드
 description: Linux 용 Windows 하위 시스템에 대 한 사용자 지정 Linux 배포를 만드는 방법에 대해 알아봅니다.
 keywords: BashOnWindows, bash, wsl, windows, windows 하위 시스템, 배포판, 사용자 지정
-author: taraj
-ms.author: taraj
 ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: 181badd4ee2f69e904099c12b54dfbdf3a37e294
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040779"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269701"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>WSL 용 사용자 지정 Linux 배포판 만들기
 

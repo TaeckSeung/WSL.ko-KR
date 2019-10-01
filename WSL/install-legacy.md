@@ -2,18 +2,16 @@
 title: Windows 10 기념일 업데이트 또는 작성자 업데이트에서 설치 또는 제거
 description: 레거시, beta 배포판 on Windows 10 기념일 업데이트 또는 작성자 업데이트에 대 한 설치 및 설치 취소 지침
 keywords: BashOnWindows, bash, wsl, windows, linux 용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 레거시, 베타, 설치, 제거, 제거, 설치 취소, 삭제, 사용 되지 않음
-author: taraj
-ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 0d8fdabd61fadbfc58549a220ead23585a3d3656
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.openlocfilehash: 416bed3ed3a0470da2eb5e6beb75e73eb6836200
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499268"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269766"
 ---
 # <a name="guide-to-install-or-uninstall-windows-subsystem-for-linux-on-windows-10-anniversary-update-and-creators-update"></a>Windows 10 기념일 업데이트 및 작성자 업데이트에서 Linux 용 Windows 하위 시스템을 설치 또는 제거 하는 방법에 대 한 가이드 
 

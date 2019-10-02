@@ -19,7 +19,7 @@ WSL 2는 Windows에서 ELF64 Linux 이진 파일을 실행하기 위해 Linux �
 
 ## <a name="linux-kernel-in-wsl-2"></a>WSL 2의 Linux 커널
 
-WSL 2의 Linux 커널은 kernel.org에서 제공 되는 원본을 기반으로 하는 안정적인 최신 분기를 기반으로 합니다. 이 커널은 WSL 2에 대해 특별히 조정 되었습니다. Windows에서 놀라운 Linux 환경을 제공 하 고 Windows 업데이트를 통해 서비스를 제공 하는 크기와 성능에 맞게 최적화 되었습니다. 즉, 사용자가 직접 관리할 필요 없이 최신 보안 수정과 커널 향상을 얻을 수 있습니다.
+WSL 2의 Linux 커널은 kernel.org에서 제공되는 원본을 기반으로 하는 안정적인 최신 분기를 기반으로 합니다. 이 커널은 WSL 2에 대해 특별히 조정되었습니다. Windows에서 놀라운 Linux 환경을 제공하고 Windows 업데이트를 통해 서비스를 제공하는 크기와 성능에 맞게 최적화되었습니다. 즉, 사용자가 직접 관리할 필요 없이 최신 보안 수정과 커널 향상을 얻을 수 있습니다.
 
 또한 이 커널은 오픈 소스가 됩니다. [여기](https://github.com/microsoft/WSL2-Linux-Kernel)에서 Linux 커널의 전체 소스 코드를 찾을 수 있습니다. 이 커널에 대해 자세히 알아보려면 이 블로그 게시물을 작성한 팀이 작성한 [이 블로그 게시물](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/)을 체크아웃할 수 있습니다.
 

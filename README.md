@@ -1,9 +1,9 @@
 # <a name="windows-subsystem-for-linux-wsl-documentation"></a>WSL (Linux 용 Windows 하위 시스템) 설명서
 
 ## <a name="issues"></a>문제
-문서 내 문제/오류를 발견하거나 제안하고 싶은 개선점이 있는 경우 이슈를 제기하거나 pull-request 전송을 부탁드립니다. 특히 PR을 해주시면 감사합니다 :)
+문서 내 문제/오류를 발견하거나 제안하고 싶은 개선점이 있는 경우 이슈를 제기하거나 pull-request 전송을 부탁드립니다. 특히 PR 문서 관련해서 해주시면 감사하겠습니다 :)
 
-> **참고:** 이 리포지토리의 이슈 트래커는 WSL 문서와 관련된 문제를 보고하기 위한 것입니다. 기타 관련 문제 리포지토리:
+> **참고:** 이 리포지토리의 이슈 트래커는 WSL 문서와 관련된 문제를 보고하기 위한 것입니다. 기타 관련 이슈의 리포지토리는 다음과 같습니다.
 > * WSL https://github.com/Microsoft/WSL/
 > * Windows 콘솔: https://github.com/Microsoft/Console/
 

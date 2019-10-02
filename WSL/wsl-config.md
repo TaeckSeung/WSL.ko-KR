@@ -2,19 +2,17 @@
 title: Linux 배포 관리
 description: Linux용 Windows 하위 시스템에서 실행되는 여러 Linux 배포를 나열하고 구성하는 방법에 대한 참조입니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, wsl.conf, wslconfig
-author: scooley
-ms.author: scooley
 ms.date: 02/7/2018
 ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7817858b297408ec179b57bda99a38c724595d6a
-ms.sourcegitcommit: 253e4ac5baede53abf19a87d04cf58c8b848eafc
+ms.openlocfilehash: 51099f21fe44fd8c7e8682332c939fbe6d5e5827
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70746734"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269873"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 관리 및 구성
 

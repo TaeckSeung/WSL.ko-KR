@@ -2,19 +2,17 @@
 title: 새 WSL Linux 배포판 초기화
 description: WSL용 Linux 배포판이 설치되면 여기에 나와 있는 간단한 단계에 따라 초기화를 완료합니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, Debian, Suse, Windows 10
-author: taraj
-ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: e544dc461913c6e044c70f39103cced62167c4b8
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: c33d349a6d39c325b079ccbf7ed6350bed796e33
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122711"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269595"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>새로 설치된 배포판 초기화
 배포판을 다운로드하여 설치한 후에는 새 배포판의 초기화를 완료해야 합니다.

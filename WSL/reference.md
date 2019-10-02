@@ -2,19 +2,17 @@
 title: Linux용 Windows 하위 시스템에 대한 명령 참조
 description: Linux용 Windows 하위 시스템을 관리하는 명령의 목록입니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu
-author: scooley
-ms.author: scooley
 ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: edd4b8216a25f519e36b8b99b626b0a4315f6039
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: d74a6926fd797f2e1ede0fd5d8d080d0f1ce3f6b
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122747"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269839"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 명령 참조
 
@@ -152,7 +150,7 @@ Linux용 Windows 하위 시스템과 상호 작용하는 기록 명령도 있습
 
 `lxrun.exe`는 Linux용 Windows 하위 시스템을 설치하고 관리하는 데 처음으로 사용된 명령이었습니다. Windows 10 1803 이상에서는 더 이상 사용되지 않습니다.
 
-명령은 WSL(Linux용 Windows 하위 시스템) 과 직접 상호 작용하는 데 사용할 수 있습니다.  이러한 명령은 `\Windows\System32` 디렉터리에 설치되며 Windows 명령 프롬프트 내에서 또는 PowerShell에서 실행할 수 있습니다.
+`lxrun.exe` 명령은 [WSL(Linux용 Windows 하위 시스템)](https://msdn.microsoft.com/en-us/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-)과 직접 상호 작용하는 데 사용할 수 있습니다.  이러한 명령은 `\Windows\System32` 디렉터리에 설치되며 Windows 명령 프롬프트 내에서 또는 PowerShell에서 실행할 수 있습니다.
 
 | 명령                     | 설명                     |
 |:----------------------------|:---------------------------|

@@ -2,19 +2,17 @@
 title: Linux용 Windows 하위 시스템 알아보기
 description: Linux용 Windows 하위 시스템이 작동하는 방법에 대해 자세히 알아봅니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux
-author: scooley
-ms.author: scooley
 ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7c8e3b3f7ec13109485d7efa29739dadc8bfacf7
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: 4e63fd186f11545937a4ce0a0fbd6071a4bf268d
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122675"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269725"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux용 Windows 하위 시스템 설명서
 

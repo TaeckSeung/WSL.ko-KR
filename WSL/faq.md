@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
+ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269739"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71934900"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답
 
@@ -145,7 +145,7 @@ WSL은 레거시 콘솔에서 실행할 수 없습니다. 레거시 콘솔을 �
 1. 확인을 클릭합니다.
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows를 업그레이드한 후 bash.exe를 실행하면 "오류: 0x80040154"가 발생하는 이유는 무엇인가요?
-Windows 업데이트 중에 "Linux용 Windows 하위 시스템" 기능이 사용하지 않도록 설정될 수 있습니다. 이 문제가 발생하면 Windows 기능을 다시 사용하도록 설정해야 합니다. "Linux용 Windows 하위 시스템" 기능을 사용하도록 설정하는 방법에 대한 지침은 [설치 가이드](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)에서 확인할 수 있습니다.
+Windows 업데이트 중에 "Linux용 Windows 하위 시스템" 기능이 사용하지 않도록 설정될 수 있습니다. 이 문제가 발생하면 Windows 기능을 다시 사용하도록 설정해야 합니다. "Linux용 Windows 하위 시스템" 기능을 사용하도록 설정하는 방법에 대한 지침은 [설치 가이드](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)에서 확인할 수 있습니다.
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL의 표시 언어를 변경하려면 어떻게 하나요?
 WSL 설치는 Windows 설치의 로캘과 일치하도록 Ubuntu 로캘을 자동으로 변경하려고 합니다. 이 동작을 원하지 않는 경우 설치가 완료된 후 다음 명령을 실행하여 Ubuntu 로캘을 변경할 수 있습니다. 이 변경 내용이 적용되려면 bash.exe를 다시 시작해야 합니다.

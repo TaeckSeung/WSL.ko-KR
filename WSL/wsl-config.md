@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 51099f21fe44fd8c7e8682332c939fbe6d5e5827
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: e69810625d08baf734683ff06231f79132ce1519
+ms.sourcegitcommit: e1cc2fe4de0fa03d5aea14f6b328f1bb9d0c59be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269873"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999396"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 관리 및 구성
 
@@ -267,7 +267,7 @@ WSL은 `automount` 및 `network`의 두 가지 섹션을 지원합니다.
 섹션: `[automount]`
 
 
-| 키        | value                          | 기본값      | 참고                                                                                                                                                                                                                                                                                                                          |
+| 키        | value                          | 기본      | 참고                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled    | boolean                        | true         | `true`를 사용하면 고정 드라이브(즉, `C:/` 또는 `D:/`)가 `/mnt` 아래의 DrvFs에 자동으로 탑재됩니다.  `false`는 드라이브가 자동으로 탑재되지 않음을 의미하지만, 수동으로 또는 `fstab`를 통해 탑재할 수 있습니다.                                                                                                             |
 | mountFsTab | boolean                        | true         | `true`는 WSL 시작 시 `/etc/fstab`가 처리되도록 설정합니다. /etc/fstab는 SMB 공유와 같은 다른 파일 시스템을 선언할 수 있는 파일입니다. 따라서 시작 시 이러한 파일 시스템을 WSL에 자동으로 탑재할 수 있습니다.                                                                                                                |
@@ -278,11 +278,25 @@ WSL은 `automount` 및 `network`의 두 가지 섹션을 지원합니다.
 
 **참고:** 이러한 옵션은 자동으로 탑재된 모든 드라이브에 대한 탑재 옵션으로 적용됩니다. 특정 드라이브에 대한 옵션만 변경하려면 /etc/fstab를 대신 사용합니다.
 
+##### <a name="mount-options"></a>탑재 옵션
+
+Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파일에 대한 파일 사용 권한이 계산되는 방법을 제어할 수 있습니다. 다음 옵션을 사용할 수 있습니다.
+
+| 키 | 설명 | Default |
+|:----|:----|:----|
+|uid| 모든 파일의 소유자에게 사용되는 사용자 ID | WSL 배포판의 기본 사용자 ID(처음 설치할 때 기본값은 1000으로 설정됨)
+|gid| 모든 파일의 소유자에게 사용되는 그룹 ID | WSL 배포판의 기본 그룹 ID(처음 설치할 때 기본값은 1000으로 설정됨)
+|umask | 모든 파일 및 디렉터리에서 제외할 권한의 8진수 마스크 | 000
+|fmask | 모든 파일에서 제외할 권한의 8진수 마스크 | 000
+|dmask | 모든 디렉터리에서 제외할 권한의 8진수 마스크 | 000
+
+**참고:** 권한 마스크는 파일 또는 디렉터리에 적용되기 전에 논리 OR 연산을 거칩니다. 
+
 #### <a name="network"></a>네트워크
 
 섹션 레이블: `[network]`
 
-| 키 | value | 기본값 | 참고|
+| 키 | value | 기본 | 참고|
 |:----|:----|:----|:----|
 | generateHosts | boolean | `true` | `true`는 WSL에서 `/etc/hosts`를 생성하도록 설정합니다. `hosts` 파일에는 IP 주소에 해당하는 호스트 이름의 정적 맵이 포함됩니다. |
 | generateResolvConf | boolean | `true` | `true`는 WSL에서 `/etc/resolv.conf`를 생성하도록 설정합니다. `resolv.conf`에는 지정된 호스트 이름을 해당 IP 주소로 확인할 수 있는 DNS 목록이 포함됩니다. | 
@@ -293,7 +307,7 @@ WSL은 `automount` 및 `network`의 두 가지 섹션을 지원합니다.
 
 다음 옵션은 참가자 빌드 17713 이상에서 사용할 수 있습니다.
 
-| 키 | value | 기본값 | 참고|
+| 키 | value | 기본 | 참고|
 |:----|:----|:----|:----|
 | enabled | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 프로세스 시작을 지원하는지 여부가 결정됩니다. |
 | appendWindowsPath | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 경로 요소를 $PATH 환경 변수에 추가할지 여부가 결정됩니다. | 

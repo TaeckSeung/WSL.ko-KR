@@ -8,19 +8,36 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 0dcf4519877fac5b838d4542dfd088cb6d233353
-ms.sourcegitcommit: 0fa3b02b36dc49779e165e689dfded4f3b727124
+ms.openlocfilehash: b92c20bad50d0c58da05bb0c8f26a69d4c0b2970
+ms.sourcegitcommit: 050f6095e92469b903db8ddf9356df5b22b21804
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249190"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71910297"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-18995"></a>빌드 18995
+빌드 18995에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/)를 참조하세요.
+
+* [WSL2] 작업이 중단된 후 DrvFs 탑재가 중지되는 문제 해결(예: ctrl-c) [GH 4377]
+* [WSL2] 매우 큰 hvsocket 메시지 처리 문제 해결 [GH 4105]
+* [WSL2] stdin이 파일인 경우 interop 문제 해결 [GH 4475]
+* [WSL2] 예기치 않은 네트워크 상태가 발생한 경우 서비스 충돌 문제 해결 [GH 4474]
+* [WSL2] 현재 프로세스에 환경 변수가 없는 경우 interop 서버에서 배포 이름 쿼리
+* [WSL2] stdin이 파일인 경우 interop 문제 해결
+* [WSL2] Linux 커널 버전을 4.19.72로 업데이트
+* [WSL2] .wslconfig를 통해 추가 커널 명령줄 매개 변수를 지정하는 기능 추가
+```
+[wsl2]
+kernelCommandLine = <string> # Additional kernel command line arguments
+
+```
 
 ## <a name="build-18990"></a>빌드 18990
 빌드 18990에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/)를 참조하세요.
 
-* \\wsl$의 디렉터리 목록의 성능을 향상시킵니다.
+* \\\\wsl$의 디렉터리 목록의 성능 개선
 * [WSL2] 추가 부팅 엔트로피를 주입합니다.[GH 4416]
 * [WSL2] su/sudo를 사용할 때 Windows 인터럽트를 수정합니다.[GH 4465]
 
@@ -38,7 +55,7 @@ ms.locfileid: "71249190"
 * 다음과 같이 /etc/wsl.conf에서 기본 사용자 이름을 설정하는 기능이 추가되었습니다.
 ```
 [user]
-default=root
+default=<string>
 ```
 
 ## <a name="build-18975"></a>빌드 18975
@@ -120,7 +137,7 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 * epoll 삭제 코드의 교착 상태 [GH 3922]
 * --import 및 –export에 대한 인수의 공백을 처리합니다. [GH 3932]
 * mmap’d 파일을 확장하면 올바르게 작동하지 않습니다. [GH 3939]
-* ARM64 \\wsl$ 액세스가 올바르게 작동하지 않는 이슈를 해결합니다.
+* ARM64 \\\\wsl$ 액세스가 올바르게 작동하지 않는 문제 해결
 * wsl.exe에 대한 개선된 기본 아이콘을 추가합니다.
 
 ## <a name="build-18342"></a>빌드 18342
@@ -623,7 +640,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
   * fmask: 모든 일반 파일에서 제외할 권한의 8진수 마스크입니다.
   * dmask: 모든 디렉터리에서 제외할 권한의 8진수 마스크입니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  예:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -632,7 +649,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 * WSL과 Win32 간에 환경 변수가 어떻게 흐르는지 구성하는 새 환경 변수 `WSLENV`가 도입되었습니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  예:
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY

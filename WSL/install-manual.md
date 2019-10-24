@@ -6,12 +6,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: df47e656cf83e0b13aa8eb3f210e010d6a85bfd8
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
+ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269788"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778820"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판 패키지에 대 한 Windows 하위 시스템 수동으로 다운로드
 
@@ -19,7 +19,7 @@ Microsoft Store를 통해 WSL Linux 배포판을 설치 하거나 원하지 않�
 
 이러한 경우 WSL 자체를 사용할 수 있는 동안 스토어에 액세스할 수 없는 경우 WSL에서 Linux 배포판을 다운로드 하 여 설치 하는 방법
 
-> 참고: **Cmd, PowerShell 및 Linux/WSL 배포판을 포함 하는 명령줄 셸 환경은 Windows 10 S 모드에서 실행할 수 없습니다**. 이러한 제한은 S 모드에서 제공 하는 무결성 및 보안 목표를 보장 하기 위해 존재 합니다. 자세한 내용은 [이 게시물](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) 을 참조 하세요.
+> 참고: **Cmd, PowerShell 및 Linux/WSL 배포판을 포함 하는 명령줄 셸 환경은 Windows 10 S 모드에서 실행할 수 없습니다**. 이 제한은 S 모드에서 제공 하는 무결성 및 보안 목표를 보장 하기 위해 존재 합니다. 자세한 내용은 [이 게시물](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) 을 참조 하세요.
 
 ## <a name="downloading-distros"></a>배포판 다운로드 중
 
@@ -31,9 +31,9 @@ Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭 하 �
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)
 * [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
-* [WSL 용 Fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
+* [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-이렇게 하면 `<distro>.appx` 패키지가 선택한 폴더로 다운로드 됩니다. [설치 지침](#installing-your-distro) 에 따라 다운로드 한 배포판를 설치 합니다.
+이렇게 하면 `<distro>.appx` 패키지가 선택한 폴더에 다운로드 됩니다. [설치 지침](#installing-your-distro) 에 따라 다운로드 한 배포판를 설치 합니다.
 
 ## <a name="downloading-distros-via-the-command-line"></a>명령줄을 통해 배포판 다운로드
 원하는 경우 명령줄을 통해 기본 설정 배포판를 다운로드할 수도 있습니다.
@@ -46,25 +46,25 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 ```
 
 > [!TIP]
-> 다운로드 시간이 오래 걸리는 경우을 설정 하 여 진행률 표시줄을 해제 합니다.`$ProgressPreference = 'SilentlyContinue'`
+> 다운로드 시간이 오래 걸리면 `$ProgressPreference = 'SilentlyContinue'` 설정 하 여 진행률 표시줄을 해제 합니다.
 
 ### <a name="download-using-curl"></a>말아를 사용 하 여 다운로드
-Windows 10 스프링 2018 업데이트 (이상)에는 명령줄에서 웹 요청 (예: HTTP GET, POST, PUT 등)을 호출할 수 있는 인기 있는 [말아 명령줄 유틸리티가](https://curl.haxx.se/) 포함 되어 있습니다. 를 사용 `curl.exe` 하 여 위의 배포판을 다운로드할 수 있습니다.
+Windows 10 스프링 2018 업데이트 (이상)에는 명령줄에서 웹 요청 (예: HTTP GET, POST, PUT 등)을 호출할 수 있는 인기 있는 [말아 명령줄 유틸리티가](https://curl.haxx.se/) 포함 되어 있습니다. @No__t_0를 사용 하 여 위의 배포판을 다운로드할 수 있습니다.
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-위의 예에서를 실행 하 `curl.exe` 는 것이 아니라, `curl`powershell에서 실제 말아 실행 파일을 호출 하 여 [호출-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 에 대 한 powershell 말아 앨리어스가 아닌를 실행 하도록 합니다.
+위의 예제에서 `curl.exe` 실행 되어 PowerShell에서 실제 말아 실행 파일을 호출 하 여 [호출-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 에 대 한 powershell 말아 앨리어스가 아닌를 `curl` 실행 합니다.
 
-> 참고: Cmd `curl` shell 및/또는 `.bat`  /  스크립트를 사용 하 여 다운로드 단계를 호출/스크립팅 해야 하는 경우를 사용 하는 것이 좋습니다. `.cmd`
+> 참고: Cmd shell 및/또는 `.bat`  /  `.cmd` 스크립트를 사용 하 여 다운로드 단계를 호출/스크립팅 해야 하는 경우 `curl`를 사용 하는 것이 좋습니다.
 
 ## <a name="installing-your-distro"></a>배포판 설치
-Windows 10을 사용 하는 경우 PowerShell을 사용 하 여 배포판를 설치할 수 있습니다. 위에서 다운로드 한 배포판이 포함 된 폴더로 이동 하 고 해당 디렉터리에서 다음 명령을 실행 합니다. 여기서 `app_name` 는 배포판 파일의 이름입니다.  
+Windows 10을 사용 하는 경우 PowerShell을 사용 하 여 배포판를 설치할 수 있습니다. 위에서 다운로드 한 배포판이 포함 된 폴더로 이동 하 고 해당 디렉터리에서 다음 명령을 실행 합니다. 여기서 `app_name`는 배포판 파일의 이름입니다.  
 ```Powershell
 Add-AppxPackage .\app_name.appx
 ```
 
 Windows server를 사용 하는 경우 [Windows server](install-on-server.md) 설명서 페이지에서 설치 지침을 찾을 수 있습니다.
 
-배포판가 설치 되 면 [Intilization 단계](initialize-distro.md) 페이지를 참조 하 여 새 배포판를 초기화 합니다.
+배포판가 설치 되 면 [초기화 단계](initialize-distro.md) 페이지를 참조 하 여 새 배포판를 초기화 합니다.

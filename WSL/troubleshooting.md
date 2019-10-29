@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
-ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
+ms.openlocfilehash: 24a899df78e705630c6cb95f8719594aec340c5c
+ms.sourcegitcommit: 600853005bd2b42d6e47bf36ebed4b868ff2af26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71279256"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72987521"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -124,7 +124,7 @@ WSL에서 ping을 실행하려면 Windows의 관리자 권한이 필요합니다
 Bash로 작업하는 동안 Bash가 중지되거나 교착 상태가 되어 입력에 응답하지 않는 경우 메모리 덤프를 수집하고 보고하여 문제를 진단하는 데 도움이 됩니다. 다음 단계를 수행하면 시스템의 작동이 중단됩니다. 편안하지 않으면 이 작업을 수행하지 않거나 해당 작업을 저장한 후에 수행하세요.  <br/>
 메모리 덤프를 수집하려면 다음을 수행합니다.
 1. 메모리 덤프 유형을 "전체 메모리 덤프"로 변경합니다. 덤프 유형을 변경하는 동안 현재 유형을 적어 둡니다.
-2. 이 [단계](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)를 사용하여 키보드 컨트롤을 사용하는 시스템 작동 중단을 구성합니다.
+2. 이 [단계](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/How-to-Force-a-Diagnostic-Memory-Dump-When-a-Computer-Hangs/ba-p/257809)를 사용하여 키보드 컨트롤을 사용하는 시스템 작동 중단을 구성합니다.
 3. 중지 또는 교착 상태를 재현합니다.
 4. (2)의 키 시퀀스를 사용하여 시스템의 작동을 중단시킵니다.
 5. 시스템의 작동이 중단되고 메모리 덤프가 수집됩니다.

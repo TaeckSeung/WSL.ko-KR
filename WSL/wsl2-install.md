@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 386b6793f00300bc9dabd1613cfd69b19d222f0b
-ms.sourcegitcommit: eb7b572388c6bddbf6e8ad8d01927660fe66aecf
+ms.openlocfilehash: d4ce22fda7baea77c0a8d3d7101d0ab09b78e8f8
+ms.sourcegitcommit: d110e2bbcd92438781453137ba0ab747cddb28e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692461"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72998247"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
@@ -68,3 +68,6 @@ PowerShell에서 실행하고
    
 * **업그레이드 시도 중 오류: `Invalid command line option: wsl --set-version Ubuntu 2`**
     * Linux용 Windows 하위 시스템을 사용하도록 설정하고 Windows Build 버전 18917 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 Powershell 프롬프트에서 이 명령을 실행합니다. 전체 WSL 설치 지침은 [여기](./install-win10.md)에서 찾을 수 있습니다.
+
+* **가상 디스크 시스템 제한으로 인해 요청한 작업을 완료할 수 없습니다. 가상 하드 디스크 파일은 압축 되지 않고 암호화 되지 않아야 하며 스파스 일 수 없습니다.**
+    * 업데이트 된 정보에 대 한이 문제가 추적 되는 [Wsl Github 스레드 #4103](https://github.com/microsoft/WSL/issues/4103) 를 확인 하세요.

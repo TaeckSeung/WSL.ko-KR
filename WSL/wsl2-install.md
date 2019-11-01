@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: d4ce22fda7baea77c0a8d3d7101d0ab09b78e8f8
-ms.sourcegitcommit: d110e2bbcd92438781453137ba0ab747cddb28e8
+ms.openlocfilehash: e3593aaf0e1c176cbeec2d3ba7d8eca1ede6b1ec
+ms.sourcegitcommit: d74fab7469f4e589ab0bf4418be575381a3f72a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72998247"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240367"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
@@ -31,8 +31,8 @@ WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니
 관리자 권한으로 PowerShell을 열어 실행합니다.
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
 그러면 Linux 선택적 구성 요소에 대 한 가상 컴퓨터 플랫폼과 Windows 하위 시스템이 모두 설치 됩니다. 이러한 명령을 실행 한 후 컴퓨터를 다시 시작 해야 합니다. 

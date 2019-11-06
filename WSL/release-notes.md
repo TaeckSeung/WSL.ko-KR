@@ -8,14 +8,27 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: dbc041c98081563d4f77b9fc186698fad8299c0d
-ms.sourcegitcommit: 4beb93f80749ab4c8c6f0e6920ab7f809567e243
+ms.openlocfilehash: 63c0e14dab73faf7f835e9ae1eb23eb490b13c44
+ms.sourcegitcommit: 48ca05ce1ac8bf35408af3bc2a2b92a43adba0af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72549576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73166663"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-19013"></a>빌드 19013
+빌드 19013에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/29/announcing-windows-10-insider-preview-build-19013/)를 참조하세요.
+
+* [WSL2] WSL 유틸리티 VM의 메모리 성능을 개선합니다. 더 이상 사용하지 않는 메모리는 호스트로 다시 해제됩니다.
+* [WSL2] 커널 버전을 4.19.79로 업데이트합니다. (CONFIG_HIGH_RES_TIMERS, CONFIG_TASK_XACCT, CONFIG_TASK_IO_ACCOUNTING, CONFIG_SCHED_HRTICK 및 CONFIG_BRIDGE_VLAN_FILTERING 추가).
+* [WSL2] stdin이 닫혀 있지 않은 파이프 핸들인 경우를 처리하기 위해 입력 릴레이를 수정합니다.[GH 4424]
+* \\\\wsl$ 대/소문자를 구분하지 않는지 확인합니다.
+```
+[wsl2]
+pageReporting = <bool>    # Enable or disable the free memory page reporting feature (default true).
+idleThreshold = <integer> # Set the idle threshold for memory compaction, 0 disables the feature (default 1).
+```
 
 ## <a name="build-19002"></a>빌드 19002
 빌드 19002에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)를 참조하세요.
@@ -38,7 +51,6 @@ ms.locfileid: "72549576"
 ```
 [wsl2]
 kernelCommandLine = <string> # Additional kernel command line arguments
-
 ```
 
 ## <a name="build-18990"></a>빌드 18990

@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 63c0e14dab73faf7f835e9ae1eb23eb490b13c44
-ms.sourcegitcommit: 48ca05ce1ac8bf35408af3bc2a2b92a43adba0af
+ms.openlocfilehash: 299b939383a98752cb54cafa23bb8b7662d53e0a
+ms.sourcegitcommit: ac6029d7d7440b8ed0e866fcea5b693edfdc163e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73166663"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73633851"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-19018"></a>빌드 19018
+빌드 19018에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/11/05/announcing-windows-10-insider-preview-build-19018/)를 참조하세요.
+
+* [WSL2] 9p 탑재의 기본값으로 cache=mmap을 사용하여 dotnet 앱 수정
+* [WSL2] localhost 릴레이 수정 [GH 4340]
+* [WSL2] 크로스 배포판 공유 tmpfs 탑재를 도입하여 배포판 사이에서 상태 공유
+* \\\\wsl$에 대한 영구 네트워크 드라이브 복원 수정
 
 ## <a name="build-19013"></a>빌드 19013
 빌드 19013에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/29/announcing-windows-10-insider-preview-build-19013/)를 참조하세요.

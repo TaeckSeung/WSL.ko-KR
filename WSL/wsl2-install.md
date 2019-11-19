@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: e3593aaf0e1c176cbeec2d3ba7d8eca1ede6b1ec
-ms.sourcegitcommit: d74fab7469f4e589ab0bf4418be575381a3f72a0
+ms.openlocfilehash: 91994f3a075436c022acb9dadeea072142687b72
+ms.sourcegitcommit: cf6d8e277ed3102f8f879b9f39ba0966d4ea6135
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240367"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164339"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
@@ -28,16 +28,24 @@ WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니
 
 ## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>' 가상 컴퓨터 플랫폼 ' 옵션 구성 요소를 사용 하도록 설정 하 고 WSL이 사용 하도록 설정 되어 있는지 확인 합니다.
 
-관리자 권한으로 PowerShell을 열어 실행합니다.
+' 가상 컴퓨터 플랫폼 ' 구성 요소에서 관리자 권한으로 PowerShell을 열고 다음 명령을 실행 합니다. 처음으로 WSL을 설치 하는 경우 다시 시작 하 라는 메시지가 표시 되 면 ' 아니요 '를 선택 하 고, ' Linux 용 Windows 하위 시스템 ' 옵션 구성 요소를 설치한 후에는 컴퓨터를 다시 시작 해야 합니다.
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
-그러면 Linux 선택적 구성 요소에 대 한 가상 컴퓨터 플랫폼과 Windows 하위 시스템이 모두 설치 됩니다. 이러한 명령을 실행 한 후 컴퓨터를 다시 시작 해야 합니다. 
+또한 Linux 용 Windows 하위 시스템 옵션 구성 요소를 사용할 수 있는지 확인 해야 합니다. 관리자 권한으로 PowerShell 창에서 다음 명령을 실행 하 여이 작업을 수행할 수 있습니다. 
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+두 구성 요소 설치를 완료 하려면 컴퓨터를 다시 시작 하세요.
+
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
+
+Linux 배포판이 설치 되어 있지 않은 경우 설치 하는 방법에 대 한 지침은 [Windows 10 문서에 설치](./install-win10.md#install-your-linux-distribution-of-choice) 페이지를 참조 하세요. 
 
 PowerShell에서 실행하고
 

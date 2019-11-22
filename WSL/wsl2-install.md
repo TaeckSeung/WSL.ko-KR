@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 8af5ffeffdeedc5298af8125cea5c7428c8f29f8
-ms.sourcegitcommit: 3c9ebe5f9ef5fb64070e21b479c2f2d31243f310
+ms.openlocfilehash: a53e6a986813809d0c355b80b3fe3028adb21375
+ms.sourcegitcommit: 73f4cc6ac9482ea9727f3cda0ec5c3572e164256
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74248760"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74309054"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 
@@ -53,7 +53,7 @@ wsl --set-version <Distro> 2
 또한 WSL 2를 기본 아키텍처로 설정하려는 경우 이 명령을 사용하여 수행할 수 있습니다.
 
 ```
-wsl --set-default-version 2`
+wsl --set-default-version 2
 ```
 
 이렇게 하면 설치한 새로운 Distro가 WSL 2 Distro로 초기화됩니다.

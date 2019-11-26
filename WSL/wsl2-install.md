@@ -17,32 +17,32 @@ ms.locfileid: "74309054"
 
 WSL 2를 사용하여 설치하고 시작하려면 다음 단계를 완료합니다.
 
-> WSL 2 is only available in Windows 10 builds 18917 or higher
+> WSL 2는 Windows 10 빌드 18917 이상 에서만 사용할 수 있습니다.
 
-- Ensure that you have WSL installed (you can find instructions to do so [here](./install-win10.md)) and that you are running Windows 10 **build 18917** or higher
-   - To make sure you are using build 18917 or higher please join [the Windows Insider Program](https://insider.windows.com/en-us/) and select the 'Fast' ring. 
-   - You can check your Windows version by opening Command Prompt and running the `ver` command.
+- WSL이 설치 되어 있는지 확인 하 고 ( [여기](./install-win10.md)에서 작업을 수행 하기 위한 지침을 찾을 수 있음) Windows 10 **빌드 18917** 이상을 실행 하 고 있는지 확인 합니다.
+   - 빌드 18917 이상을 사용 하 고 있는지 확인 하려면 [Windows 참가자 프로그램에](https://insider.windows.com/en-us/) 참여 하 고 ' Fast ' 링을 선택 하세요. 
+   - 명령 프롬프트를 열고 `ver` 명령을 실행 하 여 Windows 버전을 확인할 수 있습니다.
 - '가상 머신 플랫폼' 옵션 구성 요소 사용
 - 명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 - Distro가 사용 중인 WSL 버전 확인
 
-## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>Enable the 'Virtual Machine Platform' optional component and make sure WSL is enabled
+## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>' 가상 컴퓨터 플랫폼 ' 옵션 구성 요소를 사용 하도록 설정 하 고 WSL이 사용 하도록 설정 되어 있는지 확인 합니다.
 
-You will need to make sure that you have both the Windows Subsystem for Linux and the Virtual Machine Platform optional components installed. You can do that by running the following command in PowerShell: 
+Linux 용 Windows 하위 시스템 및 가상 컴퓨터 플랫폼 선택적 구성 요소가 설치 되어 있는지 확인 해야 합니다. PowerShell에서 다음 명령을 실행 하 여이 작업을 수행할 수 있습니다. 
 
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Please restart your machine to finish installing both components.
+두 구성 요소 설치를 완료 하려면 컴퓨터를 다시 시작 하세요.
 
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>명령줄을 사용하여 WSL 2에 의해 지원되도록 Distro 설정
 
-If you do not have a Linux distro installed, please refer to the [Install on Windows 10](./install-win10.md#install-your-linux-distribution-of-choice) docs page for instructions on installing one. 
+Linux 배포판이 설치 되어 있지 않은 경우 설치 하는 방법에 대 한 지침은 [Windows 10 문서에 설치](./install-win10.md#install-your-linux-distribution-of-choice) 페이지를 참조 하세요. 
 
-To set a distro please run: 
+배포판를 설정 하려면 다음을 실행 하세요. 
 
 ```
 wsl --set-version <Distro> 2
@@ -60,7 +60,7 @@ wsl --set-default-version 2
 
 ## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>Distro가 사용 중인 WSL의 버전을 확인하는 작업으로 마무리합니다.
 
-To verify what versions of WSL each distro is using use the following command (only available in Windows Build 18917 or higher):
+각 배포판가 사용 하는 WSL의 버전을 확인 하려면 다음 명령을 사용 합니다 (Windows 빌드 18917 이상 에서만 사용 가능).
 
 `wsl --list --verbose` 또는 `wsl -l -v`
 
@@ -76,8 +76,8 @@ To verify what versions of WSL each distro is using use the following command (o
 * **업그레이드 시도 중 오류: `Invalid command line option: wsl --set-version Ubuntu 2`**
     * Linux용 Windows 하위 시스템을 사용하도록 설정하고 Windows Build 버전 18917 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 Powershell 프롬프트에서 이 명령을 실행합니다. 전체 WSL 설치 지침은 [여기](./install-win10.md)에서 찾을 수 있습니다.
 
-* **The requested operation could not be completed due to a virtual disk system limitation. Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.**
-    * Please check [WSL Github thread #4103](https://github.com/microsoft/WSL/issues/4103) where this issue is being tracked for updated information.
+* **가상 디스크 시스템 제한으로 인해 요청한 작업을 완료할 수 없습니다. 가상 하드 디스크 파일은 압축 되지 않고 암호화 되지 않아야 하며 스파스 일 수 없습니다.**
+    * 업데이트 된 정보에 대 한이 문제가 추적 되는 [Wsl Github 스레드 #4103](https://github.com/microsoft/WSL/issues/4103) 를 확인 하세요.
 
-* **The term 'wsl' is not recognized as the name of a cmdlet, function, script file, or operable program.** 
-    * Ensure that the [Windows Subsystem for Linux Optional Component is installed](./wsl2-install.md#enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled).<br> Additionally, if you are using an Arm64 device and running this command from PowerShell, you will receive this error. Instead run `wsl.exe` from [PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6), or Command Prompt. 
+* **용어 ' wsl '은 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램의 이름으로 인식 되지 않습니다.** 
+    * [Linux 용 Windows 하위 시스템 옵션 구성 요소가 설치](./wsl2-install.md#enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled)되어 있는지 확인 합니다.<br> 또한 Arm64 장치를 사용 하 고 PowerShell에서이 명령을 실행 하는 경우이 오류가 표시 됩니다. 대신 [PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)또는 명령 프롬프트에서 `wsl.exe`를 실행 합니다. 

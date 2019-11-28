@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: c53c4507fb56f8e4a3456963b1d6f50ceac8ef37
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 17ca32db23b426ef1367ff9444b5924d9d7e1716
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269809"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200238"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -29,9 +29,9 @@ WSL용 Linux 배포판을 설치하려면 먼저 선택적인 "Linux용 Windows 
 
 ## <a name="install-your-linux-distribution-of-choice"></a>선택한 Linux 배포 설치
 기본 설정 배포판을 다운로드하여 설치하려면 다음 세 가지 옵션 중에서 선택할 수 있습니다.
-1. Microsoft Store에서 다운로드 및 설치(아래 참조)
-1. 명령줄/스크립트에서 다운로드 및 설치([수동 설치 지침 참조](install-manual.md))
-1. 다운로드 및 수동으로 압축을 푼 후 설치(Windows Server의 경우 - [지침](install-on-server.md))
+* Microsoft Store에서 다운로드 및 설치(아래 참조)
+* 명령줄/스크립트에서 다운로드 및 설치([수동 설치 지침 참조](install-manual.md))
+* 다운로드 및 수동으로 압축을 푼 후 설치(Windows Server의 경우 - [지침](install-on-server.md))
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 이상: Microsoft Store에서 설치
 

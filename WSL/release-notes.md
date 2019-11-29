@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 299b939383a98752cb54cafa23bb8b7662d53e0a
-ms.sourcegitcommit: ac6029d7d7440b8ed0e866fcea5b693edfdc163e
+ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73633851"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200225"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-19028"></a>빌드 19028
+빌드 19028에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/)를 참조하세요.
+
+* [WSL2] Linux 커널을 4.19.81로 업데이트
+* [WSL2] /dev/net/tun의 기본 권한을 0666으로 변경 [GH 4629]
+* [WSL2] Linux VM에 할당된 기본 메모리 양을 호스트 메모리의 80%로 조정
+* [WSL2] 잘못된 호출자가 서버를 중지할 수 없게 시간 제한이 있는 요청을 처리하도록 interop 서버 수정
 
 ## <a name="build-19018"></a>빌드 19018
 빌드 19018에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/11/05/announcing-windows-10-insider-preview-build-19018/)를 참조하세요.

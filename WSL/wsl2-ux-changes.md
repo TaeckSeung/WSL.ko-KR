@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 1af9646b9b5bb845dd60e5bf2312f8d806fca5dc
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 635e4335bd3fe5dd1629faba0168ec4fa331e190
+ms.sourcegitcommit: 6f6b7b67dd35b5fc7b582bb7ac27b9936dedb23d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269879"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681640"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 사이의 사용자 환경 변경
 
@@ -27,7 +27,7 @@ ms.locfileid: "71269879"
 - 초기 미리 보기 빌드에서 OS 간 파일 액세스 속도가 느려집니다.
 
 ## <a name="place-your-linux-files-in-your-linux-root-file-system"></a>Linux 루트 파일 시스템에 Linux 파일 저장
-파일 성능 혜택을 누릴 수 있도록 Linux 루트 파일 시스템 내부의 Linux 응용 프로그램에 자주 액세스 하는 파일을 배치 해야 합니다. 이러한 파일은 더 빠른 파일 시스템 액세스를 위해 Linux 루트 파일 시스템 내에 있어야 합니다. Windows 앱이 Linux 루트 파일 시스템에 액세스할 수도 있습니다 (예: 파일 탐색기). 실행 시도: `explorer.exe .` Linux 배포판의 홈 디렉터리에서 수행 하는 작업을 확인 하 고이를 훨씬 쉽게 전환할 수 있습니다. 
+파일 성능 혜택을 누릴 수 있도록 Linux 루트 파일 시스템 내부의 Linux 응용 프로그램에 자주 액세스 하는 파일을 배치 해야 합니다. 이러한 파일은 더 빠른 파일 시스템 액세스를 위해 Linux 루트 파일 시스템 내에 있어야 합니다. Windows 앱이 Linux 루트 파일 시스템에 액세스할 수도 있습니다 (예: 파일 탐색기). 실행 시도: Linux 배포판의 홈 디렉터리에 있는 `explorer.exe .` 하 고 어떤 일이 발생 하는지 확인 하면 훨씬 쉽게 전환할 수 있습니다. 
 
 ## <a name="accessing-network-applications"></a>네트워크 응용 프로그램 액세스
 WSL 2 preview의 초기 빌드에서는 호스트 컴퓨터의 IP 주소를 사용 하 여 Linux에서 Windows server에 액세스 해야 합니다.
@@ -35,7 +35,7 @@ WSL 2 preview의 초기 빌드에서는 호스트 컴퓨터의 IP 주소를 사�
 ### <a name="accessing-windows-applications-from-linux"></a>Linux에서 Windows 응용 프로그램 액세스
 Windows 네트워크 응용 프로그램에 액세스 하려면 호스트 컴퓨터의 IP 주소를 사용 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.
 
-- 명령을 `cat /etc/resolv.conf` 실행 하 고 약관 `nameserver`에 따라 ip 주소를 복사 하 여 호스트 컴퓨터의 ip 주소를 가져옵니다. 
+- `cat /etc/resolv.conf` 명령을 실행 하 고 `nameserver`약관에 따라 IP 주소를 복사 하 여 호스트 컴퓨터의 IP 주소를 가져옵니다. 
 - 복사한 IP 주소를 사용 하 여 Windows 서버에 연결 합니다.
 
 아래 그림은 Windows에서 실행 되는 Windows에서 실행 되는 node.js 서버에 연결 하 여이에 대 한 예를 보여 줍니다. 
@@ -45,8 +45,8 @@ Windows 네트워크 응용 프로그램에 액세스 하려면 호스트 컴퓨
 ### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>Windows에서 Linux 응용 프로그램 액세스 (18945 보다 낮은 빌드 에서만)
 WSL 배포판 서버를 사용 하는 경우 배포판를 켜는 가상 머신의 IP 주소를 찾아 해당 IP 주소를 사용 하 여 연결 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.
 
-- Wsl 배포판 내에서 명령을 `ip addr` 실행 하 고 `eth0` 인터페이스의 `inet` 값에서 찾아 배포판의 IP 주소를 가져옵니다.
-   - 다음과 `ip addr | grep eth0`같이 grep를 사용 하 여 명령의 출력을 필터링 하 여이를 보다 쉽게 찾을 수 있습니다.
+- WSL 배포판 내에서 `ip addr` 명령을 실행 하 여 배포판의 IP 주소를 가져온 다음 `eth0` 인터페이스의 `inet` 값에서 찾습니다.
+   - 다음과 같이 grep를 사용 하 여 명령의 출력을 필터링 하 여 보다 쉽게 찾을 수 있습니다. `ip addr | grep eth0`.
 - 위에서 찾은 IP를 사용 하 여 Linux 서버에 연결 합니다.
 
 아래 그림에서는 Edge 브라우저를 사용 하 여 node.js 서버에 연결 하는 방법의 예를 보여 줍니다.
@@ -57,12 +57,22 @@ WSL 배포판 서버를 사용 하는 경우 배포판를 켜는 가상 머신�
 
 ### <a name="other-networking-considerations"></a>기타 네트워킹 고려 사항
 
-원격 IP 주소를 사용 하 여 응용 프로그램에 연결 하는 경우 LAN (Local Area Network)의 연결로 처리 됩니다. 즉, 응용 프로그램에서 LAN 연결을 허용할 수 있는지 확인 해야 합니다. 예를 들면 다음과 같습니다. 대신 응용 프로그램을에 `0.0.0.0` 바인딩해야 할 수도 있습니다. `127.0.0.1` 예를 들어 flask를 사용 하는 python에서는 명령을 `app.run(host='0.0.0.0')`사용 하 여이 작업을 수행할 수 있습니다. 이러한 변경을 수행 하는 경우 LAN 으로부터의 연결을 허용 하므로 보안을 염두에 두십시오. 
+#### <a name="connecting-via-remote-ip-addresses"></a>원격 IP 주소를 통해 연결
+
+원격 IP 주소를 사용 하 여 응용 프로그램에 연결 하는 경우 LAN (Local Area Network)의 연결로 처리 됩니다. 즉, 응용 프로그램에서 LAN 연결을 허용할 수 있는지 확인 해야 합니다. 즉, `127.0.0.1`대신 `0.0.0.0`에 응용 프로그램을 바인딩해야 할 수 있습니다. 예를 들어 flask를 사용 하는 python에서는 `app.run(host='0.0.0.0')`명령을 사용 하 여이 작업을 수행할 수 있습니다. 이러한 변경을 수행 하는 경우 LAN 으로부터의 연결을 허용 하므로 보안을 염두에 두십시오. 
+
+#### <a name="accessing-a-wsl2-distro-from-your-local-area-network-lan"></a>LAN (local area network)에서 WSL2 배포판에 액세스
+
+WSL1 배포판를 사용 하는 경우 컴퓨터를 LAN에서 액세스할 수 있도록 설정한 경우 WSL에서 실행 되는 응용 프로그램을 LAN 에서도 액세스할 수 있습니다. WSL2에는 자체 IP 주소가 있는 가상화 된 이더넷 어댑터가 있기 때문에 WSL2의 기본 사례가 아닙니다. 현재이 워크플로를 사용 하도록 설정 하려면 일반 가상 컴퓨터와 동일한 단계를 진행 해야 합니다. 이러한 환경을 개선 하는 방법을 살펴보겠습니다.
+
+#### <a name="ipv6-access"></a>IPv6 액세스
+
+WSL2 배포판는 현재 i p v 6에만 도달할 수 없습니다. 이 기능을 추가 하기 위해 노력 하 고 있습니다.
 
 ## <a name="understanding-wsl-2-uses-a-vhd-and-what-to-do-if-you-reach-its-max-size"></a>WSL 2는 VHD를 사용 하 고 최대 크기에 도달 하는 경우 수행할 작업을 이해 합니다.
 WSL 2는 ext4 파일 시스템을 사용 하는 VHD 내에 모든 Linux 파일을 저장 합니다. 이 VHD는 저장소 요구에 맞게 자동으로 크기가 조정 됩니다. 또한이 VHD의 초기 최대 크기는 256GB입니다. 배포판 크기가 256GB 보다 큰 경우 디스크 공간이 부족 하다는 오류가 표시 됩니다. VHD 크기를 확장 하 여 이러한 문제를 해결할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 지침은 다음과 같습니다.
 
-1. `wsl --shutdown` 명령을 사용 하 여 모든 wsl 인스턴스를 종료 합니다.
+1. `wsl --shutdown` 명령을 사용 하 여 모든 WSL 인스턴스를 종료 합니다.
 2. 배포판 설치 패키지 이름 ' PackageFamilyName ' 찾기
    - Powershell 프롬프트에서 (' 배포판 '이 (가) 배포 이름인 경우)를 입력 합니다.
       - `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
@@ -80,7 +90,7 @@ WSL 2는 ext4 파일 시스템을 사용 하는 VHD 내에 모든 Linux 파일�
       - `mount | grep ext4`
          - 이 항목의 이름을 복사 합니다. 예를 들어/Hv/sdxx (X는 다른 문자를 나타냄)와 같습니다.
       - `sudo resize2fs /dev/sdXX`
-         - 앞에서 복사한 값을 사용 하 고를 사용 `apt install resize2fs`해야 할 수도 있습니다.
+         - 앞에서 복사한 값을 사용 해야 하며, `apt install resize2fs`을 사용 해야 할 수 있습니다.
 
 참고: 일반적으로 Windows 도구 또는 편집기를 사용 하 여 AppData 폴더 내에 있는 WSL 관련 파일을 수정 하거나 이동 하거나 액세스 하지 않습니다. 이렇게 하면 Linux 배포판 손상 될 수 있습니다.
 

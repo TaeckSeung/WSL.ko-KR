@@ -39,7 +39,13 @@
       "ms.technology": "windows-subsystem-for-linux",
       "author": "craigloewen-msft",
       "ms.author": "crloewen",
-      "feedback_product_url": "https://github.com/Microsoft/WSL/issues"
+      "feedback_product_url": "https://github.com/Microsoft/WSL/issues",
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
     },
     "fileMetadata": {},
     "template": [],

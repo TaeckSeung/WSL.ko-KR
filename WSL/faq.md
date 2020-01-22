@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
-ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
+ms.openlocfilehash: d5c4308c531e4df02acbfb17a76b3f83d912b512
+ms.sourcegitcommit: 33290fd88a461a1a36d6106e737490bd57dc77bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934900"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951249"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답
 
@@ -177,8 +177,11 @@ Appdata 폴더의 파일을 백업하는 기존 백업 서비스(예: Windows Ba
 
 ## <a name="where-can-i-provide-feedback"></a>피드백을 어디에 제공할 수 있나요?
 
-여러 채널을 통해 피드백을 공유하고 질문할 수 있습니다. 피드백과 질문은 다음으로 전달해야 합니다.
+여러 채널을 통해 피드백을 공유하고 질문할 수 있습니다.
+
+기술적인 문제가 있거나 새로운 기능을 요청하려면 Github 문제 추적기로 이동하세요.
 * [GitHub 문제 추적기](https://github.com/Microsoft/BashOnWindows/issues)
-* [명령줄 UserVoice 포털](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
+
+최신 WSL 뉴스를 최신 상태로 유지하려면 다음을 수행하세요.
 * [명령줄 팀 블로그](https://blogs.msdn.microsoft.com/commandline/)
-* Twitter를 통해. Twitter에서 [@richturn_ms](https://twitter.com/richturn_MS)를 팔로우하여 뉴스, 업데이트 등에 대해 알아보세요.
+* Twitter. Twitter에서 [@craigaloewen](https://twitter.com/craigaloewen)를 팔로우하여 뉴스, 업데이트 등에 대해 알아보세요.

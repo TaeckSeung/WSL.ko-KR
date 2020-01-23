@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 635e4335bd3fe5dd1629faba0168ec4fa331e190
-ms.sourcegitcommit: 6f6b7b67dd35b5fc7b582bb7ac27b9936dedb23d
+ms.openlocfilehash: a8f298a69acf44f152da626a0ba571f6bba1970c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681640"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520562"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 사이의 사용자 환경 변경
 
@@ -42,7 +42,12 @@ Windows 네트워크 응용 프로그램에 액세스 하려면 호스트 컴퓨
 
 ![Windows에서 Linux 네트워크 응용 프로그램에 액세스](media/wsl2-network-l2w.png)
 
-### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>Windows에서 Linux 응용 프로그램 액세스 (18945 보다 낮은 빌드 에서만)
+### <a name="accessing-linux-applications-from-windows"></a>Windows에서 Linux 응용 프로그램 액세스
+
+사용 중인 Windows 버전에 따라 가상 컴퓨터의 IP 주소를 검색 해야 할 수 있습니다. 빌드가 18945 이상인 경우 평상시와 같이 `localhost` 사용할 수 있습니다. 
+
+#### <a name="accessing-linux-on-builds-lower-than-18945httpsblogswindowscomwindowsexperience20190726announcing-windows-10-insider-preview-build-18945"></a>[18945](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/) 보다 낮은 빌드에서 Linux 액세스
+
 WSL 배포판 서버를 사용 하는 경우 배포판를 켜는 가상 머신의 IP 주소를 찾아 해당 IP 주소를 사용 하 여 연결 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.
 
 - WSL 배포판 내에서 `ip addr` 명령을 실행 하 여 배포판의 IP 주소를 가져온 다음 `eth0` 인터페이스의 `inet` 값에서 찾습니다.
@@ -52,8 +57,6 @@ WSL 배포판 서버를 사용 하는 경우 배포판를 켜는 가상 머신�
 아래 그림에서는 Edge 브라우저를 사용 하 여 node.js 서버에 연결 하는 방법의 예를 보여 줍니다.
 
 ![Windows에서 Linux 네트워크 응용 프로그램에 액세스](media/wsl2-network-w2l.jpg)
-
-빌드가 18945 이상인 경우 일반 localhost를 사용할 수 있습니다. 
 
 ### <a name="other-networking-considerations"></a>기타 네트워킹 고려 사항
 

@@ -4,6 +4,7 @@
 # [Distro 초기화](./initialize-distro.md)
 # [사용자 계정 및 사용 권한](./user-support.md)
 # [Distro 관리](./wsl-config.md)
+# [파일 시스템 사용 권한](./file-permissions.md)
 # [엔터프라이즈에 대한 Linux용 Windows 하위 시스템](./enterprise.md)
 # [상호 운용성](./interop.md)
 # [사용자 지정 Distro 빌드](./build-custom-distro.md)

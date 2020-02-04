@@ -2,7 +2,7 @@
 # [Windows 10에 설치](./install-win10.md)
 # [Windows Server에 설치](./install-on-server.md)
 # [Distro 초기화](./initialize-distro.md)
-# [사용자 계정 및 사용 권한](./user-support.md)
+# [사용자 계정](./user-support.md)
 # [Distro 관리](./wsl-config.md)
 # [파일 시스템 사용 권한](./file-permissions.md)
 # [엔터프라이즈에 대한 Linux용 Windows 하위 시스템](./enterprise.md)

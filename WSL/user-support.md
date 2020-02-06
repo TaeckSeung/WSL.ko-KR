@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 85bd8f05d041181c2cfb16f6fb55aaeea15b332c
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: 30dea11adb68639f645ca800a695b0404661845a
+ms.sourcegitcommit: e5fb773dd44abab7bcf289340da00f59528b88f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520582"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76973683"
 ---
 # <a name="create-and-update-user-accounts-for-wsl-distributions"></a>WSL 배포를 위한 사용자 계정 만들기 및 업데이트
 
@@ -38,7 +38,7 @@ Linux 배포용 암호를 잊은 경우 다음을 수행합니다.
 
 1. PowerShell을 열고, `wsl -u root` 명령을 사용하여 기본 WSL 배포의 루트를 입력합니다.
 
--- 기본값이 아닌 배포에서 잊어버린 암호를 업데이트해야 하는 경우 `Debian`을 대상 배포의 이름으로 바꾼 `wsl -d Debian -u root` 명령을 사용합니다.
+> 기본값이 아닌 배포에서 잊어버린 암호를 업데이트해야 하는 경우 `Debian`을 대상 배포의 이름으로 바꾼 `wsl -d Debian -u root` 명령을 사용합니다.
 
 2. WSL 배포가 PowerShell 내의 루트 수준에서 열리면 `passwd` 명령을 사용하여 암호를 업데이트할 수 있습니다.
 

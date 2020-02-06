@@ -8,14 +8,32 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
-ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
+ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
+ms.sourcegitcommit: 7069b8d452308c32cc7fa31d1158fcb130d42e06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74200225"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911707"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-19555"></a>빌드 19555
+빌드 19555에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)를 참조하세요.
+
+* [WSL2] 메모리 cgroup을 사용하여 설치 및 변환 작업에 사용되는 메모리 양 제한 [GH 4669]
+* 기능 검색 기능을 향상시키기 위해 Linux용 Windows 하위 시스템 선택적 구성 요소를 사용할 수 없는 경우 wsl.exe가 표시되도록 합니다.
+* WSL 선택적 구성 요소가 설치되지 않은 경우 도움말 텍스트를 인쇄하도록 wsl.exe 변경
+* 인스턴스를 만들 때 경합 상태 수정
+* 모든 명령줄 기능이 포함된 wslclient.dll 생성
+* LxssManagerUser 서비스 중지 중 충돌 방지
+* distroName 매개 변수가 NULL인 경우 wslapi.dll 빠른 실패 수정
+
+## <a name="build-19041"></a>빌드 19041
+빌드 19041에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/12/10/announcing-windows-10-insider-preview-build-19041/)를 참조하세요.
+
+* [WSL2] 프로세스를 시작하기 전에 신호 마스크 지우기
+* [WSL2] Linux 커널을 4.19.84로 업데이트
+* symlink가 비 상대적일 때 /etc/resolv.conf symlink 생성 처리
 
 ## <a name="build-19028"></a>빌드 19028
 빌드 19028에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/)를 참조하세요.
@@ -674,7 +692,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
   * fmask: 모든 일반 파일에서 제외할 권한의 8진수 마스크입니다.
   * dmask: 모든 디렉터리에서 제외할 권한의 8진수 마스크입니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  예:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -683,7 +701,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 * WSL과 Win32 간에 환경 변수가 어떻게 흐르는지 구성하는 새 환경 변수 `WSLENV`가 도입되었습니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  예:
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY

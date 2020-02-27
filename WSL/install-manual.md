@@ -6,12 +6,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
-ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
+ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
+ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778820"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624927"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 배포판 패키지에 대 한 Windows 하위 시스템 수동으로 다운로드
 
@@ -24,8 +24,10 @@ Microsoft Store를 통해 WSL Linux 배포판을 설치 하거나 원하지 않�
 ## <a name="downloading-distros"></a>배포판 다운로드 중
 
 Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭 하 여 Linux 배포판을 다운로드 하 고 수동으로 설치할 수 있습니다.
-* [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
-* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
+<!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
+* Ubuntu 18.04
+* Ubuntu 18.04 ARM
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)
@@ -49,15 +51,15 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 > 다운로드 시간이 오래 걸리면 `$ProgressPreference = 'SilentlyContinue'` 설정 하 여 진행률 표시줄을 해제 합니다.
 
 ### <a name="download-using-curl"></a>말아를 사용 하 여 다운로드
-Windows 10 스프링 2018 업데이트 (이상)에는 명령줄에서 웹 요청 (예: HTTP GET, POST, PUT 등)을 호출할 수 있는 인기 있는 [말아 명령줄 유틸리티가](https://curl.haxx.se/) 포함 되어 있습니다. @No__t_0를 사용 하 여 위의 배포판을 다운로드할 수 있습니다.
+Windows 10 스프링 2018 업데이트 (이상)에는 명령줄에서 웹 요청 (예: HTTP GET, POST, PUT 등)을 호출할 수 있는 인기 있는 [말아 명령줄 유틸리티가](https://curl.haxx.se/) 포함 되어 있습니다. `curl.exe`를 사용 하 여 위의 배포판을 다운로드할 수 있습니다.
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-위의 예제에서 `curl.exe` 실행 되어 PowerShell에서 실제 말아 실행 파일을 호출 하 여 [호출-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 에 대 한 powershell 말아 앨리어스가 아닌를 `curl` 실행 합니다.
+위의 예제에서 `curl.exe` 실행 되어 PowerShell에서 실제 말아 실행 파일을 호출 하 여 [호출-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 에 대 한 powershell 말아 앨리어스가 아닌를 `curl`실행 합니다.
 
-> 참고: Cmd shell 및/또는 `.bat`  /  `.cmd` 스크립트를 사용 하 여 다운로드 단계를 호출/스크립팅 해야 하는 경우 `curl`를 사용 하는 것이 좋습니다.
+> 참고: Cmd shell 및/또는 `.bat` / `.cmd` 스크립트를 사용 하 여 다운로드 단계를 호출/스크립팅 해야 하는 경우 `curl`를 사용 하는 것이 좋습니다.
 
 ## <a name="installing-your-distro"></a>배포판 설치
 Windows 10을 사용 하는 경우 PowerShell을 사용 하 여 배포판를 설치할 수 있습니다. 위에서 다운로드 한 배포판이 포함 된 폴더로 이동 하 고 해당 디렉터리에서 다음 명령을 실행 합니다. 여기서 `app_name`는 배포판 파일의 이름입니다.  

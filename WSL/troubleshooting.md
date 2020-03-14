@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b66392f6ad37af9d61e8b4fb6bb477d0d774ccb6
-ms.sourcegitcommit: f1e471bca7a65073135365e49c0d4e59227bdf25
+ms.openlocfilehash: 9028f1e89e92da94d82b16603b3af60876a4cb86
+ms.sourcegitcommit: 8795e1c4c5d2efdc8a9c78af05fb7be3ac1eef3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575283"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79318147"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -86,20 +86,20 @@ Windows의 Ubuntu에 있는 Bash에는 업데이트해야 할 수 있는 두 가
 
 1. 다음을 `/usr/sbin/policy-rc.d`에 작성하고 변경 내용을 저장합니다.
   
-   ``` BASH
+   ```bash
    #!/bin/sh
    exit 101
    ```
   
 2. 실행 권한을 `/usr/sbin/policy-rc.d`에 추가합니다.
 
-   ``` BASH
+   ```bash
    chmod +x /usr/sbin/policy-rc.d
    ```
   
 3. 다음 명령을 실행 합니다.
 
-   ``` BASH
+   ```bash
    dpkg-divert --local --rename --add /sbin/initctl
    ln -s /bin/true /sbin/initctl
    ```
@@ -123,7 +123,7 @@ WSL 설치는 Windows 설치의 로캘과 일치하도록 Ubuntu 로캘을 자�
 
 아래 예제에서는 로캘을 en-US로 변경합니다.
 
-``` BASH
+```bash
 sudo update-locale LANG=en_US.UTF8
 ```
 
@@ -200,7 +200,7 @@ SSH 서버를 연결하려고 하면 "127.0.0.1 포트 22에 의해 연결이 �
 
 1. OpenSSH 서버가 실행되고 있는지 확인합니다.
 
-   ``` BASH
+   ```bash
    sudo service ssh status
    ```
 
@@ -208,7 +208,7 @@ SSH 서버를 연결하려고 하면 "127.0.0.1 포트 22에 의해 연결이 �
 
 2. sshd 서비스를 중지한 다음, 디버그 모드에서 sshd를 시작합니다.
 
-   ``` BASH
+   ```bash
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```

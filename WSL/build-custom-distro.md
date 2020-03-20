@@ -29,9 +29,9 @@ Microsoft Store를 통해 WSL 용 Linux 배포판을 UWP 응용 프로그램으�
 테스트용으로 로드 apps에 대 한 컴퓨터를 설정 하려면 "개발자 용"의 시스템 설정에서 사용 하도록 설정 해야 합니다.  개발자 모드 또는 테스트용으로 로드 apps가 선택 되어 있어야 합니다.
 
 ## <a name="for-linux-distro-maintainers"></a>Linux 배포판 유지 관리자
-스토어에 제출 하려면 microsoft와 협력 하 여 게시 승인을 받아야 합니다. Microsoft Store에 배포를 추가 하는 데 관심이 있는 Linux 배포 소유자 인 경우에 게 문의 wslpartners@microsoft.com하세요.
+스토어에 제출 하려면 microsoft와 협력 하 여 게시 승인을 받아야 합니다. Microsoft Store에 배포를 추가 하는 데 관심이 있는 Linux 배포 소유자 인 경우 wslpartners@microsoft.com에 문의 하세요.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 [배포판 시작 관리자 GitHub 리포지토리의](https://github.com/Microsoft/WSL-DistroLauncher) 지침에 따라 사용자 지정 Linux 배포판 패키지를 만듭니다.
 
  

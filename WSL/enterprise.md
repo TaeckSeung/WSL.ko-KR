@@ -32,7 +32,7 @@ WSL 배포를 시작 하도록 설정 하려는 회사 라면 다음 단계를 �
 
 Azure AD 계정이 있어야 하 고 Microsoft Store 앱의 설치 관리자를 얻기 위해 조직의 전역 관리자 여야 합니다. 계정이 이미 있는 경우이 단계를 건너뛸 수 있습니다.
 
-계정을 등록 하는 지침은 여기에서 찾을 수 있습니다. https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
+계정을 등록 하는 지침은 다음에서 찾을 수 있습니다. https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
 
 ### <a name="sign-into-the-store-for-business-and-go-to-the-homepage"></a>비즈니스용 스토어에 로그인 하 고 홈 페이지로 이동 합니다.
 로그인: www.microsoft.com/business-store

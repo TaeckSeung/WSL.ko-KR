@@ -30,7 +30,7 @@ Linux용 Windows 하위 시스템을 사용하면 개발자가 가상 머신의 
 1. Unix와 같은 명령줄 셸을 사용하여 Windows 애플리케이션을 호출합니다.
 1. Windows에서 GNU/Linux 애플리케이션을 호출합니다.
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
 * [Windows 10에 Linux 설치](install-win10.md)
 * [명령 참조 살펴보기](reference.md)

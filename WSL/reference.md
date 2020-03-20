@@ -96,7 +96,7 @@ Linux용 Windows 하위 시스템과 상호 작용하는 기록 명령도 있습
 
 사용: `wslconfig [Argument] [Options...]`
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>인수
 * **/l, /list [옵션]**
   
   등록된 배포를 나열합니다.

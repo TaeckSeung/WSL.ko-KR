@@ -968,7 +968,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>알려진 문제
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 이슈 2392: WSL에서 Windows 폴더를 인식할 수 없음...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>[GitHub 이슈 2392: WSL에서 Windows 폴더를 인식할 수 없음...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 빌드 16257의 경우 WSL에서 `/mnt/c/...` 명령을 통해 Windows 파일/폴더를 열거할 때 이슈가 있습니다.
 이 이슈가 해결되었으며, 2017년 8월 14일부터 일주일 동안 참가자 빌드에서 릴리스해야 합니다.
 

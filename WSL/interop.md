@@ -36,7 +36,7 @@ WSL(Linux용 Windows 하위 시스템)은 Windows와 Linux 간의 통합을 지�
 1. WSL 기본 사용자로 실행합니다.
 1. 호출 프로세스 및 터미널과 동일한 Windows 관리 권한을 사용합니다.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예:
 
 ```console
 C:\temp> wsl ls -la
@@ -80,7 +80,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>WSL에서 Windows 도구 실행
 
-WSL은 `[binary name].exe`를 사용하여 WSL 명령줄에서 Windows 이진 파일을 직접 호출할 수 있습니다.  예를 들면 `notepad.exe`입니다.  Windows 실행 파일을 더 쉽게 실행하기 위해 Windows 경로가 Fall Creators Update의 Linux `$PATH`에 포함됩니다.
+WSL은 `[binary name].exe`를 사용하여 WSL 명령줄에서 Windows 이진 파일을 직접 호출할 수 있습니다.  정의합니다(예: `notepad.exe`).  Windows 실행 파일을 더 쉽게 실행하기 위해 Windows 경로가 Fall Creators Update의 Linux `$PATH`에 포함됩니다.
 
 이 방식으로 실행되는 애플리케이션에는 다음과 같은 속성이 있습니다.
 

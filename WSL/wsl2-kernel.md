@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
 ms.custom: seodec18
-ms.openlocfilehash: f7fce13c2acc65e3afa2cc56873e40bc55a460bc
-ms.sourcegitcommit: 506272bd7fc1cbda7e32146d54a8bdd02af3e0c4
+ms.openlocfilehash: a1a2f23fb05c426f80878e12e82026a96c71354e
+ms.sourcegitcommit: 4b7b8bb0ac20c2336fcdbf44e6b3b2ed336bf4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319713"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447747"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux 커널 업데이트
 
@@ -20,7 +20,7 @@ WSL 2 내에서 Linux 커널을 수동으로 업데이트하려면 다음 단계
 
 ## <a name="download-the-linux-kernel-update-package"></a>Linux 커널 업데이트 패키지 다운로드
 
-AMD64 머신에 대한 최신 WSL2 Linux 커널 업데이트 패키지를 다운로드하려면 [이 링크](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)를 클릭하세요.
+x64 머신에 대한 최신 WSL2 Linux 커널 업데이트 패키지를 다운로드하려면 [이 링크](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)를 클릭하세요.
 
 > [!NOTE] 
 > ARM64 머신을 사용하는 경우 [이 패키지](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)를 대신 다운로드하세요.

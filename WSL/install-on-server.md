@@ -6,12 +6,13 @@ ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 51a2e3f3443ed9b1ba3d8ab79977f22839ee0283
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.localizationpriority: high
+ms.openlocfilehash: 8859929fe45c9989d367af5f82191162963e6b4f
+ms.sourcegitcommit: 0a001ada2131f80dd77b114fc14f2fde43c947ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269777"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256396"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 설치 가이드
 
@@ -40,8 +41,8 @@ Windows에서 Linux 배포판을 실행하려면 먼저 "Linux용 Windows 하위
 1. `<distro>.appx` 패키지의 콘텐츠를 추출합니다. PowerShell을 사용한 예는 다음과 같습니다.
 
     ```powershell
-    Rename-Item ./Ubuntu.appx ./Ubuntu.zip
-    Expand-Archive ./Ubuntu.zip ./Ubuntu
+    Rename-Item .\Ubuntu.appx .\Ubuntu.zip
+    Expand-Archive .\Ubuntu.zip .\Ubuntu
     ```
 
 2. 배포판 시작 관리자를 실행합니다. 설치를 완료하려면 `<distro>.exe`라는 대상 폴더에서 배포판 시작 관리자 애플리케이션을 실행합니다. 예를 들어 `ubuntu.exe` 등이 있습니다.

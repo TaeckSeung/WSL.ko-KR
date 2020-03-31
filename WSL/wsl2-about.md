@@ -6,12 +6,13 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 7122fcbd73e064871eba2ac80c727178aaf3ca7b
-ms.sourcegitcommit: 5c92b820f84de57a04ab11faf4dd0d24fff6b320
+ms.localizationpriority: high
+ms.openlocfilehash: f11aed3a5583d1a68f4a0e095103eb0315ca2c45
+ms.sourcegitcommit: 0a001ada2131f80dd77b114fc14f2fde43c947ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74161476"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256386"
 ---
 # <a name="about-wsl-2"></a>WSL 2 정보
 

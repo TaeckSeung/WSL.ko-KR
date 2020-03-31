@@ -6,12 +6,13 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 91bd479e922fc29bf11b89dcfe06fa381632c4fa
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.localizationpriority: high
+ms.openlocfilehash: 7c031b1348a77e1dac967fae5e4df772e10a9084
+ms.sourcegitcommit: 0a001ada2131f80dd77b114fc14f2fde43c947ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520552"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256346"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2의 설치 지침
 

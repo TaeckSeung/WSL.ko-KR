@@ -6,12 +6,13 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: c694b3476976241422d079eb65e72beca415ff62
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.localizationpriority: high
+ms.openlocfilehash: 6a70cf1c3a139610785ff506d78b8c3621620b4c
+ms.sourcegitcommit: 7d9ad78979e7a111c5022138af8201a57c24a3f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520572"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307455"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 FAQ
 
@@ -29,7 +30,7 @@ WSL 2는 Windows 10 Home을 포함하여 WSL이 현재 제공되는 모든 SKU�
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>WSL 2 및 기타 타사 가상화 도구(예: VMware 또는 VirtualBox)를 실행할 수 있나요?
 
-Hyper-V를 사용 중인 경우 일부 타사 애플리케이션을 작동할 수 없습니다. 즉, WSL 2가 사용하도록 설정된 경우에는 일부 타사 애플리케이션이 실행되지 않습니다. 여기에는 VMware, VirtualBox 6 이전 버전이 포함됩니다(2018년 12월에 출시된 VirtualBox 6.0.0은 [현재 Windows 호스트의 대체 실행 코어로 Hyper-V를 지원함][1]).
+Hyper-V를 사용 중인 경우 일부 타사 애플리케이션을 작동할 수 없습니다. 즉, VMware 및 VirtualBox와 같이 WSL 2를 사용하도록 설정된 경우에는 일부 타사 애플리케이션이 실행되지 않습니다. 그러나 최근 VirtualBox와 VMware는 모두 Hyper-V와 WSL2를 지원하는 버전을 릴리스했습니다! [VirtualBox의 변경 내용은 여기][1] 그리고 [VMware의 변경 내용은 여기][4]에서 자세히 알아볼 수 있습니다.
 
 이 문제를 해결할 방법을 모색하는 중입니다. 예를 들어 타사 가상화 공급자가 Hyper-V와 호환되는 소프트웨어를 만드는 데 사용할 수 있는 [하이퍼바이저 플랫폼][2]이라는 API 세트를 제공합니다. 이를 통해 애플리케이션은 현재 Hyper-V와 호환되는 VirtualBox 6 이상 버전과 [Google Android Emulator][3] 같은 에뮬레이션에 Hyper-V 아키텍처를 사용할 수 있습니다.
 
@@ -56,3 +57,4 @@ WSL 2는 WSL 1에서 사용하는 것과 동일한 wsl. 파일을 지원합니�
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
  [2]: https://docs.microsoft.com/en-us/virtualization/api/
  [3]: https://devblogs.microsoft.com/visualstudio/hyper-v-android-emulator-support/
+ [4]: https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html

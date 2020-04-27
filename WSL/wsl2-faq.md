@@ -8,10 +8,10 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: 6a70cf1c3a139610785ff506d78b8c3621620b4c
-ms.sourcegitcommit: 7d9ad78979e7a111c5022138af8201a57c24a3f4
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "80307455"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 FAQ

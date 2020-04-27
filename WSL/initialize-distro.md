@@ -8,10 +8,10 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: c33d349a6d39c325b079ccbf7ed6350bed796e33
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "71269595"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>새로 설치된 배포판 초기화

@@ -7,10 +7,10 @@ ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
 ms.openlocfilehash: 5651b0869ff97899a768985ce6efa006afa77a9b
-ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "77624937"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답

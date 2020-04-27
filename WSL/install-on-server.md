@@ -8,10 +8,10 @@ ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: 8859929fe45c9989d367af5f82191162963e6b4f
-ms.sourcegitcommit: 0a001ada2131f80dd77b114fc14f2fde43c947ad
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "80256396"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 설치 가이드

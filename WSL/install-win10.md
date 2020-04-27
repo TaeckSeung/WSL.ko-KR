@@ -8,10 +8,10 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: 17ca32db23b426ef1367ff9444b5924d9d7e1716
-ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "74200238"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드

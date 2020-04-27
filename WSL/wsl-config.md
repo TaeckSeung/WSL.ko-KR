@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: e69810625d08baf734683ff06231f79132ce1519
-ms.sourcegitcommit: e1cc2fe4de0fa03d5aea14f6b328f1bb9d0c59be
+ms.openlocfilehash: ffe95ae31c3442a380d267133bf903d5531bcd4d
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999396"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "81479320"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 관리 및 구성
 
@@ -91,12 +91,12 @@ Sunday, March 11, 2018 7:54:05 PM
 
 PS C:\Users\sarah> wsl
 scooley@scooley-elmer:/mnt/c/Users/sarah$ date
-Sun Mar 11 19:56:57 DST 2018
+Sun Mar 11 19:55:47 DST 2018
 scooley@scooley-elmer:/mnt/c/Users/sarah$ exit
 logout
 
 PS C:\Users\sarah> wsl date
-Sun Mar 11 19:55:47 DST 2018
+Sun Mar 11 19:56:57 DST 2018
 ```
 
 **예제:**

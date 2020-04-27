@@ -8,10 +8,10 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
 ms.custom: seodec18
 ms.openlocfilehash: a1a2f23fb05c426f80878e12e82026a96c71354e
-ms.sourcegitcommit: 4b7b8bb0ac20c2336fcdbf44e6b3b2ed336bf4d6
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "79447747"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux 커널 업데이트
@@ -35,4 +35,4 @@ Linux 커널 업데이트 패키지를 설치하려면 다음을 수행합니다
 
 ## <a name="future-plans-for-updating-the-wsl2-linux-kernel"></a>향후의 WSL2 Linux 커널 업데이트 계획
 
-이러한 변경 내용에 대한 자세한 내용은 [Windows 명령줄 블로그](https://aka.ms/cliblog)에서 [이 블로그 게시물](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004)을 참조하세요.
+이러한 변경 내용에 대한 자세한 내용은 [Windows 명령줄 블로그](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004)에서 [이 블로그 게시물](https://aka.ms/cliblog)을 참조하세요.

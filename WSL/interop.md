@@ -7,10 +7,10 @@ ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: f8b0150c044f5011b84e80cac4befd752c4dc552
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "71269801"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows와 Linux용 Windows 하위 시스템의 상호 운용성
@@ -36,7 +36,7 @@ WSL(Linux용 Windows 하위 시스템)은 Windows와 Linux 간의 통합을 지�
 1. WSL 기본 사용자로 실행합니다.
 1. 호출 프로세스 및 터미널과 동일한 Windows 관리 권한을 사용합니다.
 
-예:
+예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```console
 C:\temp> wsl ls -la
@@ -80,7 +80,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>WSL에서 Windows 도구 실행
 
-WSL은 `[binary name].exe`를 사용하여 WSL 명령줄에서 Windows 이진 파일을 직접 호출할 수 있습니다.  정의합니다(예: `notepad.exe`).  Windows 실행 파일을 더 쉽게 실행하기 위해 Windows 경로가 Fall Creators Update의 Linux `$PATH`에 포함됩니다.
+WSL은 `[binary name].exe`를 사용하여 WSL 명령줄에서 Windows 이진 파일을 직접 호출할 수 있습니다.  예를 들면 `notepad.exe`입니다.  Windows 실행 파일을 더 쉽게 실행하기 위해 Windows 경로가 Fall Creators Update의 Linux `$PATH`에 포함됩니다.
 
 이 방식으로 실행되는 애플리케이션에는 다음과 같은 속성이 있습니다.
 
@@ -129,7 +129,7 @@ Reply from 2600:1409:a:5a2::747: time=2ms
 
 매개 변수는 수정되지 않은 Windows 이진 파일에 전달됩니다.
 
-예를 들어 다음 명령은 `notepad.exe`에서 `C:\temp\foo.txt`를 엽니다.
+예를 들어 다음 명령은 `C:\temp\foo.txt`에서 `notepad.exe`를 엽니다.
 
 ``` BASH
 $ notepad.exe "C:\temp\foo.txt"
@@ -202,7 +202,7 @@ Fall Creators Update 이전의 interop 환경은 최신 interop 환경과 비슷
 요약하면 다음과 같습니다.
 
 * `bash.exe`가 더 이상 사용되지 않으며 `wsl.exe`로 대체되었습니다.
-* `wsl.exe`에는 단일 명령을 실행하기 위한 `-c` 옵션이 필요하지 않습니다.
+* `-c`에는 단일 명령을 실행하기 위한 `wsl.exe` 옵션이 필요하지 않습니다.
 * Windows 경로가 WSL `$PATH`에 포함됩니다.
 
 interop를 사용하지 않도록 설정하는 프로세스는 변경되지 않습니다.
@@ -284,7 +284,7 @@ $ /mnt/c/Windows/System32/PING.EXE www.microsoft.com
 
 매개 변수는 수정되지 않은 Windows 이진 파일에 전달됩니다.  
 
-예를 들어 다음 명령은 `notepad.exe`에서 `C:\temp\foo.txt`를 엽니다.
+예를 들어 다음 명령은 `C:\temp\foo.txt`에서 `notepad.exe`를 엽니다.
 
 ``` BASH
 $ notepad.exe "C:\temp\foo.txt"

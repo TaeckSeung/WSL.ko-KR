@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 여러 Linux �
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 59419919be138a20ab57e1a6d26a411e1531bf9f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235899"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343899"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 명령 및 시작 구성
 
@@ -161,6 +161,17 @@ WSL에서 배포의 등록을 취소하여 해당 배포를 다시 설치하거�
 
 WSL을 지정된 사용자로 실행합니다. 사용자는 WSL 배포 내에 있어야 합니다.
 
+## <a name="change-the-default-user-for-a-distribution"></a>배포에 대 한 기본 사용자 변경
+
+`<DistributionName> config --default-user <Username>`
+
+배포 로그인에 대 한 기본 사용자를 변경 합니다. 사용자가 기본 사용자가 될 수 있도록 배포 내에 이미 있어야 합니다. 
+
+예를 `ubuntu config --default-user johndoe` 들어는 Ubuntu 배포에 대 한 기본 사용자를 "johndoe" 사용자로 변경 합니다.
+
+> [!NOTE]
+> 배포 이름을 확인 하는 데 문제가 있는 경우 설치 된 배포의 공식 이름을 나열 하는 명령에 대 한 [배포 나열](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions) 을 참조 하세요. 
+
 ## <a name="run-a-specific-distribution"></a>특정 배포 실행
 
 `wsl -d <DistributionName>`, `wsl --distribution <DistributionName>`
@@ -247,22 +258,22 @@ WSL은 `automount` 및 `network`의 두 가지 섹션을 지원합니다.
 
 섹션: `[automount]`
 
-| key        | 값                          | default      | 정보                                                                                                                                                                                                                                                                                                                          |
+| 키        | value                          | 기본      | 참고                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 사용    | boolean                        | true         | `true`를 사용하면 고정 드라이브(즉, `C:/` 또는 `D:/`)가 `/mnt` 아래의 DrvFs에 자동으로 탑재됩니다.  `false`는 드라이브가 자동으로 탑재 되지 않음을 의미 하지만 수동으로 또는를 통해 탑재할 수 있습니다 `fstab` .                                                                                                             |
+| enabled    | boolean                        | true         | `true`를 사용하면 고정 드라이브(즉, `C:/` 또는 `D:/`)가 `/mnt` 아래의 DrvFs에 자동으로 탑재됩니다.  `false`는 드라이브가 자동으로 탑재 되지 않음을 의미 하지만 수동으로 또는를 통해 탑재할 수 있습니다 `fstab` .                                                                                                             |
 | mountFsTab | boolean                        | true         | `true`는 WSL 시작 시 `/etc/fstab`가 처리되도록 설정합니다. /etc/fstab는 SMB 공유와 같은 다른 파일 시스템을 선언할 수 있는 파일입니다. 따라서 시작 시 이러한 파일 시스템을 WSL에 자동으로 탑재할 수 있습니다.                                                                                                                |
-| root       | String                         | `/mnt/`      | 고정 드라이브가 자동으로 탑재될 디렉터리를 설정합니다. 예를 들어 WSL의 `/windir/`에 디렉터리가 있고 이 디렉터리를 루트로 지정하면 고정 드라이브가 `/windir/c`에 탑재됩니다.                                                                                              |
+| root       | 문자열                         | `/mnt/`      | 고정 드라이브가 자동으로 탑재될 디렉터리를 설정합니다. 예를 들어 WSL의 `/windir/`에 디렉터리가 있고 이 디렉터리를 루트로 지정하면 고정 드라이브가 `/windir/c`에 탑재됩니다.                                                                                              |
 | 옵션    | 쉼표로 구분된 값 목록 | 빈 문자열 | 이 값은 기본 DrvFs 탑재 옵션 문자열에 추가됩니다. **DrvFs별 옵션만 지정할 수 있습니다.** 탑재 이진 파일이 일반적으로 플래그로 구문 분석되는 옵션은 지원되지 않습니다. 이러한 옵션을 명시적으로 지정하려면 원하는 모든 드라이브를 /etc/fstab에 포함시켜야 합니다. |
 
 기본적으로 WSL은 uid와 gid를 기본 사용자의 값으로 설정합니다(Ubuntu 배포판에서 기본 사용자는 uid=1000, gid=1000으로 만들어짐). 사용자가 이 키를 통해 gid 또는 uid 옵션을 명시적으로 지정하면 연결된 값이 덮어쓰입니다. 그렇지 않으면 항상 기본값이 추가됩니다.
 
-**참고:** 이러한 옵션은 자동으로 탑재 된 모든 드라이브에 대 한 탑재 옵션으로 적용 됩니다. 특정 드라이브에 대한 옵션만 변경하려면 /etc/fstab를 대신 사용합니다.
+**참고:** 이러한 옵션은 자동으로 탑재된 모든 드라이브에 대한 탑재 옵션으로 적용됩니다. 특정 드라이브에 대한 옵션만 변경하려면 /etc/fstab를 대신 사용합니다.
 
 #### <a name="mount-options"></a>탑재 옵션
 
 Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파일에 대한 파일 사용 권한이 계산되는 방법을 제어할 수 있습니다. 다음 옵션을 사용할 수 있습니다.
 
-| 키 | Description | 기본값 |
+| 키 | 설명 | Default |
 |:----|:----|:----|
 |uid| 모든 파일의 소유자에게 사용되는 사용자 ID | WSL 배포판의 기본 사용자 ID(처음 설치할 때 기본값은 1000으로 설정됨)
 |gid| 모든 파일의 소유자에게 사용되는 그룹 ID | WSL 배포판의 기본 그룹 ID(처음 설치할 때 기본값은 1000으로 설정됨)
@@ -270,13 +281,13 @@ Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파�
 |fmask | 모든 파일에서 제외할 권한의 8진수 마스크 | 000
 |dmask | 모든 디렉터리에서 제외할 권한의 8진수 마스크 | 000
 
-**참고:** 권한 마스크는 파일이 나 디렉터리에 적용 되기 전에 논리적 OR 작업을 통해 배치 됩니다. 
+**참고:** 권한 마스크는 파일 또는 디렉터리에 적용되기 전에 논리 OR 연산을 거칩니다. 
 
 #### <a name="network"></a>네트워크
 
 섹션 레이블: `[network]`
 
-| key | 값 | default | 정보|
+| 키 | value | 기본 | 참고|
 |:----|:----|:----|:----|
 | generateHosts | boolean | `true` | `true`는 WSL에서 `/etc/hosts`를 생성하도록 설정합니다. `hosts` 파일에는 IP 주소에 해당하는 호스트 이름의 정적 맵이 포함됩니다. |
 | generateResolvConf | boolean | `true` | `true`는 WSL에서 `/etc/resolv.conf`를 생성하도록 설정합니다. `resolv.conf`에는 지정된 호스트 이름을 해당 IP 주소로 확인할 수 있는 DNS 목록이 포함됩니다. | 
@@ -287,9 +298,9 @@ Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파�
 
 다음 옵션은 참가자 빌드 17713 이상에서 사용할 수 있습니다.
 
-| key | 값 | default | 정보|
+| 키 | value | 기본 | 참고|
 |:----|:----|:----|:----|
-| 사용 | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 프로세스 시작을 지원하는지 여부가 결정됩니다. |
+| enabled | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 프로세스 시작을 지원하는지 여부가 결정됩니다. |
 | appendWindowsPath | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 경로 요소를 $PATH 환경 변수에 추가할지 여부가 결정됩니다. |
 
 #### <a name="user"></a>사용자

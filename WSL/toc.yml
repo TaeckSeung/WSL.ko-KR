@@ -1,0 +1,40 @@
+- name: WSL 설명서
+  href: index.md
+- name: 개요
+  items:
+    - name: WSL이란?
+      href: about.md
+    - name: WSL 2의 새로운 기능
+      href: wsl2-index.md
+    - name: WSL 2와 WSL 1 비교
+      href: compare-versions.md
+- name: 빠른 시작
+  items:
+    - name: WSL 설치 및 WSL 2로 업데이트
+      href: install-win10.md
+    - name: Windows Server에 설치
+      href: install-on-server.md
+    - name: 사용자 계정 및 암호 만들기
+      href: user-support.md
+- name: 사용 방법
+  items:
+    - name: 상호 운용성 명령
+      href: interop.md
+    - name: 명령 및 구성 시작
+      href: wsl-config.md
+    - name: 파일 권한
+      href: file-permissions.md
+    - name: 회사용 WSL 설정
+      href: enterprise.md
+    - name: 사용자 지정 배포판 빌드
+      href: build-custom-distro.md
+    - name: 명령줄 참조
+      href: reference.md
+- name: 질문과 대답
+  href: faq.md
+- name: WSL 2 FAQ
+  href: wsl2-faq.md
+- name: 문제 해결
+  href: troubleshooting.md
+- name: 릴리스 정보
+  href: release-notes.md

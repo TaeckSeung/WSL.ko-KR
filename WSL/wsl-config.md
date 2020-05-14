@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 여러 Linux �
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 914bce22b789d379420823d44d063bc84ec39ac1
+ms.sourcegitcommit: 509691ed3d42c9e0171e6a44e09003d4eb24f9ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343899"
+ms.locfileid: "83380430"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 명령 및 시작 구성
 
@@ -309,27 +309,40 @@ Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파�
 
 이러한 옵션은 빌드 18980 이상에서 사용할 수 있습니다.
 
-| key | 값 | default | 정보|
+| key | value | default | 정보|
 |:----|:----|:----|:----|
-| default | 문자열 | 처음 실행할 때 생성 된 초기 사용자 이름입니다. | 이 키를 설정 하면 먼저 WSL 세션을 시작할 때 실행할 사용자를 지정 합니다. |
+| default | string | 처음 실행할 때 생성 된 초기 사용자 이름입니다. | 이 키를 설정 하면 먼저 WSL 세션을 시작할 때 실행할 사용자를 지정 합니다. |
 
 ## <a name="configure-global-options-with-wslconfig"></a>. Wslconfig를 사용 하 여 전역 옵션 구성
 
 > **Windows 빌드 19041 이상에서 사용 가능**
 
-`.wslconfig`사용자 폴더의 루트 디렉터리에 파일을 배치 하 여 global WSL 옵션을 구성할 수 있습니다 `C:\Users\<yourUserName>\.wslconfig` . 이 파일에는 다음 옵션이 포함 될 수 있습니다.
+`.wslconfig`사용자 폴더의 루트 디렉터리에 파일을 배치 하 여 global WSL 옵션을 구성할 수 있습니다 `C:\Users\<yourUserName>\.wslconfig` . 
+
+다음은 샘플. wslconfig 파일입니다.
+
+```console
+[wsl2]
+kernel=C:\\temp\\myCustomKernel
+memory=4GB # Limits VM memory in WSL 2 to 4 GB
+processors=2 # Makes the WSL 2 VM use two virtual processors
+```
+
+이 파일에는 다음 옵션이 포함 될 수 있습니다.
 
 ### <a name="wsl-2-settings"></a>WSL 2 설정
 
-이러한 설정은 모든 WSL 2 배포를 지 원하는 VM에 영향을 줍니다. 
+섹션 레이블: `[wsl2]`
 
-| key | 값 | default | 정보|
+이러한 설정은 모든 WSL 2 배포를 지 원하는 VM에 영향을 줍니다.
+
+| key | value | default | 정보|
 |:----|:----|:----|:----|
-| 커널(kernel) | 문자열 | Microsoft에서 빌드된 커널을 제공 받은 수신함 | 사용자 지정 Linux 커널의 절대 Windows 경로입니다. |
+| 커널(kernel) | string | Microsoft에서 빌드된 커널을 제공 받은 수신함 | 사용자 지정 Linux 커널의 절대 Windows 경로입니다. |
 | 메모리 | 크기 | Windows에서 총 메모리의 80% | WSL 2 VM에 할당할 메모리의 양입니다. |
 | 프로세서 | number | Windows에서 동일한 수의 프로세서 | WSL 2 VM에 할당할 프로세서 수입니다. |
 | localhostForwarding | boolean | `true` | WSL 2 VM의 와일드 카드 또는 localhost에 바인딩된 포트를 localhost: port를 통해 호스트에서 연결할 수 있는지 여부를 지정 하는 부울입니다. |
-| kernelCommandLine | 문자열 | 비어 있음 | 추가 커널 명령줄 인수입니다. |
+| kernelCommandLine | string | 비어 있음 | 추가 커널 명령줄 인수입니다. |
 | swap | 크기 | Windows에서 메모리 크기의 25%가 가장 가까운 GB로 반올림 됨 | WSL 2 VM에 추가할 스왑 공간의 크기 이며, 스왑 파일이 없는 경우 0입니다. |
 | 스왑 파일 | 크기 | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | 스왑 가상 하드 디스크에 대 한 절대 Windows 경로입니다. |
 

@@ -1,174 +1,159 @@
 ---
 title: Linux와 Windows의 상호 운용성
 description: Linux용 Windows 하위 시스템에서 실행되는 Linux 배포와의 Windows 상호 운용성에 대해 설명합니다.
-ms.date: 12/20/2017
+ms.date: 05/12/2020
 ms.topic: article
-ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: f8b0150c044f5011b84e80cac4befd752c4dc552
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: b1c7a64a86cf088159d1abee3b341328151428f6
+ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "71269801"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83270847"
 ---
-# <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows와 Linux용 Windows 하위 시스템의 상호 운용성
-
-> **Fall Creators Update로 업데이트되었습니다.**  
-크리에이터스 업데이트 또는 1주년 업데이트를 실행하는 경우 [크리에이터스/1주년 업데이트 섹션](interop.md#creators-update-and-anniversary-update)으로 이동합니다.
+# <a name="windows-interoperability-with-linux"></a>Linux와 Windows의 상호 운용성
 
 WSL(Linux용 Windows 하위 시스템)은 Windows와 Linux 간의 통합을 지속적으로 향상시키고 있습니다.  다음을 수행할 수 있습니다.
 
-1. Linux 콘솔에서 Windows 이진 파일을 호출합니다.
-1. Windows 콘솔에서 Linux 이진 파일을 호출합니다.
-1. **Windows 참가자 빌드 17063 이상** Linux와 Windows 간에 환경 변수를 공유합니다.
+* Linux 명령줄(즉, Ubuntu)에서 Windows 도구(즉, notepad.exe)를 실행합니다.
+* Windows 명령줄(즉, PowerShell)에서 Linux 도구(즉, grep)를 실행합니다.
+* Linux와 Windows 간에 환경 변수를 공유합니다. (빌드 17063 이상)
 
-이렇게 하면 Windows와 WSL 간에 원활한 환경이 제공됩니다.  기술 세부 정보는 [WSL 블로그](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)에 있습니다.
+> [!NOTE]
+> 크리에이터스 업데이트(2017년 10월 빌드 16299) 또는 1주년 업데이트(2016년 8월 빌드 14393)를 실행하는 경우 [이전 버전의 Windows 10](#earlier-versions-of-windows-10)으로 이동합니다.
 
 ## <a name="run-linux-tools-from-a-windows-command-line"></a>Windows 명령줄에서 Linux 도구 실행
 
-`wsl.exe <command>`를 사용하여 Windows 명령 프롬프트(CMD 또는 PowerShell)에서 Linux 이진 파일을 실행합니다.
+`wsl <command>`(또는 `wsl.exe <command>`)를 사용하여 CMD(Windows 명령 프롬프트) 또는 PowerShell에서 Linux 이진 파일을 실행합니다.
 
-이진 파일은 다음과 같은 방식으로 호출됩니다.
+예:
 
-1. 현재 CMD 또는 PowerShell 프롬프트와 동일한 작업 디렉터리를 사용합니다.
-1. WSL 기본 사용자로 실행합니다.
-1. 호출 프로세스 및 터미널과 동일한 Windows 관리 권한을 사용합니다.
-
-예를 들어 다음과 같은 가치를 제공해야 합니다.
-
-```console
+```powershell
 C:\temp> wsl ls -la
 <- contents of C:\temp ->
 ```
 
-`wsl.exe` 뒤에 나오는 Linux 명령은 WSL에서 실행되는 명령처럼 처리됩니다.  sudo, 파이핑, 파일 리디렉션과 같은 작업이 작동합니다.
+이진 파일은 다음과 같은 방식으로 호출됩니다.
 
-sudo를 사용하는 예제:
+* 현재 CMD 또는 PowerShell 프롬프트와 동일한 작업 디렉터리를 사용합니다.
+* WSL 기본 사용자로 실행합니다.
+* 호출 프로세스 및 터미널과 동일한 Windows 관리 권한을 사용합니다.
 
-```console
+`wsl`(또는 `wsl.exe`) 뒤의 Linux 명령은 WSL에서 실행되는 명령처럼 처리됩니다.  sudo, 파이핑, 파일 리디렉션과 같은 작업이 작동합니다.
+
+sudo를 사용하여 기본 Linux 배포를 업데이트하는 예제:
+
+```powershell
 C:\temp> wsl sudo apt-get update
-[sudo] password for username:
-Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease
-Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
 ```
 
-WSL 및 Windows 명령을 혼합한 예제:
+이 명령을 실행하면 기본 Linux 배포 사용자 이름이 나열되고 암호를 입력하라는 메시지가 표시됩니다. 암호가 올바르게 입력되면 배포에서 업데이트를 다운로드합니다.
 
-```console
-C:\temp> wsl ls -la | findstr "foo"
--rwxrwxrwx 1 root root     14 Sep 27 14:26 foo.bat
+## <a name="mixing-linux-and-windows-commands"></a>Linux 및 Windows 명령 혼합
 
-C:\temp> dir | wsl grep foo
-09/27/2016  02:26 PM                14 foo.bat
+PowerShell을 사용하여 Linux와 Windows 명령을 혼합하는 몇 가지 예제는 다음과 같습니다.
 
+`ls -la` Linux 명령을 사용하여 파일을 나열하고 `findstr` PowerShell 명령을 사용하여 "git"이 포함된 단어에 대한 결과를 필터링하려면 명령을 다음과 같이 결합합니다.
+
+```powershell
+wsl ls -la | findstr "git"
+```
+
+`dir` PowerShell 명령을 사용하여 파일을 나열하고 `grep` Linux 명령을 사용하여 "git"이 포함된 단어에 대한 결과를 필터링하려면 명령을 다음과 같이 결합합니다.
+
+```powershell
+C:\temp> dir | wsl grep git
+```
+
+`ls -la` Linux 명령을 사용하여 파일을 나열하고 `> out.txt` PowerShell 명령을 사용하여 해당 목록을 "out.txt"라는 텍스트 파일로 출력하려면 명령을 다음과 같이 결합합니다.
+
+```powershell
 C:\temp> wsl ls -la > out.txt
 ```
 
 `wsl.exe`에 전달된 명령은 수정되지 않고 WSL 프로세스에 전달됩니다.  파일 경로는 WSL 형식으로 지정해야 합니다.
 
-경로가 포함된 예제:
+`ls -la` Linux 명령을 사용하여 `/proc/cpuinfo` Linux 파일 시스템 경로에 있는 파일을 나열하려면 PowerShell을 다음과 같이 사용합니다.
 
-```console
+```powershell
 C:\temp> wsl ls -la /proc/cpuinfo
--r--r--r-- 1 root root 0 Sep 28 11:28 /proc/cpuinfo
-
-C:\temp> wsl ls -la "/mnt/c/Program Files"
-<- contents of C:\Program Files ->
 ```
 
-## <a name="run-windows-tools-from-wsl"></a>WSL에서 Windows 도구 실행
+`ls -la` Linux 명령을 사용하여 `C:\Program Files` Windows 파일 시스템 경로에 있는 파일을 나열하려면 PowerShell을 다음과 같이 사용합니다.
 
-WSL은 `[binary name].exe`를 사용하여 WSL 명령줄에서 Windows 이진 파일을 직접 호출할 수 있습니다.  예를 들면 `notepad.exe`입니다.  Windows 실행 파일을 더 쉽게 실행하기 위해 Windows 경로가 Fall Creators Update의 Linux `$PATH`에 포함됩니다.
+```powershell
+C:\temp> wsl ls -la "/mnt/c/Program Files"
+```
+
+## <a name="run-windows-tools-from-linux"></a>Linux에서 Windows 도구 실행
+
+WSL에서 `[tool-name].exe`를 사용하여 WSL 명령줄에서 Windows 도구를 직접 실행할 수 있습니다.  정의합니다(예: `notepad.exe`).
+
+<!-- Craig - could you help add a section with an example here to explain this scenario: "To access your Linux files using a Windows tool, use `\\wsl$\<distroName>\'` as the file path." Currently it I can just enter `notepad.exe foo.txt` and it seems to work fine, so explaining a situation where the file path is needed would be helpful. -->
 
 이 방식으로 실행되는 애플리케이션에는 다음과 같은 속성이 있습니다.
 
-1. 작업 디렉터리를 WSL 명령 프롬프트로 유지합니다(대부분의 경우에 해당, 예외는 아래에 설명되어 있음).
-1. WSL 프로세스와 동일한 권한을 갖습니다.
-1. 활성 Windows 사용자로 실행합니다.
-1. CMD 프롬프트에서 직접 실행한 것처럼 Windows 작업 관리자에 표시됩니다.
-
-예제:
-
-``` BASH
-$ notepad.exe
-```
+* 작업 디렉터리를 WSL 명령 프롬프트로 유지합니다(대부분의 경우에 해당, 예외는 아래에 설명되어 있음).
+* WSL 프로세스와 동일한 권한을 갖습니다.
+* 활성 Windows 사용자로 실행합니다.
+* CMD 프롬프트에서 직접 실행한 것처럼 Windows 작업 관리자에 표시됩니다.
 
 WSL에서 실행되는 Windows 실행 파일은 네이티브 Linux 실행 파일과 비슷하게 처리됩니다(파이핑, 리디렉션 및 백그라운드 작업이 예상대로 작동).
 
-파이프를 사용하는 예제:
+`ipconfig.exe` Windows 도구를 실행하려면 `grep` Linux 도구를 사용하여 "IPv4" 결과를 필터링하고 `cut` Linux 도구를 사용하여 Linux 배포(예: Ubuntu)에서 열 필드를 제거합니다.
 
-``` BASH
-$ ipconfig.exe | grep IPv4 | cut -d: -f2
-172.21.240.1
-10.159.21.24
+```bash
+ipconfig.exe | grep IPv4 | cut -d: -f2
 ```
 
-혼합된 Windows와 WSL 명령을 사용하는 예제:
+Windows와 Linux 명령이 혼합된 예제를 사용해 보겠습니다. Linux 배포(즉, Ubuntu)를 열고, `touch foo.txt`라는 텍스트 파일을 만듭니다. 이제 `ls -la` Linux 명령을 사용하여 파일 및 해당 만들기 세부 정보를 직접 나열하고 `findstr.exe` Windows PowerShell 도구를 사용하여 결과를 필터링하여 `foo.txt` 파일만 결과에 표시합니다.
 
-``` BASH
-$ ls -la | findstr.exe foo.txt
-
-$ cmd.exe /c dir
-<- contents of C:\ ->
+```bash
+ls -la | findstr.exe foo.txt
 ```
 
-Windows 이진 파일은 파일 확장명을 포함하고, 파일 대/소문자와 일치하며, 실행 파일이어야 합니다.  일괄 처리 스크립트가 포함된 비실행 파일이 있습니다.  `dir`과 같은 CMD 기본 명령은 `cmd.exe /C` 명령을 사용하여 실행할 수 있습니다.
+Windows 도구는 파일 확장명을 포함하고, 파일 대/소문자와 일치하며, 실행 파일이어야 합니다.  일괄 처리 스크립트가 포함된 비실행 파일이 있습니다.  `dir`과 같은 CMD 기본 명령은 `cmd.exe /C` 명령을 사용하여 실행할 수 있습니다.
 
-예제:
+예를 들어 다음을 입력하여 Windows 파일 시스템의 C:\ 디렉터리에 있는 콘텐츠를 나열합니다.
 
-``` BASH
-$ cmd.exe /C dir
-<- contents of C:\ ->
-
-$ PING.EXE www.microsoft.com
-Pinging e1863.dspb.akamaiedge.net [2600:1409:a:5a2::747] with 32 bytes of data:
-Reply from 2600:1409:a:5a2::747: time=2ms
+```bash
+cmd.exe /C dir
 ```
 
-매개 변수는 수정되지 않은 Windows 이진 파일에 전달됩니다.
+또는 `ping` 명령을 사용하여 에코 요청을 microsoft.com 웹 사이트에 보냅니다.
 
-예를 들어 다음 명령은 `C:\temp\foo.txt`에서 `notepad.exe`를 엽니다.
-
-``` BASH
-$ notepad.exe "C:\temp\foo.txt"
-$ notepad.exe C:\\temp\\foo.txt
+```bash
+ping.exe www.microsoft.com
 ```
 
-VolFs에 있는 파일(`/mnt/<x>` 아래에 없는 파일)은 WSL에서 Windows 애플리케이션을 사용하여 수정할 수 없습니다.
+매개 변수는 수정되지 않은 Windows 이진 파일에 전달됩니다. 예를 들어 다음 명령은 `notepad.exe`에서 `C:\temp\foo.txt`를 엽니다.
 
-기본적으로 WSL은 Windows 이진 파일의 작업 디렉터리를 현재 WSL 디렉터리로 유지하려고 하지만, 작업 디렉터리가 VolFs에 있는 경우 인스턴스 만들기 디렉터리로 대체됩니다.
+```bash
+notepad.exe "C:\temp\foo.txt"
+```
 
-예를 들어 `wsl.exe`가 처음에는 `C:\temp`에서 시작되고, 현재 WSL 디렉터리가 사용자의 홈으로 변경됩니다.  사용자의 홈 디렉터리에서 `notepad.exe`를 호출하면 WSL이 자동으로 notepad.exe의 작업 디렉터리인 `C:\temp`로 되돌아갑니다.
+또한 다음과 같은 작업도 수행합니다.
 
-``` BASH
-C:\temp> wsl
-/mnt/c/temp/$ cd ~
-~$ notepad.exe foo.txt
-~$ ls | grep foo.txt
-~$ exit
-
-exit
-C:\temp>dir | findstr foo.txt
-09/27/2016  02:15 PM                14 foo.txt
+```bash
+notepad.exe C:\\temp\\foo.txt
 ```
 
 ## <a name="share-environment-variables-between-windows-and-wsl"></a>Windows와 WSL 간의 환경 변수 공유
 
-> Windows 참가자 빌드 17063 이상에서 사용할 수 있습니다.
+WSL 및 Windows는 WSL에서 실행되는 Windows 및 Linux 배포를 연결하기 위해 만든 `WSLENV`라는 특수 환경 변수를 공유합니다.
 
-17063 이전에서는 `PATH`만 WSL에서 액세스할 수 있는 Windows 환경 변수였습니다(이를 통해 WSL 아래에서 Win32 실행 파일을 시작할 수 있었음).
-
-17063부터 WSL 및 Windows는 WSL에서 실행되는 Windows 및 Linux 배포판을 연결하기 위해 만든 특수 환경 변수인 `WSLENV`를 공유합니다.
-
-`WSLENV`의 속성:
+`WSLENV` 변수의 속성은 다음과 같습니다.
 
 * 공유되며, Windows 및 WSL 환경 모두에 있습니다.
 * Windows와 WSL 간에 공유할 환경 변수의 목록입니다.
 * Windows 및 WSL에서 제대로 작동하도록 환경 변수의 형식을 지정할 수 있습니다.
 
-`WSLENV`에는 해당 환경 변수가 변환되는 방법에 영향을 주는 4개의 플래그를 사용할 수 있습니다.
+> [!NOTE]
+> 17063 이전에서는 `PATH`만 WSL에서 액세스할 수 있는 Windows 환경 변수였습니다(이를 통해 WSL 아래에서 Win32 실행 파일을 시작할 수 있었음). `WSLENV`는 17063부터 지원됩니다.
+
+## <a name="wslenv-flags"></a>WSLENV 플래그
+
+`WSLENV`에서 4개의 플래그를 사용하여 환경 변수가 변환되는 방법에 영향을 줄 수 있습니다.
 
 `WSLENV` 플래그:
 
@@ -179,130 +164,76 @@ C:\temp>dir | findstr foo.txt
 
 플래그는 필요에 따라 결합할 수 있습니다.
 
-## <a name="disable-interop"></a>Interop 사용 안 함
+## <a name="disable-interoperability"></a>상호 운용성 사용 안 함
 
-사용자는 다음 명령을 루트로 실행하여 단일 WSL 세션에서 Windows 이진 파일을 실행하는 기능을 사용하지 않도록 설정할 수 있습니다.
+사용자는 다음 명령을 루트로 실행하여 단일 WSL 세션에 대해 Windows 도구를 실행하는 기능을 사용하지 않도록 설정할 수 있습니다.
 
-``` BASH
-$ echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
+```bash
+echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
 ```
 
 Windows 이진 파일을 다시 사용하도록 설정하려면 모든 WSL 세션을 종료하고 bash.exe를 다시 실행하거나 다음 명령을 루트로 실행합니다.
 
-``` BASH
-$ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
+```bash
+echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 ```
 
 interop를 사용하지 않도록 설정하는 것은 WSL 세션 간에 유지되지 않습니다. 새 세션이 시작되면 interop가 사용하도록 다시 설정됩니다.
 
-## <a name="creators-update-and-anniversary-update"></a>크리에이터스 업데이트 및 1주년 업데이트
+## <a name="earlier-versions-of-windows-10"></a>이전 버전의 Windows 10
 
-Fall Creators Update 이전의 interop 환경은 최신 interop 환경과 비슷하지만 몇 가지 주요 차이점이 있습니다.
+이전 Windows 10 버전의 상호 운용성 명령에는 몇 가지 차이점이 있습니다. 크리에이터스 업데이트(2017년 10월 빌드 16299) 또는 1주년 업데이트(2016년 8월 빌드 14393) 버전의 Windows 10을 실행하는 경우 [최신 Windows 버전으로 업데이트](ms-settings:windowsupdate)하는 것이 좋습니다. 그러나 최신 버전으로 업데이트할 수 없는 경우 아래에 몇 가지 interop 차이점에 대해 간략히 설명했습니다.
 
-요약하면 다음과 같습니다.
+요약:
 
-* `bash.exe`가 더 이상 사용되지 않으며 `wsl.exe`로 대체되었습니다.
-* `-c`에는 단일 명령을 실행하기 위한 `wsl.exe` 옵션이 필요하지 않습니다.
+* `bash.exe`가 `wsl.exe`로 바뀌었습니다.
+* `wsl.exe`에는 단일 명령을 실행하기 위한 `-c` 옵션이 필요하지 않습니다.
 * Windows 경로가 WSL `$PATH`에 포함됩니다.
+* interop를 사용하지 않도록 설정하는 프로세스는 변경되지 않습니다.
 
-interop를 사용하지 않도록 설정하는 프로세스는 변경되지 않습니다.
+Linux 명령은 Windows 명령 프롬프트 또는 PowerShell에서 실행할 수 있지만, 초기 Windows 버전의 경우 `bash` 명령을 사용해야 합니다. 예:
 
-### <a name="invoking-wsl-from-the-windows-command-line"></a>Windows 명령줄에서 WSL 호출
-
-Linux 이진 파일은 Windows 명령 프롬프트 또는 PowerShell에서 호출할 수 있습니다.  이 방식으로 호출되는 이진 파일에는 다음과 같은 속성이 있습니다.
-
-1. CMD 또는 PowerShell 프롬프트와 동일한 작업 디렉터리를 사용합니다.
-1. WSL 기본 사용자로 실행합니다.
-1. 호출 프로세스 및 터미널과 동일한 Windows 관리 권한을 사용합니다.
-
-예제:
-
-```console
+```powershell
 C:\temp> bash -c "ls -la"
 ```
 
-이 방식으로 호출되는 Linux 명령은 다른 Windows 애플리케이션처럼 처리됩니다.  입력, 파이핑, 파일 리디렉션과 같은 작업이 예상대로 작동합니다.
-
-예제:
-
-```console
-C:\temp>bash -c "sudo apt-get update"
-[sudo] password for username:
-Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease
-Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
-```
-
-```console
-C:\temp> bash -c "ls -la" | findstr foo
-C:\temp> dir | bash -c "grep foo"
-C:\temp> bash -c "ls -la" > out.txt
-```
+입력, 파이핑, 파일 리디렉션과 같은 작업이 예상대로 작동합니다.
 
 `bash -c`에 전달된 WSL 명령은 수정되지 않고 WSL 프로세스에 전달됩니다.  파일 경로는 WSL 형식으로 지정해야 하며, 관련 문자를 이스케이프 방식으로 처리해야 합니다. 예제:
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
--r--r--r-- 1 root root 0 Sep 28 11:28 /proc/cpuinfo
+```
 
+또는...
+
+```powershell
 C:\temp> bash -c "ls -la \"/mnt/c/Program Files\""
-<- contents of C:\Program Files ->
 ```
 
-### <a name="invoking-windows-binaries-from-wsl"></a>WSL에서 Windows 이진 파일 호출
+이전 버전의 Windows 10에서 WSL 배포를 통해 Windows 도구를 호출하는 경우 디렉터리 경로를 지정해야 합니다. 예를 들어 WSL 명령줄에서 다음을 입력합니다.
 
-Linux용 Windows 하위 시스템은 WSL 명령줄에서 Windows 이진 파일을 직접 호출할 수 있습니다.  이 방식으로 실행되는 애플리케이션에는 다음과 같은 속성이 있습니다.
-
-1. 아래에 설명된 시나리오를 제외하고는 작업 디렉터리를 WSL 명령 프롬프트로 유지합니다.
-1. `bash.exe` 프로세스와 동일한 권한을 갖습니다. 
-1. 활성 Windows 사용자로 실행합니다.
-1. CMD 프롬프트에서 직접 실행한 것처럼 Windows 작업 관리자에 표시됩니다.
-
-예제:
-
-``` BASH
-$ /mnt/c/Windows/System32/notepad.exe
+```bash
+/mnt/c/Windows/System32/notepad.exe
 ```
 
-WSL에서는 이러한 실행 파일이 네이티브 Linux 실행 파일과 비슷한 방식으로 처리됩니다.  즉, 디렉터리를 Linux 경로에 추가하고 명령 간의 파이프가 예상대로 작동합니다.  예제:
+WSL에서는 이러한 실행 파일이 네이티브 Linux 실행 파일과 비슷한 방식으로 처리됩니다.  즉, 디렉터리를 Linux 경로에 추가하고 명령 간의 파이프가 예상대로 작동합니다.  예:
 
-``` BASH
-$ export PATH=$PATH:/mnt/c/Windows/System32
-$ notepad.exe
-$ ipconfig.exe | grep IPv4 | cut -d: -f2
-$ ls -la | findstr.exe foo.txt
-$ cmd.exe /c dir
+```bash
+export PATH=$PATH:/mnt/c/Windows/System32
+```
+또는
+
+```bash
+ipconfig.exe | grep IPv4 | cut -d: -f2
 ```
 
-Windows 이진 파일은 파일 확장명을 포함하고, 파일 대/소문자와 일치하며, 실행 파일이어야 합니다.  일괄 처리 스크립트 및 `dir`과 같은 명령이 포함된 비실행 파일은 `/mnt/c/Windows/System32/cmd.exe /C` 명령을 사용하여 실행할 수 있습니다.
+Windows 이진 파일은 파일 확장명을 포함하고, 파일 대/소문자와 일치하며, 실행 파일이어야 합니다.  일괄 처리 스크립트 및 `dir`과 같은 명령이 포함된 비실행 파일은 `/mnt/c/Windows/System32/cmd.exe /C` 명령을 사용하여 실행할 수 있습니다. 예:
 
-예제:
-
-``` BASH
-$ /mnt/c/Windows/System32/cmd.exe /C dir
-$ /mnt/c/Windows/System32/PING.EXE www.microsoft.com
+```bash
+/mnt/c/Windows/System32/cmd.exe /C dir
 ```
 
-매개 변수는 수정되지 않은 Windows 이진 파일에 전달됩니다.  
+## <a name="additional-resources"></a>추가 리소스
 
-예를 들어 다음 명령은 `C:\temp\foo.txt`에서 `notepad.exe`를 엽니다.
-
-``` BASH
-$ notepad.exe "C:\temp\foo.txt"
-$ notepad.exe C:\\temp\\foo.txt
-```
-
-VolFs에 있는 파일(`/mnt/<x>` 아래에 없는 파일)은 Windows 애플리케이션을 사용하여 수정할 수 없습니다.  기본적으로 WSL은 Windows 이진 파일의 작업 디렉터리를 현재 WSL 디렉터리로 유지하려고 하지만, 작업 디렉터리가 VolFs에 있는 경우 인스턴스 만들기 디렉터리로 대체됩니다.
-
-예를 들어 `bash.exe`가 처음에는 `C:\temp`에서 시작되고, 현재 WSL 디렉터리가 사용자의 홈으로 변경됩니다.  사용자의 홈 디렉터리에서 `notepad.exe`를 호출하면 WSL이 자동으로 notepad.exe의 작업 디렉터리인 `C:\temp`로 되돌아갑니다.
-
-``` BASH
-C:\temp> bash
-/mnt/c/temp/$ cd ~
-~$ notepad.exe foo.txt
-~$ ls | grep foo.txt
-~$ exit
-exit
-
-C:\temp> dir | findstr foo.txt
-09/27/2016  02:15 PM                14 foo.txt
-```
+* [2016의 상호 운용성에 대한 WSL 블로그 게시물](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)

@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 37d8ad589d0108534c27137614a005c0c0ac55bc
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: b1720d01d492f1dccce8c2e1d2ff430f7769a42e
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80256376"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235826"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux용 Windows 하위 시스템 배포판 패키지를 수동으로 다운로드
 
@@ -56,7 +56,7 @@ Windows 10 Spring 2018 업데이트(및 그 이상 버전)에는 명령줄에서
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-위의 예에서는 PowerShell에서 [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)의 PowerShell curl 별칭이 아닌 실제 curl 실행 파일이 호출되도록 `curl`이 아닌 `curl.exe`가 실행됩니다.
+위의 예에서는 PowerShell에서 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)의 PowerShell curl 별칭이 아닌 실제 curl 실행 파일이 호출되도록 `curl`이 아닌 `curl.exe`가 실행됩니다.
 
 > 참고: Cmd 셸 및/또는 `.bat` / `.cmd` 스크립트를 사용하여 다운로드 단계를 호출/스크립팅해야 하는 경우 `curl`을 사용하는 것이 좋습니다.
 

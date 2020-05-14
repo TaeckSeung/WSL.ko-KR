@@ -7,14 +7,14 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 6a70cf1c3a139610785ff506d78b8c3621620b4c
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 35edad06775e75eef6d81d018355d8f28d772deb
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80307455"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235891"
 ---
-# <a name="wsl-2-faq"></a>WSL 2 FAQ
+# <a name="wsl-2-faqs"></a>WSL 2 FAQ
 
 다음은 Linux용 Windows 하위 시스템 2에 대한 FAQ(질문과 대답) 목록입니다.
 
@@ -52,9 +52,9 @@ WSL 2의 초기 릴리스에서는 하드웨어 액세스 지원이 제한됩니
 
 ## <a name="can-i-use-wslconf-in-wsl-2"></a>WSL 2에서 wsl.conf를 사용할 수 있나요?
 
-WSL 2는 WSL 1에서 사용하는 것과 동일한 wsl. 파일을 지원합니다. 즉, WSL 1 배포판에서 설정한 모든 구성 옵션(예: Windows 드라이브 자동 탑재, interop 사용 또는 사용 안 함, Windows 드라이브가 탑재될 디렉터리 변경 등)이 모두 WSL 2 내에서 작동합니다. [배포판 관리](./wsl-config.md) 페이지에서 WSL의 구성 옵션에 대해 자세히 알아볼 수 있습니다. 
+WSL 2는 WSL 1에서 사용하는 것과 동일한 wsl. 파일을 지원합니다. 즉, WSL 1 배포판에서 설정한 모든 구성 옵션(예: Windows 드라이브 자동 탑재, interop 사용 또는 사용 안 함, Windows 드라이브가 탑재될 디렉터리 변경 등)이 모두 WSL 2 내에서 작동합니다. [배포판 관리](./wsl-config.md) 페이지에서 WSL의 구성 옵션에 대해 자세히 알아볼 수 있습니다.
 
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
- [2]: https://docs.microsoft.com/en-us/virtualization/api/
+ [2]: https://docs.microsoft.com/virtualization/api/
  [3]: https://devblogs.microsoft.com/visualstudio/hyper-v-android-emulator-support/
  [4]: https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html

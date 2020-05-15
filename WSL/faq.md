@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 5651b0869ff97899a768985ce6efa006afa77a9b
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77624937"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343905"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답
 
@@ -200,11 +200,11 @@ sudo update-locale LANG=en_US.UTF8
 방화벽을 해제하면 액세스가 허용되는 경우도 있습니다. 단순히 방화벽을 설치하면 경우에 따라 액세스가 차단되는 것처럼 보입니다.
 
 ## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>Windows의 WSL에서 포트에 액세스하려면 어떻게 하나요?
-WSL은 Windows에서 실행되는 Windows의 IP 주소를 공유합니다. 따라서 localhost의 모든 포트에 액세스할 수 있습니다. 예를 들어 1234 포트에 웹 콘텐츠가 있는 경우 https://localhost:1234 를 Windows 브라우저에 연결할 수 있습니다.
+WSL은 Windows에서 실행되는 Windows의 IP 주소를 공유합니다. 따라서 localhost의 모든 포트에 액세스할 수 있습니다. 예를 들어 1234 포트에 웹 콘텐츠가 있는 경우 https://localhost:1234를 Windows 브라우저에 연결할 수 있습니다.
 
-## <a name="how-can-i-back-up-my-wsl-distros"></a>내 WSL 배포판을 백업하려면 어떻게 해야 하나요?
+## <a name="how-can-i-back-up-my-wsl-distros-or-move-them-from-one-drive-to-another"></a>내 WSL 배포판을 백업하거나 한 드라이브에서 다른 드라이브로 이동할 수 있나요?
 
-배포판을 백업하는 가장 좋은 방법은 Windows 버전 1809 이상에서 사용할 수 있습니다. `wsl --export` 명령을 사용하여 전체 배포를 tarball로 내보낼 수 있습니다. 그런 다음, `wsl --import` 명령을 사용하여 이 배포판을 WSL로 다시 가져와서 WSL 배포 상태를 백업하고 저장할 수 있습니다. 
+배포판을 백업하거나 이동하는 가장 좋은 방법은 Windows 버전 1809 이상에서 사용할 수 있는 export/import 명령을 통하는 것입니다. `wsl --export` 명령을 사용하여 전체 배포를 tarball로 내보낼 수 있습니다. 그런 다음, `wsl --import` 명령을 사용하여 이 배포판을 WSL로 다시 가져올 수 있습니다. 이 명령을 사용하면 가져올 새 드라이브 위치의 이름을 지정할 수 있으므로 WSL 배포 상태를 백업 및 저장하거나 이동할 수 있습니다. 
 
 Appdata 폴더의 파일을 백업하는 기존 백업 서비스(예: Windows Backup)는 Linux 파일을 손상시키지 않습니다.
 

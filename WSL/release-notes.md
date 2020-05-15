@@ -1,19 +1,17 @@
 ---
 title: Linux용 Windows 하위 시스템의 릴리스 정보
 description: Linux용 Windows 하위 시스템의 릴리스 정보입니다.  매주 업데이트됩니다.
-keywords: BashOnWindows, bash, wsl, windows, linux용 windows 하위 시스템, windows 하위 시스템, ubuntu
+keywords: 릴리스 정보, wsl, windows, linux용 windows 하위 시스템, windows 하위 시스템, ubuntu
 author: benhillis
-ms.date: 07/31/2017
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "76911707"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235940"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
 
@@ -188,7 +186,7 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 * wsl.conf를 참조하도록 resolv.conf 헤더를 업데이트합니다. [GH 3928에서 설명]
 * epoll 삭제 코드의 교착 상태 [GH 3922]
 * --import 및 –export에 대한 인수의 공백을 처리합니다. [GH 3932]
-* mmap’d 파일을 확장하면 올바르게 작동하지 않습니다. [GH 3939]
+* mmap'd 파일을 확장하면 올바르게 작동하지 않습니다. [GH 3939]
 * ARM64 \\\\wsl$ 액세스가 올바르게 작동하지 않는 문제 해결
 * wsl.exe에 대한 개선된 기본 아이콘을 추가합니다.
 
@@ -526,7 +524,7 @@ wslconfig.exe /terminate <DistributionName>
     * 우선 순위는 현재 지원되는 WSL 기능이 아니므로 제한이 있지만, 표준 사용의 차단을 해제해야 합니다.
 * Windows 방화벽은 WSL 프로세스를 지원합니다. [GH 1852]
     * 예를 들어 WSL python 프로세스가 모든 포트에서 수신 대기하도록 허용하려면 관리자 권한 Windows cmd ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```를 사용합니다.
-    * 방화벽 규칙을 추가하는 방법에 대한 자세한 내용은 [링크](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)를 참조하세요.
+    * 방화벽 규칙을 추가하는 방법에 대한 자세한 내용은 [링크](https://support.microsoft.com/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)를 참조하세요.
 * wsl.exe를 사용할 때 사용자의 기본 셸을 준수합니다. [GH 2372]
 * 모든 네트워크 인터페이스를 이더넷으로 보고합니다. [GH 2996]
 * 손상된 /etc/passwd 파일을 보다 효율적으로 처리합니다. [GH 3001]
@@ -555,8 +553,8 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="wsl"></a>WSL
 * Windows에서 /init를 종료할 수 있습니다. [GH 2928]
-* 이제 DrvFs는 기본적으로 디렉터리 단위 대/소문자 구분을 사용합니다(“case=dir” 탑재 옵션과 동일).
-    * “case=force”(이전 동작)를 사용하려면 레지스트리 키를 설정해야 합니다. "case=force"를 사용해야 하는 경우 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1 명령을 실행하여 "case=force"를 설정합니다.
+* 이제 DrvFs는 기본적으로 디렉터리 단위 대/소문자 구분을 사용합니다("case=dir" 탑재 옵션과 동일).
+    * "case=force"(이전 동작)를 사용하려면 레지스트리 키를 설정해야 합니다. "case=force"를 사용해야 하는 경우 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1 명령을 실행하여 "case=force"를 설정합니다.
     * 이전 버전의 Windows에서 WSL을 사용하여 만든 기존 디렉터리가 있고 대/소문자를 구분해야 하는 경우 다음 fsutil.exe를 사용하여 대/소문자를 구분하도록 설정합니다. fsutil.exe file setcasesensitiveinfo <path> enable
 * NULL은 uname syscall에서 반환된 문자열을 종료합니다.
 
@@ -622,10 +620,10 @@ wslconfig.exe /terminate <DistributionName>
 * DrvFs를 사용하여 만든 특수 파일(예: WSL 기호화된 링크) 또는 메타데이터를 사용하는 경우 fifos 및 소켓을 이제 Windows에서 복사하여 이동할 수 있습니다.
 
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>wsl.conf를 사용하여 보다 유연하게 WSL 구성 가능
-하위 시스템을 시작할 때마다 적용되는 WSL의 특정 기능을 자동으로 구성하는 방법이 추가되었습니다. 여기에는 자동 탑재 옵션 및 네트워크 구성이 포함됩니다. 블로그 게시물 https://aka.ms/wslconf 에서 자세히 알아보세요.
+하위 시스템을 시작할 때마다 적용되는 WSL의 특정 기능을 자동으로 구성하는 방법이 추가되었습니다. 여기에는 자동 탑재 옵션 및 네트워크 구성이 포함됩니다. 블로그 게시물 https://aka.ms/wslconf에서 자세히 알아보세요.
 
 #### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX를 사용하면 WSL의 Linux 프로세스와 Windows 네이티브 프로세스 간에 소켓 연결이 가능합니다.
-WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신할 수 있습니다. Windows에서 서비스를 실행하고 Windows 및 WSL 앱 모두에서 이 서비스를 제공하려 한다고 가정해 보겠습니다. 이제 Unix 소켓을 사용하면 가능합니다. 블로그 게시물 https://aka.ms/afunixinterop 에서 자세히 알아보세요.
+WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신할 수 있습니다. Windows에서 서비스를 실행하고 Windows 및 WSL 앱 모두에서 이 서비스를 제공하려 한다고 가정해 보겠습니다. 이제 Unix 소켓을 사용하면 가능합니다. 블로그 게시물 https://aka.ms/afunixinterop에서 자세히 알아보세요.
 
 ### <a name="wsl"></a>WSL
 * MAP_NORESERVE를 통해 mmap() 지원 [GH 121, 2784]
@@ -766,9 +764,9 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
       -a    force result to absolute path format
       -u    translate from a Windows path to a WSL path (default)
       -w    translate from a WSL path to a Windows path
-      -m    translate from a WSL path to a Windows path, with ‘/’ instead of ‘\\’
+      -m    translate from a WSL path to a Windows path, with '/' instead of '\\'
 
-      EX: wslpath ‘c:\users’
+      EX: wslpath 'c:\users'
   ```
   #### <a name="console"></a>콘솔
 - 수정 사항이 없습니다.
@@ -957,7 +955,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 #### <a name="console"></a>콘솔
 - 모든 곳에서 가로 선/밑줄을 수정했습니다. [GH 2168]
 - 프로세스 순서가 변경되면 NPM을 닫기 어려워지는 문제를 수정했습니다. [GH 2170]
-- 새로운 색 구성표를 추가했습니다(https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/ ).
+- 새로운 색 구성표를 추가했습니다(https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/).
 
 ### <a name="ltp-results"></a>LTP 결과:
 16251 이후로 변경된 내용이 없습니다.
@@ -1416,7 +1414,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 - ping이 0.000ms 시간을 반환하는 이슈를 해결했습니다. (GH #1296)
 - 파일을 너무 많이 열었을 때 올바른 오류 코드가 반환됩니다.
 - 인터페이스의 하드웨어 주소가 32바이트인 경우(예: Teredo 인터페이스) 네트워크 인터페이스 데이터에 대한 Netlink 요청이 EINVAL과 함께 실패하는 WSL 이슈를 해결했습니다.
-   - Linux "ip" 유틸리티에는 WSL에서 32바이트 하드웨어 주소를 보고하면 충돌하는 버그가 있습니다. 이것은 WSL이 아니라 "ip"의 버그입니다. “ip” 유틸리티는 하드웨어 주소를 인쇄하는 데 사용되는 문자열 버퍼의 길이를 하드 코딩하는데, 이 버퍼가 너무 작아서 32바이트 하드웨어 주소를 인쇄할 수 없습니다.
+   - Linux "ip" 유틸리티에는 WSL에서 32바이트 하드웨어 주소를 보고하면 충돌하는 버그가 있습니다. 이것은 WSL이 아니라 "ip"의 버그입니다. "ip" 유틸리티는 하드웨어 주소를 인쇄하는 데 사용되는 문자열 버퍼의 길이를 하드 코딩하는데, 이 버퍼가 너무 작아서 32바이트 하드웨어 주소를 인쇄할 수 없습니다.
 - 그 외에도 여러 문제를 수정하고 기능을 개선했습니다.
 
 ### <a name="ltp-results"></a>LTP 결과:
@@ -1544,7 +1542,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 자세한 내용은 아래에서 찾을 수 있습니다.
 
 - [Interop에 대한 WSL 팀 블로그](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [MSDN Interop 설명서](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [MSDN Interop 설명서](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
 
 ### <a name="fixed"></a>고정
 
@@ -1594,7 +1592,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 
 ### <a name="fixed"></a>고정
 
-- SSH를 차단하는 “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” 네트워킹 충돌을 포함하여 여러 버그 검사가 수정되었습니다.
+- SSH를 차단하는 "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" 네트워킹 충돌을 포함하여 여러 버그 검사가 수정되었습니다.
 - 현재 DrvFs가 있는 Windows 애플리케이션에서 생성된 알림에 inotifiy가 지원됩니다.
 - mongod에 대한 TCP_KEEPIDLE 및 TCP_KEEPINTVL이 구현되었습니다. (GH #695)
 - pivot_root 시스템 호출이 구현되었습니다.
@@ -1621,7 +1619,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 참고: 향후 릴리스에서 WSL은 Ubuntu 14.04(Trusty) 대신 Ubuntu 16.04(Xenial)를 설치할 것입니다.  이 변경 내용은 새 인스턴스를 설치하는(lxrun.exe /install 또는 bash.exe를 처음으로 실행) 참가자에게 적용됩니다.  Trusty를 사용하는 기존 인스턴스는 자동으로 업그레이드되지 않습니다. 사용자는 do-release-upgrade 명령을 사용하여 Trusty 이미지를 Xenial로 업그레이드할 수 있습니다.
 
 ### <a name="known-issue"></a>알려진 이슈
-WSL에서 일부 소켓 구현에 이슈가 있습니다.  버그 검사는 “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” 오류와 함께 자신을 충돌로 나타냅니다.  이 이슈의 가장 일반적인 징후는 ssh를 사용할 때 발생하는 충돌입니다.  근본 원인은 내부 빌드에서 수정되었으며, 기회가 되는 대로 참가자에게 푸시할 예정입니다.
+WSL에서 일부 소켓 구현에 이슈가 있습니다.  버그 검사는 "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" 오류와 함께 자신을 충돌로 나타냅니다.  이 이슈의 가장 일반적인 징후는 ssh를 사용할 때 발생하는 충돌입니다.  근본 원인은 내부 빌드에서 수정되었으며, 기회가 되는 대로 참가자에게 푸시할 예정입니다.
 
 ### <a name="fixed"></a>고정
 
@@ -1816,7 +1814,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
   - 사용자는 /mnt/c 드라이브에서 case.txt 및 CASE.TXT를 입력할 수 있습니다.
   - 대/소문자 구분은 Windows 기반 Ubuntu의 Bash 내에서만 지원됩니다. Bash 외부에 있는 경우 NTFS가 파일을 올바르게 보고하지만, 예기치 않은 동작이 발생하여 Windows의 파일과 상호 작용할 수 있습니다.
   - 각 볼륨의 루트(/mnt/c)는 대/소문자를 구분하지 않습니다.
-  - Windows에서 이러한 파일을 처리하는 방법에 대한 자세한 내용은 [여기](https://support.microsoft.com/en-us/kb/100625)에서 확인할 수 있습니다.
+  - Windows에서 이러한 파일을 처리하는 방법에 대한 자세한 내용은 [여기](https://support.microsoft.com/kb/100625)에서 확인할 수 있습니다.
 - pty/tty 지원이 대폭 개선되었습니다.  이제 TMUX 같은 애플리케이션이 지원됩니다. (GH #40)
 - 가끔 사용자 계정이 만들어지지 않는 이슈를 해결했습니다.
 - 매우 긴 인수 목록을 허용하도록 명령줄 인수 구조를 최적화했습니다. (GH #153)
@@ -1831,7 +1829,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 - 이제 strace가 올바르게 종료됩니다.
 - /proc/self/fd를 통해 파이프를 다시 열 수 있습니다. (GH #222)
 - DrvFs에서 %LOCALAPPDATA%\lxss 아래에 디렉터리를 숨깁니다. (GH #270)
-- bash.exe ~를 보다 효율적으로 처리합니다.  이제 “bash ~ -c ls” 같은 명령이 지원됩니다. (GH #467)
+- bash.exe ~를 보다 효율적으로 처리합니다.  이제 "bash ~ -c ls" 같은 명령이 지원됩니다. (GH #467)
 - 이제 종료하는 동안 소켓이 epoll 읽기를 사용할 수 있음을 알립니다. (GH #271).
 - lxrun /uninstall이 파일 및 폴더 삭제를 보다 효율적으로 수행합니다.
 - ps -f를 수정했습니다. (GH #246)
@@ -1864,8 +1862,8 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 - 255자보다 긴 파일 이름을 허용하는 WSL 이슈를 수정했습니다.
 - 영어가 아닌 문자에 대한 지원이 개선되었습니다.
 - 현재 Windows 표준 시간대 데이터를 추가하고 기본값으로 설정했습니다.
-- 각 탑재 지점에 대한 고유한 디바이스 id (jre 픽스 – GH #49)
-- "." 및 “..”가 포함된 경로 이슈를 수정했습니다.
+- 각 탑재 지점에 대한 고유한 디바이스 id(jre 픽스 – GH #49)
+- "." 및 ".."를 포함하는 경로에 대한 문제 해결
 - Fifo 지원이 추가되었습니다. (GH #71)
 - 네이티브 Ubuntu 형식과 일치하도록 resolv.conf 형식을 업데이트했습니다.
 - 일부 procfs를 정리했습니다.
@@ -1909,7 +1907,7 @@ VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microso
 - 그 외에도 여러 버그를 수정하고 기능을 개선했습니다.
 
 ### <a name="known-issues"></a>알려진 문제
-- 경우에 따라 DriveFs에서 ‘..’가 올바르게 확인되지 않습니다.
+- '..' 확인하지 않음 일부 경우 DriveFs에서 올바르게 설정
 
 ### <a name="syscall-support"></a>Syscall 지원
 아래는 WSL에서 일부가 구현된 새 syscall 또는 향상된 syscall 목록입니다. 이 목록의 syscall은 하나 이상의 시나리오에서 지원되지만, 현재 지원되는 매개 변수 중 일부가 없을 수도 있습니다.
@@ -1955,7 +1953,7 @@ VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microso
 ### <a name="new-features"></a>새로운 기능
 * 이제 Linux 사용자를 지원합니다.  Windows 기반의 Ubuntu에 Bash를 설치하면 Linux 사용자를 만들라는 메시지가 표시됩니다.  자세한 내용은 https://aka.ms/wslusers 에서 확인할 수 있습니다.
 * 이제 호스트 이름이 Windows 컴퓨터 이름으로 설정됩니다. 더 이상 @localhost는 없습니다.
-* 빌드 14328에 대한 자세한 내용은 https://aka.ms/wip14328 에서 확인할 수 있습니다.
+* 빌드 14328에 대한 자세한 내용은 https://aka.ms/wip14328에서 확인할 수 있습니다.
 
 ### <a name="fixed"></a>고정
 * 비 /mnt/<drive> 파일에 대한 Symlink가 개선되었습니다.

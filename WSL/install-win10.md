@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: acb83234a90dc5e65c98518b869f29c4ecf973d8
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: ec24bbe6ed3ecc4413e623d12d12f9a92c6db9e6
+ms.sourcegitcommit: f0b33cdd1ce7b461e7f657d44e9798094ef55b55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343915"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83683035"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -93,13 +93,13 @@ wsl --set-default-version 2
 
 PowerShell 명령줄을 열고 `wsl -l -v` 명령을 입력([Windows 빌드 19041 이상에서만 사용 가능](ms-settings:windowsupdate))하면 설치한 각 Linux 배포에 할당된 WSL 버전을 확인할 수 있습니다.
 
-```bash
+```powershell
 wsl --list --verbose
 ```
 
 두 버전의 WSL에 의해 지원되도록 배포를 설정하려면 다음을 실행합니다.
 
-```bash
+```powershell
 wsl --set-version <distribution name> <versionNumber>
 ```
 
@@ -107,7 +107,7 @@ wsl --set-version <distribution name> <versionNumber>
 
 또한 WSL 2를 기본 아키텍처로 설정하려는 경우 이 명령을 사용하여 수행할 수 있습니다.
 
-```bash
+```powershell
 wsl --set-default-version 2
 ```
 

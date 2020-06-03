@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd38fbe3781fd0cd45bcd52c278de548d3da38f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 6ed12ba9d63d3f4038b67489035e13113a372928
+ms.sourcegitcommit: 9f12e168b80775cd967f22f97376e51043c3667e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83270551"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301204"
 ---
 # <a name="install-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 설치
 
@@ -36,7 +36,7 @@ Linux 배포를 실행하기 전에 Windows 10의 "Linux용 Windows 하위 시�
 
 - Microsoft Store에서 다운로드 및 설치(아래 참조)
 - [명령줄에서 다운로드하여 수동으로 설치](install-manual.md)
-- [Windows Server에 설치]]\(install-on-server.md)
+- [Windows Server에 설치](install-on-server.md)
 
 ### <a name="install-from-the-microsoft-store"></a>Microsoft Store에서 설치
 

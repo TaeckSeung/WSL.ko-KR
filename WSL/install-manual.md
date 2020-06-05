@@ -1,18 +1,16 @@
 ---
 title: WSL(Linux용 Windows 하위 시스템) 배포판을 수동으로 다운로드
 description: Linux용 Windows 하위 시스템 배포판을 수동으로 다운로드하는 방법에 대한 지침입니다.
-keywords: BashOnWindows, bash, wsl, windows, linux용 windows 하위 시스템, WSL, windows 하위 시스템, 배포판, ubuntu, openSUSE, SLES, debian, kali
-ms.date: 07/24/2018
+keywords: wsl, linux 용 windows 하위 시스템, 수동 설치, 수동으로 설치, microsoft store, windows 10, curl, Add-AppxPackage, 장기 서비스, LTSC
+ms.date: 05/28/2020
 ms.topic: article
-ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
-ms.custom: seodec18
-ms.localizationpriority: high
-ms.openlocfilehash: b1720d01d492f1dccce8c2e1d2ff430f7769a42e
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.localizationpriority: medium
+ms.openlocfilehash: 621b2619d6c62e0b6c4e53f7791fc587c1c8f878
+ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235826"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211719"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux용 Windows 하위 시스템 배포판 패키지를 수동으로 다운로드
 
@@ -40,7 +38,7 @@ Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭하여
 원하는 경우 명령줄을 통해 기본 배포판을 다운로드할 수도 있습니다.
 
  ### <a name="download-using-powershell"></a>PowerShell을 사용하여 다운로드
- PowerShell을 사용하여 배포판을 다운로드하려면 [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet을 사용합니다. Ubuntu 16.04를 다운로드하는 샘플 명령은 다음과 같습니다.
+ PowerShell을 사용하여 배포판을 다운로드하려면 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1) cmdlet을 사용합니다. Ubuntu 16.04를 다운로드하는 샘플 명령은 다음과 같습니다.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -68,4 +66,4 @@ Add-AppxPackage .\app_name.appx
 
 Windows Server를 사용하는 경우 [Windows Server](install-on-server.md) 설명서 페이지에서 설치 지침을 확인할 수 있습니다.
 
-배포판이 설치되면 [초기화 단계](initialize-distro.md) 페이지를 참조하여 새 배포판을 초기화합니다.
+배포가 설치되면 일반 지침에 따라 [WSL 2로 업데이트](./install-win10.md#update-to-wsl-2)하거나 [새 사용자 계정 및 암호 작성](./user-support.md)을 수행하세요.

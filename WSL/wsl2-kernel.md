@@ -5,19 +5,19 @@ keywords: wsl, windows, linux 커널, linux용 windows 하위 시스템, 커널
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 89e5755699938b7797aa65a5f3131f93e3e31796
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 1628bea2f1bae590928b055425413e5b085dffef
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343835"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153048"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux 커널 업데이트
 
 WSL 2 내에서 Linux 커널을 수동으로 업데이트하려면 다음 단계를 따르세요.
 
 > [!NOTE] 
-> 설치 관리자가 WSL 1을 찾지 못하면 Linux 커널 업데이트 설치 관리자를 마우스 오른쪽 단추로 클릭하고 제거를 누른 후 설치 관리자를 다시 실행합니다.
+> 설치 관리자가 WSL 1을 찾지 못하면 Linux 커널 업데이트 설치 관리자를 마우스 오른쪽 단추로 클릭하고 "제거"를 누른 후 설치 관리자를 다시 실행합니다.
 
 ## <a name="download-the-linux-kernel-update-package"></a>Linux 커널 업데이트 패키지 다운로드
 

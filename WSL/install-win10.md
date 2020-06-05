@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ec24bbe6ed3ecc4413e623d12d12f9a92c6db9e6
-ms.sourcegitcommit: f0b33cdd1ce7b461e7f657d44e9798094ef55b55
+ms.openlocfilehash: 3914e8d3be84f922424cba1000ea45ea8ce22cd8
+ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83683035"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211729"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -31,9 +31,6 @@ WSL 1만 설치하려면 지금 컴퓨터를 다시 시작하여 [선택한 Linu
 WSL 2로 업데이트하려면 다음 조건을 충족해야 합니다.
 
 - Windows 10 실행, [버전 2004로 업데이트](ms-settings:windowsupdate), **빌드 19041** 이상.
-
-> [!IMPORTANT]
-> 현재 Windows 10, 버전 2004(빌드 19041)로 업데이트하려면 [Windows 참가자 프로그램에 가입](https://insider.windows.com/insidersigninboth/)하고 "릴리스 미리 보기" 링을 선택해야 합니다. 공개 릴리스는 5월 하순에 도착합니다.
 
 - **Windows 로고 키 + R**을 선택하고 **winver**를 입력한 다음, **확인**을 선택하여 Windows 버전을 확인합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) 빌드가 19041보다 낮은 경우 [최신 Windows 버전으로 업데이트합니다](ms-settings:windowsupdate). [Windows 업데이트 도우미를 가져옵니다](https://www.microsoft.com/software-download/windows10).
 
@@ -57,6 +54,9 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 ```
 
+> [!NOTE]
+> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다.
+
 ## <a name="install-your-linux-distribution-of-choice"></a>선택한 Linux 배포 설치
 
 1. [Microsoft Store](https://aka.ms/wslstore)를 열고 즐겨 찾는 Linux 배포를 선택합니다.
@@ -67,6 +67,7 @@ wsl --set-default-version 2
 
     - [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
     - [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+    - [Ubuntu 20.04 LTS](https://www.microsoft.com/store/apps/9n6svws3rx71)
     - [openSUSE Leap 15.1](https://www.microsoft.com/store/apps/9NJFZK00FGKV)
     - [SUSE Linux Enterprise Server 12 SP5](https://www.microsoft.com/store/apps/9MZ3D1TRP8T1)
     - [SUSE Linux Enterprise Server 15 SP1](https://www.microsoft.com/store/apps/9PN498VPMF3Z)

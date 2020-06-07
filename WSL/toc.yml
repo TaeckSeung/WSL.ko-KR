@@ -16,6 +16,12 @@
       href: install-on-server.md
     - name: 사용자 계정 및 암호 만들기
       href: user-support.md
+- name: 자습서
+  items:
+    - name: VS Code 시작
+      href: tutorials/wsl-vscode.md
+    - name: Git 시작
+      href: tutorials/wsl-git.md
 - name: 사용 방법
   items:
     - name: 상호 운용성 명령

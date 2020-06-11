@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, git, github, 버전 
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 94166371fc0928d6be3b3cfd6cb595c6fac76608
-ms.sourcegitcommit: d95bdbc2fea991ba14a4c9ec53ee0ec19d6bbdb4
+ms.openlocfilehash: 687a12186d11343a2d4131e0fdeeef3bcec902fb
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84457795"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671014"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에서 Git 사용 시작
 
@@ -18,12 +18,12 @@ Git은 가장 일반적으로 사용 되는 버전 제어 시스템입니다. Gi
 
 ## <a name="git-can-be-installed-on-windows-and-on-wsl"></a>Git은 Windows 및 WSL에 설치할 수 있습니다.
 
-중요 한 고려 사항: WSL을 사용 하도록 설정 하 고 Linux 배포를 설치 하는 경우 Windows NTFS C:\에서 분리 된 새 파일 시스템을 설치 하 게 됩니다. 컴퓨터의 드라이브입니다. Linux에서 드라이브에는 문자가 제공 되지 않습니다. 지정 된 탑재 지점이 있습니다. 파일 시스템의 루트는 `/` WSL의 경우 루트 파티션 또는 폴더의 탑재 지점입니다. 의 모든 항목이 `/` 동일한 드라이브는 아닙니다. 예를 들어 내 노트북에서 Debian 뿐만 아니라 Ubuntu (20.04 및 18.01)의 두 가지 버전을 설치 했습니다. 이러한 배포를 열고 명령을 사용 하 여 루트 디렉터리를 선택한 `cd ~` 후 명령을 입력 하면 `explorer.exe .` Windows 파일 탐색기가 열리고 해당 배포에 대 한 디렉터리 경로가 표시 됩니다.
+중요 한 고려 사항: WSL을 사용 하도록 설정 하 고 Linux 배포를 설치 하는 경우 Windows NTFS C:\에서 분리 된 새 파일 시스템을 설치 하 게 됩니다. 컴퓨터의 드라이브입니다. Linux에서 드라이브에는 문자가 제공 되지 않습니다. 지정 된 탑재 지점이 있습니다. 파일 시스템의 루트는 `/` WSL의 경우 루트 파티션 또는 폴더의 탑재 지점입니다. 의 모든 항목이 `/` 동일한 드라이브는 아닙니다. 예를 들어 내 노트북에서 Debian 뿐만 아니라 Ubuntu (20.04 및 18.04)의 두 가지 버전을 설치 했습니다. 이러한 배포를 열고 명령을 사용 하 여 루트 디렉터리를 선택한 `cd ~` 후 명령을 입력 하면 `explorer.exe .` Windows 파일 탐색기가 열리고 해당 배포에 대 한 디렉터리 경로가 표시 됩니다.
 
 | Linux 배포판 | 홈 폴더에 액세스 하기 위한 Windows 경로 |
 | ----------- | ----------- |
 | Ubuntu 20.04 | `\\wsl$\Ubuntu-20.04\home\username` |
-| Ubuntu 18.01 | `\\wsl$\Ubuntu-18.04\home\username` |
+| Ubuntu 18.04 | `\\wsl$\Ubuntu-18.04\home\username` |
 | Debian | `\\wsl$\Debian\home\username` |
 | Windows PowerShell | `C:\Users\username` |
 
@@ -77,7 +77,7 @@ Windows, WSL 또는 컨테이너와 동일한 리포지토리 폴더를 사용 �
 
 Windows 및 Linux는 서로 다른 기본 줄 끝을 사용 하기 때문에 Git은 줄 끝에서 차이가 없는 다 수의 수정 된 파일을 보고할 수 있습니다. 이 문제가 발생 하지 않도록 하려면 파일을 사용 하 여 줄 끝 변환을 사용 하지 않도록 설정 `.gitattributes` 하거나 Windows 쪽에서 전역적으로 변환을 사용 하지 않도록 설정할 수 있습니다. [Git 줄 종료 문제를 해결 하는 방법에 대 한이 VS Code 문서](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)를 참조 하세요.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 * [WSL & VS Code](./wsl-vscode.md)
 * [GitHub 학습 랩: 온라인 과정](https://lab.github.com/)

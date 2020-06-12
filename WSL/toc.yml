@@ -43,4 +43,8 @@
 - name: 문제 해결
   href: troubleshooting.md
 - name: 릴리스 정보
-  href: release-notes.md
+  items:
+    - name: 일반 릴리스 정보
+      href: release-notes.md
+    - name: Linux 커널 릴리스 정보
+      href: kernel-release-notes.md

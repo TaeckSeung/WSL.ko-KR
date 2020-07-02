@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, linux용 windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 805b7d266020c62e0c6f58889541517d44db3726
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: ebcd7f6b10d2b734b1f2a66f64a5e3292855bcf4
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153073"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671023"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 설치 가이드
 
@@ -25,20 +25,6 @@ PowerShell을 관리자 권한으로 열어 실행합니다.
 ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-```
-
-**100% 시스템 호출 호환성과 더 빠른 IO 성능을 찾고 있는 경우 아래 내용을 참조하여 WSL 2를 설치합니다!**
-
-WSL 2는 Windows 10, 버전 2004, 빌드 19041 이상에서만 사용할 수 있습니다. [Windows 버전을 업데이트](ms-settings:windowsupdate)해야 할 수도 있습니다.
-
-**WSL 1을 계속 진행하는 경우 메시지가 표시되면 컴퓨터를 다시 시작하고 [여기](./install-on-server.md#download-a-linux-distribution)에서 설치를 계속합니다.**
-
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>가상 머신 플랫폼 옵션 구성 요소 사용
-
-‘가상 머신 플랫폼’ 옵션 구성 요소가 설치되어 있는지 확인합니다. PowerShell에서 다음 명령을 실행하면 확인할 수 있습니다.
-
-```powershell
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ## <a name="download-a-linux-distribution"></a>Linux 배포 다운로드

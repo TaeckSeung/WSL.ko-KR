@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linu
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
-ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
+ms.openlocfilehash: bbd5b36f7857d136d3eb2f75eb3d1a36ac2b94f7
+ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978266"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>WSL 2와 WSL 1 비교
 
@@ -28,7 +28,7 @@ WSL 2는 가장 유용한 최신 가상화 기술을 사용하여 간단한 유�
  관리 VM| ❌ | ✅
  전체 Linux 커널| ❌ |✅
  전체 시스템 호출 호환성| ❌ | ✅
- 현재 버전의 VM Ware 및 VirtualBox로 실행| ✅ | ❌
+ 현재 버전의 VMWare 및 VirtualBox로 실행| ✅ | ❌
  OS 파일 시스템 간 성능| ✅ | ❌
 
 WSL 1을 이미 사용하고 있으며 WSL 2로 업그레이드하려고 하나요? 그러면 지침에 따라 [WSL 2로 업데이트](./install-win10.md#update-to-wsl-2)하세요!
@@ -36,7 +36,7 @@ WSL 1을 이미 사용하고 있으며 WSL 2로 업그레이드하려고 하나�
 WSL 2는 Windows 10, 버전 2004, 빌드 19041 이상에서만 사용할 수 있습니다. **Windows 로고 키 + R**을 선택하고 **winver**를 입력한 다음, **확인**을 선택하여 Windows 버전을 확인합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) [최신 Windows 버전을 업데이트](ms-settings:windowsupdate)해야 할 수도 있습니다. 19041보다 낮은 빌드의 경우 WSL은 전혀 지원되지 않습니다.
 
 > [!NOTE]
-> WSL 2는 [VM Ware의 미리 보기 버전](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 및 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0)에서 작동합니다.
+> WSL 2는 [미리 보기 버전의 VMWare](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 및 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0)에서 작동합니다.
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>더 빠른 성능을 위해 Linux 파일 시스템 사용
 

@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 3914e8d3be84f922424cba1000ea45ea8ce22cd8
-ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
+ms.openlocfilehash: 0f59fda8aa093487f09c1817acf47bd88eaae8cc
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84211729"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336096"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -48,14 +48,16 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 ### <a name="set-wsl-2-as-your-default-version"></a>WSL 2를 기본 버전으로 설정
 
-새 Linux 배포를 설치할 때 Powershell에서 다음 명령을 실행하여 WSL 2를 기본 버전으로 설정합니다.
+새 Linux 배포를 설치할 때 PowerShell에서 다음 명령을 실행하여 WSL 2를 기본 버전으로 설정합니다.
 
 ```powershell
 wsl --set-default-version 2
 ```
 
+`WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel` 명령을 실행한 후 이 메시지가 표시될 수 있습니다. 링크([https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel))를 따라 이동한 다음, 설명서의 해당 페이지에서 MSI를 설치하여 머신에 WSL 2에서 사용할 Linux 커널을 설치합니다. 커널을 설치한 후 명령을 다시 실행합니다. 그러면 메시지가 표시되지 않고 성공적으로 완료될 것입니다. 
+
 > [!NOTE]
-> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다.
+> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다. Windows 10 1주년 업데이트 또는 Creators Update에서 이전 버전(레거시)의 WSL 1을 실행하는 경우 업데이트 오류가 발생할 수 있습니다. 다음 지침에 따라 [레거시 배포판을 제거](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)하세요.
 
 ## <a name="install-your-linux-distribution-of-choice"></a>선택한 Linux 배포 설치
 
@@ -131,10 +133,10 @@ wsl --set-default-version 2
   - 컴퓨터 BIOS 내에서 가상화를 사용하도록 설정했는지 확인합니다. 이 방법에 대한 지침은 컴퓨터마다 다르며, CPU 관련 옵션에 있을 가능성이 높습니다.
 
 - **업그레이드 시도 중 오류: `Invalid command line option: wsl --set-version Ubuntu 2`**
-  - Linux용 Windows 하위 시스템을 사용하도록 설정하고 Windows Build 버전 19041 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 Powershell 프롬프트에서 이 명령을 실행합니다. 전체 WSL 설치 지침은 [여기](./install-win10.md)에서 찾을 수 있습니다.
+  - Linux용 Windows 하위 시스템을 사용하도록 설정하고 Windows Build 버전 19041 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 PowerShell 프롬프트에서 이 명령을 실행합니다. 전체 WSL 설치 지침은 [여기](./install-win10.md)에서 찾을 수 있습니다.
 
 - **가상 디스크 시스템 제한으로 인해 요청한 작업을 완료할 수 없습니다. 가상 하드 디스크 파일은 압축이 풀려 있는 상태이고 암호화되지 않아야 하며 스파스가 아니어야 합니다.**
-  - 이 문제에 대한 업데이트된 정보를 추적할 수 있는 [WSL Github 스레드 #4103](https://github.com/microsoft/WSL/issues/4103)을 확인하세요.
+  - 이 문제에 대한 업데이트된 정보를 추적할 수 있는 [WSL GitHub 스레드 #4103](https://github.com/microsoft/WSL/issues/4103)을 확인하세요.
 
 - **cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름에는 'wsl'이라는 단어가 들어갈 수 없습니다.**
-  - [Linux용 Windows 하위 시스템 옵션 구성 요소가 설치되었는지](./install-win10.md#enable-the-virtual-machine-platform-optional-component) 확인하세요. 또는 Arm64 디바이스를 사용 중이고 PowerShell에서 이 명령을 실행하는 경우 이 오류가 표시됩니다. [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) 또는 명령 프롬프트에서 `wsl.exe`를 대신 실행하세요.
+  - [Linux용 Windows 하위 시스템 옵션 구성 요소가 설치되었는지](./install-win10.md#enable-the-virtual-machine-platform-optional-component) 확인하세요. 또는 ARM64 디바이스를 사용 중이고 PowerShell에서 이 명령을 실행하는 경우 이 오류가 표시됩니다. [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) 또는 명령 프롬프트에서 `wsl.exe`를 대신 실행하세요.

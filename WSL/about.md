@@ -6,23 +6,25 @@ ms.date: 05/12/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 90a661c408cacbef95a869ac896a40381120d52e
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 75da6389beec4af7ac684ec7ee2ef31431e14071
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270797"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336066"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템이란?
 
-Linux용 Windows 하위 시스템을 사용하면 개발자가 가상 머신의 오버헤드 없이 대부분의 명령줄 도구, 유틸리티 및 애플리케이션이 포함된 수정되지 않은 GNU/Linux 환경을 Windows에서 직접 실행할 수 있습니다.
+Linux용 Windows 하위 시스템을 사용하면 개발자가 기존 가상 머신의 오버헤드 또는 듀얼 부팅 설정 없이 대부분의 명령줄 도구, 유틸리티 및 애플리케이션을 비롯한 GNU/Linux 환경을 수정하지 않고 Windows에서 직접 실행할 수 있습니다.
 
 다음을 수행할 수 있습니다.
 
 * [Microsoft Store](https://aka.ms/wslstore)에서 즐겨찾는 GNU/Linux 배포를 선택합니다.
 * `grep`, `sed`, `awk` 또는 다른 ELF-64 이진 파일과 같은 일반적인 명령줄 도구를 실행합니다.
 * 다음을 포함하여 Bash 셸 스크립트 및 GNU/Linux 명령줄 애플리케이션을 실행합니다.  
-    * 도구: vim, emacs, tmux *언어: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# & F#, Rust, Go 등 *서비스: SSHD, MySQL, Apache, lighttpd, [MongoDB](https://docs.microsoft.com/windows/nodejs/databases), [PostgreSQL](https://docs.microsoft.com/windows/python/databases).
+    * 도구: vim, emacs, tmux
+    * 언어: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# 및 F#, Rust, Go 등
+    * 서비스: SSHD, MySQL, Apache, lighttpd, [MongoDB](https://docs.microsoft.com/windows/nodejs/databases), [PostgreSQL](https://docs.microsoft.com/windows/python/databases).
 * 자체 GNU/Linux 배포 패키지 관리자를 사용하여 추가 소프트웨어를 설치합니다.
 * Unix와 같은 명령줄 셸을 사용하여 Windows 애플리케이션을 호출합니다.
 * Windows에서 GNU/Linux 애플리케이션을 호출합니다.

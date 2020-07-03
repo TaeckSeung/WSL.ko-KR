@@ -6,14 +6,30 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
+ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942597"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-20150"></a>빌드 20150
+빌드 20150에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)를 참조하세요.
+
+* WSL2 GPU 컴퓨팅에 대한 자세한 내용은 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)를 참조하세요.
+* WSL을 쉽게 설치할 수 있도록 wsl.exe --install 명령줄 옵션이 도입되었습니다.
+* WSL2 커널 업데이트를 관리하는 wsl.exe --update 명령줄 옵션이 도입되었습니다. 
+* WSL2를 기본값으로 설정합니다.
+* WSL2 VM 정상 종료 시간 제한이 늘어났습니다.
+* 디바이스 메모리를 매핑할 때 발생하는 virtio-9p 경합 상태를 수정했습니다.
+* UAC를 사용하지 않도록 설정한 경우에는 관리자 권한 9p 서버를 실행하지 마세요.
+
+## <a name="build-19640"></a>빌드 19640
+빌드 19640에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/03/announcing-windows-10-insider-preview-build-19640/)를 참조하세요.
+
+* [WSL2] virtio-9p(drvfs)의 안정성이 향상되었습니다.
 
 ## <a name="build-19555"></a>빌드 19555
 빌드 19555에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)를 참조하세요.
@@ -620,10 +636,10 @@ wslconfig.exe /terminate <DistributionName>
 * DrvFs를 사용하여 만든 특수 파일(예: WSL 기호화된 링크) 또는 메타데이터를 사용하는 경우 fifos 및 소켓을 이제 Windows에서 복사하여 이동할 수 있습니다.
 
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>wsl.conf를 사용하여 보다 유연하게 WSL 구성 가능
-하위 시스템을 시작할 때마다 적용되는 WSL의 특정 기능을 자동으로 구성하는 방법이 추가되었습니다. 여기에는 자동 탑재 옵션 및 네트워크 구성이 포함됩니다. 블로그 게시물 https://aka.ms/wslconf에서 자세히 알아보세요.
+하위 시스템을 시작할 때마다 적용되는 WSL의 특정 기능을 자동으로 구성하는 방법이 추가되었습니다. 여기에는 자동 탑재 옵션 및 네트워크 구성이 포함됩니다. 블로그 게시물 https://aka.ms/wslconf 에서 자세히 알아보세요.
 
 #### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX를 사용하면 WSL의 Linux 프로세스와 Windows 네이티브 프로세스 간에 소켓 연결이 가능합니다.
-WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신할 수 있습니다. Windows에서 서비스를 실행하고 Windows 및 WSL 앱 모두에서 이 서비스를 제공하려 한다고 가정해 보겠습니다. 이제 Unix 소켓을 사용하면 가능합니다. 블로그 게시물 https://aka.ms/afunixinterop에서 자세히 알아보세요.
+WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신할 수 있습니다. Windows에서 서비스를 실행하고 Windows 및 WSL 앱 모두에서 이 서비스를 제공하려 한다고 가정해 보겠습니다. 이제 Unix 소켓을 사용하면 가능합니다. 블로그 게시물 https://aka.ms/afunixinterop 에서 자세히 알아보세요.
 
 ### <a name="wsl"></a>WSL
 * MAP_NORESERVE를 통해 mmap() 지원 [GH 121, 2784]
@@ -955,7 +971,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 #### <a name="console"></a>콘솔
 - 모든 곳에서 가로 선/밑줄을 수정했습니다. [GH 2168]
 - 프로세스 순서가 변경되면 NPM을 닫기 어려워지는 문제를 수정했습니다. [GH 2170]
-- 새로운 색 구성표를 추가했습니다(https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/).
+- 새로운 색 구성표를 추가했습니다(https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/ ).
 
 ### <a name="ltp-results"></a>LTP 결과:
 16251 이후로 변경된 내용이 없습니다.
@@ -1907,7 +1923,7 @@ VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microso
 - 그 외에도 여러 버그를 수정하고 기능을 개선했습니다.
 
 ### <a name="known-issues"></a>알려진 문제
-- '..' 확인하지 않음 일부 경우 DriveFs에서 올바르게 설정
+- '..' 확인하지 않음 올바르게 확인되지 않습니다.
 
 ### <a name="syscall-support"></a>Syscall 지원
 아래는 WSL에서 일부가 구현된 새 syscall 또는 향상된 syscall 목록입니다. 이 목록의 syscall은 하나 이상의 시나리오에서 지원되지만, 현재 지원되는 매개 변수 중 일부가 없을 수도 있습니다.
@@ -1953,7 +1969,7 @@ VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microso
 ### <a name="new-features"></a>새로운 기능
 * 이제 Linux 사용자를 지원합니다.  Windows 기반의 Ubuntu에 Bash를 설치하면 Linux 사용자를 만들라는 메시지가 표시됩니다.  자세한 내용은 https://aka.ms/wslusers 에서 확인할 수 있습니다.
 * 이제 호스트 이름이 Windows 컴퓨터 이름으로 설정됩니다. 더 이상 @localhost는 없습니다.
-* 빌드 14328에 대한 자세한 내용은 https://aka.ms/wip14328에서 확인할 수 있습니다.
+* 빌드 14328에 대한 자세한 내용은 https://aka.ms/wip14328 에서 확인할 수 있습니다.
 
 ### <a name="fixed"></a>고정
 * 비 /mnt/<drive> 파일에 대한 Symlink가 개선되었습니다.

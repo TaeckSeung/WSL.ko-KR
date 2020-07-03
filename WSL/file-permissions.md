@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 66cded36fb7182a54a05e7794250808665bd4cf1
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235857"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336076"
 ---
 # <a name="file-permissions-for-wsl"></a>WSL에 대한 파일 권한
 
@@ -108,4 +108,4 @@ Linux 루트 파일 시스템에서 만들거나 수정하거나 액세스하는
 
 wsl.conf의 탑재 옵션을 사용하여 Windows 드라이브 내에서 파일 권한을 구성할 수 있습니다. 탑재 옵션을 사용하면 `umask`, `dmask` 및 `fmask` 권한 마스크를 설정할 수 있습니다. `umask`는 모든 파일에 적용되고, `dmask`는 디렉터리에만 적용되며, `fmask`는 파일에만 적용됩니다. 그런 다음, 이러한 권한 마스크는 파일에 적용될 때 논리 OR 연산을 수행합니다. 예를 들어 `umask` 값이 `023`이고 `fmask` 값이 `022`인 경우 파일에 대한 결과 권한 마스크는 `023`이 됩니다.
 
-이 작업을 수행하는 방법에 대한 지침은 [wslconf를 사용하여 시작 설정 구성](./wsl-config.md#configure-launch-settings-with-wslconf) 문서를 참조하세요.
+이 작업을 수행하는 방법에 대한 지침은 [wslconf를 사용하여 배포판별 시작 설정 구성](./wsl-config.md#configure-per-distro-launch-settings-with-wslconf) 문서를 참조하세요.

@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 Linux 배포�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b1c7a64a86cf088159d1abee3b341328151428f6
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
+ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270847"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663136"
 ---
 # <a name="windows-interoperability-with-linux"></a>Linux와 Windows의 상호 운용성
 
@@ -147,6 +147,7 @@ WSL 및 Windows는 WSL에서 실행되는 Windows 및 Linux 배포를 연결하�
 * 공유되며, Windows 및 WSL 환경 모두에 있습니다.
 * Windows와 WSL 간에 공유할 환경 변수의 목록입니다.
 * Windows 및 WSL에서 제대로 작동하도록 환경 변수의 형식을 지정할 수 있습니다.
+* WSL과 Win32 간의 흐름을 지원할 수 있습니다.
 
 > [!NOTE]
 > 17063 이전에서는 `PATH`만 WSL에서 액세스할 수 있는 Windows 환경 변수였습니다(이를 통해 WSL 아래에서 Win32 실행 파일을 시작할 수 있었음). `WSLENV`는 17063부터 지원됩니다.
@@ -163,6 +164,8 @@ WSL 및 Windows는 WSL에서 실행되는 Windows 및 Linux 배포를 연결하�
 * `/w` - WSL에서 Win32를 실행할 때만 경우에만 이 환경 변수가 포함되어야 함을 나타냅니다.
 
 플래그는 필요에 따라 결합할 수 있습니다.
+
+WSLENV 값을 미리 정의된 다른 환경 변수의 연결로 설정하고, 각 환경 변수에 접미사로 슬래시를 붙이고 그 뒤에 플래그를 추가하여 값을 변환하고 스크립트를 사용하여 변수를 전달하는 방법을 지정하는 FAQ 및 예제를 포함하여 [WSLENV에 대해 자세히 알아보세요](https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/). 또한 이 문서에는 WSL과 Win32 간에 GOPATH을 공유하도록 구성된 [Go 프로그래밍 언어](https://golang.org/)를 사용하여 개발 환경을 설정하는 예제가 포함되어 있습니다.
 
 ## <a name="disable-interoperability"></a>상호 운용성 사용 안 함
 

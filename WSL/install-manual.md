@@ -5,12 +5,12 @@ keywords: wsl, linux 용 windows 하위 시스템, 수동 설치, 수동으로 �
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 621b2619d6c62e0b6c4e53f7791fc587c1c8f878
-ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
+ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
+ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84211719"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746279"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux용 Windows 하위 시스템 배포판 패키지를 수동으로 다운로드
 
@@ -23,6 +23,8 @@ Microsoft Store를 통해 WSL Linux 배포판을 설치할 수 없는 몇 가지
 ## <a name="downloading-distros"></a>배포판 다운로드
 
 Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭하여 Linux 배포판을 다운로드하고 수동으로 설치할 수 있습니다.
+* [Ubuntu 20.04](https://aka.ms/wslubuntu2004)
+* [Ubuntu 20.04 ARM](https://aka.ms/wslubuntu2004arm)
 * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
 * [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)

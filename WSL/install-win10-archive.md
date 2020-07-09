@@ -1,20 +1,17 @@
 ---
-title: Windows 10에 WSL(Linux용 Windows 하위 시스템) 설치
-description: Linux용 Windows 하위 시스템을 Windows 10에 설치하는 방법에 대한 지침입니다.
-keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, Debian, Suse, Windows 10, 설치
+title: 보관 된 WSL 지침
 ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
-ms.localizationpriority: high
-ms.openlocfilehash: 6ed12ba9d63d3f4038b67489035e13113a372928
-ms.sourcegitcommit: 9f12e168b80775cd967f22f97376e51043c3667e
-ms.translationtype: HT
+ROBOTS: NOINDEX
+ms.openlocfilehash: 1de614dccbbb8d0ef1b9ac070f6ec90281339858
+ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301204"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157959"
 ---
-# <a name="install-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 설치
+# <a name="archived-instructions"></a>보관 된 지침
 
 다음 가이드는 Windows 10을 실행하는 컴퓨터에 WSL(Linux용 Windows 하위 시스템)을 설치하는 데 필요한 단계를 안내합니다.
 

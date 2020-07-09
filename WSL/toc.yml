@@ -22,6 +22,8 @@
       href: tutorials/wsl-vscode.md
     - name: Git 시작
       href: tutorials/wsl-git.md
+    - name: 데이터베이스 시작
+      href: tutorials/wsl-database.md
     - name: GPU 가속 설정(NVIDIA CUDA/DirectML)
       href: tutorials/gpu-compute.md
 - name: 사용 방법

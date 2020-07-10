@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 Linux 배포�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
-ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
+ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663136"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093270"
 ---
 # <a name="windows-interoperability-with-linux"></a>Linux와 Windows의 상호 운용성
 
@@ -151,6 +151,7 @@ WSL 및 Windows는 WSL에서 실행되는 Windows 및 Linux 배포를 연결하�
 
 > [!NOTE]
 > 17063 이전에서는 `PATH`만 WSL에서 액세스할 수 있는 Windows 환경 변수였습니다(이를 통해 WSL 아래에서 Win32 실행 파일을 시작할 수 있었음). `WSLENV`는 17063부터 지원됩니다.
+> WSLENV는 대/소문자를 구분합니다.
 
 ## <a name="wslenv-flags"></a>WSLENV 플래그
 

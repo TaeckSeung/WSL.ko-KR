@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 0f59fda8aa093487f09c1817acf47bd88eaae8cc
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 222afa3ee2a4e8948cd0159d794fc7a4375e7ba7
+ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336096"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157939"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -24,7 +24,7 @@ PowerShell을 관리자 권한으로 열어 실행합니다.
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-WSL 1만 설치하려면 지금 컴퓨터를 다시 시작하여 [선택한 Linux 배포 설치](./install-win10.md#install-your-linux-distribution-of-choice)로 이동해야 합니다. 그렇지 않으면 다시 시작될 때까지 기다렸다가 WSL 2로 업데이트로 이동합니다. [WSL 2와 WSL 1비교](./compare-versions.md)에 대해 자세히 알아보세요.
+WSL 1만 설치하려면 지금 머신을 다시 시작하여 [선택한 Linux 배포 설치](./install-win10.md#install-your-linux-distribution-of-choice)로 이동해야 합니다. 그렇지 않으면 다시 시작될 때까지 기다렸다가 WSL 2로 업데이트로 이동합니다. [WSL 2와 WSL 1비교](./compare-versions.md)에 대해 자세히 알아보세요.
 
 ## <a name="update-to-wsl-2"></a>WSL 2로 업데이트
 
@@ -44,7 +44,7 @@ PowerShell을 관리자 권한으로 열어 실행합니다.
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-컴퓨터를 **다시 시작하여** WSL 설치를 완료하고 WSL 2로 업데이트합니다.
+머신을 **다시 시작하여** WSL 설치를 완료하고 WSL 2로 업데이트합니다.
 
 ### <a name="set-wsl-2-as-your-default-version"></a>WSL 2를 기본 버전으로 설정
 
@@ -57,7 +57,9 @@ wsl --set-default-version 2
 `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel` 명령을 실행한 후 이 메시지가 표시될 수 있습니다. 링크([https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel))를 따라 이동한 다음, 설명서의 해당 페이지에서 MSI를 설치하여 머신에 WSL 2에서 사용할 Linux 커널을 설치합니다. 커널을 설치한 후 명령을 다시 실행합니다. 그러면 메시지가 표시되지 않고 성공적으로 완료될 것입니다. 
 
 > [!NOTE]
-> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다. Windows 10 1주년 업데이트 또는 Creators Update에서 이전 버전(레거시)의 WSL 1을 실행하는 경우 업데이트 오류가 발생할 수 있습니다. 다음 지침에 따라 [레거시 배포판을 제거](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)하세요.
+> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다. Windows 10 1주년 업데이트 또는 Creators Update에서 이전 버전(레거시)의 WSL 1을 실행하는 경우 업데이트 오류가 발생할 수 있습니다. 다음 지침에 따라 [레거시 배포판을 제거](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)하세요. 
+>
+> `wsl --set-default-version` 결과가 잘못된 명령이면 `wsl --help`를 입력하세요. `--set-default-version`이 나열되지 않은 경우 OS에서 해당 기능을 지원하지 않으며 버전 2004, 빌드 19041 이상으로 업데이트해야 함을 의미합니다.
 
 ## <a name="install-your-linux-distribution-of-choice"></a>선택한 Linux 배포 설치
 

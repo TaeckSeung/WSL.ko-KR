@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 9028f1e89e92da94d82b16603b3af60876a4cb86
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: cc8f032a99fb087b7ef614dd3a3574cb8ee3f2da
+ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "79318147"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86033059"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -39,6 +39,41 @@ WSL 설명서에 기여하려면 끌어오기 요청을 https://github.com/Micro
 마지막으로, Windows 터미널, Windows 콘솔 또는 명령줄 UI와 관련된 문제가 있는 경우 https://github.com/microsoft/terminal Windows 터미널 리포지토리를 사용합니다.
 
 ## <a name="common-issues"></a>일반적인 문제
+
+### <a name="cannot-access-wsl-files-from-windows"></a>Windows에서 WSL 파일에 액세스할 수 없음
+9p 프로토콜 파일 서버는 Linux 쪽에서 서비스를 제공하여 Windows가 Linux 파일 시스템에 액세스할 수 있도록 합니다. Windows에서 `\\wsl$`를 사용하여 WSL에 액세스할 수 없는 경우 9P가 제대로 시작되지 않았기 때문일 수 있습니다.
+
+이를 확인하려면 `dmesg |grep 9p`를 사용하여 시작 로그를 확인할 수 있습니다. 그러면 오류가 표시됩니다. 성공적인 출력은 다음과 같습니다. 
+
+```
+[    0.363323] 9p: Installing v9fs 9p2000 file system support
+[    0.363336] FS-Cache: Netfs '9p' registered for caching
+[    0.398989] 9pnet: Installing 9P2000 support
+```
+
+이 문제에 대한 자세한 내용은 [이 Github 스레드](https://github.com/microsoft/wsl/issues/5307)를 참조하세요.
+
+### <a name="cant-start-wsl-2-distro-and-only-see-wsl-2-in-output"></a>WSL 2 배포를 시작할 수 없으며 출력에서 'WSL 2'만 표시됩니다.
+표시 언어가 영어가 아닌 경우 오류 텍스트가 잘려서 표시될 수 있습니다.
+
+```powershell
+C:\Users\me>wsl
+WSL 2
+```
+
+이 문제를 해결하려면 `https://aka.ms/wsl2kernel`을 방문하여 해당 문서 페이지의 지침에 따라 수동으로 커널을 설치하세요. 
+
+### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>가상 머신 플랫폼 Windows 기능을 활성화하고 BIOS에서 가상화가 사용되고 있는지 확인하세요.
+
+1. [Hyper-V 시스템 요구 사항](https://docs.microsoft.com/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)을 확인합니다.
+2. 머신이 VM인 경우 [중첩된 가상화](https://docs.microsoft.com/windows/wsl/wsl2-faq#can-i-run-wsl-2-in-a-virtual-machine)를 수동으로 사용하도록 설정하세요. 관리자로 powershell을 시작하고 다음을 실행합니다. 
+
+```powershell
+Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+```
+
+3. 가상화를 사용하도록 설정하는 방법에 대한 자세한 지침은 PC 제조업체의 지침을 따르세요. 일반적으로 이는 시스템 BIOS를 사용하여 이러한 기능이 CPU에서 활성화되도록 할 수 있습니다. 
+4. `Virtual Machine Platform` 선택적 구성 요소를 사용하도록 설정한 후 머신을 다시 시작합니다. 
 
 ### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>Bash가 VPN에 연결되면 네트워크 연결이 끊어짐
 

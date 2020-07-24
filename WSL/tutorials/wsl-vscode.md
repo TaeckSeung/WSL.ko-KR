@@ -5,16 +5,16 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, vs code, 원격 확�
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 416862201094ba28474918dca8e7d9ce316844cc
-ms.sourcegitcommit: d95bdbc2fea991ba14a4c9ec53ee0ec19d6bbdb4
+ms.openlocfilehash: f5d7bd4f582f504ea3c4bd814454b1dc881ffed2
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84457785"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948657"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템을 사용 하 여 Visual Studio Code 시작
 
-원격 WSL 확장과 함께 Visual Studio Code를 사용 하면 VS Code에서 직접 WSL을 전체 시간 개발 환경으로 사용할 수 있습니다. 다음을 수행할 수 있습니다.
+원격 WSL 확장과 함께 Visual Studio Code를 사용 하면 VS Code에서 직접 WSL을 전체 시간 개발 환경으로 사용할 수 있습니다. 다음을 할 수 있습니다.
 
 * Linux 기반 환경에서 개발
 * Linux 특정 도구 체인 및 유틸리티 사용
@@ -34,7 +34,7 @@ ms.locfileid: "84457785"
 * [원격 개발 확장 팩](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)을 설치 합니다. 이 확장 팩은 원격-SSH 및 원격 컨테이너 확장 외에도 원격-WSL 확장을 포함 하 여 컨테이너, 원격 컴퓨터 또는 WSL의 모든 폴더를 열 수 있도록 합니다.
 
 > [!IMPORTANT]
-> 원격 WSL 확장을 설치 하려면 VS Code의 [1.35](https://code.visualstudio.com/updates/v1_35) 버전 이상이 필요 합니다. 자동 완성, 디버깅, lint 등에 대 한 지원이 손실 될 것 이므로, 원격-WSL 확장이 없으면 VS Code에서 WSL을 사용 하지 않는 것이 좋습니다. 흥미로운 사실:이 WSL 확장은 $HOME/.vscode-server/extensions.에 설치 됩니다.
+> 원격 WSL 확장을 설치 하려면 VS Code의 [1.35](https://code.visualstudio.com/updates/v1_35) 버전 이상이 필요 합니다. 자동 완성, 디버깅, lint 등에 대 한 지원이 손실 될 것 이므로, 원격-WSL 확장이 없으면 VS Code에서 WSL을 사용 하지 않는 것이 좋습니다. 흥미로운 사실:이 WSL 확장은 $HOME/확장명 (PowerShell에서 명령을 입력)에 설치 됩니다 `ls $HOME\.vscode\extensions\` .
 
 ## <a name="update-your-linux-distribution"></a>Linux 배포 업데이트
 
@@ -94,7 +94,7 @@ Git를 설치 하려면 [Linux 용 Windows 하위 시스템을 사용 하도록 
 
 새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 사용자 고유의 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 (색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. 자세한 내용은 [Windows 터미널 문서](https://docs.microsoft.com/windows/terminal)를 확인 하세요.
 
-1. [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)가져오기: 스토어를 통해 설치 하면 업데이트가 자동으로 처리 됩니다.
+1. 다음과 같이 [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
 
 2. 설치가 완료되면 Windows 터미널을 열고 **설정**을 선택한 다음, `profile.json` 파일을 사용하여 터미널을 사용자 지정합니다.
 

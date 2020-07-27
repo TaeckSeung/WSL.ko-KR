@@ -6,14 +6,24 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
-ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
+ms.openlocfilehash: 1de8f5e287d70c4992e9e6694d8980cbd305957b
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84942597"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948687"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-20175"></a>빌드 20175
+빌드 20175에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)를 참조하세요.
+
+* WSL2 VM의 기본 메모리 할당을 호스트 메모리의 50% 또는 8GB 중 [GH 4166]보다 더 적은 값으로 조정합니다.
+* URI 구문 분석을 지원하기 위해 \\\\wsl$ 접두사를 \\\\wsl로 변경합니다. 이전 \\\\wsl$ 경로도 여전히 지원됩니다.
+* amd64에서 WSL2에 대해 중첩된 가상화를 기본적으로 사용하도록 설정합니다. %userprofile%\\.wslconfig([wsl2] nestedVirtualization=false)를 통해 이 기능을 사용하지 않도록 설정할 수 있습니다.
+* wsl.exe --update demand가 Microsoft Update를 시작하도록 합니다.
+* DrvFs에서 읽기 전용 파일의 이름 변경을 지원합니다.
+* 오류 메시지가 항상 올바른 코드 페이지에 인쇄되어 있는지 확인합니다.
 
 ## <a name="build-20150"></a>빌드 20150
 빌드 20150에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)를 참조하세요.
@@ -1547,13 +1557,13 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 ### <a name="new-feature-windows--ubuntu-interoperability"></a>새 기능: Windows/Ubuntu 상호 운용성
 이제 WSL 명령줄에서 직접 Windows 이진 파일을 호출할 수 있습니다.  덕분에 사용자는 이전에는 불가능하던 방식으로 Windows 환경 및 시스템과 상호 작용할 수 있게 되었습니다.  간단한 예제로, 이제 사용자가 다음 명령을 실행할 수 있습니다.
 
-    ```
-    $ export PATH=$PATH:/mnt/c/Windows/System32
-    $ notepad.exe
-    $ ipconfig.exe | grep IPv4 | cut -d: -f2
-    $ ls -la | findstr.exe foo.txt
-    $ cmd.exe /c dir
-    ```
+```bash
+$ export PATH=$PATH:/mnt/c/Windows/System32
+$ notepad.exe
+$ ipconfig.exe | grep IPv4 | cut -d: -f2
+$ ls -la | findstr.exe foo.txt
+$ cmd.exe /c dir
+```
 
 자세한 내용은 아래에서 찾을 수 있습니다.
 

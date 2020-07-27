@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 222afa3ee2a4e8948cd0159d794fc7a4375e7ba7
-ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
+ms.openlocfilehash: 73e3b982cd29558fdc86bd499f9a4c51a9d22e83
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157939"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948697"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -48,7 +48,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 ### <a name="set-wsl-2-as-your-default-version"></a>WSL 2를 기본 버전으로 설정
 
-새 Linux 배포를 설치할 때 PowerShell에서 다음 명령을 실행하여 WSL 2를 기본 버전으로 설정합니다.
+PowerShell을 관리자 권한으로 열고 이 명령을 실행하여 새 Linux 배포를 설치할 때 WSL 2를 기본 버전으로 설정합니다.
 
 ```powershell
 wsl --set-default-version 2

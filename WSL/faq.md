@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 8e3ebb44c139b5e7b8c25e8e813766b0107426dc
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343905"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948637"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답
 
@@ -34,6 +34,10 @@ WSL은 시작할 때 Bash 셸을 실행하는 Windows 콘솔을 여는 Bash.exe�
 또한 Linux Bash 셸 내에서 로컬 머신의 파일 시스템에 액세스할 수 있습니다. 이 경우 로컬 드라이브는 `/mnt` 폴더 아래에 탑재되어 있습니다. 예를 들어 `C:` 드라이브가 `/mnt/c` 아래에 탑재되어 있습니다.  
 
 ![탑재된 C 드라이브의 스크린샷](media/ls.png)
+
+## <a name="could-you-describe-a-typical-development-workflow-that-incorporates-wsl"></a>WSL이 통합된 일반적인 개발 워크플로를 설명할 수 있나요?
+
+WSL은 내부 개발 루프의 일부로 사용하려는 개발자를 대상으로 합니다. Sam이 CI/CD 파이프라인(Continuous Integration & Continuous Delivery)을 만들고 있으며 클라우드에 배포하기 전에 로컬 머신(랩톱)에서 먼저 테스트하려 한다고 가정해 보겠습니다. Sam은 WSL(및 WSL 2)을 사용하여 속도와 성능을 향상시킨 다음, 원하는 Bash 명령어와 도구를 사용하여 로컬(랩톱 상의)에서 정품 Linux Ubuntu 인스턴스를 사용할 수 있습니다. 개발 파이프라인이 로컬에서 확인되면 Sam은 해당 CI/CD 파이프라인을 Docker 컨테이너로 만들고 프로덕션 준비가 된 Ubuntu VM에서 실행되는 클라우드 인스턴스로 푸시하여 이 컨테이너를 클라우드(예: Azure)까지 푸시할 수 있습니다.
 
 ## <a name="what-is-bash"></a>Bash란?
 
@@ -83,7 +87,7 @@ WSL은 x64 및 ARM CPU를 지원합니다.
 
 로컬 머신의 하드 드라이브에 대한 탑재 지점이 자동으로 만들어져 Windows 파일 시스템에 쉽게 액세스할 수 있습니다.
 
-**/mnt/\<드라이브 문자>/**
+**/mnt/\<drive letter>/**
 
 예를 들어 c:\에 액세스하려면 `cd /mnt/c`를 사용합니다.
 
@@ -200,7 +204,7 @@ sudo update-locale LANG=en_US.UTF8
 방화벽을 해제하면 액세스가 허용되는 경우도 있습니다. 단순히 방화벽을 설치하면 경우에 따라 액세스가 차단되는 것처럼 보입니다.
 
 ## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>Windows의 WSL에서 포트에 액세스하려면 어떻게 하나요?
-WSL은 Windows에서 실행되는 Windows의 IP 주소를 공유합니다. 따라서 localhost의 모든 포트에 액세스할 수 있습니다. 예를 들어 1234 포트에 웹 콘텐츠가 있는 경우 https://localhost:1234를 Windows 브라우저에 연결할 수 있습니다.
+WSL은 Windows에서 실행되는 Windows의 IP 주소를 공유합니다. 따라서 localhost의 모든 포트에 액세스할 수 있습니다. 예를 들어 1234 포트에 웹 콘텐츠가 있는 경우 https://localhost:1234 를 Windows 브라우저에 연결할 수 있습니다.
 
 ## <a name="how-can-i-back-up-my-wsl-distros-or-move-them-from-one-drive-to-another"></a>내 WSL 배포판을 백업하거나 한 드라이브에서 다른 드라이브로 이동할 수 있나요?
 

@@ -4,14 +4,16 @@ description: Linux용 Windows 하위 시스템 설명서를 살펴봅니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: eac5ab3a4406d7e3b1ba89c0d9e6212fa602d852
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 81ff05f03172e3e3a167ffba4ce846ec2edb3d1c
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83270491"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948587"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux용 Windows 하위 시스템 설명서
+
+Linux용 Windows 하위 시스템을 사용하면 개발자가 기존 가상 머신의 오버헤드 또는 듀얼 부팅 설정 없이 대부분의 명령줄 도구, 유틸리티 및 애플리케이션을 비롯한 GNU/Linux 환경을 수정하지 않고 Windows에서 직접 실행할 수 있습니다.
 
 ## <a name="learn-more-here"></a>여기에서 자세히 알아보기
 

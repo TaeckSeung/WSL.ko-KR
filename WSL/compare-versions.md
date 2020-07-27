@@ -1,18 +1,18 @@
 ---
-title: Linux용 Windows 하위 시스템에 대한 개요
+title: WSL 버전 1과 2 비교
 description: Linux용 Windows 하위 시스템, 다양한 버전 및 이를 사용하는 방법에 대해 알아봅니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux, Ubuntu, Debian, Suse, Windows 10, UX 변경 내용, WSL 2, Linux 커널, 네트워크 애플리케이션, localhost, IPv6, 가상 하드웨어 디스크, VHD, VHD 제한, VHD 오류
-ms.date: 05/12/2020
+ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 8354e9c35d1e97f38c4cf6aa53a861c2c5e290be
-ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
+ms.openlocfilehash: 139bf2200b47f7d1465312f16ed0a3449491dc89
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86093275"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948647"
 ---
-# <a name="comparing-wsl-2-and-wsl-1"></a>WSL 2와 WSL 1 비교
+# <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 비교
 
 Linux용 Windows 하위 시스템을 새 버전으로 업데이트하는 기본 목표는 **파일 시스템 성능을 향상**시키고 **전체 시스템 호출 호환성**을 지원하는 것입니다. 
 

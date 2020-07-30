@@ -2,16 +2,16 @@
 title: Linux용 Windows 하위 시스템 정보
 description: Linux용 Windows 하위 시스템, 다양한 버전 및 사용 방법에 대해 알아봅니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux
-ms.date: 05/12/2020
+ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
-ROBOTS: NOINDEX
-ms.openlocfilehash: ddc242360adf67e3c5b6cd14d35fb6c869b83b2d
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.localizationpriority: high
+ms.openlocfilehash: 512b5dc96892e2b66721e5e164301f2e9be6cd65
+ms.sourcegitcommit: b494c8a76f867d69fa7fff4878c4e38140eaeb8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948627"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235457"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템이란?
 
@@ -24,10 +24,17 @@ Linux용 Windows 하위 시스템을 사용하면 개발자가 기존 가상 머
 * 다음을 포함하여 Bash 셸 스크립트 및 GNU/Linux 명령줄 애플리케이션을 실행합니다.  
     * 도구: vim, emacs, tmux
     * 언어: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# 및 F#, Rust, Go 등
-    * 서비스: SSHD, MySQL, Apache, lighttpd, [MongoDB](https://docs.microsoft.com/windows/nodejs/databases), [PostgreSQL](https://docs.microsoft.com/windows/python/databases).
+    * 서비스: SSHD, [MySQL](./tutorials/wsl-database.md), Apache, lighttpd, [MongoDB](./tutorials/wsl-database.md), [PostgreSQL](./tutorials/wsl-database.md).
 * 자체 GNU/Linux 배포 패키지 관리자를 사용하여 추가 소프트웨어를 설치합니다.
 * Unix와 같은 명령줄 셸을 사용하여 Windows 애플리케이션을 호출합니다.
 * Windows에서 GNU/Linux 애플리케이션을 호출합니다.
+
+> [!div class="nextstepaction"]
+> [WSL 설치](install-win10.md)
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/48k317kOxqg]
 
 ## <a name="what-is-wsl-2"></a>WSL 2란?
 
@@ -36,6 +43,10 @@ WSL 2는 Linux용 Windows 하위 시스템 아키텍처의 새로운 버전으�
 이 새 아키텍처는 이러한 Linux 이진 파일이 Windows 및 컴퓨터의 하드웨어와 상호 작용하는 방식을 변경하되, WSL 1(현재 널리 사용 가능한 버전)과 동일한 사용자 환경을 제공합니다.
 
 개별 Linux 배포는 WSL 1 또는 WSL 2 아키텍처를 사용하여 실행할 수 있습니다. 언제든지 각 배포를 업그레이드하거나 다운그레이드할 수 있으며 WSL 1 및 WSL 2 배포를 함께 실행할 수 있습니다. WSL 2는 실제 Linux 커널을 실행하는 이점을 제공하는 완전히 새로운 아키텍처를 사용합니다.
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/MrZolfGm8Zk]
 
 ## <a name="next-steps"></a>다음 단계
 

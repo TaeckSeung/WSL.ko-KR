@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 여러 Linux �
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: e97b1030d5891bf8aa1cb656646a4d9e1d480a3d
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: b8aa740233f3ac9517744212eb7b362a18378822
+ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336086"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88039416"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 명령 및 시작 구성
 
@@ -18,7 +18,7 @@ ms.locfileid: "85336086"
 [설치](install-win10.md)된 후에는 wsl을 사용 하 여 Linux 배포를 실행 하는 여러 가지 방법이 있습니다.
 
 1. Windows 시작 메뉴를 방문 하 고 설치 된 배포의 이름을 입력 하 여 Linux 배포를 엽니다. 예: "Ubuntu".
-2. Windows 명령 프롬프트 또는 PowerShell에서 설치 된 배포의 이름을 입력 합니다. 예: `ubuntu`
+2. Windows 명령 프롬프트 또는 PowerShell에서 설치 된 배포의 이름을 입력 합니다. 예를 들면 다음과 같습니다. `ubuntu`
 3. Windows 명령 프롬프트 또는 PowerShell에서 현재 명령줄 내에서 기본 Linux 배포를 열려면 다음을 입력 `wsl.exe` 합니다.
 4. Windows 명령 프롬프트 또는 PowerShell에서 현재 명령줄 내에서 기본 Linux 배포를 열려면 다음을 입력 `wsl [command]` 합니다.
 
@@ -340,11 +340,13 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 |:----|:----|:----|:----|
 | 커널(kernel) | 문자열 | Microsoft에서 빌드된 커널을 제공 받은 수신함 | 사용자 지정 Linux 커널의 절대 Windows 경로입니다. |
 | 메모리 | 크기 | Windows에서 총 메모리의 80% | WSL 2 VM에 할당할 메모리의 양입니다. |
-| 프로세서 | number | Windows에서 동일한 수의 프로세서 | WSL 2 VM에 할당할 프로세서 수입니다. |
+| 프로세서 | 숫자 | Windows에서 동일한 수의 프로세서 | WSL 2 VM에 할당할 프로세서 수입니다. |
 | localhostForwarding | boolean | `true` | WSL 2 VM의 와일드 카드 또는 localhost에 바인딩된 포트를 localhost: port를 통해 호스트에서 연결할 수 있는지 여부를 지정 하는 부울입니다. |
 | kernelCommandLine | 문자열 | 비어 있음 | 추가 커널 명령줄 인수입니다. |
 | swap | 크기 | Windows에서 메모리 크기의 25%가 가장 가까운 GB로 반올림 됨 | WSL 2 VM에 추가할 스왑 공간의 크기 이며, 스왑 파일이 없는 경우 0입니다. |
 | 스왑 파일 | 문자열 | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | 스왑 가상 하드 디스크에 대 한 절대 Windows 경로입니다. |
+
+* 참고:이 값은 Windows 빌드 19041에 적용 되며, 참가자 프로그램의 Windows 빌드에서 다를 수 있습니다.
 
 값이 인 항목은 `path` 이스케이프 된 백슬래시가 포함 된 Windows 경로 여야 합니다. 예:`C:\\Temp\\myCustomKernel`
 

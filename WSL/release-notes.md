@@ -6,14 +6,23 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 1de8f5e287d70c4992e9e6694d8980cbd305957b
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: 751f7dd73abeefe7be0406c17b95158ee21b9199
+ms.sourcegitcommit: b79bf1d5f158f09e858184a6dfd096e212c1a231
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948687"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88161045"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-20190"></a>빌드 20190
+빌드 20190에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/)를 참조하세요.
+
+* WSL1 인스턴스가 시작되지 않는 버그 수정 [GH 5633]
+* Windows 프로세스 출력을 리디렉션할 때 반응이 없는 문제 수정 [GH 5648]
+* VM 유휴 시간 제한(wsl2.vmIdleTimeout=<time_in_ms>)을 제어하는 %userprofile%\\.wslconfig 옵션 추가
+* WSL에서 앱 실행 별칭 시작 지원
+* wsl.exe --install에 WSL2 커널 및 배포를 설치하기 위한 지원이 추가됨
 
 ## <a name="build-20175"></a>빌드 20175
 빌드 20175에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)를 참조하세요.

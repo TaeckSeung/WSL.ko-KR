@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 73e3b982cd29558fdc86bd499f9a4c51a9d22e83
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: bab21722e77a0879db70e21003fb237491d99218
+ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948697"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88039443"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -135,10 +135,18 @@ wsl --set-default-version 2
   - 컴퓨터 BIOS 내에서 가상화를 사용하도록 설정했는지 확인합니다. 이 방법에 대한 지침은 컴퓨터마다 다르며, CPU 관련 옵션에 있을 가능성이 높습니다.
 
 - **업그레이드 시도 중 오류: `Invalid command line option: wsl --set-version Ubuntu 2`**
-  - Linux용 Windows 하위 시스템을 사용하도록 설정하고 Windows Build 버전 19041 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 PowerShell 프롬프트에서 이 명령을 실행합니다. 전체 WSL 설치 지침은 [여기](./install-win10.md)에서 찾을 수 있습니다.
+  - Linux용 Windows 하위 시스템을 사용하도록 설정했고 Windows 빌드 버전 19041 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 PowerShell 프롬프트에서 이 명령을 실행합니다.
 
 - **가상 디스크 시스템 제한으로 인해 요청한 작업을 완료할 수 없습니다. 가상 하드 디스크 파일은 압축이 풀려 있는 상태이고 암호화되지 않아야 하며 스파스가 아니어야 합니다.**
-  - 이 문제에 대한 업데이트된 정보를 추적할 수 있는 [WSL GitHub 스레드 #4103](https://github.com/microsoft/WSL/issues/4103)을 확인하세요.
+  - Linux 배포판의 프로필 폴더를 열어서 "내용 압축"과 "내용 암호화"를 선택 취소합니다. 이는 Windows 파일 시스템의 `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...` 같은 폴더에 있을 것입니다.
+  - 이 Linux 배포판 프로필에는 LocalState 폴더가 있을 것입니다. 이 폴더를 마우스 오른쪽 단추로 클릭하여 옵션 메뉴를 표시합니다. 속성 > 고급을 선택하고 "내용을 압축하여 디스크 공간 절약" 및 "데이터 보호를 위해 내용을 암호화" 확인란이 선택 취소되어 있는지 확인합니다(선택하지 않음). 이를 현재 폴더 또는 모든 하위 폴더와 파일에만 적용할지 묻는 메시지가 표시되면 압축 플래그만 지우도록 "이 폴더만"을 선택합니다. 그러면 `wsl –set-version` 명령이 작동할 것입니다.
+
+![WSL 배포판 속성 설정의 스크린샷](media/troubleshooting-virtualdisk-compress.png)
+
+> [!NOTE]
+> 이 예에서는 Ubuntu 18.04 배포판의 LocalState 폴더가 C:\Users\<my-user-name>\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc에 있습니다.
+>
+> 이 문제에 대한 업데이트된 정보를 추적할 수 있는 [WSL Docs GitHub 스레드 #4103](https://github.com/microsoft/WSL/issues/4103)을 확인하세요.
 
 - **cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름에는 'wsl'이라는 단어가 들어갈 수 없습니다.**
   - [Linux용 Windows 하위 시스템 옵션 구성 요소가 설치되었는지](./install-win10.md#enable-the-virtual-machine-platform-optional-component) 확인하세요. 또는 ARM64 디바이스를 사용 중이고 PowerShell에서 이 명령을 실행하는 경우 이 오류가 표시됩니다. [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) 또는 명령 프롬프트에서 `wsl.exe`를 대신 실행하세요.

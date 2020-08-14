@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linu
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ea2c92030a895076be17ad2b99fe34719f84a47f
-ms.sourcegitcommit: b494c8a76f867d69fa7fff4878c4e38140eaeb8a
+ms.openlocfilehash: f64eff318ead5b74356a1b7db435952d4d4e669b
+ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235467"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88039426"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 비교
 
@@ -136,6 +136,11 @@ Linux 배포(즉, Ubuntu)에서 Windows에서 실행되는 네트워킹 앱(예:
 WSL 1 배포를 사용할 때 LAN에서 컴퓨터에 액세스하도록 설정된 경우 WSL에서 실행되는 애플리케이션도 LAN에서 액세스할 수 있습니다.
 
 이는 WSL 2의 기본 사례가 아닙니다. WSL 2에는 고유한 IP 주소가 있는 가상화된 이더넷 어댑터가 있습니다. 현재 이 워크플로를 사용하도록 설정하려면 일반 가상 머신과 동일한 단계를 진행해야 합니다. (이 환경을 개선할 수 있는 방법을 찾고 있습니다.)
+
+다음은 호스트의 포트 4000에서 수신 대기하고 포트 4000을 통해 IP 주소가 192.168.101.100인 WSL 2 VM에 연결하는 포트 프록시를 추가하는 PowerShell 명령의 예입니다.
+```powershell
+netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 connectport=4000 connectaddress=192.168.101.100
+```
 
 #### <a name="ipv6-access"></a>IPv6 액세스
 

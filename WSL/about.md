@@ -1,17 +1,17 @@
 ---
 title: Linux용 Windows 하위 시스템 정보
-description: Linux용 Windows 하위 시스템, 다양한 버전 및 사용 방법에 대해 알아봅니다.
+description: 다양한 버전 및 이를 사용하는 방법을 포함하여 Linux용 Windows 하위 시스템에 대해 알아봅니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux
 ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 512b5dc96892e2b66721e5e164301f2e9be6cd65
-ms.sourcegitcommit: b494c8a76f867d69fa7fff4878c4e38140eaeb8a
+ms.openlocfilehash: c468f501894df9dfde4323471a6d20569ac82e9c
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235457"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88865960"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템이란?
 

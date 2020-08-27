@@ -5,12 +5,12 @@ keywords: wsl, windows, linux 커널, linux용 windows 하위 시스템, 커널
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bef722f5653380d9f6d104f1a7c116a7599658c9
-ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
+ms.openlocfilehash: a718c4a880e2c3147900143c24983835d269a4bc
+ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86033045"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714829"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux 커널 업데이트
 
@@ -43,7 +43,7 @@ Linux 커널 업데이트 패키지를 설치하려면 다음을 수행합니다
 ## <a name="troubleshooting"></a>문제 해결
 
 ### <a name="this-update-only-applies-to-machines-with-the-windows-subsystem-for-linux"></a>이 업데이트는 Linux용 Windows 하위 시스템을 사용하는 머신에만 적용됩니다.
-MSI 커널을 설치하려면 WSL이 필요하며 이를 먼저 사용하도록 설정해야 합니다. 실패하면 `This update only applies to machines with the Windows Subsytem for Linux` 메시지가 표시됩니다. 
+MSI 커널을 설치하려면 WSL이 필요하며 이를 먼저 사용하도록 설정해야 합니다. 실패하면 `This update only applies to machines with the Windows Subsystem for Linux` 메시지가 표시됩니다. 
 
 이 메시지가 표시되는 세 가지 가능한 원인은 다음과 같습니다.
 

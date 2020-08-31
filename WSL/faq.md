@@ -1,17 +1,17 @@
 ---
 title: FAQ(질문과 대답)
-description: Linux용 Windows 하위 시스템에 대한 질문과 대답입니다.
+description: 'Linux용 Windows 하위 시스템에 대한 FAQ(예: WSL로 무엇을 할 수 있나요?)의 답변을 찾아보세요.'
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, FAQ
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 8e3ebb44c139b5e7b8c25e8e813766b0107426dc
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: 9a9f287ceb2ae93286999ed32d655198c8a390c8
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948637"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866155"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답
 

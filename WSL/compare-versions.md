@@ -1,16 +1,16 @@
 ---
 title: WSL 2와 WSL 1 비교
-description: Linux용 Windows 하위 시스템의 버전 1과 버전 2를 비교합니다. 힌트 - 버전 2는 실제 Linux 커널을 실행하고 성능 속도가 더 빠르지만 WSL 1은 Windows와 Linux 파일 시스템에서 모두 작업할 경우 더 효과적입니다.
+description: Linux용 Windows 하위 시스템의 버전 1과 버전 2를 비교합니다. WSL 2는 실제 Linux 커널을 실행하여 속도와 전체 시스템 호출 호환성을 높입니다. WSL 1은 Windows 및 Linux 파일 시스템 모두에서 작업하는 경우 더욱 효과적으로 작동합니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux, Ubuntu, Debian, Suse, Windows 10, UX 변경 내용, WSL 2, Linux 커널, 네트워크 애플리케이션, localhost, IPv6, 가상 하드웨어 디스크, VHD, VHD 제한, VHD 오류
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f64eff318ead5b74356a1b7db435952d4d4e669b
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 15f1528332345f0bea829b9606372ed7346e6dff
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039426"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866021"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 비교
 

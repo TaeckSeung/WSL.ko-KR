@@ -1,16 +1,16 @@
 ---
 title: Linux용 Windows 하위 시스템에 대한 명령 참조
-description: Linux용 Windows 하위 시스템을 관리하는 명령의 목록입니다.
+description: 'Linux용 Windows 하위 시스템을 관리하는 명령(예: Linux 명령 실행을 위한 인수) 목록을 참조하세요.'
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu
 ms.date: 07/31/2017
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 72b78a73bf68b28dd14b4826943a0c81ea04bbad
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: fc5c9e06c597092a3790ba7f9eb06054a33450c1
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270877"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866135"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 명령 참조
 

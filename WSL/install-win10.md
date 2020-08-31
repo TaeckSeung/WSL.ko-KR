@@ -1,16 +1,16 @@
 ---
 title: Windows 10에 WSL(Linux용 Windows 하위 시스템) 설치
-description: Linux용 Windows 하위 시스템을 Windows 10에 설치하는 방법에 대한 지침입니다.
+description: Windows 10에 Linux용 Windows 하위 시스템을 설치하는 방법을 알아봅니다. Windows 10을 버전 2004, 빌드 19041 이상으로 업데이트해야 합니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, Debian, Suse, Windows 10, 설치, 사용, WSL 2, 버전 2
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bab21722e77a0879db70e21003fb237491d99218
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039443"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866160"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -30,9 +30,9 @@ WSL 1만 설치하려면 지금 머신을 다시 시작하여 [선택한 Linux �
 
 WSL 2로 업데이트하려면 다음 조건을 충족해야 합니다.
 
-- Windows 10 실행, [버전 2004로 업데이트](ms-settings:windowsupdate), **빌드 19041** 이상.
+- Windows 10 실행, [버전 1903 이상으로 업데이트](ms-settings:windowsupdate), **빌드 18362** 이상.
 
-- **Windows 로고 키 + R**을 선택하고 **winver**를 입력한 다음, **확인**을 선택하여 Windows 버전을 확인합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) 빌드가 19041보다 낮은 경우 [최신 Windows 버전으로 업데이트합니다](ms-settings:windowsupdate). [Windows 업데이트 도우미를 가져옵니다](https://www.microsoft.com/software-download/windows10).
+- **Windows 로고 키 + R**을 선택하고 **winver**를 입력한 다음, **확인**을 선택하여 Windows 버전을 확인합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) 빌드가 18361보다 낮은 경우 [최신 Windows 버전으로 업데이트합니다](ms-settings:windowsupdate). [Windows 업데이트 도우미를 가져옵니다](https://www.microsoft.com/software-download/windows10).
 
 ### <a name="enable-the-virtual-machine-platform-optional-component"></a>'가상 머신 플랫폼' 옵션 구성 요소 사용
 
@@ -59,7 +59,7 @@ wsl --set-default-version 2
 > [!NOTE]
 > WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다. Windows 10 1주년 업데이트 또는 Creators Update에서 이전 버전(레거시)의 WSL 1을 실행하는 경우 업데이트 오류가 발생할 수 있습니다. 다음 지침에 따라 [레거시 배포판을 제거](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)하세요. 
 >
-> `wsl --set-default-version` 결과가 잘못된 명령이면 `wsl --help`를 입력하세요. `--set-default-version`이 나열되지 않은 경우 OS에서 해당 기능을 지원하지 않으며 버전 2004, 빌드 19041 이상으로 업데이트해야 함을 의미합니다.
+> `wsl --set-default-version` 결과가 잘못된 명령이면 `wsl --help`를 입력하세요. `--set-default-version`이 나열되지 않은 경우 OS에서 해당 기능을 지원하지 않으며 버전 1903, 빌드 18362 이상으로 업데이트해야 함을 의미합니다.
 
 ## <a name="install-your-linux-distribution-of-choice"></a>선택한 Linux 배포 설치
 
@@ -96,7 +96,7 @@ wsl --set-default-version 2
 
 ## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>배포 버전을 WSL 1 또는 WSL 2로 설정
 
-PowerShell 명령줄을 열고 `wsl -l -v` 명령을 입력([Windows 빌드 19041 이상에서만 사용 가능](ms-settings:windowsupdate))하면 설치한 각 Linux 배포에 할당된 WSL 버전을 확인할 수 있습니다.
+PowerShell 명령줄을 열고 `wsl -l -v` 명령을 입력([Windows 빌드 18362 이상에서만 사용 가능](ms-settings:windowsupdate))하면 설치한 각 Linux 배포에 할당된 WSL 버전을 확인할 수 있습니다.
 
 ```powershell
 wsl --list --verbose
@@ -135,7 +135,7 @@ wsl --set-default-version 2
   - 컴퓨터 BIOS 내에서 가상화를 사용하도록 설정했는지 확인합니다. 이 방법에 대한 지침은 컴퓨터마다 다르며, CPU 관련 옵션에 있을 가능성이 높습니다.
 
 - **업그레이드 시도 중 오류: `Invalid command line option: wsl --set-version Ubuntu 2`**
-  - Linux용 Windows 하위 시스템을 사용하도록 설정했고 Windows 빌드 버전 19041 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 PowerShell 프롬프트에서 이 명령을 실행합니다.
+  - Linux용 Windows 하위 시스템을 사용하도록 설정했고 Windows 빌드 버전 18362 이상을 사용하고 있는지 확인합니다. WSL을 실행하도록 하려면 관리자 권한(`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`)으로 PowerShell 프롬프트에서 이 명령을 실행합니다.
 
 - **가상 디스크 시스템 제한으로 인해 요청한 작업을 완료할 수 없습니다. 가상 하드 디스크 파일은 압축이 풀려 있는 상태이고 암호화되지 않아야 하며 스파스가 아니어야 합니다.**
   - Linux 배포판의 프로필 폴더를 열어서 "내용 압축"과 "내용 암호화"를 선택 취소합니다. 이는 Windows 파일 시스템의 `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...` 같은 폴더에 있을 것입니다.

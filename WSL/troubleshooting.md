@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cc8f032a99fb087b7ef614dd3a3574cb8ee3f2da
-ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
+ms.openlocfilehash: 84aecf4f6111cca47ece3c2421be659fb5a27771
+ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86033059"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714850"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -39,6 +39,22 @@ WSL 설명서에 기여하려면 끌어오기 요청을 https://github.com/Micro
 마지막으로, Windows 터미널, Windows 콘솔 또는 명령줄 UI와 관련된 문제가 있는 경우 https://github.com/microsoft/terminal Windows 터미널 리포지토리를 사용합니다.
 
 ## <a name="common-issues"></a>일반적인 문제
+
+### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>오류: `wsl --set-default-version 2`인 경우 0x1bc
+'표시 언어' 또는 '시스템 로캘' 설정이 영어가 아닌 경우 발생할 수 있습니다.
+```
+wsl --set-default-version 2
+Error: 0x1bc
+For information on key differences with WSL 2 please visit https://aka.ms/wsl2
+```
+
+`0x1bc`의 실제 오류는 다음과 같습니다.
+```
+WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+```
+
+자세한 내용은 문제 [5749](https://github.com/microsoft/WSL/issues/5749)를 참조하십시오.
+
 
 ### <a name="cannot-access-wsl-files-from-windows"></a>Windows에서 WSL 파일에 액세스할 수 없음
 9p 프로토콜 파일 서버는 Linux 쪽에서 서비스를 제공하여 Windows가 Linux 파일 시스템에 액세스할 수 있도록 합니다. Windows에서 `\\wsl$`를 사용하여 WSL에 액세스할 수 없는 경우 9P가 제대로 시작되지 않았기 때문일 수 있습니다.

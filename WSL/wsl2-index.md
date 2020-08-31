@@ -1,16 +1,16 @@
 ---
 title: WSL 2
-description: Linux용 Windows 하위 시스템 2
+description: Linux용 Windows 하위 시스템 2의 새로운 기능에 대해 알아봅니다. WSL 버전 업데이트 및 FAQ와 같은 사용 가능한 추가 리소스를 살펴봅니다.
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 6ed3c98fa674e595b2fb05a989ab72f38cf45cbe
-ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
+ms.openlocfilehash: fe9d9e2d2bbb13091722e0303bd98d20677415a9
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978236"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866015"
 ---
 # <a name="whats-new-in-wsl-2"></a>WSL 2의 새로운 기능
 

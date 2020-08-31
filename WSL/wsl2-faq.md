@@ -1,18 +1,18 @@
 ---
 title: WSL 2 관련 질문과 대답
-description: Linux용 Windows 하위 시스템 2에 대한 질문과 대답
+description: 'Linux용 Windows 하위 시스템 2에 대한 FAQ(예: 가상 머신에서 WSL 2를 실행할 수 있나요?)의 답변을 찾아보세요.'
 keywords: BashOnWindows, bash, wsl, wsl2, windows, Linux용 windows 하위 시스템, windowssubsystem, ubuntu, debian, suse, windows 10, 설치
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 89b8a29f0c2d24a3c97d9661db3d83963629f34f
-ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
+ms.openlocfilehash: 1a55ace547b27c949794db3a6c8f7e2eb7c4a52c
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663116"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866009"
 ---
 # <a name="wsl-2-faqs"></a>WSL 2 FAQ
 

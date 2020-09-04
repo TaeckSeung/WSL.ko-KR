@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 1a55ace547b27c949794db3a6c8f7e2eb7c4a52c
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: a021dc3c6c3c2a14fea631f2733d2b846c6fe3ad
+ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866009"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89058488"
 ---
 # <a name="wsl-2-faqs"></a>WSL 2 FAQ
 
@@ -20,7 +20,7 @@ ms.locfileid: "88866009"
 
 ## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a>WSL 2가 Hyper-V를 사용하나요? Windows 10 Home에 제공될 예정인가요?
 
-WSL 2는 Windows 10 Home을 포함하여 WSL이 현재 제공되는 모든 SKU에서 사용할 수 있게 됩니다.
+WSL 2는 Windows 10 Home을 포함하여 WSL이 현재 제공되는 모든 SKU에서 사용할 수 있습니다.
 
 최신 버전의 WSL은 Hyper-V 아키텍처를 사용하여 가상화를 지원합니다. 이 아키텍처는 'Virtual Machine 플랫폼' 옵션 구성 요소에서 사용할 수 있습니다. 이 옵션 구성 요소는 모든 SKU에서 사용할 수 있습니다. 이 환경에 대한 자세한 내용은 WSL 2 릴리스를 앞두고 제공될 예정입니다.
 
@@ -36,11 +36,11 @@ Hyper-V를 사용 중인 경우 일부 타사 애플리케이션을 작동할 �
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2의 GPU에 액세스할 수 있나요? 하드웨어 지원을 늘릴 계획이 있나요?
 
-WSL 2의 초기 릴리스에서는 하드웨어 액세스 지원이 제한됩니다. 예를 들어 GPU, 직렬 또는 USB 디바이스에 액세스할 수 없습니다. 하지만 더 나은 디바이스 지원을 최우선적으로 추가할 예정입니다. 그래야 이러한 디바이스와 상호 작용하려는 개발자에게 더 많은 사용 사례가 열리기 때문입니다. 그동안 직렬 포트 액세스 권한이 있는 WSL 1을 항상 사용할 수 있습니다. 이 블로그 및 WSL 팀원의 Twitter 소식을 받아 보면서 참가자 빌드에 제공되는 최신 기능에 대한 정보를 확인하고, 상호 작용하려는 디바이스에 대한 피드백을 제공해 주시기 바랍니다.
+WSL 2 배포판 내부의 GPU 액세스 지원을 릴리스했습니다. 즉, 이제 빅 데이터 세트가 관련될 때 기계 학습, AI 및 데이터 과학 시나리오에 대해 WSL을 더 쉽게 사용할 수 있습니다. [여기에서 GPU 지원을 시작하기 위한](./tutorials/gpu-compute) 자습서를 찾을 수 있습니다. 현재 WSL 2에는 직렬 지원 또는 USB 디바이스 지원이 포함되어 있지 않습니다. 이러한 기능을 추가하는 가장 좋은 방법을 찾고 있습니다.
 
 ## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>WSL 2가 네트워킹 애플리케이션을 사용할 수 있나요?
 
-예, 전체 시스템 호출 호환성이 지원되므로 일반적으로 네트워킹 애플리케이션이 더 빠르게, 더 효율적으로 작동합니다. 그러나 새 아키텍처는 가상화된 네트워킹 구성 요소를 사용합니다. 따라서 WSL 2의 초기 미리 보기 빌드는 가상 머신과 유사하게 동작합니다. 예를 들면 다음과 같습니다. WSL 2는 호스트 머신과 다른 IP 주소를 갖게 됩니다. Microsoft는 WSL 2를 WSL 1과 동일한 느낌으로 만들기 위해 노력하고 있으며, 이를 위해 네트워킹 사례를 개선하고 있습니다. localhost를 사용하여 Linux 또는 Windows에서 모든 네트워킹 앱에 액세스하는 기능과 같은 향상된 기능을 최대한 빨리 추가할 예정입니다. WSL 2 릴리스가 가까워지면 네트워킹 사례 및 개선 사항에 대한 자세한 내용을 게시할 예정입니다.
+예, 전체 시스템 호출 호환성이 지원되므로 일반적으로 네트워킹 애플리케이션이 더 빠르게, 더 효율적으로 작동합니다. 그러나 새 아키텍처는 가상화된 네트워킹 구성 요소를 사용합니다. 따라서 WSL 2의 초기 미리 보기 빌드는 가상 머신과 유사하게 동작합니다. 예를 들면 다음과 같습니다. WSL 2는 호스트 머신과 다른 IP 주소를 갖게 됩니다. Microsoft는 WSL 2를 WSL 1과 동일한 느낌으로 만들기 위해 노력하고 있으며, 이를 위해 네트워킹 사례를 개선하고 있습니다. 
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>가상 머신에서 WSL 2를 실행할 수 있나요?
 

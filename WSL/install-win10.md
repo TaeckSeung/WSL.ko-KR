@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 14e1697d1f2ac7a1efa17368be830a5c22973bc6
+ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866160"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89058498"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -30,7 +30,9 @@ WSL 1만 설치하려면 지금 머신을 다시 시작하여 [선택한 Linux �
 
 WSL 2로 업데이트하려면 다음 조건을 충족해야 합니다.
 
-- Windows 10 실행, [버전 1903 이상으로 업데이트](ms-settings:windowsupdate), **빌드 18362** 이상.
+- Windows 10 실행, x64 시스템의 경우 [버전 1903 이상](ms-settings:windowsupdate), **빌드 18362** 이상으로 업데이트.
+- Windows 10 실행, ARM64 시스템의 경우 버전 2004 이상, **빌드 19041**로 업데이트.
+- Windows 10 버전 1903 또는 1909를 사용할 경우 적절한 백포트가 있는지 확인해야 합니다. 지침은 [여기에서 확인](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)할 수 있습니다. 
 
 - **Windows 로고 키 + R**을 선택하고 **winver**를 입력한 다음, **확인**을 선택하여 Windows 버전을 확인합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) 빌드가 18361보다 낮은 경우 [최신 Windows 버전으로 업데이트합니다](ms-settings:windowsupdate). [Windows 업데이트 도우미를 가져옵니다](https://www.microsoft.com/software-download/windows10).
 

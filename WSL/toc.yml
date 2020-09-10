@@ -24,6 +24,8 @@
       href: tutorials/wsl-git.md
     - name: 데이터베이스 시작
       href: tutorials/wsl-database.md
+    - name: Docker 원격 컨테이너 시작
+      href: tutorials/wsl-containers.md
     - name: GPU 가속 설정(NVIDIA CUDA/DirectML)
       href: tutorials/gpu-compute.md
 - name: 사용 방법

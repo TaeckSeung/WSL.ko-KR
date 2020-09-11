@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 551cc66b1648a66717163d1d8e19a78d28bff342
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235915"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427190"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>새 Linux 배포에 대한 사용자 계정 및 암호 만들기
 
@@ -50,7 +50,7 @@ Linux 배포용 암호를 잊은 경우 다음을 수행합니다.
 
     > 기본값이 아닌 배포에서 잊어버린 암호를 업데이트해야 하는 경우 `Debian`을 대상 배포의 이름으로 바꾼 `wsl -d Debian -u root` 명령을 사용합니다.
 
-2. WSL 배포가 PowerShell 내의 루트 수준에서 열리면 `passwd` 명령을 사용하여 암호를 업데이트할 수 있습니다.
+2. WSL 배포가 PowerShell 내의 루트 수준에서 열리면 `passwd <WSLUsername>` 명령을 사용하여 암호를 업데이트할 수 있습니다. 여기서 `<WSLUsername>`은 암호를 잊어버린 DISTRO의 계정 사용자 이름입니다.
 
 3. 새 UNIX 암호를 입력한 다음, 해당 암호를 확인하라는 메시지가 표시됩니다. 암호가 성공적으로 업데이트되었다는 메시지가 표시되면 `exit` 명령을 사용하여 PowerShell 내에서 WSL을 닫습니다.
 

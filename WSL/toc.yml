@@ -40,6 +40,8 @@
       href: enterprise.md
     - name: 사용자 지정 배포판 빌드
       href: build-custom-distro.md
+    - name: WSL 2(미리 보기)에 디스크 탑재
+      href: wsl2-mount-disk.md
     - name: 명령줄 참조
       href: reference.md
 - name: 질문과 대답

@@ -4,8 +4,6 @@
   items:
     - name: WSL이란?
       href: about.md
-    - name: WSL 2의 새로운 기능
-      href: wsl2-index.md
     - name: WSL 2와 WSL 1 비교
       href: compare-versions.md
 - name: 빠른 시작

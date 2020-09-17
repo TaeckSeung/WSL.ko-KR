@@ -5,23 +5,23 @@ keywords: wsl, windows, windowssubsystem, MySQL MongoDB, PostgreSQL, SQLite, Mic
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffd40ef21e8fb8ece529157852ba5d8bb676076
-ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
+ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160228"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719132"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에서 데이터베이스 시작
 
 이 단계별 가이드는 WSL의 프로젝트를 데이터베이스에 연결 하기 시작 하는 데 도움이 됩니다. MySQL, PostgreSQL, MongoDB, Redis, Microsoft SQL Server 또는 SQLite를 시작 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Windows 10 실행, [버전 2004로 업데이트](ms-settings:windowsupdate), **빌드 19041** 이상.
 - [Wsl을 사용 및 설치 하 고 wsl 2로 업데이트 했습니다](https://docs.microsoft.com/windows/wsl/install-win10).
-- [Linux 배포](https://docs.microsoft.com/windows/wsl/install-win10#install-your-linux-distribution-of-choice) (이 예에서는 Ubuntu 18.04)가 설치 되어 있습니다.
-- Ubuntu 18.04 배포가 [WSL 2 모드로 실행](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2)되 고 있는지 확인 합니다. WSL은 v1 또는 v2 모드에서 배포를 실행할 수 있습니다. PowerShell을 열고 다음을 입력 하 여이를 확인할 수 있습니다.`wsl -l -v`
+- [Linux 배포](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (이 예에서는 Ubuntu 18.04)가 설치 되어 있습니다.
+- Ubuntu 18.04 배포가 [WSL 2 모드로 실행](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2)되 고 있는지 확인 합니다. WSL은 v1 또는 v2 모드에서 배포를 실행할 수 있습니다. PowerShell을 열고 다음을 입력 하 여이를 확인할 수 있습니다. `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>데이터베이스 시스템의 차이점
 
@@ -29,7 +29,7 @@ ms.locfileid: "86160228"
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql/?view=sql-server-ver15) (SQL)
+- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (nosql)
 - [Redis](https://redis.io/topics/introduction) (nosql)
@@ -54,22 +54,22 @@ WSL에 MySQL을 설치 하려면 (Ubuntu 18.04):
 
 1. WSL 터미널을 엽니다(예: Ubuntu 18.04).
 2. Ubuntu 패키지를 업데이트합니다. `sudo apt update`
-3. 패키지가 업데이트 된 후 다음을 사용 하 여 MySQL을 설치 합니다.`sudo apt install mysql-server`
+3. 패키지가 업데이트 된 후 다음을 사용 하 여 MySQL을 설치 합니다. `sudo apt install mysql-server`
 4. 설치를 확인하고 버전 번호(`mysql --version`)를 가져옵니다.
 
 포함 된 보안 스크립트를 실행할 수도 있습니다. 이렇게 하면 원격 루트 로그인 및 샘플 사용자와 같은 항목에 대 한 보안 수준이 낮은 기본 옵션이 변경 됩니다. 보안 스크립트를 실행 하려면 다음을 수행 합니다.
 
-1. MySQL 서버 시작:`sudo /etc/init.d/mysql start`
-2. 보안 스크립트 프롬프트를 시작 합니다.`sudo mysql_secure_installation`
+1. MySQL 서버 시작: `sudo /etc/init.d/mysql start`
+2. 보안 스크립트 프롬프트를 시작 합니다. `sudo mysql_secure_installation`
 3. 첫 번째 메시지는 MySQL 암호의 강도를 테스트 하는 데 사용할 수 있는 암호 유효성 검사 플러그 인을 설정할지 여부를 묻는 메시지를 표시 합니다. 그런 다음 MySQL 루트 사용자에 대 한 암호를 설정 하 고, 익명 사용자를 제거할지 여부를 결정 하 고, 루트 사용자가 로컬 및 원격으로 로그인 할 수 있도록 허용할지 여부를 결정 하 고, 테스트 데이터베이스를 제거할지 여부를 결정 하 고, 마지막으로 권한 테이블을 즉시 다시 로드할지 여부를 결정 합니다.
 
-MySQL 프롬프트를 열려면 다음을 입력 합니다.`sudo mysql`
+MySQL 프롬프트를 열려면 다음을 입력 합니다. `sudo mysql`
 
-사용 가능한 데이터베이스를 확인 하려면 MySQL 프롬프트에 다음을 입력 합니다.`SHOW DATABASES;`
+사용 가능한 데이터베이스를 확인 하려면 MySQL 프롬프트에 다음을 입력 합니다. `SHOW DATABASES;`
 
-새 데이터베이스를 만들려면 다음을 입력 합니다.`CREATE DATABASE database_name;`
+새 데이터베이스를 만들려면 다음을 입력 합니다. `CREATE DATABASE database_name;`
 
-데이터베이스를 삭제 하려면 다음을 입력 합니다.` DROP DATABASE database_name;`
+데이터베이스를 삭제 하려면 다음을 입력 합니다. ` DROP DATABASE database_name;`
 
 MySQL 데이터베이스 작업에 대 한 자세한 내용은 [mysql 문서](https://dev.mysql.com/doc/mysql-getting-started/en/)를 참조 하세요.
 
@@ -157,7 +157,7 @@ MongoDB 문서에서 자세히 알아보세요.
 
 ## <a name="install-microsoft-sql-server"></a>Microsoft SQL Server 설치
 
-WSL (Ubuntu 18.04)에 SQL Server를 설치 하려면이 빠른 시작: [ubuntu에 SQL Server 설치 및 데이터베이스 만들기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15)를 따릅니다.
+WSL (Ubuntu 18.04)에 SQL Server를 설치 하려면이 빠른 시작: [ubuntu에 SQL Server 설치 및 데이터베이스 만들기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu)를 따릅니다.
 
 VS Code에서 Microsoft SQL Server 데이터베이스를 사용 하려면 [MSSQL 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)을 시도 합니다.
 
@@ -167,16 +167,16 @@ WSL (Ubuntu 18.04)에 SQLite를 설치 하려면 다음을 수행 합니다.
 
 1. WSL 터미널을 엽니다(예: Ubuntu 18.04).
 2. Ubuntu 패키지를 업데이트합니다. `sudo apt update`
-3. 패키지가 업데이트 된 후 다음을 사용 하 여 SQLite3를 설치 합니다.`sudo apt install sqlite3`
+3. 패키지가 업데이트 된 후 다음을 사용 하 여 SQLite3를 설치 합니다. `sudo apt install sqlite3`
 4. 설치를 확인하고 버전 번호(`sqlite3 --version`)를 가져옵니다.
 
-"Example. db" 라는 테스트 데이터베이스를 만들려면 다음을 입력 합니다.`sqlite3 example.db`
+"Example. db" 라는 테스트 데이터베이스를 만들려면 다음을 입력 합니다. `sqlite3 example.db`
 
-SQLite 데이터베이스 목록을 보려면 다음을 입력 합니다.`.databases`
+SQLite 데이터베이스 목록을 보려면 다음을 입력 합니다. `.databases`
 
-데이터베이스의 상태를 확인 하려면 다음을 입력 합니다.`.dbinfo ?DB?`
+데이터베이스의 상태를 확인 하려면 다음을 입력 합니다. `.dbinfo ?DB?`
 
-SQLite 프롬프트를 종료 하려면 다음을 입력 합니다.`.exit`
+SQLite 프롬프트를 종료 하려면 다음을 입력 합니다. `.exit`
 
 SQLite 데이터베이스 작업에 대 한 자세한 내용은 [sqlite 문서](https://www.sqlite.org/quickstart.html)를 참조 하세요.
 
@@ -188,14 +188,14 @@ WSL (Ubuntu 18.04)에 Redis를 설치 하려면 다음을 수행 합니다.
 
 1. WSL 터미널을 엽니다(예: Ubuntu 18.04).
 2. Ubuntu 패키지를 업데이트합니다. `sudo apt update`
-3. 패키지가 업데이트 된 후 다음을 사용 하 여 Redis를 설치 합니다.`sudo apt install redis-server`
+3. 패키지가 업데이트 된 후 다음을 사용 하 여 Redis를 설치 합니다. `sudo apt install redis-server`
 4. 설치를 확인하고 버전 번호(`redis-server --version`)를 가져옵니다.
 
-Redis 서버 실행을 시작 하려면 다음을 수행 합니다.`sudo service redis-server start`
+Redis 서버 실행을 시작 하려면 다음을 수행 합니다. `sudo service redis-server start`
 
 Redis가 작동 하는지 확인 합니다 (redis은 Redis와 통신 하기 위한 명령줄 인터페이스 유틸리티). `redis-cli ping` "ping"의 회신을 반환 해야 합니다.
 
-Redis 서버 실행을 중지 하려면:`sudo service redis-server stop`
+Redis 서버 실행을 중지 하려면: `sudo service redis-server stop`
 
 Redis database 작업에 대 한 자세한 내용은 [Redis 문서](https://redis.io/topics/quickstart)를 참조 하세요.
 
@@ -203,7 +203,7 @@ VS Code에서 Redis 데이터베이스를 사용 하려면 [Redis 확장](https:
 
 ## <a name="see-services-running-and-set-up-profile-aliases"></a>서비스 실행 중 및 프로필 별칭 설정을 참조 하세요.
 
-WSL 배포에서 현재 실행 중인 서비스를 확인 하려면 다음을 입력 합니다.`service --status-all`
+WSL 배포에서 현재 실행 중인 서비스를 확인 하려면 다음을 입력 합니다. `service --status-all`
 
 `sudo service mongodb start` 또는 `sudo service postgres start` 및 `sudo -u postgrest psql`을 입력하는 것은 지루할 수 있습니다.  그러나 WSL의 `.profile` 파일에 별칭을 설정하면 이러한 명령으로 더 빠르게 사용하고 더 쉽게 기억할 수 있습니다.
 
@@ -224,6 +224,6 @@ WSL 배포에서 현재 실행 중인 서비스를 확인 하려면 다음을 �
 4. 새 별칭을 추가한 후에는 **Ctrl+X**를 사용하여 Nano 텍스트 편집기를 종료합니다. 저장 및 Enter에 대한 메시지가 표시되면 `Y`(예)를 선택합니다(파일 이름을 `.profile`로 그대로 둠).
 5. WSL 터미널을 닫았다가 다시 연 다음, 새 별칭 명령을 시도합니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - [Windows 10에서 개발 환경 설정](https://docs.microsoft.com/windows/dev-environment/)

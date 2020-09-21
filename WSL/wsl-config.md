@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 여러 Linux �
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: b8aa740233f3ac9517744212eb7b362a18378822
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039416"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818735"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 명령 및 시작 구성
 
@@ -18,7 +18,7 @@ ms.locfileid: "88039416"
 [설치](install-win10.md)된 후에는 wsl을 사용 하 여 Linux 배포를 실행 하는 여러 가지 방법이 있습니다.
 
 1. Windows 시작 메뉴를 방문 하 고 설치 된 배포의 이름을 입력 하 여 Linux 배포를 엽니다. 예: "Ubuntu".
-2. Windows 명령 프롬프트 또는 PowerShell에서 설치 된 배포의 이름을 입력 합니다. 예를 들면 다음과 같습니다. `ubuntu`
+2. Windows 명령 프롬프트 또는 PowerShell에서 설치 된 배포의 이름을 입력 합니다. `ubuntu`
 3. Windows 명령 프롬프트 또는 PowerShell에서 현재 명령줄 내에서 기본 Linux 배포를 열려면 다음을 입력 `wsl.exe` 합니다.
 4. Windows 명령 프롬프트 또는 PowerShell에서 현재 명령줄 내에서 기본 Linux 배포를 열려면 다음을 입력 `wsl [command]` 합니다.
 
@@ -125,9 +125,9 @@ Windows 10 버전 1903 [이상](ms-settings:windowsupdate)에서는를 사용 `w
 `wsl -l` , `wsl --list`  
 WSL에 사용할 수 있는 Linux 배포를 나열합니다.  배포가 나열되면 해당 배포가 설치되어 사용할 준비가 되어 있습니다.
 
-`wsl --list --all`현재 사용할 수 없는 모든 배포를 나열 합니다.  이러한 배포는 설치 중, 제거 중 또는 손상된 상태일 수 있습니다.  
+`wsl --list --all` 현재 사용할 수 없는 모든 배포를 나열 합니다.  이러한 배포는 설치 중, 제거 중 또는 손상된 상태일 수 있습니다.  
 
-`wsl --list --running`현재 실행 중인 모든 배포를 나열 합니다.
+`wsl --list --running` 현재 실행 중인 모든 배포를 나열 합니다.
 
 ## <a name="set-a-default-distribution"></a>기본 배포 설정
 
@@ -208,7 +208,7 @@ WSL에 사용할 수 있는 Linux 배포를 나열합니다.  배포가 나열�
 
 명령줄에서를 실행할 때 실행 되는 기본 배포를 설정 하려면 `wsl` 다음을 수행 합니다.
 
-`wslconfig /setdefault <DistributionName>`기본 분포를로 설정 `<DistributionName>` 합니다.
+`wslconfig /setdefault <DistributionName>` 기본 분포를로 설정 `<DistributionName>` 합니다.
 
 **예: (PowerShell 사용)**  
 `wslconfig /setdefault Ubuntu`는 기본 배포를 Ubuntu로 설정합니다.  이제 `wsl npm init`를 실행하면 Ubuntu에서 실행됩니다.  `wsl`을 실행하면 Ubuntu 세션이 열립니다.
@@ -260,7 +260,7 @@ WSL은 `automount` 및 `network`의 두 가지 섹션을 지원합니다.
 
 | 키        | value                          | 기본      | 참고                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled    | boolean                        | true         | `true`를 사용하면 고정 드라이브(즉, `C:/` 또는 `D:/`)가 `/mnt` 아래의 DrvFs에 자동으로 탑재됩니다.  `false`는 드라이브가 자동으로 탑재 되지 않음을 의미 하지만 수동으로 또는를 통해 탑재할 수 있습니다 `fstab` .                                                                                                             |
+| enabled    | boolean                        | true         | `true`를 사용하면 고정 드라이브(즉, `C:/` 또는 `D:/`)가 `/mnt` 아래의 DrvFs에 자동으로 탑재됩니다.  `false` 는 드라이브가 자동으로 탑재 되지 않음을 의미 하지만 수동으로 또는를 통해 탑재할 수 있습니다 `fstab` .                                                                                                             |
 | mountFsTab | boolean                        | true         | `true`는 WSL 시작 시 `/etc/fstab`가 처리되도록 설정합니다. /etc/fstab는 SMB 공유와 같은 다른 파일 시스템을 선언할 수 있는 파일입니다. 따라서 시작 시 이러한 파일 시스템을 WSL에 자동으로 탑재할 수 있습니다.                                                                                                                |
 | root       | 문자열                         | `/mnt/`      | 고정 드라이브가 자동으로 탑재될 디렉터리를 설정합니다. 예를 들어 WSL의 `/windir/`에 디렉터리가 있고 이 디렉터리를 루트로 지정하면 고정 드라이브가 `/windir/c`에 탑재됩니다.                                                                                              |
 | 옵션    | 쉼표로 구분된 값 목록 | 빈 문자열 | 이 값은 기본 DrvFs 탑재 옵션 문자열에 추가됩니다. **DrvFs별 옵션만 지정할 수 있습니다.** 탑재 이진 파일이 일반적으로 플래그로 구문 분석되는 옵션은 지원되지 않습니다. 이러한 옵션을 명시적으로 지정하려면 원하는 모든 드라이브를 /etc/fstab에 포함시켜야 합니다. |
@@ -339,8 +339,8 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 | key | 값 | default | 정보|
 |:----|:----|:----|:----|
 | 커널(kernel) | 문자열 | Microsoft에서 빌드된 커널을 제공 받은 수신함 | 사용자 지정 Linux 커널의 절대 Windows 경로입니다. |
-| 메모리 | 크기 | Windows에서 총 메모리의 80% | WSL 2 VM에 할당할 메모리의 양입니다. |
-| 프로세서 | 숫자 | Windows에서 동일한 수의 프로세서 | WSL 2 VM에 할당할 프로세서 수입니다. |
+| 메모리 | 크기 | Windows 또는 8GB에서 총 메모리의 50% 중 더 작은 쪽 20175 이전 빌드: Windows에서 총 메모리의 80% | WSL 2 VM에 할당할 메모리의 양입니다. |
+| 프로세서 | number | Windows에서 동일한 수의 프로세서 | WSL 2 VM에 할당할 프로세서 수입니다. |
 | localhostForwarding | boolean | `true` | WSL 2 VM의 와일드 카드 또는 localhost에 바인딩된 포트를 localhost: port를 통해 호스트에서 연결할 수 있는지 여부를 지정 하는 부울입니다. |
 | kernelCommandLine | 문자열 | 비어 있음 | 추가 커널 명령줄 인수입니다. |
 | swap | 크기 | Windows에서 메모리 크기의 25%가 가장 가까운 GB로 반올림 됨 | WSL 2 VM에 추가할 스왑 공간의 크기 이며, 스왑 파일이 없는 경우 0입니다. |
@@ -348,6 +348,6 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 
 * 참고:이 값은 Windows 빌드 19041에 적용 되며, 참가자 프로그램의 Windows 빌드에서 다를 수 있습니다.
 
-값이 인 항목은 `path` 이스케이프 된 백슬래시가 포함 된 Windows 경로 여야 합니다. 예:`C:\\Temp\\myCustomKernel`
+값이 인 항목은 `path` 이스케이프 된 백슬래시가 포함 된 Windows 경로 여야 합니다. 예: `C:\\Temp\\myCustomKernel`
 
 값이 인 항목은 `size` 크기와 그 뒤에 단위를 사용 해야 합니다 (예: `8GB` 또는) `512MB` .

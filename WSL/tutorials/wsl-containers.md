@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, windows 10, docker, 컨테이너
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a972cd6f179059e0841e1aef4bc3929fa46fcc4d
-ms.sourcegitcommit: 1c7f2e9928672ad3941a9327162595cb73ef5a3f
+ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609725"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818755"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>WSL 2에서 Docker 원격 컨테이너 시작
 
@@ -28,7 +28,7 @@ Docker 컨테이너는 가상 머신과 비슷하지만 전체 가상 운영 체
 
 자세히 알아보려면 Microsoft Learn에서 [Docker 컨테이너 소개](https://docs.microsoft.com/learn/modules/intro-to-docker-containers/) 를 확인 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 컴퓨터에 Windows 10이 실행 되 고 있는지 확인 하 고 버전 2004, **빌드 18362** 이상 [으로 업데이트](ms-settings:windowsupdate)합니다.
 - [WSL을 사용 하도록 설정 하 고, Linux 배포를 설치 하 고, wsl 2로 업데이트](https://docs.microsoft.com/windows/wsl/install-win10)합니다.

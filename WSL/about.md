@@ -6,12 +6,12 @@ ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: c468f501894df9dfde4323471a6d20569ac82e9c
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 2b79473f620c39084bc9b7a385d4e16e3fe34d77
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88865960"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818675"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템이란?
 

@@ -2,15 +2,15 @@
 title: WSL(Linux용 Windows 하위 시스템) 배포판을 수동으로 다운로드
 description: Linux용 Windows 하위 시스템 배포판을 수동으로 다운로드하는 방법에 대한 지침입니다.
 keywords: wsl, linux 용 windows 하위 시스템, 수동 설치, 수동으로 설치, microsoft store, windows 10, curl, Add-AppxPackage, 장기 서비스, LTSC
-ms.date: 05/28/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
-ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
+ms.openlocfilehash: 04b991d1019f2187a01189695e4078f4d8a8ba1f
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746279"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719142"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux용 Windows 하위 시스템 배포판 패키지를 수동으로 다운로드
 
@@ -40,7 +40,7 @@ Microsoft Store 앱을 사용할 수 없는 경우 다음 링크를 클릭하여
 원하는 경우 명령줄을 통해 기본 배포판을 다운로드할 수도 있습니다.
 
  ### <a name="download-using-powershell"></a>PowerShell을 사용하여 다운로드
- PowerShell을 사용하여 배포판을 다운로드하려면 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1) cmdlet을 사용합니다. Ubuntu 16.04를 다운로드하는 샘플 명령은 다음과 같습니다.
+ PowerShell을 사용하여 배포판을 다운로드하려면 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest) cmdlet을 사용합니다. Ubuntu 16.04를 다운로드하는 샘플 명령은 다음과 같습니다.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -56,7 +56,7 @@ Windows 10 Spring 2018 업데이트(및 그 이상 버전)에는 명령줄에서
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-위의 예에서는 PowerShell에서 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)의 PowerShell curl 별칭이 아닌 실제 curl 실행 파일이 호출되도록 `curl`이 아닌 `curl.exe`가 실행됩니다.
+위의 예에서는 PowerShell에서 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest)의 PowerShell curl 별칭이 아닌 실제 curl 실행 파일이 호출되도록 `curl`이 아닌 `curl.exe`가 실행됩니다.
 
 > 참고: Cmd 셸 및/또는 `.bat` / `.cmd` 스크립트를 사용하여 다운로드 단계를 호출/스크립팅해야 하는 경우 `curl`을 사용하는 것이 좋습니다.
 
@@ -68,4 +68,4 @@ Add-AppxPackage .\app_name.appx
 
 Windows Server를 사용하는 경우 [Windows Server](install-on-server.md) 설명서 페이지에서 설치 지침을 확인할 수 있습니다.
 
-배포가 설치되면 일반 지침에 따라 [WSL 2로 업데이트](./install-win10.md#update-to-wsl-2)하거나 [새 사용자 계정 및 암호 작성](./user-support.md)을 수행하세요.
+배포가 설치되면 일반 지침에 따라 [WSL 2로 업데이트](./install-win10.md#step-2---update-to-wsl-2)하거나 [새 사용자 계정 및 암호 작성](./user-support.md)을 수행하세요.

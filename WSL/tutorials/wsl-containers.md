@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, windows 10, docker, 컨테이너
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 5a1187336341d73f662b7e9f27b19df4fd0e1e73
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818755"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413334"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>WSL 2에서 Docker 원격 컨테이너 시작
 
@@ -24,17 +24,17 @@ Docker는 컨테이너를 사용 하 여 응용 프로그램을 만들고 배포
 
 Docker 컨테이너는 가상 머신과 비슷하지만 전체 가상 운영 체제를 만들지는 않습니다. 대신 Docker를 사용 하면 앱이 실행 중인 시스템과 동일한 Linux 커널을 사용할 수 있습니다. 이를 통해 응용 프로그램 패키지는 호스트 컴퓨터에 아직 없는 부품만 필요로 하 여 패키지 크기를 줄이고 성능을 향상 시킬 수 있습니다.
 
-[Kubernetes](https://docs.microsoft.com/azure/aks/)같은 도구와 함께 Docker 컨테이너를 사용 하는 지속적인 가용성은 컨테이너의 인기를 위한 또 다른 이유입니다. 이렇게 하면 여러 버전의 앱 컨테이너를 서로 다른 시간에 만들 수 있습니다. 업데이트 또는 유지 관리를 위해 전체 시스템을 중단 하는 대신 각 컨테이너 (및 특정 마이크로 서비스)를 즉석에서 바꿀 수 있습니다. 모든 업데이트를 사용 하 여 새 컨테이너를 준비 하 고, 프로덕션을 위해 컨테이너를 설정 하 고, 준비가 되 면 새 컨테이너를 가리킬 수 있습니다. 컨테이너를 사용 하 여 여러 버전의 앱을 보관 하 고 필요한 경우 안전 대체로 계속 실행할 수도 있습니다.
+[Kubernetes](/azure/aks/)같은 도구와 함께 Docker 컨테이너를 사용 하는 지속적인 가용성은 컨테이너의 인기를 위한 또 다른 이유입니다. 이렇게 하면 여러 버전의 앱 컨테이너를 서로 다른 시간에 만들 수 있습니다. 업데이트 또는 유지 관리를 위해 전체 시스템을 중단 하는 대신 각 컨테이너 (및 특정 마이크로 서비스)를 즉석에서 바꿀 수 있습니다. 모든 업데이트를 사용 하 여 새 컨테이너를 준비 하 고, 프로덕션을 위해 컨테이너를 설정 하 고, 준비가 되 면 새 컨테이너를 가리킬 수 있습니다. 컨테이너를 사용 하 여 여러 버전의 앱을 보관 하 고 필요한 경우 안전 대체로 계속 실행할 수도 있습니다.
 
-자세히 알아보려면 Microsoft Learn에서 [Docker 컨테이너 소개](https://docs.microsoft.com/learn/modules/intro-to-docker-containers/) 를 확인 하세요.
+자세히 알아보려면 Microsoft Learn에서 [Docker 컨테이너 소개](/learn/modules/intro-to-docker-containers/) 를 확인 하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - 컴퓨터에 Windows 10이 실행 되 고 있는지 확인 하 고 버전 2004, **빌드 18362** 이상 [으로 업데이트](ms-settings:windowsupdate)합니다.
-- [WSL을 사용 하도록 설정 하 고, Linux 배포를 설치 하 고, wsl 2로 업데이트](https://docs.microsoft.com/windows/wsl/install-win10)합니다.
-- [Linux 커널 업데이트 패키지를 다운로드 하 여 설치](https://docs.microsoft.com/windows/wsl/wsl2-kernel)합니다.
+- [WSL을 사용 하도록 설정 하 고, Linux 배포를 설치 하 고, wsl 2로 업데이트](../install-win10.md)합니다.
+- [Linux 커널 업데이트 패키지를 다운로드 하 여 설치](/windows/wsl/wsl2-kernel)합니다.
 - [Visual Studio Code를 설치](https://code.visualstudio.com/download) 합니다 *(선택 사항)*. 이렇게 하면 원격 Docker 컨테이너 내에서 코딩 및 디버깅 하 고 Linux 배포에 연결 하는 기능을 포함 하 여 최상의 환경을 제공 합니다.
-- [Windows 터미널을 설치](https://docs.microsoft.com/windows/terminal/get-started) 합니다 *(선택 사항)*. 이렇게 하면 동일한 인터페이스에서 여러 터미널을 사용자 지정 하 고 여는 기능 (Ubuntu, Debian, PowerShell, Azure CLI 또는 선호 하는 항목 포함)을 비롯 하 여 최상의 환경을 제공 합니다.
+- [Windows 터미널을 설치](/windows/terminal/get-started) 합니다 *(선택 사항)*. 이렇게 하면 동일한 인터페이스에서 여러 터미널을 사용자 지정 하 고 여는 기능 (Ubuntu, Debian, PowerShell, Azure CLI 또는 선호 하는 항목 포함)을 비롯 하 여 최상의 환경을 제공 합니다.
 - Docker [허브에서 DOCKER ID에 등록](https://hub.docker.com/signup) 합니다 *(선택 사항)*.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Docker 컨테이너는 가상 머신과 비슷하지만 전체 가상 운영 체
 
 Windows 용 Docker Desktop에서 WSL 2 백 엔드를 지 원하는 경우 Linux 기반 개발 환경에서 작업 하 고, 코드 편집 및 디버깅을 위해 Visual Studio Code를 사용 하 고, Windows의 Microsoft Edge 브라우저에서 컨테이너를 실행 하는 동안 linux 기반 개발 환경에서 작업을 수행할 수 있습니다.
 
-Docker를 설치 하려면 ( [WSL 2](https://docs.microsoft.com/windows/wsl/install-win10)를 이미 설치한 후):
+Docker를 설치 하려면 ( [WSL 2](../install-win10.md)를 이미 설치한 후):
 
 1. [Docker Desktop](https://docs.docker.com/docker-for-windows/wsl/#download) 을 다운로드 하 고 설치 지침을 따릅니다.
 
@@ -84,7 +84,7 @@ WSL 2에서 Docker를 사용 하 여 앱 개발을 시작 하려면 원격 WSL �
 
 Docker를 사용 하 여 기존 앱 프로젝트에 대 한 개발 컨테이너를 만들어 보겠습니다.
 
-1. 이 예제에서는 Python 개발 환경에서 [Django에 대 한 내 Hello World 자습서](https://docs.microsoft.com/windows/python/web-frameworks#hello-world-tutorial-for-django) 의 소스 코드를 사용 하 여 문서를 설정 합니다. 사용자 고유의 프로젝트 소스 코드를 사용 하려는 경우이 단계를 건너뛸 수 있습니다. GitHub에서 내 HelloWorld-Django 웹 앱을 다운로드 하려면 WSL 터미널 (예: Ubuntu)을 열고 다음을 입력 합니다. `git clone https://github.com/mattwojo/helloworld-django.git`
+1. 이 예제에서는 Python 개발 환경에서 [Django에 대 한 내 Hello World 자습서](/windows/python/web-frameworks#hello-world-tutorial-for-django) 의 소스 코드를 사용 하 여 문서를 설정 합니다. 사용자 고유의 프로젝트 소스 코드를 사용 하려는 경우이 단계를 건너뛸 수 있습니다. GitHub에서 내 HelloWorld-Django 웹 앱을 다운로드 하려면 WSL 터미널 (예: Ubuntu)을 열고 다음을 입력 합니다. `git clone https://github.com/mattwojo/helloworld-django.git`
 
     > [!NOTE]
     > 에서 도구를 사용 하는 것과 동일한 파일 시스템에 항상 코드를 저장 합니다. 이로 인해 파일 액세스 성능이 더 빨라집니다. 이 예제에서는 Ubuntu (Linux 배포판)를 사용 하며, 프로젝트 파일을 WSL 파일 시스템에 저장 하려고 합니다 `\\wsl\` . Windows 파일 시스템에 프로젝트 파일을 저장 하면 WSL에서 Linux 도구를 사용 하 여 해당 파일에 액세스할 때 성능이 크게 저하 됩니다.

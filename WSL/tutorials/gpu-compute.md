@@ -5,12 +5,12 @@ keywords: wsl, windows, windows 하위 시스템, gpu 계산, gpu 가속, NVIDIA
 ms.date: 06/17/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f101022dec534055905b25619a6c4fcee36f3f7d
-ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
+ms.openlocfilehash: bc20f2d3f1da646ba01dcdc00de8eca6c3825ec8
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947417"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413314"
 ---
 # <a name="gpu-accelerated-machine-learning-training-in-the-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템의 GPU 가속 기계 학습 교육
 
@@ -22,7 +22,7 @@ ms.locfileid: "84947417"
 
 ## <a name="install-and-set-up"></a>설치 및 설정
 
-WSL 2 지원에 대 한 자세한 내용과 DirectML 문서 내의 [GPU 가속 교육 가이드](https://docs.microsoft.com/windows/win32/direct3d12/gpu-accelerated-training) 에서 기계 학습 모델 학습을 시작 하는 방법을 알아보세요. 이 가이드에서는 다음 내용을 다룹니다.
+WSL 2 지원에 대 한 자세한 내용과 DirectML 문서 내의 [GPU 가속 교육 가이드](/windows/win32/direct3d12/gpu-accelerated-training) 에서 기계 학습 모델 학습을 시작 하는 방법을 알아보세요. 이 가이드에서는 다음 내용을 다룹니다.
 
 * DirectML을 사용 하 여 TensorFlow를 설정 하는 초보자 또는 학생을 위한 지침
 * 전문가 들이 기존에 사용할 수 있는 워크플로를 실행 하기 시작 하기 위한 지침

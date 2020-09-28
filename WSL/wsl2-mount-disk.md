@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, disk, ext4, filesyst
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8053b817dab0639789401e2fcfb116f6f8e722a7
-ms.sourcegitcommit: a949595f3947c733f0bcdc54b30ccda5ae61577c
+ms.openlocfilehash: 5ea7d7adae42a44b040408575e7345c456f3acac
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89671210"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413284"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2에서 linux 디스크 탑재 시작 (미리 보기)
 
@@ -127,7 +127,7 @@ wsl --mount <Diskpath> -t vfat
 wsl --mount <Diskpath> -p <PartitionIndex>
 ```
 
-디스크가 MBR (마스터 부트 레코드) 또는 GPT (GUID 파티션 테이블) 인 경우에만 작동 합니다. [파티션 스타일 (MBR 및 GPT)에 대해 읽어 보십시오](https://docs.microsoft.com/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr).
+디스크가 MBR (마스터 부트 레코드) 또는 GPT (GUID 파티션 테이블) 인 경우에만 작동 합니다. [파티션 스타일 (MBR 및 GPT)에 대해 읽어 보십시오](/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr).
 
 ### <a name="specifying-mount-options"></a>탑재 옵션 지정
 
@@ -137,7 +137,7 @@ wsl --mount <Diskpath> -p <PartitionIndex>
 wsl --mount <DiskPath> -o <MountOptions>
 ```
 
-예:
+예제:
 
 ```powershell
 wsl --mount <DiskPath> -o "data=ordered"

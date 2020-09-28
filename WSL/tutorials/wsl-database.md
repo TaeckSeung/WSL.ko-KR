@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, MySQL MongoDB, PostgreSQL, SQLite, Mic
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: b7e4f7477741a931c4ee71e07736bac115443ac9
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719132"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413304"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에서 데이터베이스 시작
 
@@ -19,9 +19,9 @@ ms.locfileid: "90719132"
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - Windows 10 실행, [버전 2004로 업데이트](ms-settings:windowsupdate), **빌드 19041** 이상.
-- [Wsl을 사용 및 설치 하 고 wsl 2로 업데이트 했습니다](https://docs.microsoft.com/windows/wsl/install-win10).
-- [Linux 배포](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (이 예에서는 Ubuntu 18.04)가 설치 되어 있습니다.
-- Ubuntu 18.04 배포가 [WSL 2 모드로 실행](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2)되 고 있는지 확인 합니다. WSL은 v1 또는 v2 모드에서 배포를 실행할 수 있습니다. PowerShell을 열고 다음을 입력 하 여이를 확인할 수 있습니다. `wsl -l -v`
+- [Wsl을 사용 및 설치 하 고 wsl 2로 업데이트 했습니다](../install-win10.md).
+- [Linux 배포](../install-win10.md#step-6---install-your-linux-distribution-of-choice) (이 예에서는 Ubuntu 18.04)가 설치 되어 있습니다.
+- Ubuntu 18.04 배포가 [WSL 2 모드로 실행](../install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2)되 고 있는지 확인 합니다. WSL은 v1 또는 v2 모드에서 배포를 실행할 수 있습니다. PowerShell을 열고 다음을 입력 하 여이를 확인할 수 있습니다. `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>데이터베이스 시스템의 차이점
 
@@ -29,7 +29,7 @@ ms.locfileid: "90719132"
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
+- [Microsoft SQL Server](/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (nosql)
 - [Redis](https://redis.io/topics/introduction) (nosql)
@@ -157,7 +157,7 @@ MongoDB 문서에서 자세히 알아보세요.
 
 ## <a name="install-microsoft-sql-server"></a>Microsoft SQL Server 설치
 
-WSL (Ubuntu 18.04)에 SQL Server를 설치 하려면이 빠른 시작: [ubuntu에 SQL Server 설치 및 데이터베이스 만들기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu)를 따릅니다.
+WSL (Ubuntu 18.04)에 SQL Server를 설치 하려면이 빠른 시작: [ubuntu에 SQL Server 설치 및 데이터베이스 만들기](/sql/linux/quickstart-install-connect-ubuntu)를 따릅니다.
 
 VS Code에서 Microsoft SQL Server 데이터베이스를 사용 하려면 [MSSQL 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)을 시도 합니다.
 
@@ -226,4 +226,4 @@ WSL 배포에서 현재 실행 중인 서비스를 확인 하려면 다음을 �
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [Windows 10에서 개발 환경 설정](https://docs.microsoft.com/windows/dev-environment/)
+- [Windows 10에서 개발 환경 설정](/windows/dev-environment/)

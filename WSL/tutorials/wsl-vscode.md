@@ -5,16 +5,16 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, vs code, 원격 확�
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d7bd4f582f504ea3c4bd814454b1dc881ffed2
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948657"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413344"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템을 사용 하 여 Visual Studio Code 시작
 
-원격 WSL 확장과 함께 Visual Studio Code를 사용 하면 VS Code에서 직접 WSL을 전체 시간 개발 환경으로 사용할 수 있습니다. 다음을 할 수 있습니다.
+원격 WSL 확장과 함께 Visual Studio Code를 사용 하면 VS Code에서 직접 WSL을 전체 시간 개발 환경으로 사용할 수 있습니다. 다음을 수행할 수 있습니다.
 
 * Linux 기반 환경에서 개발
 * Linux 특정 도구 체인 및 유틸리티 사용
@@ -56,7 +56,7 @@ sudo apt-get install wget ca-certificates
 
 ### <a name="from-the-command-line"></a>명령줄에서
 
-WSL 배포에서 프로젝트를 열려면 분포의 명령줄을 열고 다음을 입력 합니다.`code .`
+WSL 배포에서 프로젝트를 열려면 분포의 명령줄을 열고 다음을 입력 합니다. `code .`
 
 ![VS Code 원격 서버를 사용 하 여 WSL 프로젝트 열기](../media/wsl-open-vs-code.gif)
 
@@ -92,7 +92,7 @@ Git를 설치 하려면 [Linux 용 Windows 하위 시스템을 사용 하도록 
 
 ## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치(선택 사항)
 
-새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 사용자 고유의 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 (색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. 자세한 내용은 [Windows 터미널 문서](https://docs.microsoft.com/windows/terminal)를 확인 하세요.
+새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 사용자 고유의 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 (색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. 자세한 내용은 [Windows 터미널 문서](/windows/terminal)를 확인 하세요.
 
 1. 다음과 같이 [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
 
@@ -105,7 +105,7 @@ Git를 설치 하려면 [Linux 용 Windows 하위 시스템을 사용 하도록 
 * [WSL 자습서를 사용한 원격 개발 자습서](https://code.visualstudio.com/remote-tutorials/wsl/getting-started)
 * [WSL 2 및 VS Code에서 Docker 사용](https://code.visualstudio.com/blogs/2020/03/02/docker-in-wsl2)
 * [VS Code에서 c + + 및 WSL 사용](https://code.visualstudio.com/docs/cpp/config-wsl)
-* [Linux용 원격 R 서비스](https://docs.microsoft.com/visualstudio/rtvs/setting-up-remote-r-service-on-linux?view=vs-2017)
+* [Linux용 원격 R 서비스](/visualstudio/rtvs/setting-up-remote-r-service-on-linux)
 
 다음과 같은 몇 가지 추가 확장도 고려해 볼 수 있습니다.
 

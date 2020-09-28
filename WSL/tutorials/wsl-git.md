@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, git, github, 버전 
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c48234be5c3867d771363aaa5e630d8ebe378364
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 2d05e83d4c87b1b03028856bcec9d5205205535a
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427220"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413354"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템에서 Git 사용 시작
 
@@ -40,7 +40,7 @@ Git는 Linux 배포판에 대 한 대부분의 Windows 하위 시스템에 이�
 
 Git를 설치 하려면 [Linux 용 Git 다운로드](https://git-scm.com/download/linux) 사이트를 참조 하세요. 각 Linux 배포에는 자체 패키지 관리자와 install 명령이 있습니다.
 
-Ubuntu/Debian에서 안정적인 최신 GIt 버전의 경우 다음 명령을 입력 합니다.
+Ubuntu/Debian에서 안정적인 최신 Git 버전의 경우 다음 명령을 입력 합니다.
 
 ```bash
 sudo apt-get install git
@@ -99,7 +99,7 @@ Windows, WSL 또는 컨테이너와 동일한 리포지토리 폴더를 사용 �
 
 Windows 및 Linux는 서로 다른 기본 줄 끝을 사용 하기 때문에 Git은 줄 끝에서 차이가 없는 다 수의 수정 된 파일을 보고할 수 있습니다. 이 문제가 발생 하지 않도록 하려면 파일을 사용 하 여 줄 끝 변환을 사용 하지 않도록 설정 `.gitattributes` 하거나 Windows 쪽에서 전역적으로 변환을 사용 하지 않도록 설정할 수 있습니다. [Git 줄 종료 문제를 해결 하는 방법에 대 한이 VS Code 문서](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)를 참조 하세요.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 * [WSL & VS Code](./wsl-vscode.md)
 * [GitHub 학습 랩: 온라인 과정](https://lab.github.com/)

@@ -5,20 +5,20 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 7f1ad56a6f4261ad0455ee93bdeb5e31d0ed10d1
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427190"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818725"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>새 Linux 배포에 대한 사용자 계정 및 암호 만들기
 
 [WSL을 사용하도록 설정하고 Microsoft Store에서 Linux 배포를 설치](./install-win10.md)하면, 새로 설치된 Linux 배포를 열 때 완료해야 하는 첫 번째 단계는 **사용자 이름** 및 **암호**를 포함하여 계정을 만드는 것입니다.
 
-- 이 **사용자 이름** 및 **암호**는 Linux 배포에만 적용되며, Windows 사용자 이름에는 적용되지 않습니다.
+- 이 **사용자 이름** 및 **암호**는 설치하는 각각의 개별 Linux 배포에만 적용되며, Windows 사용자 이름과는 관련이 없습니다.
 
-- 이 **사용자 이름** 및 **암호**를 만들면 해당 계정이 배포의 기본 사용자가 되고 시작 시 자동으로 로그인됩니다.
+- **사용자 이름** 및 **암호**를 만들면 해당 계정이 배포의 기본 사용자가 되고 시작 시 자동으로 로그인됩니다.
 
 - 이 계정은 `sudo`(슈퍼 사용자 작업) 관리 명령을 실행할 수 있는 Linux 관리자로 간주됩니다.
 

@@ -6,23 +6,33 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 57d06a8666f8003b187f043bd18655a9287d8a63
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866101"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818695"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-20211"></a>빌드 20211
+빌드 20211에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/)를 참조하세요.
+
+* 실제 또는 가상 디스크를 탑재하는 `wsl.exe --mount`를 도입했습니다. 자세한 내용은 [Windows 및 WSL 2에서 Linux 파일 시스템 액세스](https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/)를 참조하세요.
+* VM이 유휴 상태인지 확인할 때 LxssManager 서비스의 작동 중단이 수정되었습니다. [GH 5768]
+* 압축된 VHD 파일을 지원합니다. [GH 4103]
+* c:\windows\system32\lxss\lib에 설치된 Linux 사용자 모드 라이브러리가 OS 업그레이드에서 유지되도록 합니다. [GH 5848]
+* `wsl --install --list-distributions`를 사용하여 설치할 수 있는 사용 가능한 배포를 나열하는 기능이 추가되었습니다.
+* 이제 사용자가 로그오프하면 WSL 인스턴스가 종료됩니다.
 
 ## <a name="build-20190"></a>빌드 20190
 빌드 20190에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/)를 참조하세요.
 
-* WSL1 인스턴스가 시작되지 않는 버그 수정 [GH 5633]
-* Windows 프로세스 출력을 리디렉션할 때 반응이 없는 문제 수정 [GH 5648]
-* VM 유휴 시간 제한(wsl2.vmIdleTimeout=<time_in_ms>)을 제어하는 %userprofile%\\.wslconfig 옵션 추가
-* WSL에서 앱 실행 별칭 시작 지원
-* wsl.exe --install에 WSL2 커널 및 배포를 설치하기 위한 지원이 추가됨
+* WSL1 인스턴스가 시작되지 않도록 하는 버그가 수정되었습니다. [GH 5633]
+* Windows 프로세스 출력을 리디렉션하는 경우 발생하는 중단 문제가 해결되었습니다. [GH 5648]
+* VM 유휴 시간 제한(wsl2.vmIdleTimeout=<time_in_ms>)을 제어하는 %userprofile%\\.wslconfig 옵션이 추가되었습니다.
+* WSL에서 앱 실행 별칭 시작을 지원합니다.
+* WSL2 커널 및 배포를 wsl.exe --install에 설치하기 위한 지원이 추가되었습니다.
 
 ## <a name="build-20175"></a>빌드 20175
 빌드 20175에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)를 참조하세요.

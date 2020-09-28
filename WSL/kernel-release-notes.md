@@ -5,19 +5,19 @@ keywords: 릴리스 정보, wsl, windows, linux용 windows 하위 시스템, win
 ms.date: 06/09/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 32b65bcde3df01b25f0361493a172e754e78e101
-ms.sourcegitcommit: 43d4056eefe0c71ecd9a0fbd5a7a58dd18fa9829
+ms.openlocfilehash: eb93135355384013b93b4b5c4af03a582280febf
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89615544"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719122"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux-kernel"></a>Linux용 Windows 하위 시스템 커널의 릴리스 정보
 
 [전체 Linux 커널을 사용하는](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/) WSL 2 배포판에 대한 지원이 추가되었습니다. 이 Linux 커널은 오픈 소스이며, 소스 코드는 [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel) 리포지토리에 제공됩니다. 이 Linux 커널은 Microsoft 업데이트를 통해 머신에 제공되며, Windows 이미지의 일부로 제공되는 Linux용 Windows 하위 시스템에 대한 별도의 릴리스 일정을 따릅니다.
 
 ## <a name="419128-microsoft-standard"></a>4.19.128-microsoft-standard
-*출시 날짜*: 시험판 및 수동 설치를 통해 사용 가능
+*출시 날짜*: 2020/09/15
 
 [공식 Github 릴리스 링크](https://github.com/microsoft/WSL2-Linux-Kernel/releases/tag/4.19.128-microsoft-standard)입니다.
 

@@ -5,16 +5,16 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2335db4daf8b9c5c67ad04a1fc94339b6c01e546
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427200"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818715"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
-WSL 관련 문제에 대한 지원은 GitHub 리포지토리를 참조하세요.
+WSL 관련 문제에 대한 지원은 https://github.com/Microsoft/wsl/issues GitHub 리포지토리를 참조하세요.
 
 ## <a name="search-for-any-existing-issues-related-to-your-problem"></a>문제와 관련된 기존 문제 검색
 
@@ -44,7 +44,7 @@ WSL 설명서에 기여하려면 끌어오기 요청을 https://github.com/Micro
 
 이는 머신이 아직 WSL 2의 백포트를 가져오지 않았기 때문일 수 있습니다. 이를 해결하는 가장 간단한 방법은 Windows 설정으로 이동하여 '업데이트 확인'을 클릭하여 시스템에 최신 업데이트를 설치하는 것입니다. [여기](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)에서 백포트에 대한 전체 지침을 볼 수 있습니다. 
 
-'업데이트 확인'을 눌렀는데도 업데이트를 받지 못하면 [이 링크를 따라](http://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116) KB KB4566116을 수동으로 설치할 수 있습니다.  
+'업데이트 확인'을 눌렀는데도 업데이트를 받지 못하면 [이 링크를 따라](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116) KB KB4566116을 수동으로 설치할 수 있습니다.  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>오류: `wsl --set-default-version 2`인 경우 0x1bc
 '표시 언어' 또는 '시스템 로캘' 설정이 영어가 아닌 경우 발생할 수 있습니다.

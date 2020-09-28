@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: a021dc3c6c3c2a14fea631f2733d2b846c6fe3ad
-ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
+ms.openlocfilehash: 458aadc89e0f8e63e7d7bad780ed8c5fad0de702
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89058488"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818685"
 ---
 # <a name="wsl-2-faqs"></a>WSL 2 FAQ
 
@@ -30,13 +30,13 @@ WSL 2는 Windows 10 Home을 포함하여 WSL이 현재 제공되는 모든 SKU�
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>WSL 2 및 기타 타사 가상화 도구(예: VMware 또는 VirtualBox)를 실행할 수 있나요?
 
-Hyper-V를 사용 중인 경우 일부 타사 애플리케이션을 작동할 수 없습니다. 즉, VMware 및 VirtualBox와 같이 WSL 2를 사용하도록 설정된 경우에는 일부 타사 애플리케이션이 실행되지 않습니다. 그러나 최근 VirtualBox와 VMware는 모두 Hyper-V와 WSL2를 지원하는 버전을 릴리스했습니다! [VirtualBox의 변경 내용은 여기][1] 그리고 [VMware의 변경 내용은 여기][4]에서 자세히 알아볼 수 있습니다.
+Hyper-V를 사용 중인 경우 일부 타사 애플리케이션을 작동할 수 없습니다. 즉, VMware 및 VirtualBox와 같이 WSL 2를 사용하도록 설정된 경우에는 일부 타사 애플리케이션이 실행되지 않습니다. 그러나 최근에 VirtualBox와 VMware는 모두 Hyper-V 및 WSL2를 지원하는 버전을 릴리스했습니다! [VirtualBox 변경 내용][1] 및 [VMware 변경 내용][4]에서 자세히 알아보세요. 문제 해결은 [GitHub의 WSL 리포지토리에 있는 VirtualBox 문제 토론](https://github.com/MicrosoftDocs/WSL/issues?q=is%3Aissue+virtualbox+sort%3Acomments-desc)을 참조하세요.
 
 저희는 타사의 Hyper-V 통합을 지원하기 위해 지속적으로 솔루션을 개발하고 있습니다. 예를 들어 타사 가상화 공급자가 Hyper-V와 호환되는 소프트웨어를 만드는 데 사용할 수 있는 [하이퍼바이저 플랫폼][2]이라는 API 세트를 제공합니다. 이를 통해 애플리케이션은 현재 Hyper-V와 호환되는 VirtualBox 6 이상 버전과 [Google Android Emulator][3] 같은 에뮬레이션에 Hyper-V 아키텍처를 사용할 수 있습니다.
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2의 GPU에 액세스할 수 있나요? 하드웨어 지원을 늘릴 계획이 있나요?
 
-WSL 2 배포판 내부의 GPU 액세스 지원을 릴리스했습니다. 즉, 이제 빅 데이터 세트가 관련될 때 기계 학습, AI 및 데이터 과학 시나리오에 대해 WSL을 더 쉽게 사용할 수 있습니다. [여기에서 GPU 지원을 시작하기 위한](./tutorials/gpu-compute) 자습서를 찾을 수 있습니다. 현재 WSL 2에는 직렬 지원 또는 USB 디바이스 지원이 포함되어 있지 않습니다. 이러한 기능을 추가하는 가장 좋은 방법을 찾고 있습니다.
+WSL 2 배포판 내부의 GPU 액세스 지원을 릴리스했습니다. 즉, 이제 빅 데이터 세트가 관련될 때 기계 학습, AI 및 데이터 과학 시나리오에 대해 WSL을 더 쉽게 사용할 수 있습니다. [GPU 지원 시작](./tutorials/gpu-compute.md) 자습서를 확인하세요. 현재 WSL 2에는 직렬 지원 또는 USB 디바이스 지원이 포함되어 있지 않습니다. 이러한 기능을 추가하는 가장 좋은 방법을 찾고 있습니다.
 
 ## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>WSL 2가 네트워킹 애플리케이션을 사용할 수 있나요?
 

@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linu
 ms.topic: article
 ms.date: 09/15/2020
 ms.localizationpriority: high
-ms.openlocfilehash: e8046e4ec95e599014c5e5c09a24e7fac44da43d
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: 6bfa3a67418e2b5c164f3506d0ee9180df828377
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719162"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413204"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux용 Windows 하위 시스템 설명서
 
@@ -37,7 +37,7 @@ Linux용 Windows 하위 시스템을 사용하면 개발자가 기존 가상 머
 
 * [비디오 및 블로그 모음이 포함된 게시물에 대한 개요](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
 * [명령줄 블로그](https://blogs.msdn.microsoft.com/commandline/)(활성)
-* [Linux용 Windows 하위 시스템 블로그](https://blogs.msdn.microsoft.com/wsl/)(기록)
+* [Linux용 Windows 하위 시스템 블로그](/archive/blogs/wsl/)(기록)
 
 ## <a name="posts-and-articles"></a>게시물 및 문서
 

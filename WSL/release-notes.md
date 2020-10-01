@@ -6,12 +6,12 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818695"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413274"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
 
@@ -1184,14 +1184,14 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 ### <a name="fixed"></a>고정
 
-- [직렬 지원을 사용합니다.](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- [직렬 지원을 사용합니다.](/archive/blogs/wsl/serial-support-on-the-windows-subsystem-for-linux)
 - IP 소켓 옵션 IP_OPTIONS가 추가되었습니다. [GH 1116]
 - pwritev 함수를 구현했습니다(파일을 nginx/PHP-FPM으로 업로드하는 동안). [GH 1506]
 - IP 소켓 옵션 IP_MULTICAST_IF 및 IPV6_MULTICAST_IF가 추가되었습니다. [GH 990]
 - 소켓 옵션 IP_MULTICAST_LOOP 및 IPV6_MULTICAST_LOOP에 대한 지원이 추가되었습니다. [GH 1678]
 - 앱 노드, traceroute, dig, nslookup, host에 대한 IP(V6)_MTU 소켓 옵션이 추가되었습니다.
 - IP 소켓 옵션 IPV6_UNICAST_HOPS가 추가되었습니다.
-- [파일 시스템이 향상되었습니다.](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
+- [파일 시스템이 향상되었습니다.](/archive/blogs/wsl/file-system-improvements-to-the-windows-subsystem-for-linux)
     * UNC 경로 탑재 허용
     * drvfs에서 CDFS 지원 사용
     * drvfs의 네트워크 파일 시스템에 대한 권한을 올바르게 처리
@@ -1208,7 +1208,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 빌드 16170에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)를 참조하세요.<br/>
 
-WSL 테스트에 대해 설명하는 새로운 [블로그 게시물](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)을 발표했습니다.
+WSL 테스트에 대해 설명하는 새로운 [블로그 게시물](/archive/blogs/wsl/testing-the-windows-subsystem-for-linux)을 발표했습니다.
 
 ### <a name="fixed"></a>고정
 
@@ -1540,7 +1540,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 
 ### <a name="fixed"></a>고정
 
-- Windows에 대한 Pico 프로세스 알림이 개선되었습니다.  추가 정보는 [WSL 블로그](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)에서 찾을 수 있습니다.
+- Windows에 대한 Pico 프로세스 알림이 개선되었습니다.  추가 정보는 [WSL 블로그](/archive/blogs/wsl/wsl-antivirus-and-firewall-compatibility)에서 찾을 수 있습니다.
 - Windows 상호 운용성 덕분에 안정성이 향상되었습니다.
 - EDP(엔터프라이즈 데이터 보호)를 사용하는 경우 bash.exe를 시작할 때 발생하는 0x80070057 오류를 해결했습니다.
 - 그 외에도 여러 버그를 수정하고 기능을 개선했습니다.
@@ -1586,8 +1586,8 @@ $ cmd.exe /c dir
 
 자세한 내용은 아래에서 찾을 수 있습니다.
 
-- [Interop에 대한 WSL 팀 블로그](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [MSDN Interop 설명서](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
+- [Interop에 대한 WSL 팀 블로그](/archive/blogs/wsl/windows-and-ubuntu-interoperability)<br/>
+- [MSDN Interop 설명서](./interop.md)<br/>
 
 ### <a name="fixed"></a>고정
 
@@ -1807,7 +1807,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 
 ### <a name="fixed"></a>고정
 - 8월 2일에 Windows 10 1주년 업데이트를 준비하도록 수정되었습니다.
-  - 1주년 업데이트의 WSL에 대한 자세한 내용은 [블로그](https://blogs.msdn.microsoft.com/wsl/)에서 찾을 수 있습니다.
+  - 1주년 업데이트의 WSL에 대한 자세한 내용은 [블로그](/archive/blogs/wsl/)에서 찾을 수 있습니다.
 
 <br/>
 
@@ -1926,7 +1926,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 ## <a name="build-14342"></a>빌드 14342
 빌드 14342에 대한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/wip14342)를 참조하세요. <br/>
 
-VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microsoft.com/wsl)에서 찾을 수 있습니다. <br/>
+VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](/archive/blogs/wsl/)에서 찾을 수 있습니다. <br/>
 
 ### <a name="fixed"></a>고정
 - Windows 사용자의 사용자 이름에 유니코드 문자가 있을 때 발생하는 설치 이슈를 해결했습니다.

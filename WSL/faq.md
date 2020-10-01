@@ -6,12 +6,12 @@ ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: f769261bab35619b034e2a84e4f308eeb0a93cb4
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719192"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413243"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템에 대한 질문과 대답
 
@@ -45,7 +45,7 @@ WSL은 내부 개발 루프의 일부로 사용하려는 개발자를 대상으�
 
 ## <a name="how-does-this-work"></a>어떻게 작동하나요?
 
-기본 기술에 대해 자세히 알아보려면 이 [블로그](https://blogs.msdn.microsoft.com/wsl/)를 확인하세요.
+기본 기술에 대해 자세히 알아보려면 이 [블로그](/archive/blogs/wsl/)를 확인하세요.
 
 ## <a name="why-would-i-use-wsl-rather-than-linux-in-a-vm"></a>VM에서 Linux 대신 WSL을 사용하는 이유는 무엇인가요?
 
@@ -103,7 +103,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 이제 사용자가 WSL 배포판 내에서 수행하는 모든 Git 작업에서 자격 증명 관리자를 사용합니다. 호스트용으로 캐시된 자격 증명이 이미 있는 경우 자격 증명 관리자에서 액세스됩니다. 그렇지 않다면 자격 증명을 요청하는 대화 상자 응답이 수신됩니다(Linux 콘솔에 있을 경우도).
 
-이 지원은 [Linux 및 Windows 자체의 Windows 하위 시스템 간의 상호 운용성](https://docs.microsoft.com/windows/wsl/interop)을 기반으로 합니다.
+이 지원은 [Linux 및 Windows 자체의 Windows 하위 시스템 간의 상호 운용성](./interop.md)을 기반으로 합니다.
 
 ## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>Linux 앱에서 Windows 파일을 사용하려면 어떻게 하나요?
 
@@ -161,7 +161,7 @@ WSL은 머신의 고정 드라이브를 Linux 배포판의 `/mnt/<drive>` 폴더
   lxrun /uninstall /full
   ```
   
-스토어에서 설치된 WSL 배포는 다른 Windows 앱처럼 마우스 오른쪽 단추로 앱 타일을 클릭하고 [제거]를 클릭하거나 [`Remove-AppxPackage` cmdlet](https://technet.microsoft.com/library/hh856038.aspx)을 사용하여 PowerShell을 통해 제거할 수 있습니다.
+스토어에서 설치된 WSL 배포는 다른 Windows 앱처럼 마우스 오른쪽 단추로 앱 타일을 클릭하고 [제거]를 클릭하거나 [`Remove-AppxPackage` cmdlet](/previous-versions//hh856038(v=technet.10))을 사용하여 PowerShell을 통해 제거할 수 있습니다.
 
 ## <a name="why-does-ping-generate-permission-denied-errors"></a>ping에서 권한 거부 오류가 생성되는 이유는 무엇인가요?
 
@@ -181,7 +181,7 @@ WSL은 레거시 콘솔에서 실행할 수 없습니다. 레거시 콘솔을 �
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows를 업그레이드한 후 bash.exe를 실행하면 "오류: 0x80040154"가 발생하는 이유는 무엇인가요?
 
-Windows 업데이트 중에 "Linux용 Windows 하위 시스템" 기능이 사용하지 않도록 설정될 수 있습니다. 이 문제가 발생하면 Windows 기능을 다시 사용하도록 설정해야 합니다. "Linux용 Windows 하위 시스템" 기능을 사용하도록 설정하는 방법에 대한 지침은 [설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)에서 확인할 수 있습니다.
+Windows 업데이트 중에 "Linux용 Windows 하위 시스템" 기능이 사용하지 않도록 설정될 수 있습니다. 이 문제가 발생하면 Windows 기능을 다시 사용하도록 설정해야 합니다. "Linux용 Windows 하위 시스템" 기능을 사용하도록 설정하는 방법에 대한 지침은 [설치 가이드](./install-win10.md)에서 확인할 수 있습니다.
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL의 표시 언어를 변경하려면 어떻게 하나요?
 

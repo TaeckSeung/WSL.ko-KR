@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 Linux 배포�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
-ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
+ms.openlocfilehash: 8e3568e4ca94f9b381b7827a237c2b637b97ae57
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86093270"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413074"
 ---
 # <a name="windows-interoperability-with-linux"></a>Linux와 Windows의 상호 운용성
 
@@ -240,4 +240,4 @@ Windows 이진 파일은 파일 확장명을 포함하고, 파일 대/소문자�
 
 ## <a name="additional-resources"></a>추가 리소스
 
-* [2016의 상호 운용성에 대한 WSL 블로그 게시물](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)
+* [2016의 상호 운용성에 대한 WSL 블로그 게시물](/archive/blogs/wsl/windows-and-ubuntu-interoperability)

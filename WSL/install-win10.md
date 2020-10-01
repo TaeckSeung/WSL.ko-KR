@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f617f006ae8067da8adbe1449bfcfe5bf32e73a3
-ms.sourcegitcommit: 1232d3b3becc4ceaa113f8ffb0b935c5550f99a2
+ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90777654"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413116"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -43,7 +43,7 @@ WSL 2로 업데이트하려면 Windows 10을 실행해야 합니다.
 버전 및 빌드 번호를 확인하려면 **Windows 로고 키 + R**을 선택하고, **winver**를 입력하고, **확인**을 선택합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) [설정] 메뉴에서 [최신 Windows 버전으로 업데이트](ms-settings:windowsupdate)합니다.
 
 > [!NOTE]
-> Windows 10 버전 1903 또는 1909를 실행하고 있는 경우 Windows 메뉴에서 "설정"을 열고, "업데이트 및 보안"으로 이동한 다음, "업데이트 확인"을 선택합니다. 빌드 번호는 18362.1049 이상 또는 18363.1049 이상이고, 부 빌드 번호는 .1049 이상이어야 합니다. 자세한 정보: [WSL 2 지원이 Windows 10 버전 1903 및 1909에 제공됨](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). [문제 해결 지침](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)을 참조하세요.
+> Windows 10 버전 1903 또는 1909를 실행하고 있는 경우 Windows 메뉴에서 "설정"을 열고, "업데이트 및 보안"으로 이동한 다음, "업데이트 확인"을 선택합니다. 빌드 번호는 18362.1049 이상 또는 18363.1049 이상이고, 부 빌드 번호는 .1049 이상이어야 합니다. 자세한 정보: [WSL 2 지원이 Windows 10 버전 1903 및 1909에 제공됨](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). [문제 해결 지침](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)을 참조하세요.
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>3단계 - Virtual Machine 기능 사용
 
@@ -81,7 +81,7 @@ wsl --set-default-version 2
 ```
 
 > [!NOTE]
-> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다. Windows 10 1주년 업데이트 또는 Creators Update에서 이전 버전(레거시)의 WSL 1을 실행하는 경우 업데이트 오류가 발생할 수 있습니다. 다음 지침에 따라 [레거시 배포판을 제거](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)하세요.
+> WSL 1에서 WSL 2로 업데이트는 대상 배포 크기에 따라 완료하는 데 몇 분이 걸릴 수 있습니다. Windows 10 1주년 업데이트 또는 Creators Update에서 이전 버전(레거시)의 WSL 1을 실행하는 경우 업데이트 오류가 발생할 수 있습니다. 다음 지침에 따라 [레거시 배포판을 제거](./install-legacy.md#uninstallingremoving-the-legacy-distro)하세요.
 >
 > `wsl --set-default-version` 결과가 잘못된 명령이면 `wsl --help`를 입력하세요. `--set-default-version`이 나열되지 않은 경우 OS에서 해당 기능을 지원하지 않으며 버전 1903, 빌드 18362 이상으로 업데이트해야 함을 의미합니다.
 >
@@ -124,9 +124,9 @@ wsl --set-default-version 2
 
 ## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치(선택 사항)
 
-Windows 터미널을 사용하면 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 등 간에 빠르게 전환)을 사용하도록 설정하고, 사용자 지정 키(탭 열기 또는 닫기, 복사 + 붙여넣기 등에 대한 바로 가기 키) 바인딩을 만들고, 검색 기능을 사용하고, 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용자 지정할 수 있습니다. [자세한 정보](https://docs.microsoft.com/windows/terminal)
+Windows 터미널을 사용하면 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 등 간에 빠르게 전환)을 사용하도록 설정하고, 사용자 지정 키(탭 열기 또는 닫기, 복사 + 붙여넣기 등에 대한 바로 가기 키) 바인딩을 만들고, 검색 기능을 사용하고, 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용자 지정할 수 있습니다. [자세한 정보](/windows/terminal)
 
-[Windows 터미널을 설치](https://docs.microsoft.com/windows/terminal/get-started)합니다.
+[Windows 터미널을 설치](/windows/terminal/get-started)합니다.
 
   ![Windows 터미널](media/terminal.png)
 
@@ -185,7 +185,7 @@ wsl --set-default-version 2
 > 이 문제에 대한 업데이트된 정보를 추적할 수 있는 [WSL Docs GitHub 스레드 #4103](https://github.com/microsoft/WSL/issues/4103)을 확인하세요.
 
 - **cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름에는 'wsl'이라는 단어가 들어갈 수 없습니다.**
-  - [Linux용 Windows 하위 시스템 옵션 구성 요소가 설치되었는지](./install-win10.md#step-3---enable-virtual-machine-feature) 확인하세요. 또는 ARM64 디바이스를 사용 중이고 PowerShell에서 이 명령을 실행하는 경우 이 오류가 표시됩니다. [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) 또는 명령 프롬프트에서 `wsl.exe`를 대신 실행하세요.
+  - [Linux용 Windows 하위 시스템 옵션 구성 요소가 설치되었는지](./install-win10.md#step-3---enable-virtual-machine-feature) 확인하세요. 또는 ARM64 디바이스를 사용 중이고 PowerShell에서 이 명령을 실행하는 경우 이 오류가 표시됩니다. [PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) 또는 명령 프롬프트에서 `wsl.exe`를 대신 실행하세요.
 
 - **오류: 이 업데이트는 Linux용 Windows 하위 시스템을 사용하는 컴퓨터에만 적용됩니다.**
   - Linux 커널 업데이트 MSI 패키지를 설치하려면 WSL이 필요하며, 먼저 이를 사용하도록 설정해야 합니다. 실패하면 `This update only applies to machines with the Windows Subsystem for Linux` 메시지가 표시됩니다.

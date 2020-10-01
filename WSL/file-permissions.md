@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 3de8553baf616ee8d5d45f0738615f83df952942
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336076"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413224"
 ---
 # <a name="file-permissions-for-wsl"></a>WSL에 대한 파일 권한
 
@@ -32,7 +32,7 @@ WSL에서 추가할 수 있는 네 가지 NTFS 확장 특성은 다음과 같습
 | $LXMOD | 파일 모드(파일 시스템 권한 8진수 및 형식(예: 0777)) |
 | $LXDEV | 디바이스(디바이스 파일인 경우) |
 
-또한 일반 파일 또는 디렉터리가 아닌 파일(예: symlinks, FIFO, 블록 디바이스, Unix 소켓 및 문자 디바이스)에는 NTFS [재분석 지점](https://docs.microsoft.com/windows/win32/fileio/reparse-points)도 있습니다. 이렇게 하면 확장 특성을 쿼리하지 않고도 지정된 디렉터리에서 파일 종류를 더 빨리 확인할 수 있습니다.
+또한 일반 파일 또는 디렉터리가 아닌 파일(예: symlinks, FIFO, 블록 디바이스, Unix 소켓 및 문자 디바이스)에는 NTFS [재분석 지점](/windows/win32/fileio/reparse-points)도 있습니다. 이렇게 하면 확장 특성을 쿼리하지 않고도 지정된 디렉터리에서 파일 종류를 더 빨리 확인할 수 있습니다.
 
 ## <a name="file-access-scenarios"></a>파일 액세스 시나리오
 

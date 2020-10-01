@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 07/24/2018
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7ce4455dd4ab5e75d69ba841d7dfb7963af9c891
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 11dc84d3a58b51241c7c63e8ca35eba94a12508b
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235788"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413214"
 ---
 # <a name="initializing-a-newly-installed-distribution"></a>새로 설치된 배포 초기화
 
@@ -52,7 +52,7 @@ sudo apt update && sudo apt upgrade
 
 > Windows는 Linux 배포를 자동으로 업데이트하거나 업그레이드하지 않습니다. 이는 Linux 사용자가 직접 제어하는 것을 선호하는 작업입니다.
 
-작업을 완료했습니다. WSL에서 새 Linux 배포를 사용해 보세요! WSL에 대해 자세히 알아보려면 다른 [WSL 문서](https://aka.ms/wsldocs) 또는 [WSL 학습 리소스 페이지](https://aka.ms/learnwsl)를 검토하세요.
+작업을 완료했습니다. WSL에서 새 Linux 배포를 사용해 보세요! WSL에 대해 자세히 알아보려면 다른 [WSL 문서](./index.md) 또는 [WSL 학습 리소스 페이지](https://aka.ms/learnwsl)를 검토하세요.
 
 ![WSL에서 Linux 사용](media/linux-on-wsl.png)
 

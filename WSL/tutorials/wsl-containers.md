@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, windows 10, docker, 컨테이너
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a1187336341d73f662b7e9f27b19df4fd0e1e73
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: cca53f2079e026fbe765ad13cc67722457f83c23
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413334"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211787"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>WSL 2에서 Docker 원격 컨테이너 시작
 
@@ -20,19 +20,19 @@ Windows 용 Docker Desktop은 무료로 제공 되며 dockerized 앱을 빌드, 
 
 ## <a name="overview-of-docker-containers"></a>Docker 컨테이너 개요
 
-Docker는 컨테이너를 사용 하 여 응용 프로그램을 만들고 배포 하 고 실행 하는 데 사용 되는 도구입니다. 개발자는 컨테이너를 사용 하 여 필요한 모든 파트 (라이브러리, 프레임 워크, 종속성 등)로 앱을 패키지 한 다음 하나의 패키지로 제공할 수 있습니다. 컨테이너를 사용 하면 응용 프로그램 코드를 작성 하 고 테스트 하는 데 사용 된 컴퓨터와 다를 수 있는 사용자 지정 된 설정 또는 이전에 설치한 컴퓨터의 라이브러리와 상관 없이 앱이 동일 하 게 실행 됩니다. 이를 통해 개발자는 코드가 실행 되는 시스템에 대해 걱정 하지 않고 코드 작성에 집중할 수 있습니다.
+Docker는 컨테이너를 사용하여 애플리케이션을 만들고, 배포하고, 실행하는 데 사용되는 도구입니다. 개발자는 컨테이너를 사용하여 필요한 모든 파트(라이브러리, 프레임워크, 종속성 등)와 함께 앱을 패키징하여 하나의 패키지로 제공할 수 있습니다. 컨테이너를 사용하면 앱을 실행하는 컴퓨터(코드를 작성하고 테스트하는 데 사용된 머신과 다를 수도 있음)의 사용자 지정된 설정 또는 이전에 설치한 라이브러리와 상관없이 앱이 동일하게 실행됩니다. 따라서 개발자는 코드가 실행될 시스템에 대해 신경 쓰지 않고 코드 작성에 집중할 수 있습니다.
 
-Docker 컨테이너는 가상 머신과 비슷하지만 전체 가상 운영 체제를 만들지는 않습니다. 대신 Docker를 사용 하면 앱이 실행 중인 시스템과 동일한 Linux 커널을 사용할 수 있습니다. 이를 통해 응용 프로그램 패키지는 호스트 컴퓨터에 아직 없는 부품만 필요로 하 여 패키지 크기를 줄이고 성능을 향상 시킬 수 있습니다.
+Docker 컨테이너는 가상 머신과 비슷하지만 전체 가상 운영 체제를 만들지는 않습니다. 대신 Docker를 사용하면 앱이 실행 중인 시스템과 동일한 Linux 커널을 사용할 수 있습니다. 따라서 호스트 컴퓨터에 아직 없는 파트만 앱 패키지에 필요하므로 패키지 크기를 줄이고 성능을 높일 수 있습니다.
 
-[Kubernetes](/azure/aks/)같은 도구와 함께 Docker 컨테이너를 사용 하는 지속적인 가용성은 컨테이너의 인기를 위한 또 다른 이유입니다. 이렇게 하면 여러 버전의 앱 컨테이너를 서로 다른 시간에 만들 수 있습니다. 업데이트 또는 유지 관리를 위해 전체 시스템을 중단 하는 대신 각 컨테이너 (및 특정 마이크로 서비스)를 즉석에서 바꿀 수 있습니다. 모든 업데이트를 사용 하 여 새 컨테이너를 준비 하 고, 프로덕션을 위해 컨테이너를 설정 하 고, 준비가 되 면 새 컨테이너를 가리킬 수 있습니다. 컨테이너를 사용 하 여 여러 버전의 앱을 보관 하 고 필요한 경우 안전 대체로 계속 실행할 수도 있습니다.
+컨테이너가 인기 있는 또 다른 이유는 [Kubernetes](/azure/aks/) 같은 도구와 함께 Docker 컨테이너를 사용하면 지속적인 가용성을 얻을 수 있다는 점입니다. 이렇게 하면 여러 버전의 앱 컨테이너를 서로 다른 시간에 만들 수 있습니다. 업데이트 또는 유지 관리를 위해 전체 시스템을 중단하는 대신, 각 컨테이너(및 해당 마이크로서비스)를 필요할 때 바꿀 수 있습니다. 모든 업데이트가 포함된 새 컨테이너를 준비하고, 프로덕션용 컨테이너를 설정하고, 준비가 되면 새 컨테이너를 가리킬 수 있습니다. 컨테이너를 사용하여 여러 버전의 앱을 보관하고, 필요한 경우 안전 대비책으로 앱을 계속 실행할 수도 있습니다.
 
 자세히 알아보려면 Microsoft Learn에서 [Docker 컨테이너 소개](/learn/modules/intro-to-docker-containers/) 를 확인 하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 컴퓨터에 Windows 10이 실행 되 고 있는지 확인 하 고 버전 2004, **빌드 18362** 이상 [으로 업데이트](ms-settings:windowsupdate)합니다.
 - [WSL을 사용 하도록 설정 하 고, Linux 배포를 설치 하 고, wsl 2로 업데이트](../install-win10.md)합니다.
-- [Linux 커널 업데이트 패키지를 다운로드 하 여 설치](/windows/wsl/wsl2-kernel)합니다.
+- [Linux 커널 업데이트 패키지를 다운로드 하 여 설치](../install-win10.md#step-4---download-the-linux-kernel-update-package)합니다.
 - [Visual Studio Code를 설치](https://code.visualstudio.com/download) 합니다 *(선택 사항)*. 이렇게 하면 원격 Docker 컨테이너 내에서 코딩 및 디버깅 하 고 Linux 배포에 연결 하는 기능을 포함 하 여 최상의 환경을 제공 합니다.
 - [Windows 터미널을 설치](/windows/terminal/get-started) 합니다 *(선택 사항)*. 이렇게 하면 동일한 인터페이스에서 여러 터미널을 사용자 지정 하 고 여는 기능 (Ubuntu, Debian, PowerShell, Azure CLI 또는 선호 하는 항목 포함)을 비롯 하 여 최상의 환경을 제공 합니다.
 - Docker [허브에서 DOCKER ID에 등록](https://hub.docker.com/signup) 합니다 *(선택 사항)*.
@@ -66,9 +66,9 @@ Docker를 설치 하려면 ( [WSL 2](../install-win10.md)를 이미 설치한 �
 > [!TIP]
 > 다음은 몇 가지 유용한 Docker 명령입니다.
 >
-> - 다음을 입력 하 여 Docker CLI에서 사용할 수 있는 명령을 나열 합니다. `docker`
-> - 특정 명령에 대 한 정보 나열: `docker <COMMAND> --help`
-> - 다음을 사용 하 여 컴퓨터에 docker 이미지를 나열 합니다 (이 시점에서는 hello-세계 이미지). `docker image ls --all`
+> - Docker CLI에서 사용할 수 있는 명령 나열: `docker`
+> - 특정 명령에 대한 정보 나열: `docker <COMMAND> --help`
+> - 머신의 docker 이미지 나열(현재는 hello-world 이미지만 나열됨): `docker image ls --all`
 > - 다음을 사용 하 여 컴퓨터에 컨테이너 나열: `docker container ls --all` 또는 `docker ps -a` (-a show all 플래그를 사용 하지 않고 실행 중인 컨테이너만 표시 됨)
 > - 다음을 사용 하 여 WSL 2 컨텍스트에서 사용할 수 있는 통계 및 리소스 (CPU & 메모리)를 비롯 하 여 Docker 설치와 관련 된 시스템 차원의 정보를 나열 합니다. `docker info`
 
@@ -78,9 +78,9 @@ WSL 2에서 Docker를 사용 하 여 앱 개발을 시작 하려면 원격 WSL �
 
 - [VS Code 원격-WSL 확장을 설치](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)합니다. 이 확장을 사용 하면 VS Code의 WSL에서 실행 되는 Linux 프로젝트를 열 수 있습니다 (pathing 문제, 이진 호환성 또는 기타 OS 간 문제에 대해 걱정 하지 않아도 됩니다).
 
-- [VS Code 원격-컨테이너 확장을 설치](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)합니다. 이 확장을 사용 하면 컨테이너 내에서 프로젝트 폴더 또는 리포지토리를 열고 Visual Studio Code의 전체 기능 집합을 활용 하 여 컨테이너 내에서 개발 작업을 수행할 수 있습니다.
+- [VS code Remote-Containers 확장을 설치](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)합니다. 이 확장을 사용 하면 컨테이너 내에서 프로젝트 폴더 또는 리포지토리를 열고 Visual Studio Code의 전체 기능 집합을 활용 하 여 컨테이너 내에서 개발 작업을 수행할 수 있습니다.
 
-- [VS Code Docker 확장을 설치](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)합니다. 이 확장은 VS Code 내에서 컨테이너 화 된 응용 프로그램을 빌드, 관리 및 배포 하는 기능을 추가 합니다. (실제로 개발자 환경으로 컨테이너를 사용 하려면 원격 컨테이너 확장이 필요 합니다.)
+- [VS Code Docker 확장을 설치](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)합니다. 이 확장은 VS Code 내에서 컨테이너 화 된 응용 프로그램을 빌드, 관리 및 배포 하는 기능을 추가 합니다. (실제로는 컨테이너를 개발 환경으로 사용 하기 위해 Remote-Container 확장이 필요 합니다.)
 
 Docker를 사용 하 여 기존 앱 프로젝트에 대 한 개발 컨테이너를 만들어 보겠습니다.
 

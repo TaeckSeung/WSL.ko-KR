@@ -1,18 +1,18 @@
 ---
-title: WSL 2에서 linux 디스크 탑재 시작 (미리 보기)
+title: WSL 2에서 Linux 디스크 탑재 시작 (미리 보기)
 description: WSL 2에서 디스크 탑재를 설정 하는 방법 및 액세스 하는 방법에 대해 알아봅니다.
 keywords: wsl, windows, windowssubsystem, gnu, linux, bash, disk, ext4, filesystem, mount
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ea7d7adae42a44b040408575e7345c456f3acac
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 8c67b0f34dcde925bb91979e9153049fdd474db3
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413284"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211737"
 ---
-# <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2에서 linux 디스크 탑재 시작 (미리 보기)
+# <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2에서 Linux 디스크 탑재 시작 (미리 보기)
 
 Windows에서 지원 되지 않는 Linux 디스크 형식에 액세스 하려는 경우 WSL 2를 사용 하 여 디스크를 탑재 하 고 해당 콘텐츠에 액세스할 수 있습니다.
 

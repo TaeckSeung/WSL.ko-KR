@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: cf349615dc40f1912fdb4dff3f5593627fa246e6
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413116"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211777"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -28,7 +28,7 @@ PowerShell을 관리자 권한으로 열어 실행합니다.
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-이제 2단계로 이동하여 WSL 2로 업데이트하는 것이 좋습니다. 그러나 WSL 1만 설치하려면 이제 컴퓨터를 다시 시작하여 [6단계 - 선택한 Linux 배포 설치](./install-win10.md#step-6---install-your-linux-distribution-of-choice)로 이동할 수 있습니다. WSL 2로 업데이트하려면 컴퓨터가 다시 시작될 때까지 기다린 후 다음 단계로 이동합니다.
+이제 2단계로 이동하여 WSL 2로 업데이트하는 것이 좋습니다. 그러나 WSL 1만 설치하려면 이제 컴퓨터를 **다시 시작** 하여 [6단계 - 선택한 Linux 배포 설치](./install-win10.md#step-6---install-your-linux-distribution-of-choice)로 이동할 수 있습니다. WSL 2로 업데이트하려면 컴퓨터가 **다시 시작될 때까지 기다린 후** 다음 단계로 이동합니다.
 
 ## <a name="step-2---update-to-wsl-2"></a>2단계 - WSL 2로 업데이트
 
@@ -40,7 +40,7 @@ WSL 2로 업데이트하려면 Windows 10을 실행해야 합니다.
 - ARM64 시스템의 경우: **버전 2004** 이상, **빌드 19041** 이상
 - 18362보다 낮은 빌드는 WSL 2를 지원하지 않습니다. [Windows Update Assistant](https://www.microsoft.com/software-download/windows10)를 사용하여 Windows 버전을 업데이트합니다.
 
-버전 및 빌드 번호를 확인하려면 **Windows 로고 키 + R**을 선택하고, **winver**를 입력하고, **확인**을 선택합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) [설정] 메뉴에서 [최신 Windows 버전으로 업데이트](ms-settings:windowsupdate)합니다.
+버전 및 빌드 번호를 확인하려면 **Windows 로고 키 + R** 을 선택하고, **winver** 를 입력하고, **확인** 을 선택합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) [설정] 메뉴에서 [최신 Windows 버전으로 업데이트](ms-settings:windowsupdate)합니다.
 
 > [!NOTE]
 > Windows 10 버전 1903 또는 1909를 실행하고 있는 경우 Windows 메뉴에서 "설정"을 열고, "업데이트 및 보안"으로 이동한 다음, "업데이트 확인"을 선택합니다. 빌드 번호는 18362.1049 이상 또는 18363.1049 이상이고, 부 빌드 번호는 .1049 이상이어야 합니다. 자세한 정보: [WSL 2 지원이 Windows 10 버전 1903 및 1909에 제공됨](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). [문제 해결 지침](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)을 참조하세요.
@@ -74,7 +74,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 ## <a name="step-5---set-wsl-2-as-your-default-version"></a>5단계 - WSL 2를 기본 버전으로 설정
 
-PowerShell을 관리자 권한으로 열고 이 명령을 실행하여 새 Linux 배포를 설치할 때 WSL 2를 기본 버전으로 설정합니다.
+PowerShell을 열고 이 명령을 실행하여 새 Linux 배포를 설치할 때 WSL 2를 기본 버전으로 설정합니다.
 
 ```powershell
 wsl --set-default-version 2
@@ -160,12 +160,12 @@ wsl --set-default-version 2
 
 - **0x80070003 오류로 인한 설치 실패**
   - Linux용 Windows 하위 시스템은 시스템 드라이브(일반적으로 `C:` 드라이브)에서만 실행됩니다. 배포가 시스템 드라이브에 저장되어 있는지 확인합니다.  
-  - **설정** -> **스토리지** -> **더 많은 스토리지 설정을 차례로 엽니다. 새 콘텐츠가 저장된 위치를 변경합니다.** 
+  - **설정** -> **시스템 --> **스토리지** -> **더 많은 스토리지 설정을 차례로 엽니다. 새 콘텐츠가 저장된 위치를 변경합니다.** 
     ![C: 드라이브에 앱을 설치하기 위한 시스템 설정에 대한 그림](media/AppStorage.png)
 
 - **0x8007019e 오류로 인한 WslRegisterDistribution 실패**
   - 선택적인 Linux용 Windows 하위 시스템 구성 요소가 실행되지 않습니다.
-  - **제어판** -> **프로그램 및 기능** -> **Windows 기능 사용/사용 안 함**을 차례로 열어 **Linux용 Windows 하위 시스템**을 선택하거나 이 문서의 시작 부분에서 설명한 PowerShell cmdlet을 사용합니다.
+  - **제어판** -> **프로그램 및 기능** -> **Windows 기능 사용/사용 안 함** 을 차례로 열어 **Linux용 Windows 하위 시스템** 을 선택하거나 이 문서의 시작 부분에서 설명한 PowerShell cmdlet을 사용합니다.
 
 - **0x80070003 오류 또는 0x80370102 오류로 인해 설치하지 못했습니다.**
   - 컴퓨터 BIOS 내에서 가상화를 사용하도록 설정했는지 확인합니다. 이 방법에 대한 지침은 컴퓨터마다 다르며, CPU 관련 옵션에 있을 가능성이 높습니다.

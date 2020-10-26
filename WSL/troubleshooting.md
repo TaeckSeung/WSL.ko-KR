@@ -5,22 +5,22 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 78d122ce22e3ab4d67339cc6f0d6038502e23dbb
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: c3becde51cf16b95f96222a08a2fe7249cd936c1
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413294"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211757"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
-WSL 관련 문제에 대한 지원은 https://github.com/Microsoft/wsl/issues GitHub 리포지토리를 참조하세요.
+WSL 관련 문제에 대한 지원은 [GitHub의 WSL 제품 리포지토리](https://github.com/Microsoft/wsl/issues)를 참조하세요.
 
 ## <a name="search-for-any-existing-issues-related-to-your-problem"></a>문제와 관련된 기존 문제 검색
 
-기술 문제를 해결하려면 https://github.com/Microsoft/wsl/issues 제품 리포지토리를 사용합니다.
+기술 문제를 해결하려면 [제품 리포지토리](https://github.com/Microsoft/wsl/issues)를 사용합니다.
 
-이 설명서의 내용과 관련된 문제는 https://github.com/MicrosoftDocs/wsl/issues 문서 리포지토리를 사용합니다.
+이 설명서의 내용과 관련된 문제는 [문서 리포지토리](https://github.com/MicrosoftDocs/wsl/issues)를 사용합니다.
 
 ## <a name="submit-a-bug-report"></a>버그 보고서 제출
 
@@ -28,7 +28,7 @@ WSL 함수 또는 기능과 관련된 버그는 해당 문제를 https://github.
 
 ## <a name="submit-a-feature-request"></a>기능 요청 제출
 
-WSL 함수 또는 호환성과 관련된 새로운 기능을 요청하려면 해당 문제를 https://github.com/Microsoft/wsl/issues 제품 리포지토리에 제출합니다.
+WSL 기능 또는 호환성과 관련된 새로운 기능을 요청하려면 [해당 문제를 제품 리포지토리에 제출합니다](https://github.com/Microsoft/wsl/issues).
 
 ## <a name="contribute-to-the-docs"></a>문서 작성에 참여
 
@@ -40,34 +40,37 @@ WSL 설명서에 기여하려면 끌어오기 요청을 https://github.com/Micro
 
 ## <a name="common-issues"></a>일반적인 문제
 
-### <a name="im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2"></a>Windows 10 버전 1903을 사용하고 있는데 WSL 2에 대한 옵션이 아직 보이지 않습니다. 
+### <a name="im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2"></a>Windows 10 버전 1903을 사용하고 있는데 WSL 2에 대한 옵션이 아직 보이지 않음
 
-이는 머신이 아직 WSL 2의 백포트를 가져오지 않았기 때문일 수 있습니다. 이를 해결하는 가장 간단한 방법은 Windows 설정으로 이동하여 '업데이트 확인'을 클릭하여 시스템에 최신 업데이트를 설치하는 것입니다. [여기](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)에서 백포트에 대한 전체 지침을 볼 수 있습니다. 
+이는 머신이 아직 WSL 2의 백포트를 가져오지 않았기 때문일 수 있습니다. 이를 해결하는 가장 간단한 방법은 Windows 설정으로 이동하여 '업데이트 확인'을 클릭하여 시스템에 최신 업데이트를 설치하는 것입니다. [백포트에 대한 전체 지침](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)을 확인하세요.
 
-'업데이트 확인'을 눌렀는데도 업데이트를 받지 못하면 [이 링크를 따라](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116) KB KB4566116을 수동으로 설치할 수 있습니다.  
+'업데이트 확인'을 눌렀는데도 업데이트를 아직 받지 못한 경우 [KB KB4566116을 수동으로 설치](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116)할 수 있습니다.  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>오류: `wsl --set-default-version 2`인 경우 0x1bc
+
 '표시 언어' 또는 '시스템 로캘' 설정이 영어가 아닌 경우 발생할 수 있습니다.
-```
+
+```powershell
 wsl --set-default-version 2
 Error: 0x1bc
 For information on key differences with WSL 2 please visit https://aka.ms/wsl2
 ```
 
 `0x1bc`의 실제 오류는 다음과 같습니다.
-```
+
+```powershell
 WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
 ```
 
 자세한 내용은 문제 [5749](https://github.com/microsoft/WSL/issues/5749)를 참조하십시오.
 
-
 ### <a name="cannot-access-wsl-files-from-windows"></a>Windows에서 WSL 파일에 액세스할 수 없음
+
 9p 프로토콜 파일 서버는 Linux 쪽에서 서비스를 제공하여 Windows가 Linux 파일 시스템에 액세스할 수 있도록 합니다. Windows에서 `\\wsl$`를 사용하여 WSL에 액세스할 수 없는 경우 9P가 제대로 시작되지 않았기 때문일 수 있습니다.
 
-이를 확인하려면 `dmesg |grep 9p`를 사용하여 시작 로그를 확인할 수 있습니다. 그러면 오류가 표시됩니다. 성공적인 출력은 다음과 같습니다. 
+이를 확인하려면 `dmesg |grep 9p`를 사용하여 시작 로그를 확인할 수 있습니다. 그러면 오류가 표시됩니다. 성공적인 출력은 다음과 같습니다.
 
-```
+```bash
 [    0.363323] 9p: Installing v9fs 9p2000 file system support
 [    0.363336] FS-Cache: Netfs '9p' registered for caching
 [    0.398989] 9pnet: Installing 9P2000 support
@@ -75,7 +78,8 @@ WSL 2 requires an update to its kernel component. For information please visit h
 
 이 문제에 대한 자세한 내용은 [이 Github 스레드](https://github.com/microsoft/wsl/issues/5307)를 참조하세요.
 
-### <a name="cant-start-wsl-2-distro-and-only-see-wsl-2-in-output"></a>WSL 2 배포를 시작할 수 없으며 출력에서 'WSL 2'만 표시됩니다.
+### <a name="cant-start-wsl-2-distribution-and-only-see-wsl-2-in-output"></a>WSL 2 배포를 시작할 수 없으며 출력에 'WSL 2'만 표시됨
+
 표시 언어가 영어가 아닌 경우 오류 텍스트가 잘려서 표시될 수 있습니다.
 
 ```powershell
@@ -85,17 +89,49 @@ WSL 2
 
 이 문제를 해결하려면 `https://aka.ms/wsl2kernel`을 방문하여 해당 문서 페이지의 지침에 따라 수동으로 커널을 설치하세요. 
 
-### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>가상 머신 플랫폼 Windows 기능을 활성화하고 BIOS에서 가상화가 사용되고 있는지 확인하세요.
+### <a name="command-not-found-when-executing-windows-exe-in-linux"></a>Linux에서 windows.exe를 실행하는 경우 `command not found`
 
-1. [Hyper-V 시스템 요구 사항](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)을 확인합니다.
-2. 머신이 VM인 경우 [중첩된 가상화](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine)를 수동으로 사용하도록 설정하세요. 관리자로 powershell을 시작하고 다음을 실행합니다. 
+사용자는 Linux에서 직접 notepad.exe와 같은 Windows 실행 파일을 실행할 수 있습니다. 경우에 따라 다음과 같이 "명령을 찾을 수 없음" 오류가 발생할 수 있습니다. 
 
-```powershell
-Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+```Bash
+$ notepad.exe
+-bash: notepad.exe: command not found
 ```
 
-3. 가상화를 사용하도록 설정하는 방법에 대한 자세한 지침은 PC 제조업체의 지침을 따르세요. 일반적으로 이는 시스템 BIOS를 사용하여 이러한 기능이 CPU에서 활성화되도록 할 수 있습니다. 
-4. `Virtual Machine Platform` 선택적 구성 요소를 사용하도록 설정한 후 머신을 다시 시작합니다. 
+$PATH에 win32 경로가 없는 경우 interop에서 .exe를 찾지 못합니다.
+Linux에서 `echo $PATH`를 실행하여 이를 확인할 수 있습니다. 출력에 win32 경로(예: /mnt/c/Windows)가 표시되어야 합니다.
+Windows 경로가 표시되지 않는 경우 Linux 셸에서 PATH를 덮어쓸 가능성이 높습니다. 
+
+다음은 Debian의 /etc/profile로 인해 문제가 발생한 예입니다.
+
+```Bash
+if [ "`id -u`" -eq 0 ]; then
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+else
+  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+fi
+```
+
+Debian에서 올바른 방법은 위의 줄을 제거하는 것입니다.
+아래와 같이 할당 시 $PATH를 추가할 수도 있지만 이 경우에는 WSL 및 VSCode와 관련한 [몇 가지 다른 문제](https://salsa.debian.org/debian/WSL/-/commit/7611edba482fd0b3f67143aa0fc1e2cc1d4100a6)가 발생합니다.
+
+자세한 내용은 문제 [5296](https://github.com/microsoft/WSL/issues/5296) 및 [5779](https://github.com/microsoft/WSL/issues/5779)를 참조하세요.
+
+### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>가상 머신 플랫폼 Windows 기능을 사용하도록 설정하고 BIOS에서 가상화가 사용되고 있는지 확인하세요.
+
+가상 머신 플랫폼 Windows 기능을 활성화하고 BIOS에서 가상화가 사용되고 있는지 확인하세요.
+
+1. [Hyper-V 시스템 요구 사항](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)을 확인합니다.
+
+2. 머신이 VM인 경우 [중첩된 가상화](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine)를 수동으로 사용하도록 설정하세요. 관리자로 powershell을 시작하고 다음을 실행합니다.
+
+    ```powershell
+    Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+    ```
+
+3. 가상화를 사용하도록 설정하는 방법에 대한 자세한 지침은 PC 제조업체의 지침을 따르세요. 일반적으로 이는 시스템 BIOS를 사용하여 이러한 기능이 CPU에서 활성화되도록 할 수 있습니다. 이 프로세스에 대한 지침은 머신마다 다를 수 있습니다. 예는 Bleeping Computer의 [이 문서](https://www.bleepingcomputer.com/tutorials/how-to-enable-cpu-virtualization-in-your-computer-bios/)를 참조하세요.
+
+4. `Virtual Machine Platform` 선택적 구성 요소를 사용하도록 설정한 후 머신을 다시 시작합니다.
 
 ### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>Bash가 VPN에 연결되면 네트워크 연결이 끊어짐
 
@@ -205,7 +241,7 @@ sudo update-locale LANG=en_US.UTF8
 
 ### <a name="permission-denied-error-when-using-ping"></a>ping 사용 시의 권한 거부 오류
 
-[Windows 1주년 업데이트, 버전 1607](./release-notes.md#build-14388-to-windows-10-anniversary-update)의 경우 WSL에서 ping을 실행하려면 Windows의 **관리자 권한**이 필요합니다.  ping을 실행하려면 Windows의 Ubuntu에서 관리자 권한으로 Bash를 실행하거나 CMD/PowerShell 프롬프트에서 관리자 권한으로 bash.exe를 실행합니다.
+[Windows 1주년 업데이트, 버전 1607](./release-notes.md#build-14388-to-windows-10-anniversary-update)의 경우 WSL에서 ping을 실행하려면 Windows의 **관리자 권한** 이 필요합니다.  ping을 실행하려면 Windows의 Ubuntu에서 관리자 권한으로 Bash를 실행하거나 CMD/PowerShell 프롬프트에서 관리자 권한으로 bash.exe를 실행합니다.
 
 이후 버전의 Windows인 [빌드 14926 이상](./release-notes.md#build-14926)의 경우 관리자 권한이 더 이상 필요하지 않습니다.
 
@@ -232,7 +268,7 @@ Bash로 작업하는 동안 Bash가 중지되거나 교착 상태가 되어 입�
 ### <a name="check-your-build-number"></a>빌드 번호 확인
 
 PC의 아키텍처 및 Windows 빌드 번호를 확인하려면  
-**설정** > **시스템** > **정보**를 차례로 엽니다.
+**설정** > **시스템** > **정보** 를 차례로 엽니다.
 
 **OS 빌드** 및 **시스템 종류** 필드를 찾습니다.  
     ![빌드 및 시스템 종류 필드의 스크린샷](media/system.png)
@@ -309,7 +345,7 @@ sudo apt-get install openssh-server
 
 이 오류가 표시되는 경우:
 
-```
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -318,7 +354,7 @@ Permissions 0777 for '/home/artur/.ssh/private-key.pem' are too open.
 
 이 문제를 해결하려면 다음을 ```/etc/wsl.conf``` 파일에 추가합니다.
 
-```
+```bash
 [automount]
 enabled = true
 options = metadata,uid=1000,gid=1000,umask=0022

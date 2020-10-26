@@ -6,14 +6,19 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: c772185501b009369d7d47752dc792b8f90b482d
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413274"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211747"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-20226"></a>빌드 20226
+빌드 20226에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20226/)를 참조하세요.
+
+* LxssManager 서비스의 충돌이 해결되었습니다. [GH 5902]
 
 ## <a name="build-20211"></a>빌드 20211
 빌드 20211에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/)를 참조하세요.

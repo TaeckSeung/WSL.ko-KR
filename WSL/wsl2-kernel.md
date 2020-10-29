@@ -6,11 +6,11 @@ ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
 ms.openlocfilehash: 7bf2ef606d0bd23083f323117348aeea87c52b10
-ms.sourcegitcommit: f1996541005ae126ef379d8aebfe1abfcccb9ac9
+ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91238803"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92444809"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux 커널 업데이트
 

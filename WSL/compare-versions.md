@@ -1,17 +1,17 @@
 ---
 title: WSL 2와 WSL 1 비교
-description: Linux용 Windows 하위 시스템의 버전 1과 버전 2를 비교합니다. WSL 2의 새로운 기능인 실제 Linux 커널, 더 빠른 속도, 전체 시스템 호출 호환성에 대해 알아봅니다. 파일을 운영 파일 시스템에 저장하는 경우 WSL 1이 더 효율적으로 작동합니다. WSL 2 VHD(가상 하드 디스크)의 크기를 확장할 수 있습니다.
-keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux, Ubuntu, Debian, Suse, Windows 10, UX 변경 내용, WSL 2, Linux 커널, 네트워크 애플리케이션, localhost, IPv6, 가상 하드 디스크, VHD, VHD 제한, VHD 오류
-ms.date: 09/15/2020
+description: Linux용 Windows 하위 시스템의 버전 1과 버전 2를 비교합니다. WSL 2의 새로운 기능인 실제 Linux 커널, 더 빠른 속도, 전체 시스템 호출 호환성에 대해 알아봅니다. 파일을 운영 파일 시스템에 저장하는 경우 WSL 1이 더 효율적으로 작동합니다. WSL 2 VHD(가상 하드웨어 Disk)의 크기를 확장할 수 있습니다.
+keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, GNU, Linux, Ubuntu, Debian, Suse, Windows 10, UX 변경 내용, WSL 2, Linux 커널, 네트워크 애플리케이션, localhost, IPv6, 가상 하드웨어 디스크, VHD, VHD 제한, VHD 오류
+ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: ce68a19da519ddae5dd562c75c9ba2bac3659190
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 93fdbf87bf588a8b23aa917ea0cab05020e0ea3e
+ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211767"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92444872"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 비교
 
@@ -49,7 +49,12 @@ WSL 2는 가장 유용한 최신 가상화 기술을 사용하여 간단한 유�
 - Linux 파일 시스템 루트 디렉터리(`\\wsl$\Ubuntu-18.04\home\<user name>\Project`)를 사용합니다.
 - Windows 파일 시스템 루트 디렉터리(`C:\Users\<user name>\Project`)가 아닙니다.
 
-Windows 앱 및 도구(예: 파일 탐색기)를 사용하여 Linux 루트 파일 시스템에 액세스할 수 있습니다. Linux 배포(예: Ubuntu)를 열어 보고, `cd ~` 명령을 입력하여 Linux 홈 디렉터리에 있는지 확인합니다. 그런 다음, `explorer.exe .` *(끝에 있는 마침표를 잊지 마세요)* 를 입력하여 파일 탐색기에서 Linux 파일 시스템을 엽니다.
+현재 실행 중인 모든 배포(`wsl -l`)는 네트워크 연결을 통해 액세스할 수 있습니다. 그렇게 하려면 \[WIN+R\](바로 가기 키) 명령을 실행하거나 파일 탐색기 주소 표시줄에 `\\wsl$`를 입력하여 해당 배포 이름을 찾고 루트 파일 시스템에 액세스합니다.
+
+WSL의 Linux [터미널](https://en.wikipedia.org/wiki/Linux_console) 내에서 windows 명령을 사용할 수도 있습니다. Linux 배포(예: Ubuntu)를 열어 보고, `cd ~` 명령을 입력하여 Linux 홈 디렉터리에 있는지 확인합니다. 그런 다음, `powershell.exe /c start .` *(끝에 있는 마침표를 잊지 마세요)* 를 입력하여 파일 탐색기에서 Linux 파일 시스템을 엽니다.
+
+> [!IMPORTANT]
+> **-bash: powershell.exe: 명령을 찾을 수 없음** 오류가 발생할 경우 [WSL 문제 해결 페이지](troubleshooting.md#running-windows-commands-fails-inside-a-distribution)를 참조하여 문제를 해결하세요.
 
 WSL 2는 Windows 10, 버전 1903, 빌드 18362 이상에서만 사용할 수 있습니다. **Windows 로고 키 + R** 을 선택하고 **winver** 를 입력한 다음, **확인** 을 선택하여 Windows 버전을 확인합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) [최신 Windows 버전을 업데이트](ms-settings:windowsupdate)해야 할 수도 있습니다. 18362보다 낮은 빌드의 경우 WSL은 전혀 지원되지 않습니다.
 

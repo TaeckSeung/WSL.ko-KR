@@ -2,15 +2,15 @@
 title: Linux용 Windows 하위 시스템 문제 해결
 description: Linux용 Windows 하위 시스템에서 Linux를 실행하는 동안 사용자에게 발생할 수 있는 일반적인 오류 및 문제에 대한 자세한 정보를 제공합니다.
 keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
-ms.date: 01/20/2020
+ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: c3becde51cf16b95f96222a08a2fe7249cd936c1
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: f7fdc6243e6cd5156bfae23fd7a1d61514449cf5
+ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211757"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92444796"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -117,7 +117,7 @@ Debian에서 올바른 방법은 위의 줄을 제거하는 것입니다.
 
 자세한 내용은 문제 [5296](https://github.com/microsoft/WSL/issues/5296) 및 [5779](https://github.com/microsoft/WSL/issues/5779)를 참조하세요.
 
-### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>가상 머신 플랫폼 Windows 기능을 사용하도록 설정하고 BIOS에서 가상화가 사용되고 있는지 확인하세요.
+### <a name="error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed"></a>"Error: 0x80370102 필요한 기능이 설치되어 있지 않아 가상 머신을 시작할 수 없습니다."
 
 가상 머신 플랫폼 Windows 기능을 활성화하고 BIOS에서 가상화가 사용되고 있는지 확인하세요.
 
@@ -361,3 +361,14 @@ options = metadata,uid=1000,gid=1000,umask=0022
 ```
 
 이 명령을 추가하면 메타데이터가 포함되고 WSL에서 보이는 Windows 파일에 대한 파일 권한이 수정됩니다. 자세한 내용은 [파일 시스템 권한](./file-permissions.md)에서 확인하세요.
+
+### <a name="running-windows-commands-fails-inside-a-distribution"></a>배포 내에서 Windows 명령 실행 실패
+
+[Microsoft Store에서 제공되는](install-win10.md#step-6---install-your-linux-distribution-of-choice) 일부 배포는 아직 완전히 호환되지 않아서 기본적으로 [터미널](https://en.wikipedia.org/wiki/Linux_console)에서 Windows 명령을 실행할 수 없습니다. `powershell.exe /c start .` 또는 다른 Windows 명령을 실행할 때 `-bash: powershell.exe: command not found` 오류가 발생하면 다음 단계를 수행하여 해결할 수 있습니다.
+
+1. WSL 배포에서 `echo $PATH`를 실행합니다.  
+   `/mnt/c/Windows/system32`를 포함하지 않는 경우 무언가 표준 PATH 변수를 다시 정의하는 것입니다.
+2. `cat /etc/profile`을 사용하여 프로필 설정을 확인하세요.  
+   PATH 변수 할당을 포함하는 경우에는 파일을 편집하여 **#** 문자로 PATH 할당 블록을 주석 처리합니다.
+3. wsl.conf가 있는지 확인하고(`cat /etc/wsl.conf`) `appendWindowsPath=false`가 없는지 확인합니다. 있는 경우에는 주석 처리합니다.
+4. `wsl -t ` 다음에 배포 이름을 입력하여 배포를 다시 시작하거나 cmd 또는 PowerShell에서 `wsl --shutdown`을 실행합니다.

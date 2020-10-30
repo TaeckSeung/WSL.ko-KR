@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, disk, ext4, filesyst
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c67b0f34dcde925bb91979e9153049fdd474db3
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 9ee71d7f76a9fd0e6b20293ef30b0808d56c43a1
+ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211737"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035729"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2에서 Linux 디스크 탑재 시작 (미리 보기)
 
@@ -19,6 +19,7 @@ Windows에서 지원 되지 않는 Linux 디스크 형식에 액세스 하려는
 이 자습서에서는 WSL2에 연결할 디스크와 파티션을 식별 하는 단계, 탑재 하는 방법 및 액세스 하는 방법을 설명 합니다.
 
 > [!NOTE]
+> 이 기능에 액세스 하려면 Windows 10 빌드 20211 이상에 있어야 합니다. [Windows 참가자 프로그램](https://insider.windows.com/) 에 참여 하 여 최신 미리 보기 빌드를 가져올 수 있습니다.
 > WSL 2에 디스크를 연결 하려면 관리자 권한이 필요 합니다.
 
 ## <a name="identify-the-disk"></a>디스크 식별

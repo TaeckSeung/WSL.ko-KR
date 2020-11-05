@@ -4,12 +4,12 @@ description: Linux용 Windows 하위 시스템에서 실행되는 여러 Linux �
 keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, Windows 하위 시스템, Ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 73544d4d8c8eda462194f213a0f093b21ab6d90e
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 2a26795821162e91cb87825483426cd58aab8ac6
+ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413324"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93352666"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 명령 및 시작 구성
 
@@ -280,14 +280,15 @@ Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파�
 |umask | 모든 파일 및 디렉터리에서 제외할 권한의 8진수 마스크 | 000
 |fmask | 모든 파일에서 제외할 권한의 8진수 마스크 | 000
 |dmask | 모든 디렉터리에서 제외할 권한의 8진수 마스크 | 000
+|metadata | Linux 시스템 권한을 지원 하기 위해 메타 데이터를 Windows 파일에 추가할지 여부 | 사용
 
-**참고:** 권한 마스크는 파일 또는 디렉터리에 적용되기 전에 논리 OR 연산을 거칩니다. 
+**참고:** 권한 마스크는 파일이 나 디렉터리에 적용 되기 전에 논리적 OR 작업을 통해 배치 됩니다. 
 
-#### <a name="network"></a>네트워크
+#### <a name="network"></a>network
 
 섹션 레이블: `[network]`
 
-| 키 | value | 기본 | 참고|
+| key | 값 | 기본값 | 정보|
 |:----|:----|:----|:----|
 | generateHosts | boolean | `true` | `true`는 WSL에서 `/etc/hosts`를 생성하도록 설정합니다. `hosts` 파일에는 IP 주소에 해당하는 호스트 이름의 정적 맵이 포함됩니다. |
 | generateResolvConf | boolean | `true` | `true`는 WSL에서 `/etc/resolv.conf`를 생성하도록 설정합니다. `resolv.conf`에는 지정된 호스트 이름을 해당 IP 주소로 확인할 수 있는 DNS 목록이 포함됩니다. | 
@@ -298,9 +299,9 @@ Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파�
 
 다음 옵션은 참가자 빌드 17713 이상에서 사용할 수 있습니다.
 
-| 키 | value | 기본 | 참고|
+| key | 값 | 기본값 | 정보|
 |:----|:----|:----|:----|
-| enabled | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 프로세스 시작을 지원하는지 여부가 결정됩니다. |
+| 사용 | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 프로세스 시작을 지원하는지 여부가 결정됩니다. |
 | appendWindowsPath | boolean | `true` | 이 키를 설정하면 WSL에서 Windows 경로 요소를 $PATH 환경 변수에 추가할지 여부가 결정됩니다. |
 
 #### <a name="user"></a>사용자
@@ -311,7 +312,7 @@ Windows 드라이브(DrvFs)에 다른 탑재 옵션을 설정하면 Windows 파�
 
 | key | 값 | 기본값 | 정보|
 |:----|:----|:----|:----|
-| 기본값 | 문자열 | 처음 실행할 때 생성 된 초기 사용자 이름입니다. | 이 키를 설정 하면 먼저 WSL 세션을 시작할 때 실행할 사용자를 지정 합니다. |
+| 기본값 | string | 처음 실행할 때 생성 된 초기 사용자 이름입니다. | 이 키를 설정 하면 먼저 WSL 세션을 시작할 때 실행할 사용자를 지정 합니다. |
 
 ## <a name="configure-global-options-with-wslconfig"></a>. Wslconfig를 사용 하 여 전역 옵션 구성
 
@@ -338,13 +339,13 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 
 | key | 값 | 기본값 | 정보|
 |:----|:----|:----|:----|
-| 커널(kernel) | 문자열 | Microsoft에서 빌드된 커널을 제공 받은 수신함 | 사용자 지정 Linux 커널의 절대 Windows 경로입니다. |
+| 커널(kernel) | string | Microsoft에서 빌드된 커널을 제공 받은 수신함 | 사용자 지정 Linux 커널의 절대 Windows 경로입니다. |
 | 메모리 | 크기 | Windows 또는 8GB에서 총 메모리의 50% 중 더 작은 쪽 20175 이전 빌드: Windows에서 총 메모리의 80% | WSL 2 VM에 할당할 메모리의 양입니다. |
 | 프로세서 | number | Windows에서 동일한 수의 프로세서 | WSL 2 VM에 할당할 프로세서 수입니다. |
 | localhostForwarding | boolean | `true` | WSL 2 VM의 와일드 카드 또는 localhost에 바인딩된 포트를 localhost: port를 통해 호스트에서 연결할 수 있는지 여부를 지정 하는 부울입니다. |
-| kernelCommandLine | 문자열 | 비어 있음 | 추가 커널 명령줄 인수입니다. |
+| kernelCommandLine | string | 비어 있음 | 추가 커널 명령줄 인수입니다. |
 | swap | 크기 | Windows에서 메모리 크기의 25%가 가장 가까운 GB로 반올림 됨 | WSL 2 VM에 추가할 스왑 공간의 크기 이며, 스왑 파일이 없는 경우 0입니다. |
-| 스왑 파일 | 문자열 | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | 스왑 가상 하드 디스크에 대 한 절대 Windows 경로입니다. |
+| 스왑 파일 | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | 스왑 가상 하드 디스크에 대 한 절대 Windows 경로입니다. |
 
 * 참고:이 값은 Windows 빌드 19041에 적용 되며, 참가자 프로그램의 Windows 빌드에서 다를 수 있습니다.
 

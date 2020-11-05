@@ -5,12 +5,12 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, disk, ext4, filesyst
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ee71d7f76a9fd0e6b20293ef30b0808d56c43a1
-ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
+ms.openlocfilehash: 5d996586baf5e22cc557c27c6f54b2cb1a91dc4b
+ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035729"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93352656"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2에서 Linux 디스크 탑재 시작 (미리 보기)
 
@@ -169,6 +169,18 @@ wsl --unmount [DiskPath]
 
 > [!NOTE]
 > 한 디스크를 분리 하는 데 실패 한 경우 WSL 2는 디스크를 분리 하는를 실행 하 여 강제로 종료 될 수 있습니다 `wsl --shutdown` .
+
+## <a name="mount-a-vhd-in-wsl"></a>WSL에서 VHD 탑재
+
+을 사용 하 여 WSL에 VHD (가상 하드 디스크 파일)를 탑재할 수도 있습니다 `wsl --mount` . 이렇게 하려면 먼저 Windows의 명령을 사용 하 여 VHD를 Windows에 탑재 해야 합니다 [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) . 관리자 권한이 있는 창에서이 명령을 실행 해야 합니다. 다음은이 명령을 사용 하 고 디스크 경로를 출력 하는 예제입니다. 
+
+```powershell
+Write-Output "\.\\PhysicalDrive$((Mount-VHD -Path .\ext4.vhdx -PassThru | Get-Disk).Number)"
+```
+
+위의 출력을 사용 하 여이 VHD의 디스크 경로를 가져온 다음, 이전 섹션의 지침에 따라 WSL에 탑재할 수 있습니다.
+
+또한 각 WSL 2 배포판는 이라는 가상 하드 디스크 파일을 통해 저장 되므로이 방법을 사용 하 여 다른 WSL distros의 가상 하드 디스크를 탑재 하 고 상호 작용할 수 있습니다 `ext4.vhdx` . 기본적으로 WSL 2 배포판의 Vhd는이 경로에 저장 됩니다 .이 `C:\Users\[user]\AppData\Local\Packages\[distro]\LocalState\[distroPackageName]` 시스템 파일에 액세스 하는 데 주의를 기울여야 합니다 .이는 고급 사용자 워크플로입니다.
 
 ## <a name="limitations"></a>제한 사항
 

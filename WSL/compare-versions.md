@@ -6,12 +6,12 @@ ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: 93fdbf87bf588a8b23aa917ea0cab05020e0ea3e
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: be0cd21b65705e455f29bfd1666ce74078a21baa
+ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444872"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035739"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1과 WSL 2 비교
 
@@ -133,9 +133,10 @@ Linux 배포를 작동하는 가상 머신의 IP 주소를 찾으려면 다음�
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>Linux에서 Windows 네트워킹 앱에 액세스(호스트 IP)
 
 Linux 배포(즉, Ubuntu)에서 Windows에서 실행되는 네트워킹 앱(예: NodeJS 또는 SQL 서버에서 실행되는 앱)에 액세스하려면 호스트 머신의 IP 주소를 사용해야 합니다. 일반적인 시나리오는 아니지만 다음 단계에 따라 작업을 수행할 수 있습니다.
-    - Linux 배포에서 `cat /etc/resolv.conf` 명령을 실행하여 호스트 머신의 IP 주소를 가져옵니다.
-    - IP 주소를 `nameserver`라는 용어 뒤에 복사합니다.
-    - 복사한 IP 주소를 사용하여 Windows Server에 연결합니다.
+
+1. Linux 배포에서 `cat /etc/resolv.conf` 명령을 실행하여 호스트 머신의 IP 주소를 가져옵니다.
+2. IP 주소를 `nameserver`라는 용어 뒤에 복사합니다.
+3. 복사한 IP 주소를 사용하여 Windows Server에 연결합니다.
 
 아래 그림은 curl을 통해 Windows에서 실행 중인 Node.js 서버에 연결하여 이에 대한 예를 보여줍니다.
 

@@ -2,15 +2,15 @@
 title: WSL 2에서 Linux 디스크 탑재 시작 (미리 보기)
 description: WSL 2에서 디스크 탑재를 설정 하는 방법 및 액세스 하는 방법에 대해 알아봅니다.
 keywords: wsl, windows, windowssubsystem, gnu, linux, bash, disk, ext4, filesystem, mount
-ms.date: 06/08/2020
+ms.date: 11/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d996586baf5e22cc557c27c6f54b2cb1a91dc4b
-ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
+ms.openlocfilehash: 828f796839ff272261e98e88ca54a1af76471958
+ms.sourcegitcommit: 70ce8f7472167b6d8d760d0c54dbaab67904f2a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93352656"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413688"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2에서 Linux 디스크 탑재 시작 (미리 보기)
 
@@ -103,7 +103,7 @@ wsl --unmount <DiskPath>
 
 ## <a name="command-line-reference"></a>명령줄 참조
 
-### <a name="mouting-a-specific-filesystem"></a>특정 파일 시스템 이전
+### <a name="mounting-a-specific-filesystem"></a>특정 파일 시스템 탑재
 
 기본적으로 WSL 2는 ext4으로 장치를 탑재 하려고 시도 합니다. 다른 파일 시스템을 지정 하려면 다음을 실행 합니다.
 
@@ -120,7 +120,7 @@ wsl --mount <Diskpath> -t vfat
 > [!NOTE]
 > WSL2에서 사용 가능한 파일 시스템를 나열 하려면 다음을 실행 합니다. `cat /proc/filesystems`
 
-### <a name="mouting-a-specific-partition"></a>특정 파티션 이전
+### <a name="mounting-a-specific-partition"></a>특정 파티션 탑재
 
 기본적으로 WSL 2는 전체 디스크를 탑재 하려고 시도 합니다. 특정 파티션을 탑재 하려면 다음을 실행 합니다.
 

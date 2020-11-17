@@ -1,21 +1,146 @@
 ---
 title: Linux용 Windows 하위 시스템의 릴리스 정보
-description: Linux용 Windows 하위 시스템의 릴리스 정보입니다.  매주 업데이트됩니다.
-keywords: BashOnWindows, bash, wsl, windows, linux용 windows 하위 시스템, windows 하위 시스템, ubuntu
+description: Linux용 Windows 하위 시스템의 릴리스 정보를 참조하세요. 릴리스 정보에는 수정된 문제가 포함되며 매주 업데이트됩니다.
+keywords: 릴리스 정보, wsl, windows, linux용 windows 하위 시스템, windows 하위 시스템, ubuntu
 author: benhillis
-ms.date: 07/31/2017
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9dfd4704eee537c053d874d6fcee47b70efbc33c
-ms.sourcegitcommit: 212d3e0092dbc584a8422de47599a4ce46f0f016
+ms.openlocfilehash: c772185501b009369d7d47752dc792b8f90b482d
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902419"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211747"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템의 릴리스 정보
+
+## <a name="build-20226"></a>빌드 20226
+빌드 20226에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20226/)를 참조하세요.
+
+* LxssManager 서비스의 충돌이 해결되었습니다. [GH 5902]
+
+## <a name="build-20211"></a>빌드 20211
+빌드 20211에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/)를 참조하세요.
+
+* 실제 또는 가상 디스크를 탑재하는 `wsl.exe --mount`를 도입했습니다. 자세한 내용은 [Windows 및 WSL 2에서 Linux 파일 시스템 액세스](https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/)를 참조하세요.
+* VM이 유휴 상태인지 확인할 때 LxssManager 서비스의 작동 중단이 수정되었습니다. [GH 5768]
+* 압축된 VHD 파일을 지원합니다. [GH 4103]
+* c:\windows\system32\lxss\lib에 설치된 Linux 사용자 모드 라이브러리가 OS 업그레이드에서 유지되도록 합니다. [GH 5848]
+* `wsl --install --list-distributions`를 사용하여 설치할 수 있는 사용 가능한 배포를 나열하는 기능이 추가되었습니다.
+* 이제 사용자가 로그오프하면 WSL 인스턴스가 종료됩니다.
+
+## <a name="build-20190"></a>빌드 20190
+빌드 20190에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/)를 참조하세요.
+
+* WSL1 인스턴스가 시작되지 않도록 하는 버그가 수정되었습니다. [GH 5633]
+* Windows 프로세스 출력을 리디렉션하는 경우 발생하는 중단 문제가 해결되었습니다. [GH 5648]
+* VM 유휴 시간 제한(wsl2.vmIdleTimeout=<time_in_ms>)을 제어하는 %userprofile%\\.wslconfig 옵션이 추가되었습니다.
+* WSL에서 앱 실행 별칭 시작을 지원합니다.
+* WSL2 커널 및 배포를 wsl.exe --install에 설치하기 위한 지원이 추가되었습니다.
+
+## <a name="build-20175"></a>빌드 20175
+빌드 20175에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)를 참조하세요.
+
+* WSL2 VM의 기본 메모리 할당을 호스트 메모리의 50% 또는 8GB 중 [GH 4166]보다 더 적은 값으로 조정합니다.
+* URI 구문 분석을 지원하기 위해 \\\\wsl$ 접두사를 \\\\wsl로 변경합니다. 이전 \\\\wsl$ 경로도 여전히 지원됩니다.
+* amd64에서 WSL2에 대해 중첩된 가상화를 기본적으로 사용하도록 설정합니다. %userprofile%\\.wslconfig([wsl2] nestedVirtualization=false)를 통해 이 기능을 사용하지 않도록 설정할 수 있습니다.
+* wsl.exe --update demand가 Microsoft Update를 시작하도록 합니다.
+* DrvFs에서 읽기 전용 파일의 이름 변경을 지원합니다.
+* 오류 메시지가 항상 올바른 코드 페이지에 인쇄되어 있는지 확인합니다.
+
+## <a name="build-20150"></a>빌드 20150
+빌드 20150에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)를 참조하세요.
+
+* WSL2 GPU 컴퓨팅에 대한 자세한 내용은 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)를 참조하세요.
+* WSL을 쉽게 설치할 수 있도록 wsl.exe --install 명령줄 옵션이 도입되었습니다.
+* WSL2 커널 업데이트를 관리하는 wsl.exe --update 명령줄 옵션이 도입되었습니다. 
+* WSL2를 기본값으로 설정합니다.
+* WSL2 VM 정상 종료 시간 제한이 늘어났습니다.
+* 디바이스 메모리를 매핑할 때 발생하는 virtio-9p 경합 상태를 수정했습니다.
+* UAC를 사용하지 않도록 설정한 경우에는 관리자 권한 9p 서버를 실행하지 마세요.
+
+## <a name="build-19640"></a>빌드 19640
+빌드 19640에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/06/03/announcing-windows-10-insider-preview-build-19640/)를 참조하세요.
+
+* [WSL2] virtio-9p(drvfs)의 안정성이 향상되었습니다.
+
+## <a name="build-19555"></a>빌드 19555
+빌드 19555에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)를 참조하세요.
+
+* [WSL2] 메모리 cgroup을 사용하여 설치 및 변환 작업에 사용되는 메모리 양 제한 [GH 4669]
+* 기능 검색 기능을 향상시키기 위해 Linux용 Windows 하위 시스템 선택적 구성 요소를 사용할 수 없는 경우 wsl.exe가 표시되도록 합니다.
+* WSL 선택적 구성 요소가 설치되지 않은 경우 도움말 텍스트를 인쇄하도록 wsl.exe 변경
+* 인스턴스를 만들 때 경합 상태 수정
+* 모든 명령줄 기능이 포함된 wslclient.dll 생성
+* LxssManagerUser 서비스 중지 중 충돌 방지
+* distroName 매개 변수가 NULL인 경우 wslapi.dll 빠른 실패 수정
+
+## <a name="build-19041"></a>빌드 19041
+빌드 19041에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/12/10/announcing-windows-10-insider-preview-build-19041/)를 참조하세요.
+
+* [WSL2] 프로세스를 시작하기 전에 신호 마스크 지우기
+* [WSL2] Linux 커널을 4.19.84로 업데이트
+* symlink가 비 상대적일 때 /etc/resolv.conf symlink 생성 처리
+
+## <a name="build-19028"></a>빌드 19028
+빌드 19028에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/)를 참조하세요.
+
+* [WSL2] Linux 커널을 4.19.81로 업데이트
+* [WSL2] /dev/net/tun의 기본 권한을 0666으로 변경 [GH 4629]
+* [WSL2] Linux VM에 할당된 기본 메모리 양을 호스트 메모리의 80%로 조정
+* [WSL2] 잘못된 호출자가 서버를 중지할 수 없게 시간 제한이 있는 요청을 처리하도록 interop 서버 수정
+
+## <a name="build-19018"></a>빌드 19018
+빌드 19018에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/11/05/announcing-windows-10-insider-preview-build-19018/)를 참조하세요.
+
+* [WSL2] 9p 탑재의 기본값으로 cache=mmap을 사용하여 dotnet 앱 수정
+* [WSL2] localhost 릴레이 수정 [GH 4340]
+* [WSL2] 크로스 배포판 공유 tmpfs 탑재를 도입하여 배포판 사이에서 상태 공유
+* \\\\wsl$에 대한 영구 네트워크 드라이브 복원 수정
+
+## <a name="build-19013"></a>빌드 19013
+빌드 19013에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/29/announcing-windows-10-insider-preview-build-19013/)를 참조하세요.
+
+* [WSL2] WSL 유틸리티 VM의 메모리 성능을 개선합니다. 더 이상 사용하지 않는 메모리는 호스트로 다시 해제됩니다.
+* [WSL2] 커널 버전을 4.19.79로 업데이트합니다. (CONFIG_HIGH_RES_TIMERS, CONFIG_TASK_XACCT, CONFIG_TASK_IO_ACCOUNTING, CONFIG_SCHED_HRTICK 및 CONFIG_BRIDGE_VLAN_FILTERING 추가).
+* [WSL2] stdin이 닫혀 있지 않은 파이프 핸들인 경우를 처리하기 위해 입력 릴레이를 수정합니다.[GH 4424]
+* \\\\wsl$ 대/소문자를 구분하지 않는지 확인합니다.
+```
+[wsl2]
+pageReporting = <bool>    # Enable or disable the free memory page reporting feature (default true).
+idleThreshold = <integer> # Set the idle threshold for memory compaction, 0 disables the feature (default 1).
+```
+
+## <a name="build-19002"></a>빌드 19002
+빌드 19002에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)를 참조하세요.
+
+* [WSL] 일부 유니코드 문자 처리 이슈 해결: https://github.com/microsoft/terminal/issues/2770
+* [WSL] 빌드 간 업그레이드 후 바로 시작할 경우 드물게 배포판이 등록 취소되는 사례를 수정합니다.
+* [WSL] 인스턴스 유휴 타이머가 취소되지 않은 wsl.exe --shutdown의 사소한 이슈를 해결합니다.
+
+## <a name="build-18995"></a>빌드 18995
+빌드 18995에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/)를 참조하세요.
+
+* [WSL2] 작업이 중단된 후 DrvFs 탑재가 중지되는 문제 해결(예: ctrl-c) [GH 4377]
+* [WSL2] 매우 큰 hvsocket 메시지 처리 문제 해결 [GH 4105]
+* [WSL2] stdin이 파일인 경우 interop 문제 해결 [GH 4475]
+* [WSL2] 예기치 않은 네트워크 상태가 발생한 경우 서비스 충돌 문제 해결 [GH 4474]
+* [WSL2] 현재 프로세스에 환경 변수가 없는 경우 interop 서버에서 배포 이름 쿼리
+* [WSL2] stdin이 파일인 경우 interop 문제 해결
+* [WSL2] Linux 커널 버전을 4.19.72로 업데이트
+* [WSL2] .wslconfig를 통해 추가 커널 명령줄 매개 변수를 지정하는 기능 추가
+```
+[wsl2]
+kernelCommandLine = <string> # Additional kernel command line arguments
+```
+
+## <a name="build-18990"></a>빌드 18990
+빌드 18990에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/)를 참조하세요.
+
+* \\\\wsl$의 디렉터리 목록의 성능 개선
+* [WSL2] 추가 부팅 엔트로피를 주입합니다.[GH 4416]
+* [WSL2] su/sudo를 사용할 때 Windows 인터럽트를 수정합니다.[GH 4465]
 
 ## <a name="build-18980"></a>빌드 18980
 빌드 18980에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/)를 참조하세요.
@@ -30,7 +155,7 @@ ms.locfileid: "70902419"
 * 다음과 같이 /etc/wsl.conf에서 기본 사용자 이름을 설정하는 기능이 추가되었습니다.
 ```
 [user]
-default=root
+default=<string>
 ```
 
 ## <a name="build-18975"></a>빌드 18975
@@ -111,8 +236,8 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 * wsl.conf를 참조하도록 resolv.conf 헤더를 업데이트합니다. [GH 3928에서 설명]
 * epoll 삭제 코드의 교착 상태 [GH 3922]
 * --import 및 –export에 대한 인수의 공백을 처리합니다. [GH 3932]
-* mmap’d 파일을 확장하면 올바르게 작동하지 않습니다. [GH 3939]
-* ARM64 \\wsl$ 액세스가 올바르게 작동하지 않는 이슈를 해결합니다.
+* mmap'd 파일을 확장하면 올바르게 작동하지 않습니다. [GH 3939]
+* ARM64 \\\\wsl$ 액세스가 올바르게 작동하지 않는 문제 해결
 * wsl.exe에 대한 개선된 기본 아이콘을 추가합니다.
 
 ## <a name="build-18342"></a>빌드 18342
@@ -449,7 +574,7 @@ wslconfig.exe /terminate <DistributionName>
     * 우선 순위는 현재 지원되는 WSL 기능이 아니므로 제한이 있지만, 표준 사용의 차단을 해제해야 합니다.
 * Windows 방화벽은 WSL 프로세스를 지원합니다. [GH 1852]
     * 예를 들어 WSL python 프로세스가 모든 포트에서 수신 대기하도록 허용하려면 관리자 권한 Windows cmd ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```를 사용합니다.
-    * 방화벽 규칙을 추가하는 방법에 대한 자세한 내용은 [링크](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)를 참조하세요.
+    * 방화벽 규칙을 추가하는 방법에 대한 자세한 내용은 [링크](https://support.microsoft.com/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)를 참조하세요.
 * wsl.exe를 사용할 때 사용자의 기본 셸을 준수합니다. [GH 2372]
 * 모든 네트워크 인터페이스를 이더넷으로 보고합니다. [GH 2996]
 * 손상된 /etc/passwd 파일을 보다 효율적으로 처리합니다. [GH 3001]
@@ -478,8 +603,8 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="wsl"></a>WSL
 * Windows에서 /init를 종료할 수 있습니다. [GH 2928]
-* 이제 DrvFs는 기본적으로 디렉터리 단위 대/소문자 구분을 사용합니다(“case=dir” 탑재 옵션과 동일).
-    * “case=force”(이전 동작)를 사용하려면 레지스트리 키를 설정해야 합니다. "case=force"를 사용해야 하는 경우 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1 명령을 실행하여 "case=force"를 설정합니다.
+* 이제 DrvFs는 기본적으로 디렉터리 단위 대/소문자 구분을 사용합니다("case=dir" 탑재 옵션과 동일).
+    * "case=force"(이전 동작)를 사용하려면 레지스트리 키를 설정해야 합니다. "case=force"를 사용해야 하는 경우 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1 명령을 실행하여 "case=force"를 설정합니다.
     * 이전 버전의 Windows에서 WSL을 사용하여 만든 기존 디렉터리가 있고 대/소문자를 구분해야 하는 경우 다음 fsutil.exe를 사용하여 대/소문자를 구분하도록 설정합니다. fsutil.exe file setcasesensitiveinfo <path> enable
 * NULL은 uname syscall에서 반환된 문자열을 종료합니다.
 
@@ -615,7 +740,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
   * fmask: 모든 일반 파일에서 제외할 권한의 8진수 마스크입니다.
   * dmask: 모든 디렉터리에서 제외할 권한의 8진수 마스크입니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  예:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -624,7 +749,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 * WSL과 Win32 간에 환경 변수가 어떻게 흐르는지 구성하는 새 환경 변수 `WSLENV`가 도입되었습니다.
 
-  예를 들어 다음과 같은 가치를 제공해야 합니다.
+  예:
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
@@ -689,9 +814,9 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
       -a    force result to absolute path format
       -u    translate from a Windows path to a WSL path (default)
       -w    translate from a WSL path to a Windows path
-      -m    translate from a WSL path to a Windows path, with ‘/’ instead of ‘\\’
+      -m    translate from a WSL path to a Windows path, with '/' instead of '\\'
 
-      EX: wslpath ‘c:\users’
+      EX: wslpath 'c:\users'
   ```
   #### <a name="console"></a>콘솔
 - 수정 사항이 없습니다.
@@ -891,7 +1016,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>알려진 문제
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 이슈 2392: WSL에서 Windows 폴더를 인식할 수 없음...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>[GitHub 이슈 2392: WSL에서 Windows 폴더를 인식할 수 없음...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 빌드 16257의 경우 WSL에서 `/mnt/c/...` 명령을 통해 Windows 파일/폴더를 열거할 때 이슈가 있습니다.
 이 이슈가 해결되었으며, 2017년 8월 14일부터 일주일 동안 참가자 빌드에서 릴리스해야 합니다.
 
@@ -1064,14 +1189,14 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 ### <a name="fixed"></a>고정
 
-- [직렬 지원을 사용합니다.](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- [직렬 지원을 사용합니다.](/archive/blogs/wsl/serial-support-on-the-windows-subsystem-for-linux)
 - IP 소켓 옵션 IP_OPTIONS가 추가되었습니다. [GH 1116]
 - pwritev 함수를 구현했습니다(파일을 nginx/PHP-FPM으로 업로드하는 동안). [GH 1506]
 - IP 소켓 옵션 IP_MULTICAST_IF 및 IPV6_MULTICAST_IF가 추가되었습니다. [GH 990]
 - 소켓 옵션 IP_MULTICAST_LOOP 및 IPV6_MULTICAST_LOOP에 대한 지원이 추가되었습니다. [GH 1678]
 - 앱 노드, traceroute, dig, nslookup, host에 대한 IP(V6)_MTU 소켓 옵션이 추가되었습니다.
 - IP 소켓 옵션 IPV6_UNICAST_HOPS가 추가되었습니다.
-- [파일 시스템이 향상되었습니다.](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
+- [파일 시스템이 향상되었습니다.](/archive/blogs/wsl/file-system-improvements-to-the-windows-subsystem-for-linux)
     * UNC 경로 탑재 허용
     * drvfs에서 CDFS 지원 사용
     * drvfs의 네트워크 파일 시스템에 대한 권한을 올바르게 처리
@@ -1088,7 +1213,7 @@ WSL 및 Windows 애플리케이션은 이제 Unix 소켓을 통해 서로 통신
 
 빌드 16170에 대한 일반적인 Windows 정보는 [Windows 블로그](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)를 참조하세요.<br/>
 
-WSL 테스트에 대해 설명하는 새로운 [블로그 게시물](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)을 발표했습니다.
+WSL 테스트에 대해 설명하는 새로운 [블로그 게시물](/archive/blogs/wsl/testing-the-windows-subsystem-for-linux)을 발표했습니다.
 
 ### <a name="fixed"></a>고정
 
@@ -1339,7 +1464,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 - ping이 0.000ms 시간을 반환하는 이슈를 해결했습니다. (GH #1296)
 - 파일을 너무 많이 열었을 때 올바른 오류 코드가 반환됩니다.
 - 인터페이스의 하드웨어 주소가 32바이트인 경우(예: Teredo 인터페이스) 네트워크 인터페이스 데이터에 대한 Netlink 요청이 EINVAL과 함께 실패하는 WSL 이슈를 해결했습니다.
-   - Linux "ip" 유틸리티에는 WSL에서 32바이트 하드웨어 주소를 보고하면 충돌하는 버그가 있습니다. 이것은 WSL이 아니라 "ip"의 버그입니다. “ip” 유틸리티는 하드웨어 주소를 인쇄하는 데 사용되는 문자열 버퍼의 길이를 하드 코딩하는데, 이 버퍼가 너무 작아서 32바이트 하드웨어 주소를 인쇄할 수 없습니다.
+   - Linux "ip" 유틸리티에는 WSL에서 32바이트 하드웨어 주소를 보고하면 충돌하는 버그가 있습니다. 이것은 WSL이 아니라 "ip"의 버그입니다. "ip" 유틸리티는 하드웨어 주소를 인쇄하는 데 사용되는 문자열 버퍼의 길이를 하드 코딩하는데, 이 버퍼가 너무 작아서 32바이트 하드웨어 주소를 인쇄할 수 없습니다.
 - 그 외에도 여러 문제를 수정하고 기능을 개선했습니다.
 
 ### <a name="ltp-results"></a>LTP 결과:
@@ -1420,7 +1545,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 
 ### <a name="fixed"></a>고정
 
-- Windows에 대한 Pico 프로세스 알림이 개선되었습니다.  추가 정보는 [WSL 블로그](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)에서 찾을 수 있습니다.
+- Windows에 대한 Pico 프로세스 알림이 개선되었습니다.  추가 정보는 [WSL 블로그](/archive/blogs/wsl/wsl-antivirus-and-firewall-compatibility)에서 찾을 수 있습니다.
 - Windows 상호 운용성 덕분에 안정성이 향상되었습니다.
 - EDP(엔터프라이즈 데이터 보호)를 사용하는 경우 bash.exe를 시작할 때 발생하는 0x80070057 오류를 해결했습니다.
 - 그 외에도 여러 버그를 수정하고 기능을 개선했습니다.
@@ -1456,18 +1581,18 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 ### <a name="new-feature-windows--ubuntu-interoperability"></a>새 기능: Windows/Ubuntu 상호 운용성
 이제 WSL 명령줄에서 직접 Windows 이진 파일을 호출할 수 있습니다.  덕분에 사용자는 이전에는 불가능하던 방식으로 Windows 환경 및 시스템과 상호 작용할 수 있게 되었습니다.  간단한 예제로, 이제 사용자가 다음 명령을 실행할 수 있습니다.
 
-    ```
-    $ export PATH=$PATH:/mnt/c/Windows/System32
-    $ notepad.exe
-    $ ipconfig.exe | grep IPv4 | cut -d: -f2
-    $ ls -la | findstr.exe foo.txt
-    $ cmd.exe /c dir
-    ```
+```bash
+$ export PATH=$PATH:/mnt/c/Windows/System32
+$ notepad.exe
+$ ipconfig.exe | grep IPv4 | cut -d: -f2
+$ ls -la | findstr.exe foo.txt
+$ cmd.exe /c dir
+```
 
 자세한 내용은 아래에서 찾을 수 있습니다.
 
-- [Interop에 대한 WSL 팀 블로그](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [MSDN Interop 설명서](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [Interop에 대한 WSL 팀 블로그](/archive/blogs/wsl/windows-and-ubuntu-interoperability)<br/>
+- [MSDN Interop 설명서](./interop.md)<br/>
 
 ### <a name="fixed"></a>고정
 
@@ -1517,7 +1642,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 
 ### <a name="fixed"></a>고정
 
-- SSH를 차단하는 “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” 네트워킹 충돌을 포함하여 여러 버그 검사가 수정되었습니다.
+- SSH를 차단하는 "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" 네트워킹 충돌을 포함하여 여러 버그 검사가 수정되었습니다.
 - 현재 DrvFs가 있는 Windows 애플리케이션에서 생성된 알림에 inotifiy가 지원됩니다.
 - mongod에 대한 TCP_KEEPIDLE 및 TCP_KEEPINTVL이 구현되었습니다. (GH #695)
 - pivot_root 시스템 호출이 구현되었습니다.
@@ -1544,7 +1669,7 @@ Windows 10 크리에이터스 업데이트에 포함하기로 계획된 WSL 수�
 참고: 향후 릴리스에서 WSL은 Ubuntu 14.04(Trusty) 대신 Ubuntu 16.04(Xenial)를 설치할 것입니다.  이 변경 내용은 새 인스턴스를 설치하는(lxrun.exe /install 또는 bash.exe를 처음으로 실행) 참가자에게 적용됩니다.  Trusty를 사용하는 기존 인스턴스는 자동으로 업그레이드되지 않습니다. 사용자는 do-release-upgrade 명령을 사용하여 Trusty 이미지를 Xenial로 업그레이드할 수 있습니다.
 
 ### <a name="known-issue"></a>알려진 이슈
-WSL에서 일부 소켓 구현에 이슈가 있습니다.  버그 검사는 “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” 오류와 함께 자신을 충돌로 나타냅니다.  이 이슈의 가장 일반적인 징후는 ssh를 사용할 때 발생하는 충돌입니다.  근본 원인은 내부 빌드에서 수정되었으며, 기회가 되는 대로 참가자에게 푸시할 예정입니다.
+WSL에서 일부 소켓 구현에 이슈가 있습니다.  버그 검사는 "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" 오류와 함께 자신을 충돌로 나타냅니다.  이 이슈의 가장 일반적인 징후는 ssh를 사용할 때 발생하는 충돌입니다.  근본 원인은 내부 빌드에서 수정되었으며, 기회가 되는 대로 참가자에게 푸시할 예정입니다.
 
 ### <a name="fixed"></a>고정
 
@@ -1687,7 +1812,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 
 ### <a name="fixed"></a>고정
 - 8월 2일에 Windows 10 1주년 업데이트를 준비하도록 수정되었습니다.
-  - 1주년 업데이트의 WSL에 대한 자세한 내용은 [블로그](https://blogs.msdn.microsoft.com/wsl/)에서 찾을 수 있습니다.
+  - 1주년 업데이트의 WSL에 대한 자세한 내용은 [블로그](/archive/blogs/wsl/)에서 찾을 수 있습니다.
 
 <br/>
 
@@ -1739,7 +1864,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
   - 사용자는 /mnt/c 드라이브에서 case.txt 및 CASE.TXT를 입력할 수 있습니다.
   - 대/소문자 구분은 Windows 기반 Ubuntu의 Bash 내에서만 지원됩니다. Bash 외부에 있는 경우 NTFS가 파일을 올바르게 보고하지만, 예기치 않은 동작이 발생하여 Windows의 파일과 상호 작용할 수 있습니다.
   - 각 볼륨의 루트(/mnt/c)는 대/소문자를 구분하지 않습니다.
-  - Windows에서 이러한 파일을 처리하는 방법에 대한 자세한 내용은 [여기](https://support.microsoft.com/en-us/kb/100625)에서 확인할 수 있습니다.
+  - Windows에서 이러한 파일을 처리하는 방법에 대한 자세한 내용은 [여기](https://support.microsoft.com/kb/100625)에서 확인할 수 있습니다.
 - pty/tty 지원이 대폭 개선되었습니다.  이제 TMUX 같은 애플리케이션이 지원됩니다. (GH #40)
 - 가끔 사용자 계정이 만들어지지 않는 이슈를 해결했습니다.
 - 매우 긴 인수 목록을 허용하도록 명령줄 인수 구조를 최적화했습니다. (GH #153)
@@ -1754,7 +1879,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 - 이제 strace가 올바르게 종료됩니다.
 - /proc/self/fd를 통해 파이프를 다시 열 수 있습니다. (GH #222)
 - DrvFs에서 %LOCALAPPDATA%\lxss 아래에 디렉터리를 숨깁니다. (GH #270)
-- bash.exe ~를 보다 효율적으로 처리합니다.  이제 “bash ~ -c ls” 같은 명령이 지원됩니다. (GH #467)
+- bash.exe ~를 보다 효율적으로 처리합니다.  이제 "bash ~ -c ls" 같은 명령이 지원됩니다. (GH #467)
 - 이제 종료하는 동안 소켓이 epoll 읽기를 사용할 수 있음을 알립니다. (GH #271).
 - lxrun /uninstall이 파일 및 폴더 삭제를 보다 효율적으로 수행합니다.
 - ps -f를 수정했습니다. (GH #246)
@@ -1787,8 +1912,8 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 - 255자보다 긴 파일 이름을 허용하는 WSL 이슈를 수정했습니다.
 - 영어가 아닌 문자에 대한 지원이 개선되었습니다.
 - 현재 Windows 표준 시간대 데이터를 추가하고 기본값으로 설정했습니다.
-- 각 탑재 지점에 대한 고유한 디바이스 id (jre 픽스 – GH #49)
-- "." 및 “..”가 포함된 경로 이슈를 수정했습니다.
+- 각 탑재 지점에 대한 고유한 디바이스 id(jre 픽스 – GH #49)
+- "." 및 ".."를 포함하는 경로에 대한 문제 해결
 - Fifo 지원이 추가되었습니다. (GH #71)
 - 네이티브 Ubuntu 형식과 일치하도록 resolv.conf 형식을 업데이트했습니다.
 - 일부 procfs를 정리했습니다.
@@ -1806,7 +1931,7 @@ Windows 10 1주년 업데이트 이후에 출시된 첫 번째 참가자 빌드�
 ## <a name="build-14342"></a>빌드 14342
 빌드 14342에 대한 일반적인 Windows 정보는 [Windows 블로그](https://aka.ms/wip14342)를 참조하세요. <br/>
 
-VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microsoft.com/wsl)에서 찾을 수 있습니다. <br/>
+VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](/archive/blogs/wsl/)에서 찾을 수 있습니다. <br/>
 
 ### <a name="fixed"></a>고정
 - Windows 사용자의 사용자 이름에 유니코드 문자가 있을 때 발생하는 설치 이슈를 해결했습니다.
@@ -1832,7 +1957,7 @@ VolFs 및 DriveFs에 대한 정보는 [WSL 블로그](https://blogs.msdn.microso
 - 그 외에도 여러 버그를 수정하고 기능을 개선했습니다.
 
 ### <a name="known-issues"></a>알려진 문제
-- 경우에 따라 DriveFs에서 ‘..’가 올바르게 확인되지 않습니다.
+- '..' 확인하지 않음 올바르게 확인되지 않습니다.
 
 ### <a name="syscall-support"></a>Syscall 지원
 아래는 WSL에서 일부가 구현된 새 syscall 또는 향상된 syscall 목록입니다. 이 목록의 syscall은 하나 이상의 시나리오에서 지원되지만, 현재 지원되는 매개 변수 중 일부가 없을 수도 있습니다.

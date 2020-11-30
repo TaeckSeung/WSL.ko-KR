@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f7fdc6243e6cd5156bfae23fd7a1d61514449cf5
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: bb9beb75d09c4ca51ae4764d2e4cc6125a9de923
+ms.sourcegitcommit: 59aff996af4bbac5698573d58bbed6537cfb47ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444796"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933288"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -372,3 +372,7 @@ options = metadata,uid=1000,gid=1000,umask=0022
    PATH 변수 할당을 포함하는 경우에는 파일을 편집하여 **#** 문자로 PATH 할당 블록을 주석 처리합니다.
 3. wsl.conf가 있는지 확인하고(`cat /etc/wsl.conf`) `appendWindowsPath=false`가 없는지 확인합니다. 있는 경우에는 주석 처리합니다.
 4. `wsl -t ` 다음에 배포 이름을 입력하여 배포를 다시 시작하거나 cmd 또는 PowerShell에서 `wsl --shutdown`을 실행합니다.
+
+### <a name="unable-to-boot-after-installing-wsl-2"></a>WSL 2를 설치한 후 부팅할 수 없음
+
+사용자가 WSL 2를 설치한 후 부팅할 수 없는 문제에 대해 알고 있습니다. 현재 이러한 문제를 철저하게 진단하고 있으며, [버퍼 크기를 변경](https://github.com/microsoft/WSL/issues/4784#issuecomment-639219363)하거나 [적절한 드라이버를 설치](https://github.com/microsoft/WSL/issues/4784#issuecomment-675702244)하면 이 문제를 해결하는 데 도움이 된다는 사용자들의 제보가 있었습니다. [Github 문제](https://github.com/microsoft/WSL/issues/4784)에서 이 문제에 대한 최신 업데이트를 확인하세요. 

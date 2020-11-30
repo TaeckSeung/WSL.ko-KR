@@ -5,12 +5,12 @@ keywords: wsl, windows, linux 커널, linux용 windows 하위 시스템, 커널
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7bf2ef606d0bd23083f323117348aeea87c52b10
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: 4ca1bde2f8dc36c85b0c998c01f7f77eafe5f695
+ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444809"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416650"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux 커널 업데이트
 
@@ -47,8 +47,9 @@ MSI 커널을 설치하려면 WSL이 필요하며 이를 먼저 사용하도록 
 
 이 메시지가 표시되는 세 가지 가능한 원인은 다음과 같습니다.
 
-1. WSL 2를 지원하지 않는 이전 버전의 Windows를 아직 사용하고 있습니다. [WSL 2 요구 사항](https://docs.microsoft.com/windows/wsl/install-win10#update-to-wsl-2)을 확인하고 WSL 2를 사용하도록 업그레이드하세요. 
-2. `Windows Subsystem for Linux`를 사용할 수 없습니다. [Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 따르세요.
+1. WSL 2를 지원하지 않는 이전 버전의 Windows를 아직 사용하고 있습니다. [WSL 2 요구 사항](./install-win10.md#step-2---update-to-wsl-2)을 확인하고 WSL을 사용하도록 업그레이드하세요. 
+2. 
+2. `Windows Subsystem for Linux`를 사용할 수 없습니다. [Linux용 Windows 하위 시스템 설치 가이드](./install-win10.md#step-1---enable-the-windows-subsystem-for-linux)를 따르세요.
 3. `Windows Subsystem for Linux`를 사용하도록 설정한 후 다시 부팅해야 적용됩니다. 머신을 다시 부팅한 후 다시 시도하세요.
 
 ### `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`

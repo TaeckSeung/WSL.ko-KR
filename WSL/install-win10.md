@@ -5,18 +5,32 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cf349615dc40f1912fdb4dff3f5593627fa246e6
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 4e2ec7fdac4f4a0c9106edeedbaea80e4dc09165
+ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211777"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416660"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
 ## <a name="install-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 설치
 
 Linux용 Windows 하위 시스템에는 설치 프로세스 중에 선택할 수 있는 두 가지 버전이 있습니다. WSL 2는 전반적으로 성능이 우수하므로 사용하는 것이 좋습니다. 시스템에서 WSL 2를 지원하지 않거나 시스템 간 파일 스토리지가 필요한 특정 상황이 있는 경우 WSL 1을 계속 사용할 수 있습니다. [WSL 2와 WSL 1비교](./compare-versions.md)에 대해 자세히 알아보세요.
+
+> [!NOTE]
+> 새 `wsl --install` 명령을 사용하고 아래의 1-6 단계를 건너뛰려면 [Windows 참가자 프로그램](https://insider.windows.com/getting-started)에 참여하고 Windows 10의 미리 보기 빌드(OS 빌드 20262 이상)를 설치해야 합니다. 
+>
+> 미리 보기 빌드를 설치한 후에는 관리자 권한으로 명령 프롬프트 창을 열고 `wsl --install` 명령을 실행할 수 있습니다. 그러면 자동으로 선택적 요소인 WSL 및 Virtual Machine Platform 구성 요소가 사용하도록 설정되고, 최신 Linux 커널이 다운로드 및 설치되고, WSL 2가 기본값으로 설정되고, Ubuntu가 다운로드됩니다. 이를 변경하고 싶으면 예를 들어 `wsl --install -d Debian`을 사용하여 변경할 수 있으며, 사용 가능한 Linux 배포판 목록을 보려면 `wsl --list --online`을 입력하세요. 명령이 완료되면 다시 시작하라는 메시지가 표시됩니다. 다시 시작하면 Linux 배포판(기본적으로 Ubuntu) 설치가 완료되며, 사용을 시작할 수 있도록 Linux 명령줄이 열립니다. 그러면 [7단계 - 새 배포 설정](./install-win10.md#step-7---set-up-a-new-distribution)으로 건너뛸 수 있습니다.
+
+### <a name="install-steps"></a>설치 단계
+
+- 관리자 권한으로 명령 창을 엽니다.
+- `wsl.exe --install`을 실행합니다.
+- 필요에 따라 머신을 다시 시작하라는 명령이 표시되면 머신을 다시 시작합니다.
+- 머신이 다시 시작되는 즉시 설치가 완료되고 WSL을 사용할 수 있게 됩니다.
+
+그러면 Ubuntu 배포판이 설치됩니다. 인수를 전달하여 다른 배포판을 설치할 수도 있습니다. 예를 들어 `wsl --install -d Debian`을 실행하면 Debian이 설치됩니다. `wsl --list --online`을 실행하면 사용 가능한 배포판 목록이 표시됩니다. 
 
 ## <a name="step-1---enable-the-windows-subsystem-for-linux"></a>1단계 - Linux용 Windows 하위 시스템 사용
 
@@ -160,7 +174,7 @@ wsl --set-default-version 2
 
 - **0x80070003 오류로 인한 설치 실패**
   - Linux용 Windows 하위 시스템은 시스템 드라이브(일반적으로 `C:` 드라이브)에서만 실행됩니다. 배포가 시스템 드라이브에 저장되어 있는지 확인합니다.  
-  - **설정** -> **시스템 --> **스토리지** -> **더 많은 스토리지 설정을 차례로 엽니다. 새 콘텐츠가 저장된 위치를 변경합니다.** 
+  - **설정** -> **시스템 -->**스토리지** -> **더 많은 스토리지 설정을 차례로 엽니다. 새 콘텐츠가 저장된 위치를 변경합니다.** 
     ![C: 드라이브에 앱을 설치하기 위한 시스템 설정에 대한 그림](media/AppStorage.png)
 
 - **0x8007019e 오류로 인한 WslRegisterDistribution 실패**

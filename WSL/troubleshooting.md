@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Windows 하위 시스템, Ubuntu
 ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bb9beb75d09c4ca51ae4764d2e4cc6125a9de923
-ms.sourcegitcommit: 59aff996af4bbac5698573d58bbed6537cfb47ef
+ms.openlocfilehash: f4040cbe9faf5d55324b56974dd5677052224dd1
+ms.sourcegitcommit: d5d3dd8b91e93d46653f9512bceafd8b5340255f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933288"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443752"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 문제 해결
 
@@ -297,7 +297,7 @@ SSH 서버를 연결하려고 하면 "127.0.0.1 포트 22에 의해 연결이 �
    sudo service ssh status
    ```
 
-   그리고 https://help.ubuntu.com/lts/serverguide/openssh-server.html.en 자습서를 수행했습니다.
+   그리고 https://ubuntu.com/server/docs/service-openssh 자습서를 수행했습니다.
 
 2. sshd 서비스를 중지한 다음, 디버그 모드에서 sshd를 시작합니다.
 

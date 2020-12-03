@@ -5,12 +5,12 @@ keywords: BashOnWindows, Bash, WSL, Windows, Linux용 Windows 하위 시스템, 
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 4e2ec7fdac4f4a0c9106edeedbaea80e4dc09165
-ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
+ms.openlocfilehash: 248afa4695cdfdf34dd44dd0692d2cba42c32a0b
+ms.sourcegitcommit: 291c6767954e3d5034ea0099e5c1e1f1ea5b577d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95416660"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470495"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10에 Linux용 Windows 하위 시스템 설치 가이드
 
@@ -74,10 +74,10 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ## <a name="step-4---download-the-linux-kernel-update-package"></a>4단계 - Linux 커널 업데이트 패키지 다운로드
 
 1. 최신 패키지를 다운로드합니다.
-    - [x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+    - [x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지](http://aka.ms/wsl2kernelmsix64)
 
     > [!NOTE]
-    > ARM64 머신을 사용하는 경우 [ARM64 패키지](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)를 대신 다운로드하세요. 사용하고 있는 머신의 종류를 잘 모르는 경우 명령 프롬프트 또는 PowerShell을 열고 `systeminfo | find "System Type"`을 입력합니다.
+    > ARM64 머신을 사용하는 경우 [ARM64 패키지](http://aka.ms/wsl2kernelmsiarm64)를 대신 다운로드하세요. 사용하고 있는 머신의 종류를 잘 모르는 경우 명령 프롬프트 또는 PowerShell을 열고 `systeminfo | find "System Type"`을 입력합니다.
 
 2. 이전 단계에서 다운로드한 업데이트 패키지를 실행합니다. (실행하려면 두 번 클릭 - 관리자 권한을 요구하는 메시지가 표시되면 '예'를 선택하여 이 설치를 승인합니다.)
 

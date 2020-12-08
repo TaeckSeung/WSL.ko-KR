@@ -5,16 +5,16 @@ keywords: wsl, windows, windowssubsystem, gnu, linux, bash, vs code, 원격 확�
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 528c2b040136518f9c7d04d8572cd0f08bb68385
+ms.sourcegitcommit: d5d3dd8b91e93d46653f9512bceafd8b5340255f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413344"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443757"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Linux 용 Windows 하위 시스템을 사용 하 여 Visual Studio Code 시작
 
-원격 WSL 확장과 함께 Visual Studio Code를 사용 하면 VS Code에서 직접 WSL을 전체 시간 개발 환경으로 사용할 수 있습니다. 다음을 수행할 수 있습니다.
+원격 WSL 확장과 함께 Visual Studio Code를 사용 하면 VS Code에서 직접 WSL을 전체 시간 개발 환경으로 사용할 수 있습니다. 다음 작업을 수행할 수 있습니다.
 
 * Linux 기반 환경에서 개발
 * Linux 특정 도구 체인 및 유틸리티 사용
@@ -96,7 +96,7 @@ Git를 설치 하려면 [Linux 용 Windows 하위 시스템을 사용 하도록 
 
 1. 다음과 같이 [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
 
-2. 설치가 완료되면 Windows 터미널을 열고 **설정**을 선택한 다음, `profile.json` 파일을 사용하여 터미널을 사용자 지정합니다.
+2. 설치가 완료되면 Windows 터미널을 열고 **설정** 을 선택한 다음, `profile.json` 파일을 사용하여 터미널을 사용자 지정합니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 
